@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.LibSsh.Interfaces;
-using Doods.LibSsh.Queries;
+using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Base.Queries
 {

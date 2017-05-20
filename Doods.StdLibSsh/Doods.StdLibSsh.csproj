@@ -79,6 +79,12 @@
   <ItemGroup>
     <None Include="project.json" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Doods.StdFramework\Doods.StdFramework.csproj">
+      <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
+      <Name>Doods.StdFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,7 @@
-﻿using Doods.LibSsh.Interfaces;
+﻿using Doods.StdLibSsh.Base.Queries;
+using Doods.StdLibSsh.Interfaces;
 
-namespace Doods.LibSsh.Queries
+namespace Doods.StdLibSsh.Queries
 {
     /// <summary>
     /// 

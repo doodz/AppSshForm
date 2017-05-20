@@ -1,4 +1,4 @@
-﻿namespace Doods.LibSsh.Queries
+﻿namespace Doods.StdLibSsh.Queries
 {
     public abstract class Queries<T> where T:new()
     {

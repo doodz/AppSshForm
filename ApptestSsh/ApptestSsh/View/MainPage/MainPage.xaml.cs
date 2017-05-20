@@ -2,8 +2,8 @@
 using System.IO;
 using ApptestSsh.Core.View.MainPage;
 using Autofac;
-using Doods.LibSsh;
-using Doods.LibSsh.Queries;
+using Doods.StdLibSsh;
+using Doods.StdLibSsh.Queries.GroupedQueries;
 using Renci.SshNet;
 using Xamarin.Forms;
 

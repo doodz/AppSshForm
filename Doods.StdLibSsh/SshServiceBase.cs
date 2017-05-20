@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.LibSsh.Interfaces;
+using Doods.StdLibSsh.Interfaces;
 using Renci.SshNet;
 
-namespace Doods.LibSsh
+namespace Doods.StdLibSsh
 {
     public class SshServiceBase : IDisposable, IClientSsh
     {

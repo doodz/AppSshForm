@@ -1,6 +1,6 @@
 ﻿using Doods.StdFramework;
 
-namespace Doods.LibSsh.Beans
+namespace Doods.StdLibSsh.Beans
 {
     public class ProcessBean : ObservableObject
     {

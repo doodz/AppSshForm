@@ -2,10 +2,11 @@
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Doods.LibSsh.Beans;
-using Doods.LibSsh.Interfaces;
+using Doods.StdLibSsh.Base.Queries;
+using Doods.StdLibSsh.Beans;
+using Doods.StdLibSsh.Interfaces;
 
-namespace Doods.LibSsh.Queries
+namespace Doods.StdLibSsh.Queries
 {
 
     /// <summary>

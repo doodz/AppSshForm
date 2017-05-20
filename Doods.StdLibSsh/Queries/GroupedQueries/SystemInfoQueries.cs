@@ -1,9 +1,7 @@
-﻿using System;
-using Doods.LibSsh.Enums;
-using Doods.LibSsh.Interfaces;
-using Doods.LibSsh.Queries;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
+using Doods.StdLibSsh.Enums;
+using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries.GroupedQueries
 {

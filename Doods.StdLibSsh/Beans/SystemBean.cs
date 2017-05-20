@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Doods.LibSsh.Beans;
 using Doods.StdFramework;
 
 namespace Doods.StdLibSsh.Beans

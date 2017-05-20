@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Doods.LibSsh.Enums;
 using Doods.StdFramework;
+using Doods.StdLibSsh.Enums;
 
-namespace Doods.LibSsh.Beans
+namespace Doods.StdLibSsh.Beans
 {
     public class MemoryBean : ObservableObject
     {
@@ -38,6 +38,8 @@ namespace Doods.LibSsh.Beans
 
         public string HumanReadableByteCount(bool si)
         {
+
+            
             var unit = si ? 1000 : 1024;
             if (Bytes < unit)
                 return Bytes + " B";

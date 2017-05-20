@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Doods.LibSsh.Interfaces;
+using Doods.StdLibSsh.Interfaces;
 using Renci.SshNet;
 
-namespace Doods.LibSsh.Queries
+namespace Doods.StdLibSsh.Base.Queries
 {
     public class GenericQuery<T>
     {

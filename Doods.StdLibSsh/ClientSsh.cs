@@ -1,7 +1,9 @@
-﻿using Doods.LibSsh.Interfaces;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using Doods.StdLibSsh.Interfaces;
 using Renci.SshNet;
 
-namespace Doods.LibSsh
+namespace Doods.StdLibSsh
 {
     public class ClientSsh : IClientSsh
     {
@@ -41,6 +43,11 @@ namespace Doods.LibSsh
         public SshCommand RunQuerry(string cmd)
         {
             return Client.RunCommand(cmd);
+        }
+
+        public Task<string> RunCommandAsync(string cmdStr, CancellationToken token)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

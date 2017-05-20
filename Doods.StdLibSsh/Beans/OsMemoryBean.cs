@@ -1,7 +1,7 @@
-﻿using Doods.LibSsh.Enums;
-using Doods.StdFramework;
+﻿using Doods.StdFramework;
+using Doods.StdLibSsh.Enums;
 
-namespace Doods.LibSsh.Beans
+namespace Doods.StdLibSsh.Beans
 {
     public class OsMemoryBean : ObservableObject
     {
@@ -43,15 +43,15 @@ namespace Doods.LibSsh.Beans
 
         public OsMemoryBean(long totalMemory, long totalUsed)
         {
-            _totalMemory = MemoryBean.From(Memory.KB, totalMemory);
-            _totalUsed = MemoryBean.From(Memory.KB, totalUsed);
-            _totalFree = MemoryBean.From(Memory.KB, totalMemory - totalUsed);
-            _percentageUsed = (float) totalUsed / (float) totalMemory;
+            TotalMemory = MemoryBean.From(Memory.KB, totalMemory);
+            TotalUsed = MemoryBean.From(Memory.KB, totalUsed);
+            TotalFree = MemoryBean.From(Memory.KB, totalMemory - totalUsed);
+            PercentageUsed = (float) totalUsed / (float) totalMemory;
         }
 
         public OsMemoryBean(string str)
         {
-            _errorMessage = str;
+            ErrorMessage = str;
         }
     }
 }

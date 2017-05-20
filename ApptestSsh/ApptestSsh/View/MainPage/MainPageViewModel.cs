@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ApptestSsh.Core.DataBase;
 using Autofac;
-using Doods.LibSsh.Beans;
-using Doods.LibSsh.Interfaces;
-using Doods.LibSsh.Queries;
 using Doods.StdFramework;
 using Doods.StdFramework.Interfaces;
 using Doods.StdLibSsh.Beans;
@@ -52,7 +45,7 @@ namespace ApptestSsh.Core.View.MainPage
             ssh.Initialise();
 
             var test = new VcgencmdQuery(ssh);
-            _vcgencmdBean =await test.RunAsync(Token);
+            VcgencmdBean = await test.RunAsync(Token);
 
             SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
 

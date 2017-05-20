@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ApptestSsh"
+             xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
              x:Class="ApptestSsh.Core.MainPage">
 
     <StackLayout Orientation="Vertical">
@@ -35,49 +36,38 @@
             <Label Grid.ColumnSpan="2"
                    HorizontalTextAlignment="Center"
                    Grid.Row="0"
-                   Text="Overclocking"
-                   Style="{DynamicResource TitleStyle}" />
+                   Text="Overclocking"/>
             <Label Grid.Column="0"
                    Grid.Row="1"
-                   Text="Core temperature"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Core temperature"/>
             <Label Grid.Column="0"
                    Grid.Row="2"
-                   Text="Arm frequency"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Arm frequency"/>
             <Label Grid.Column="0"
                    Grid.Row="3"
-                   Text="Core frequency"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Core frequency"/>
             <Label Grid.Column="0"
                    Grid.Row="4"
-                   Text="Core Volt"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Core Volt" />
             <Label Grid.Column="0"
                    Grid.Row="5"
-                   Text="Firmware"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Firmware"/>
 
             <Label Grid.Column="1"
                    Grid.Row="1"
-                   Text="{Binding Path=CpuTemperature}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=CpuTemperature}"/>
             <Label Grid.Column="1"
                    Grid.Row="2"
-                   Text="{Binding Path=ArmFrequency}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=ArmFrequency}"/>
             <Label Grid.Column="1"
                    Grid.Row="3"
-                   Text="{Binding Path=CoreFrequency}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=CoreFrequency}"/>
             <Label Grid.Column="1"
                    Grid.Row="4"
-                   Text="{Binding Path=CoreVolts}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=CoreVolts}" />
             <Label Grid.Column="1"
                    Grid.Row="5"
-                   Text="{Binding Path=Version}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=Version}"/>
 
         </Grid>
 
@@ -106,67 +96,52 @@
             <Label Grid.ColumnSpan="2"
                    HorizontalTextAlignment="Center"
                    Grid.Row="0"
-                   Text="System"
-                   Style="{DynamicResource TitleStyle}" />
+                   Text="System"/>
             <Label Grid.Column="0"
                    Grid.Row="1"
-                   Text="Startup"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Startup"/>
             <Label Grid.Column="0"
                    Grid.Row="2"
-                   Text="Average load"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Average load"/>
             <Label Grid.Column="0"
                    Grid.Row="3"
-                   Text="Total memory"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Total memory"/>
             <Label Grid.Column="0"
                    Grid.Row="4"
-                   Text="Free memory"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Free memory"/>
             <Label Grid.Column="0"
                    Grid.Row="5"
-                   Text="Distribution"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Distribution" />
             <Label Grid.Column="0"
                    Grid.Row="6"
-                   Text="Serial No"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Serial No"/>
             <Label Grid.Column="0"
                    Grid.Row="7"
-                   Text="Last refresh"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="Last refresh"/>
 
 
 
-            <Label Grid.Column="0"
+            <Label Grid.Column="1"
                    Grid.Row="1"
-                   Text="{Binding Path=AverageLoad}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=AverageLoad}"/>
+            <Label Grid.Column="1"
                    Grid.Row="2"
-                   Text="{Binding Path=OsMemory.TotalUsed}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"/>
+            <Label Grid.Column="1"
                    Grid.Row="3"
-                   Text="{Binding Path=OsMemory.TotalMemory}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+            <Label Grid.Column="1"
                    Grid.Row="4"
-                   Text="{Binding Path=OsMemory.TotalFree}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"/>
+            <Label Grid.Column="1"
                    Grid.Row="5"
-                   Text="{Binding Path=DistributionName}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=DistributionName}"/>
+            <Label Grid.Column="1"
                    Grid.Row="6"
-                   Text="{Binding Path=CpuSerial}"
-                   Style="{DynamicResource SubtitleStyle}" />
-            <Label Grid.Column="0"
+                   Text="{Binding Path=CpuSerial}" />
+            <Label Grid.Column="1"
                    Grid.Row="7"
-                   Text="{Binding Path=CpuSerial}"
-                   Style="{DynamicResource SubtitleStyle}" />
+                   Text="{Binding Path=CpuSerial}"/>
         </Grid>
 
         <Label Text="Network"

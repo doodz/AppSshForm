@@ -1,5 +1,5 @@
 ﻿using ApptestSsh.Core.DataBase;
-using Doods.LibSsh;
+using Doods.StdLibSsh;
 using Renci.SshNet;
 namespace ApptestSsh.Core.Services
 {

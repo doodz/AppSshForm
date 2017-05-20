@@ -1,4 +1,4 @@
-﻿namespace Doods.LibSsh.Enums
+﻿namespace Doods.StdLibSsh.Enums
 {
     public enum LoadAveragePeriod
     {

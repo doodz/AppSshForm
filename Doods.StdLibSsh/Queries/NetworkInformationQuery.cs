@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Doods.LibSsh.Beans;
-using Doods.LibSsh.Interfaces;
+using Doods.StdLibSsh.Base.Queries;
+using Doods.StdLibSsh.Beans;
+using Doods.StdLibSsh.Interfaces;
 
-namespace Doods.LibSsh.Queries
+namespace Doods.StdLibSsh.Queries
 {
     public class NetworkInformationQuery : GenericQuery<IEnumerable<NetworkInterfaceInformation>>
     {

@@ -37,6 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Converters\ByteCountToHumanReadableConverter.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Converters\NullToBooleanConverter.cs" />
     <Compile Include="Grouping.cs" />
     <Compile Include="Interfaces\IDirty.cs" />
     <Compile Include="Interfaces\IFileHelper.cs" />
@@ -50,6 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
