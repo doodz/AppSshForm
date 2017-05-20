@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ApptestSsh"
+             x:Class="ApptestSsh.Core.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <Label x:Name="MyLabel"
+               Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+        <Button Text="Click me !"
+                Clicked="Button_Clicked" />
+
+
+        <Grid BindingContext="{Binding Path=VcgencmdBean}">
+            <Grid.Style>
+                <Style  TargetType="Label">
+                    <Setter Property="HorizontalTextAlignment"
+                            Value="Start" />
+                </Style>
+            </Grid.Style>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.ColumnSpan="2"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"
+                   Text="Overclocking"
+                   Style="{DynamicResource TitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Text="Core temperature"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Text="Arm frequency"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="3"
+                   Text="Core frequency"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="4"
+                   Text="Core Volt"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="5"
+                   Text="Firmware"
+                   Style="{DynamicResource SubtitleStyle}" />
+
+            <Label Grid.Column="1"
+                   Grid.Row="1"
+                   Text="{Binding Path=CpuTemperature}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="1"
+                   Grid.Row="2"
+                   Text="{Binding Path=ArmFrequency}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="1"
+                   Grid.Row="3"
+                   Text="{Binding Path=CoreFrequency}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="1"
+                   Grid.Row="4"
+                   Text="{Binding Path=CoreVolts}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="1"
+                   Grid.Row="5"
+                   Text="{Binding Path=Version}"
+                   Style="{DynamicResource SubtitleStyle}" />
+
+        </Grid>
+
+        <Grid BindingContext="{Binding Path=SystemBean}">
+            <Grid.Style>
+                <Style  TargetType="Label">
+                    <Setter Property="HorizontalTextAlignment"
+                            Value="Start" />
+                </Style>
+            </Grid.Style>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.ColumnSpan="2"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"
+                   Text="System"
+                   Style="{DynamicResource TitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Text="Startup"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Text="Average load"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="3"
+                   Text="Total memory"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="4"
+                   Text="Free memory"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="5"
+                   Text="Distribution"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="6"
+                   Text="Serial No"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="7"
+                   Text="Last refresh"
+                   Style="{DynamicResource SubtitleStyle}" />
+
+
+
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Text="{Binding Path=AverageLoad}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Text="{Binding Path=OsMemory.TotalUsed}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="3"
+                   Text="{Binding Path=OsMemory.TotalMemory}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="4"
+                   Text="{Binding Path=OsMemory.TotalFree}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="5"
+                   Text="{Binding Path=DistributionName}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="6"
+                   Text="{Binding Path=CpuSerial}"
+                   Style="{DynamicResource SubtitleStyle}" />
+            <Label Grid.Column="0"
+                   Grid.Row="7"
+                   Text="{Binding Path=CpuSerial}"
+                   Style="{DynamicResource SubtitleStyle}" />
+        </Grid>
+
+        <Label Text="Network"
+               Style="{DynamicResource TitleStyle}" />
+        <Label Text="Disk Usage"
+               Style="{DynamicResource TitleStyle}" />
+        <Label Text="Processes"
+               Style="{DynamicResource TitleStyle}" />
+    </StackLayout>
+</ContentPage>

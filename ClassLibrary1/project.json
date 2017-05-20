@@ -1,0 +1,11 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Autofac": "4.6.0",
+    "SSH.NET": "2016.1.0-beta1",
+    "Xamarin.Forms": "2.3.5.239-pre3"
+  },
+  "frameworks": {
+    "netstandard1.3": {}
+  }
+}
