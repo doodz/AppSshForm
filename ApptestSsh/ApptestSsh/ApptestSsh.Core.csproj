@@ -43,7 +43,13 @@
     <Compile Include="DataBase\Host.cs" />
     <Compile Include="DataBase\Migration1.cs" />
     <Compile Include="ISshService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SshService.cs" />
+    <Compile Include="Services\XamarinDeviceService.cs" />
+    <Compile Include="View\LoginPage\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginPage\LoginViewModel.cs" />
     <Compile Include="View\MainPage\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,12 @@
       <Project>{13F126E6-AB09-4AAC-871E-5BC9B48E3E22}</Project>
       <Name>Doods.StdRepository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\LoginPage\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

@@ -31,7 +31,7 @@ namespace Doods.StdLibSsh.Queries
     ///  1095 pts/0    00:00:00 ps
     ///  27579 ?        00:00:04 dnsmasq
     /// </example>
-    public class ProcessesQuery: GenericQuery<IEnumerable<ProcessBean>>
+    public class ProcessesQuery : GenericQuery<IEnumerable<ProcessBean>>
     {
 
         private string PROCESS_NO_ROOT_CMD = "ps -U root -u root -N";
@@ -49,15 +49,18 @@ namespace Doods.StdLibSsh.Queries
             return ParseProcesses(result);
         }
 
-        /**
-     * Parses the output of the ps command.
-     *
-     * @param output
-     * @return List with processes
-     */
+
+
+        /// <summary>
+        /// Parses the output of the ps command.
+        /// </summary>
+        /// <param name="output"></param>
+        /// <returns></returns>
         private List<ProcessBean> ParseProcesses(string output)
         {
             var lines = output.Split('\n');
+
+            var lines2 = output.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
             var processes = new List<ProcessBean>();
             var count = 0;
             foreach (var line in lines)
@@ -78,7 +81,7 @@ namespace Doods.StdLibSsh.Queries
                         // command may contain whitespace, so join again
                         var sb = new StringBuilder();
 
-                       var cmd = string.Join(" ", cols);
+                        var cmd = string.Join(" ", cols);
 
                         processes.Add(new ProcessBean(
                             int.Parse(cols[0]), cols[1], cols[2], cmd));

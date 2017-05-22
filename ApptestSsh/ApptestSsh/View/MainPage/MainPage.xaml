@@ -1,154 +1,273 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ApptestSsh"
-             xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
-             x:Class="ApptestSsh.Core.MainPage">
+<mvvm:ViewPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:ApptestSsh"
+               xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:mainPage="clr-namespace:ApptestSsh.Core.View.MainPage;assembly=ApptestSsh.Core"
+               x:Class="ApptestSsh.Core.MainPage"
+               x:TypeArguments="mainPage:MainPageViewModel">
+    <ContentPage.Resources>
 
-    <StackLayout Orientation="Vertical">
-        <Label x:Name="MyLabel"
-               Text="Welcome to Xamarin Forms!"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
-        <Button Text="Click me !"
-                Clicked="Button_Clicked" />
+        <ResourceDictionary>
+            <Style TargetType="ListView">
+                <Setter Property="HasUnevenRows"
+                        Value="True" />
+            </Style>
 
+            <!--DataType="NetworkInterfaceInformationBean"-->
+            <DataTemplate x:Key="NetworkInterfaceInformationTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
 
-        <Grid BindingContext="{Binding Path=VcgencmdBean}">
-            <Grid.Style>
-                <Style  TargetType="Label">
-                    <Setter Property="HorizontalTextAlignment"
-                            Value="Start" />
-                </Style>
-            </Grid.Style>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Label Grid.ColumnSpan="2"
-                   HorizontalTextAlignment="Center"
-                   Grid.Row="0"
-                   Text="Overclocking"/>
-            <Label Grid.Column="0"
-                   Grid.Row="1"
-                   Text="Core temperature"/>
-            <Label Grid.Column="0"
-                   Grid.Row="2"
-                   Text="Arm frequency"/>
-            <Label Grid.Column="0"
-                   Grid.Row="3"
-                   Text="Core frequency"/>
-            <Label Grid.Column="0"
-                   Grid.Row="4"
-                   Text="Core Volt" />
-            <Label Grid.Column="0"
-                   Grid.Row="5"
-                   Text="Firmware"/>
-
-            <Label Grid.Column="1"
-                   Grid.Row="1"
-                   Text="{Binding Path=CpuTemperature}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="2"
-                   Text="{Binding Path=ArmFrequency}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="3"
-                   Text="{Binding Path=CoreFrequency}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="4"
-                   Text="{Binding Path=CoreVolts}" />
-            <Label Grid.Column="1"
-                   Grid.Row="5"
-                   Text="{Binding Path=Version}"/>
-
-        </Grid>
-
-        <Grid BindingContext="{Binding Path=SystemBean}">
-            <Grid.Style>
-                <Style  TargetType="Label">
-                    <Setter Property="HorizontalTextAlignment"
-                            Value="Start" />
-                </Style>
-            </Grid.Style>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.ColumnSpan="2"
-                   HorizontalTextAlignment="Center"
-                   Grid.Row="0"
-                   Text="System"/>
-            <Label Grid.Column="0"
-                   Grid.Row="1"
-                   Text="Startup"/>
-            <Label Grid.Column="0"
-                   Grid.Row="2"
-                   Text="Average load"/>
-            <Label Grid.Column="0"
-                   Grid.Row="3"
-                   Text="Total memory"/>
-            <Label Grid.Column="0"
-                   Grid.Row="4"
-                   Text="Free memory"/>
-            <Label Grid.Column="0"
-                   Grid.Row="5"
-                   Text="Distribution" />
-            <Label Grid.Column="0"
-                   Grid.Row="6"
-                   Text="Serial No"/>
-            <Label Grid.Column="0"
-                   Grid.Row="7"
-                   Text="Last refresh"/>
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{Binding Name}" />
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{Binding IpAdress}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               Text="Up"
+                               IsVisible="{Binding HasCarrier}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               Text="Down"
+                               IsVisible="{Binding HasCarrier,Converter={x:Static converters:InverseBooleanConverter.Default}}" />
 
 
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <!--DataType="DiskUsageBean"-->
+            <DataTemplate x:Key="DiskUsageTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="1"
-                   Grid.Row="1"
-                   Text="{Binding Path=AverageLoad}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="2"
-                   Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="3"
-                   Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
-            <Label Grid.Column="1"
-                   Grid.Row="4"
-                   Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="5"
-                   Text="{Binding Path=DistributionName}"/>
-            <Label Grid.Column="1"
-                   Grid.Row="6"
-                   Text="{Binding Path=CpuSerial}" />
-            <Label Grid.Column="1"
-                   Grid.Row="7"
-                   Text="{Binding Path=CpuSerial}"/>
-        </Grid>
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{Binding FileSystem}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Text="{Binding MountedOn}" />
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{Binding Size}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="1"
+                               Text="{Binding UsedPercent}" />
 
-        <Label Text="Network"
-               Style="{DynamicResource TitleStyle}" />
-        <Label Text="Disk Usage"
-               Style="{DynamicResource TitleStyle}" />
-        <Label Text="Processes"
-               Style="{DynamicResource TitleStyle}" />
-    </StackLayout>
-</ContentPage>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <!--DataType="ProcessBean"-->
+            <DataTemplate x:Key="ProcessTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{Binding Pid}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Text="{Binding Tty}" />
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{Binding CpuTime}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="1"
+                               Text="{Binding Command}" />
+
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+
+            <Label x:Name="MyLabel"
+                   Text="Welcome to Xamarin Forms!"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <Button Text="Click me !"
+                    Clicked="Button_Clicked" />
+
+
+            <Grid BindingContext="{Binding Path=VcgencmdBean}">
+                <Grid.Style>
+                    <Style  TargetType="Label">
+                        <Setter Property="HorizontalTextAlignment"
+                                Value="Start" />
+                    </Style>
+                </Grid.Style>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="0"
+                       Text="Overclocking" />
+                <Label Grid.Column="0"
+                       Grid.Row="1"
+                       Text="Core temperature" />
+                <Label Grid.Column="0"
+                       Grid.Row="2"
+                       Text="Arm frequency" />
+                <Label Grid.Column="0"
+                       Grid.Row="3"
+                       Text="Core frequency" />
+                <Label Grid.Column="0"
+                       Grid.Row="4"
+                       Text="Core Volt" />
+                <Label Grid.Column="0"
+                       Grid.Row="5"
+                       Text="Firmware" />
+
+                <Label Grid.Column="1"
+                       Grid.Row="1"
+                       Text="{Binding Path=CpuTemperature}" />
+                <Label Grid.Column="1"
+                       Grid.Row="2"
+                       Text="{Binding Path=ArmFrequency}" />
+                <Label Grid.Column="1"
+                       Grid.Row="3"
+                       Text="{Binding Path=CoreFrequency}" />
+                <Label Grid.Column="1"
+                       Grid.Row="4"
+                       Text="{Binding Path=CoreVolts}" />
+                <Label Grid.Column="1"
+                       Grid.Row="5"
+                       Text="{Binding Path=Version}" />
+
+            </Grid>
+
+            <Grid BindingContext="{Binding Path=SystemBean}">
+                <Grid.Style>
+                    <Style  TargetType="Label">
+                        <Setter Property="HorizontalTextAlignment"
+                                Value="Start" />
+                    </Style>
+                </Grid.Style>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="0"
+                       Text="System" />
+                <Label Grid.Column="0"
+                       Grid.Row="1"
+                       Text="Startup" />
+                <Label Grid.Column="0"
+                       Grid.Row="2"
+                       Text="Average load" />
+                <Label Grid.Column="0"
+                       Grid.Row="3"
+                       Text="Total memory" />
+                <Label Grid.Column="0"
+                       Grid.Row="4"
+                       Text="Free memory" />
+                <Label Grid.Column="0"
+                       Grid.Row="5"
+                       Text="Distribution" />
+                <Label Grid.Column="0"
+                       Grid.Row="6"
+                       Text="Serial No" />
+                <Label Grid.Column="0"
+                       Grid.Row="7"
+                       Text="Last refresh" />
+                <Label Grid.Column="1"
+                       Grid.Row="1"
+                       Text="{Binding Path=AverageLoad}" />
+                <Label Grid.Column="1"
+                       Grid.Row="2"
+                       Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                <Label Grid.Column="1"
+                       Grid.Row="3"
+                       Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                <Label Grid.Column="1"
+                       Grid.Row="4"
+                       Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                <Label Grid.Column="1"
+                       Grid.Row="5"
+                       Text="{Binding Path=DistributionName}" />
+                <Label Grid.Column="1"
+                       Grid.Row="6"
+                       Text="{Binding Path=CpuSerial}" />
+                <Label Grid.Column="1"
+                       Grid.Row="7"
+                       Text="{Binding Path=CpuSerial}" />
+            </Grid>
+
+            <Label Text="Network"
+                   Style="{DynamicResource TitleStyle}" />
+
+            <ListView ItemsSource="{Binding NetworkInterfaceInformation}"
+                      HasUnevenRows="True"
+                      CachingStrategy="RecycleElement"
+                      ItemTemplate="{StaticResource NetworkInterfaceInformationTemplate}" />
+            <Label Text="Disk Usage"
+                   Style="{DynamicResource TitleStyle}" />
+            <ListView ItemsSource="{Binding DiskUsage}"
+                      HasUnevenRows="False"
+                      CachingStrategy="RecycleElement"
+                      ItemTemplate="{StaticResource DiskUsageTemplate}" />
+            <Label Text="Processes"
+                   Style="{DynamicResource TitleStyle}" />
+            <ListView ItemsSource="{Binding Processes}"
+                      CachingStrategy="RecycleElement"
+                      ItemTemplate="{StaticResource ProcessTemplate}" />
+        </StackLayout>
+    </ScrollView>
+</mvvm:ViewPage>

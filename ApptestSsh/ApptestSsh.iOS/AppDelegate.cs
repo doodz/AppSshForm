@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ApptestSsh.Core;
 using Autofac;
+using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;
 using Foundation;
 using UIKit;
@@ -26,8 +27,8 @@ namespace ApptestSsh.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            App.SetupContainer(Bootstrapper.CreateContainer());
-            App.Container.Resolve<IDatabase>().Initialize();
+            App.SetupContainer(new Setup());
+            AppContainer.Container.Resolve<IDatabase>().Initialize();
 
             LoadApplication(new App());
 

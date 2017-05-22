@@ -10,8 +10,8 @@ namespace Doods.StdLibSsh.Queries
 {
     public class WlanInfoQuery : GenericQuery<string>
     {
-        private List<NetworkInterfaceInformation> _wirelessInterfaces;
-        public WlanInfoQuery(IClientSsh client, List<NetworkInterfaceInformation> wirelessInterfaces) : base(client)
+        private List<NetworkInterfaceInformationBean> _wirelessInterfaces;
+        public WlanInfoQuery(IClientSsh client, List<NetworkInterfaceInformationBean> wirelessInterfaces) : base(client)
         {
             CmdString = "cat /proc/net/wireless";
             _wirelessInterfaces = wirelessInterfaces;

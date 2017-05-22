@@ -13,6 +13,7 @@ using ApptestSsh.Core;
 
 using Android.Util;
 using Autofac;
+using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;
 
 [assembly: UsesPermission(Manifest.Permission.Internet)]
@@ -27,8 +28,9 @@ namespace ApptestSsh.Droid
         {
             base.OnCreate();
             AndroidEnvironment.UnhandledExceptionRaiser += HandleAndroidException;
-            App.SetupContainer(Bootstrapper.CreateContainer());
-            App.Container.Resolve<IDatabase>().Initialize();
+
+            App.SetupContainer(new Setup());
+            AppContainer.Container.Resolve<IDatabase>().Initialize();
 
 #if !DEBUG
             MobileCenter.Start(config.MobileCenterKey, typeof(Analytics), typeof(Crashes));

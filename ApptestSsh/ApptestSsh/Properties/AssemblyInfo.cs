@@ -30,4 +30,8 @@ using Xamarin.Forms.Xaml;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 // XAML compiler for increase the performance of a Xamarin.Forms app.
+#if DEBUG
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+#else
+   [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+#endif

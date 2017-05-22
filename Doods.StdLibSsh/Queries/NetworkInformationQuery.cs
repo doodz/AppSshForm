@@ -6,17 +6,17 @@ using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries
 {
-    public class NetworkInformationQuery : GenericQuery<IEnumerable<NetworkInterfaceInformation>>
+    public class NetworkInformationQuery : GenericQuery<IEnumerable<NetworkInterfaceInformationBean>>
     {
         public NetworkInformationQuery(IClientSsh client) : base(client)
         {
             CmdString = "ls -1 /sys/class/net";
         }
 
-        private IEnumerable<NetworkInterfaceInformation> GetInterfeces(IEnumerable<string> interfaces)
+        private IEnumerable<NetworkInterfaceInformationBean> GetInterfeces(IEnumerable<string> interfaces)
         {
 
-           var interfacesInfo = new List<NetworkInterfaceInformation>();
+           var interfacesInfo = new List<NetworkInterfaceInformationBean>();
             // 1. find all network interfaces (excluding loopback interface) and
             // check carrier
             //var interfaces = new InterfaceQuery(Client).Run();
@@ -24,13 +24,13 @@ namespace Doods.StdLibSsh.Queries
 
             foreach (var interfaceName in interfaces)
             {
-                var interfaceInfo = new NetworkInterfaceInformation();
+                var interfaceInfo = new NetworkInterfaceInformationBean();
                 interfaceInfo.Name = interfaceName;
                 // check carrier
                 interfaceInfo.HasCarrier = checkCarrier(interfaceName);
                 interfacesInfo.Add(interfaceInfo);
             }
-            var wirelessInterfaces = new List<NetworkInterfaceInformation>();
+            var wirelessInterfaces = new List<NetworkInterfaceInformationBean>();
             // 2. for every interface with carrier check ip adress
             foreach (var interfaceBean in interfacesInfo)
             {
@@ -57,7 +57,7 @@ namespace Doods.StdLibSsh.Queries
         {
             return new CheckCarrierQuery(Client, interfaceName).Run();
         }
-        protected override IEnumerable<NetworkInterfaceInformation> PaseResult(string result)
+        protected override IEnumerable<NetworkInterfaceInformationBean> PaseResult(string result)
         {
             var res = result.Split('\n').Where(r => !r.StartsWith("lo"));
             return GetInterfeces(res);

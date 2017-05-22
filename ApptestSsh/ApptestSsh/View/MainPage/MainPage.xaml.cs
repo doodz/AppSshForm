@@ -1,7 +1,11 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
+using ApptestSsh.Core.Services;
+using ApptestSsh.Core.View.Login;
 using ApptestSsh.Core.View.MainPage;
 using Autofac;
+using Doods.StdFramework.Mvvm;
 using Doods.StdLibSsh;
 using Doods.StdLibSsh.Queries.GroupedQueries;
 using Renci.SshNet;
@@ -9,29 +13,29 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
-        private MainPageViewModel vm;
+        
         public MainPage()
         {
-            InitializeComponent();
-            vm = App.Container.Resolve<MainPageViewModel>();
-            BindingContext = vm;
+            InitializeComponent();           
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        public async void Button_Clicked(object sender, EventArgs e)
         {
+
+            await NavigationService.GoToLogin();
 
             //rest();
             //return;
-            var client = new ClientSsh();
-            var str = client.GetServeurVersion();
+            //var client = new ClientSsh();
+            //var str = client.GetServeurVersion();
 
-            var test = new VcgencmdQuery(client);
-            var res = test.Run();
+            //var test = new VcgencmdQuery(client);
+            //var res = test.Run();
 
 
-            MyLabel.Text = str;
+            //MyLabel.Text = str;
 
         }
 
@@ -80,13 +84,13 @@ namespace ApptestSsh.Core
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            await vm.OnAppearing();
+            await ViewModel.OnAppearing();
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            vm.OnDisappearing();
+            ViewModel.OnDisappearing();
         }
     }
 }

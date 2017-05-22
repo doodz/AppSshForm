@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Autofac;
+using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;
 
 namespace ApptestSsh.UWP
@@ -32,8 +33,8 @@ namespace ApptestSsh.UWP
         {
             this.InitializeComponent();
 
-            Core.App.SetupContainer(Bootstrapper.CreateContainer());
-            Core.App.Container.Resolve<IDatabase>().Initialize();
+            Core.App.SetupContainer(new Setup());
+            AppContainer.Container.Resolve<IDatabase>().Initialize();
 
             this.Suspending += OnSuspending;
         }

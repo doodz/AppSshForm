@@ -14,7 +14,7 @@ namespace Doods.StdLibSsh.Base.Queries
         {
         }
 
-        public T Run()
+        public override T Run()
         {
 
             if (!Client.IsConnected())
@@ -25,11 +25,11 @@ namespace Doods.StdLibSsh.Base.Queries
             return Action();
         }
 
-        public async Task<T> RunAsync(CancellationToken token)
+        public override async Task<T> RunAsync(CancellationToken token)
         {
             if (!Client.IsConnected())
             {
-                Client.Connect();
+                await Client.ConnectAsync();
             }
             //return await Task.FromResult<T>(Action());
             return await Task.Run(() => Action(), token);

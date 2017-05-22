@@ -2,7 +2,7 @@
 
 namespace Doods.StdLibSsh.Beans
 {
-    public class NetworkInterfaceInformation : ObservableObject
+    public class NetworkInterfaceInformationBean : ObservableObject
     {
         /// <summary>
         /// The name of the interface (eth0, wlan0, ...).

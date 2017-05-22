@@ -10,7 +10,7 @@ namespace Doods.StdFramework
     /// <summary>
     /// Base view model.
     /// </summary>
-    public class BaseViewModel : ObservableObject
+    public class BaseViewModel : ObservableObject, IViewModel
     {
         private bool _isLoad;
         private int _busyCount;
@@ -18,19 +18,22 @@ namespace Doods.StdFramework
 
         protected int BusyCount
         {
-            get { return _busyCount; }
+            get => _busyCount;
             set
             {
                 SetProperty(ref _busyCount, value);
                 SetPropertyChanged(nameof(IsBusy));
             }
         }
+
         private ViewModelState _viewModelState;
+
         public ViewModelState ViewModelState
         {
-            get { return _viewModelState; }
-            set { SetProperty(ref _viewModelState, value); }
+            get => _viewModelState;
+            set => SetProperty(ref _viewModelState, value);
         }
+
         private CancellationTokenSource _cts = new CancellationTokenSource();
         protected ILogger Logger { get; }
         protected CancellationToken Token => _cts.Token;
@@ -38,10 +41,9 @@ namespace Doods.StdFramework
         protected BaseViewModel(ILogger logger)
         {
             Logger = logger;
-
         }
 
-        string _title = string.Empty;
+        private string _title = string.Empty;
 
         /// <summary>
         /// Obtient ou définit le titre.
@@ -49,11 +51,11 @@ namespace Doods.StdFramework
         /// <value>LE titre.</value>
         public string Title
         {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
-        string subtitle = string.Empty;
+        private string subtitle = string.Empty;
 
         /// <summary>
         ///Obtient ou définit le sous-titre.
@@ -61,11 +63,11 @@ namespace Doods.StdFramework
         /// <value>Le sous-titre..</value>
         public string Subtitle
         {
-            get { return subtitle; }
-            set { SetProperty(ref subtitle, value); }
+            get => subtitle;
+            set => SetProperty(ref subtitle, value);
         }
 
-        string icon = string.Empty;
+        private string icon = string.Empty;
 
         /// <summary>
         ///Obtient ou définit l'icône.
@@ -73,10 +75,9 @@ namespace Doods.StdFramework
         /// <value>L'icône.</value>
         public string Icon
         {
-            get { return icon; }
-            set { SetProperty(ref icon, value); }
+            get => icon;
+            set => SetProperty(ref icon, value);
         }
-
 
 
         /// <summary>
@@ -86,16 +87,14 @@ namespace Doods.StdFramework
         public bool IsBusy => BusyCount > 0;
 
 
-
-
         /// <summary>
         /// Obtient ou définit une valeur indiquant si cette instance n'est pas occupée.
         /// </summary>
         /// <value><c>True</c> si cette instance n'est pas occupée; autrement, <c>false</c>.</value>
         public bool IsNotBusy => !IsBusy;
-       
 
-        bool canLoadMore = true;
+
+        private bool canLoadMore = true;
 
         /// <summary>
         /// Obtient ou définit une valeur indiquant si cette instance peut charger plus.
@@ -103,12 +102,12 @@ namespace Doods.StdFramework
         /// <value><c>true</c> si cette instance peut charger plus; autrement, <c>false</c>.</value>
         public bool CanLoadMore
         {
-            get { return canLoadMore; }
-            set { SetProperty(ref canLoadMore, value); }
+            get => canLoadMore;
+            set => SetProperty(ref canLoadMore, value);
         }
 
 
-        string _header = string.Empty;
+        private string _header = string.Empty;
 
         /// <summary>
         /// Obtient ou définit l'en-tête.
@@ -116,11 +115,11 @@ namespace Doods.StdFramework
         /// <value>L'en-tête.</value>
         public string Header
         {
-            get { return _header; }
-            set { SetProperty(ref _header, value); }
+            get => _header;
+            set => SetProperty(ref _header, value);
         }
 
-        string _footer = string.Empty;
+        private string _footer = string.Empty;
 
         /// <summary>
         /// Obtient ou définit le pied de page.
@@ -128,8 +127,8 @@ namespace Doods.StdFramework
         /// <value>Le pied de page.</value>
         public string Footer
         {
-            get { return _footer; }
-            set { SetProperty(ref _footer, value); }
+            get => _footer;
+            set => SetProperty(ref _footer, value);
         }
 
         public async Task OnAppearing()
@@ -159,7 +158,6 @@ namespace Doods.StdFramework
 
                 if (ViewModelState == ViewModelState.Loading)
                     ViewModelState = ViewModelState.Loaded;
-
             }
             catch (Exception e)
             {
@@ -170,9 +168,10 @@ namespace Doods.StdFramework
             finally
             {
                 OnLoadingCallBack();
-                    BusyCount--;
+                BusyCount--;
             }
         }
+
         protected async Task ExecuteAsync(Func<CancellationToken, Task> action, bool safeExecution = false)
         {
             try
@@ -191,18 +190,21 @@ namespace Doods.StdFramework
             }
             catch (Exception e)
             {
-                //TODO : LOG + HokeyApp
+                Logger.Error(e.Message);
                 if (!safeExecution) throw;
             }
         }
+
         protected virtual Task Load()
         {
             return Task.FromResult(0);
         }
+
         protected virtual Task OnInternalAppearing()
         {
             return Task.FromResult(0);
         }
+
         private void OnLoadingCallBack()
         {
             OnInternalLoadingCallBack();
@@ -212,6 +214,7 @@ namespace Doods.StdFramework
         {
             //NP
         }
+
         public Task OnDisappearing()
         {
             CancelExecutions();

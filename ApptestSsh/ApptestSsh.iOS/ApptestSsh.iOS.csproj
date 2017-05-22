@@ -93,6 +93,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Services\FileHelper.cs" />
     <Compile Include="Services\Logger.cs" />
+    <Compile Include="Setup.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

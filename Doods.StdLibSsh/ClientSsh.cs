@@ -15,6 +15,9 @@ namespace Doods.StdLibSsh
             Client.Connect();
 
         }
+
+       
+
         public string GetServeurVersion()
         {
 
@@ -46,6 +49,10 @@ namespace Doods.StdLibSsh
         }
 
         public Task<string> RunCommandAsync(string cmdStr, CancellationToken token)
+        {
+            throw new System.NotImplementedException();
+        }
+        public Task ConnectAsync()
         {
             throw new System.NotImplementedException();
         }

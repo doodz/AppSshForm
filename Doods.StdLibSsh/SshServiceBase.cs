@@ -24,10 +24,7 @@ namespace Doods.StdLibSsh
 
         protected virtual SshClient GetSshClient()
         {
-            if(_client == null)
-                _client = new SshClient(HostName, UserName, Password);
-
-            return _client;
+            return _client ?? (_client = new SshClient(HostName, UserName, Password));
         }
 
 
@@ -52,7 +49,12 @@ namespace Doods.StdLibSsh
             return _client.RunCommand(cmd);
         }
 
-       
+
+        public async Task ConnectAsync()
+        {
+            await Task.Factory.StartNew(Connect);   
+        }
+
         public void Connect()
         {
             if (_client == null)

@@ -21,7 +21,7 @@ namespace Doods.StdLibSsh.Base.Queries
             return Client;
         }
 
-        public  T Run()
+        public virtual T Run()
         {
 
             if (!Client.IsConnected())
@@ -46,11 +46,11 @@ namespace Doods.StdLibSsh.Base.Queries
             //return new T();
         }
 
-        public async Task<T> RunAsync(CancellationToken token)
+        public virtual async Task<T> RunAsync(CancellationToken token)
         {
             if (!Client.IsConnected())
             {
-                Client.Connect();
+                await Client.ConnectAsync();
             }
             var str = await Client.RunCommandAsync(CmdString,token);
             return PaseResult(str);

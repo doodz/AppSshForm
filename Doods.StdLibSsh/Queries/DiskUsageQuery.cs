@@ -49,10 +49,8 @@ namespace Doods.StdLibSsh.Queries
                 }
 
                 // split string at whitespaces
-                var res = Regex.Matches(line, "\\s+").Cast<Match>()
-                       .ToArray(); ;
-
-               
+                var res = line.Split().Where(l => !string.IsNullOrWhiteSpace(l)).ToArray();
+                
                 if (res.Length >= 6)
                 {
                     if (res.Length > 6)
@@ -65,16 +63,16 @@ namespace Doods.StdLibSsh.Queries
 
                         }
                         sb.Append(" ");
-                        disks.Add(new DiskUsageBean(res[0].Value,
-                                res[1].Value, res[2].Value,
-                                res[3].Value, res[4].Value, sb.ToString()));
+                        disks.Add(new DiskUsageBean(res[0],
+                                res[1], res[2],
+                                res[3], res[4], sb.ToString()));
                     }
                     else
                     {
-                        disks.Add(new DiskUsageBean(res[0].Value,
-                                res[1].Value, res[2].Value,
-                                res[3].Value, res[4].Value,
-                                res[5].Value));
+                        disks.Add(new DiskUsageBean(res[0],
+                                res[1], res[2],
+                                res[3], res[4],
+                                res[5]));
                     }
                 }
                 else

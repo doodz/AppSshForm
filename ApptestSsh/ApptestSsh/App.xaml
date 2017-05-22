@@ -5,6 +5,25 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
-
-	</Application.Resources>
+	    <!--<Style TargetType="ListView">
+	        <Setter Property="SeparatorVisibility"
+	                Value="None" />
+	        <Setter Property="HasUnevenRows"
+	                Value="True" />
+	        <Setter Property="SeparatorColor"
+	                Value="Transparent" />
+	        <Setter Property="Header">
+	            <Setter.Value>
+	                <BoxView HeightRequest="0"
+	                         Margin="0,10,0,0" />
+	            </Setter.Value>
+	        </Setter>
+	        <Setter Property="Footer">
+	            <Setter.Value>
+	                <BoxView HeightRequest="0"
+	                         Margin="0,0,0,10" />
+	            </Setter.Value>
+	        </Setter>
+	    </Style>-->
+    </Application.Resources>
 </Application>

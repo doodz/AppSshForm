@@ -8,6 +8,7 @@ namespace Doods.StdLibSsh.Interfaces
     {
         SshClient Client { get; }
         void Connect();
+        Task ConnectAsync();
         bool IsConnected();
         bool IsAuthenticated();
         SshCommand RunQuerry(string cmd);
