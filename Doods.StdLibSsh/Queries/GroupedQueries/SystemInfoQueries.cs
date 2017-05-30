@@ -12,8 +12,6 @@ namespace Doods.StdLibSsh.Queries.GroupedQueries
             Action = CreateSystemBean;
         }
 
-        
-
         private  SystemBean CreateSystemBean()
         {
             var bean = new SystemBean();

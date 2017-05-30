@@ -15,6 +15,7 @@ namespace ApptestSsh.Core.Services
             }
             catch (Exception e)
             {
+                var mess = e.Message;
             }
 
             return Task.FromResult(0);
@@ -28,6 +29,7 @@ namespace ApptestSsh.Core.Services
             }
             catch (Exception e)
             {
+                var mess = e.Message;
             }
 
             return Task.FromResult(0);
@@ -41,6 +43,7 @@ namespace ApptestSsh.Core.Services
             }
             catch (Exception e)
             {
+                var mess = e.Message;
             }
 
             return Task.FromResult(0);
@@ -56,6 +59,7 @@ namespace ApptestSsh.Core.Services
             }
             catch (Exception e)
             {
+                var mess = e.Message;
             }
 
             return Task.FromResult(0);

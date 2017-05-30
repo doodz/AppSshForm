@@ -13,6 +13,7 @@ namespace Doods.StdFramework
     public class BaseViewModel : ObservableObject, IViewModel
     {
         private bool _isLoad;
+        protected bool ReloadOnAppearing;
         private int _busyCount;
 
 
@@ -40,7 +41,9 @@ namespace Doods.StdFramework
 
         protected BaseViewModel(ILogger logger)
         {
+            Title = GetType().Name.Replace("ViewModel", "");
             Logger = logger;
+            Logger.Info($"{Title} : opened.");
         }
 
         private string _title = string.Empty;
@@ -135,7 +138,7 @@ namespace Doods.StdFramework
         {
             if (_cts.IsCancellationRequested) _cts = new CancellationTokenSource();
 
-            if (!_isLoad)
+            if (!_isLoad || ReloadOnAppearing)
             {
                 _isLoad = true;
                 await StartLoading();
@@ -144,6 +147,10 @@ namespace Doods.StdFramework
             await OnInternalAppearing();
         }
 
+        /// <summary>
+        /// Méthode appelé si le lors du premier appairage ou si l’on force l’option <c>ReloadOnAppearing</c> à true.
+        /// </summary>
+        /// <returns></returns>
         public async Task StartLoading()
         {
             ViewModelState = ViewModelState.Loading;
@@ -195,6 +202,10 @@ namespace Doods.StdFramework
             }
         }
 
+        /// <summary>
+        /// Appelé par le méthode <c>StartLoading</c>.
+        /// </summary>
+        /// <returns></returns>
         protected virtual Task Load()
         {
             return Task.FromResult(0);

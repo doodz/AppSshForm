@@ -3,8 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApptestSsh.Core.App">
 	<Application.Resources>
+	    <ResourceDictionary>
+	        <Color x:Key="ColorTextGray">#B9B9B9</Color>
+            <Style TargetType="Frame">
+	            <Setter Property="Margin"
+	                    Value="10,10" />
+	            <Setter Property="HasShadow"
+	                    Value="True" />
+	        </Style>
+	        <Style x:Key="BoxViewSeparatorStype"
+	               TargetType="BoxView">
+	            <Setter Property="BackgroundColor"
+	                    Value="{StaticResource ColorTextGray}" />
+	            <Setter Property="HeightRequest"
+	                    Value="0.5" />
+	        </Style>
 
-		<!-- Application resource dictionary -->
+	        <Style x:Key="BoxViewVerticalSeparatorStype"
+	               TargetType="BoxView">
+	            <Setter Property="BackgroundColor"
+	                    Value="{StaticResource ColorTextGray}" />
+	            <Setter Property="WidthRequest"
+	                    Value="0.5" />
+	        </Style>
+        </ResourceDictionary>
+            <!-- Application resource dictionary -->
 	    <!--<Style TargetType="ListView">
 	        <Setter Property="SeparatorVisibility"
 	                Value="None" />

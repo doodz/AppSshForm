@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Doods.StdLibSsh.Base.Queries;
@@ -71,11 +72,11 @@ namespace Doods.StdLibSsh.Queries
         private OsMemoryBean FormatMemoryInfo(string output)
         {
             var memoryData = new Dictionary<string, long>();
-            var res = Regex.Matches(output, "[\r\n]+").Cast<Match>() .ToArray();
-
+            //var res = Regex.Matches(output, "[\r\n]+").Cast<Match>() .ToArray();
+            var res = output.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
             foreach (var line in res)
             { 
-                var paragraphs = line.Value.Split(' ');
+                var paragraphs = line.Split(' ');
             if (paragraphs.Length > 1)
                 {
                     memoryData.Add(paragraphs[0], long.Parse(paragraphs[1]));

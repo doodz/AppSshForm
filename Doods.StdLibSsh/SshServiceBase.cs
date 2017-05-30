@@ -8,6 +8,7 @@ namespace Doods.StdLibSsh
 {
     public class SshServiceBase : IDisposable, IClientSsh
     {
+        private readonly object _lockObj;
         protected const int TimeoutInSecond = 60;
         private SshClient _client;
 
@@ -19,7 +20,7 @@ namespace Doods.StdLibSsh
         //private ConnectionInfo _connectionInfo;
         protected SshServiceBase()
         {
-
+            _lockObj = new object();
         }
 
         protected virtual SshClient GetSshClient()
@@ -57,30 +58,40 @@ namespace Doods.StdLibSsh
 
         public void Connect()
         {
-            if (_client == null)
+            lock (_lockObj)
             {
-                GetSshClient();
+                if (_client == null)
+                {
+                    GetSshClient();
+                }
+                _client.Connect();
             }
-            _client.Connect();
         }
 
         public bool IsConnected()
         {
-            return IsAuthenticated();
-
+            lock (_lockObj)
+            {
+                return IsAuthenticated();
+            }
         }
 
         public bool IsAuthenticated()
         {
-            if (_client == null) return false;
-            return _client.IsConnected;
+            lock (_lockObj)
+            {
+                if (_client == null) return false;
+                return _client.IsConnected;
+            }
         }
 
         public void Dispose()
         {
-            
-            _client?.Dispose();
-            _client = null;
+            lock (_lockObj)
+            {
+                _client?.Dispose();
+                _client = null;
+            }
 
         }
     }

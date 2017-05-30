@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="ApptestSsh.Core.View.HomeTabbedPage.HomeTabbedPage"
+                     xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+                     x:TypeArguments="homeTabbedPage:HomeTabbedPageViewModel"
+                     xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core"
+                     xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
+                     Title="TabbedPage">
+
+    <mvvm:BaseTabbedPage.ToolbarItems>
+        <ToolbarItem Text="Manage Host"
+                     Command="{Binding ManageHostCmd}">
+            <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS">ic_storage_black.png</On>
+                    <On Platform="Android">ic_storage_black.png</On>
+                    <On Platform="UWP">Assets/ic_storage_black_24dp_1x.png</On>
+            </OnPlatform>
+        </ToolbarItem.Icon>
+
+        </ToolbarItem>
+    </mvvm:BaseTabbedPage.ToolbarItems>
+
+    <mvvm:BaseTabbedPage.Resources>
+
+        <ResourceDictionary>
+            <Style TargetType="ListView">
+                <Setter Property="HasUnevenRows"
+                        Value="True" />
+            </Style>
+
+            <!--DataType="NetworkInterfaceInformationBean"-->
+            <DataTemplate x:Key="NetworkInterfaceInformationTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{Binding Name}" />
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{Binding IpAdress}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               Text="Up"
+                               IsVisible="{Binding HasCarrier}" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               Text="Down"
+                               IsVisible="{Binding HasCarrier,Converter={x:Static converters:InverseBooleanConverter.Default}}" />
+
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            <!--DataType="DiskUsageBean"-->
+            <DataTemplate x:Key="DiskUsageTemplate">
+                <ViewCell>
+                    <Frame>
+                        <Grid Margin="-10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="{Binding FileSystem}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding MountedOn}" />
+                            <Label Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="{Binding Size}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   Text="{Binding UsedPercent}" />
+
+
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+
+            <!--DataType="ProcessBean"-->
+            <DataTemplate x:Key="ProcessTemplate">
+                <ViewCell>
+                    <Frame>
+                        <Grid Margin="-10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="{Binding Pid}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding Tty}" />
+                            <Label Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="{Binding CpuTime}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   Text="{Binding Command}" />
+
+
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </mvvm:BaseTabbedPage.Resources>
+    <ContentPage Title="Overclocking / System">
+        <StackLayout>
+            <Frame Margin="0"
+                   Padding="10"
+                   BackgroundColor="White"
+                   HasShadow="True">
+                <Grid BindingContext="{Binding Path=VcgencmdBean}">
+                    <Grid.Style>
+                        <Style  TargetType="Label">
+                            <Setter Property="HorizontalTextAlignment"
+                                    Value="Start" />
+                        </Style>
+                    </Grid.Style>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition  Height="0.5" />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.ColumnSpan="2"
+                           HorizontalTextAlignment="Center"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           Style="{DynamicResource TitleStyle}"
+                           Text="Overclocking" />
+                    <BoxView Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Grid.Row="1"
+                             Style="{StaticResource BoxViewSeparatorStype}"
+                             Margin="-10,0" />
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           Text="Core temperature" />
+                    <Label Grid.Column="0"
+                           Grid.Row="3"
+                           Text="Arm frequency" />
+                    <Label Grid.Column="0"
+                           Grid.Row="4"
+                           Text="Core frequency" />
+                    <Label Grid.Column="0"
+                           Grid.Row="5"
+                           Text="Core Volt" />
+                    <Label Grid.Column="0"
+                           Grid.Row="6"
+                           Text="Firmware" />
+
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="{Binding Path=CpuTemperature}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="3"
+                           Text="{Binding Path=ArmFrequency}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="4"
+                           Text="{Binding Path=CoreFrequency}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="5"
+                           Text="{Binding Path=CoreVolts}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="6"
+                           Text="{Binding Path=Version}" />
+
+                </Grid>
+            </Frame>
+            <Frame Margin="0"
+                   Padding="10"
+                   BackgroundColor="Transparent"
+                   HasShadow="False">
+                <Grid BindingContext="{Binding Path=SystemBean}">
+                    <Grid.Style>
+                        <Style  TargetType="Label">
+                            <Setter Property="HorizontalTextAlignment"
+                                    Value="Start" />
+                        </Style>
+                    </Grid.Style>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition  Height="0.5" />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.ColumnSpan="2"
+                           Grid.Column="0"
+                           HorizontalTextAlignment="Center"
+                           Style="{DynamicResource TitleStyle}"
+                           Grid.Row="0"
+                           Text="System" />
+                    <BoxView Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Grid.Row="1"
+                             Style="{StaticResource BoxViewSeparatorStype}"
+                             Margin="-10,0" />
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           Text="Startup" />
+                    <Label Grid.Column="0"
+                           Grid.Row="3"
+                           Text="Average load" />
+                    <Label Grid.Column="0"
+                           Grid.Row="4"
+                           Text="Total memory" />
+                    <Label Grid.Column="0"
+                           Grid.Row="5"
+                           Text="Free memory" />
+                    <Label Grid.Column="0"
+                           Grid.Row="6"
+                           Text="Distribution" />
+                    <Label Grid.Column="0"
+                           Grid.Row="7"
+                           Text="Serial No" />
+                    <Label Grid.Column="0"
+                           Grid.Row="8"
+                           Text="Last refresh" />
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="{Binding Path=AverageLoad}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="3"
+                           Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="4"
+                           Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="5"
+                           Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="6"
+                           Text="{Binding Path=DistributionName}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="7"
+                           Text="{Binding Path=CpuSerial}" />
+                    <Label Grid.Column="1"
+                           Grid.Row="8"
+                           Text="{Binding Path=CpuSerial}" />
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Network">
+        <ListView ItemsSource="{Binding NetworkInterfaceInformation}"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
+                  ItemTemplate="{StaticResource NetworkInterfaceInformationTemplate}" />
+    </ContentPage>
+
+    <ContentPage Title="Disk Usage">
+        <ListView ItemsSource="{Binding DiskUsage}"
+                  HasUnevenRows="False"
+                  CachingStrategy="RecycleElement"
+                  ItemTemplate="{StaticResource DiskUsageTemplate}" />
+    </ContentPage>
+
+    <ContentPage Title="Processes">
+        <ListView ItemsSource="{Binding Processes}"
+                  CachingStrategy="RecycleElement"
+                  ItemTemplate="{StaticResource ProcessTemplate}" />
+    </ContentPage>
+</mvvm:BaseTabbedPage>

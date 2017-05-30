@@ -27,6 +27,11 @@ namespace Doods.StdLibSsh.Base.Queries
 
         public override async Task<T> RunAsync(CancellationToken token)
         {
+            if (token.IsCancellationRequested)
+            {
+                return await Task.FromCanceled<T>(token);
+            }
+
             if (!Client.IsConnected())
             {
                 await Client.ConnectAsync();

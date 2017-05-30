@@ -1,27 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
+﻿using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Xamarin.Forms;
 
 namespace Doods.StdFramework.Mvvm
 {
-    public class ViewPage<T> : ContentPage where T: IViewModel
+    public class ViewPage<T> : ContentPage where T : IViewModel
     {
-        readonly T _viewModel;
-        public T ViewModel { get { return _viewModel; } }
+        protected T ViewModel { get; }
 
-        public ViewPage()
+        protected ViewPage()
         {
-            using (var scope = AppContainer.Container.BeginLifetimeScope())
+            using (AppContainer.Container.BeginLifetimeScope())
             {
-                _viewModel = AppContainer.Container.Resolve<T>();
+                ViewModel = AppContainer.Container.Resolve<T>();
             }
-            BindingContext = _viewModel;
+            BindingContext = ViewModel;
+            Title = ViewModel.Title;
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();          
+            await ViewModel.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            ViewModel.OnDisappearing();
+        }
+  
     }
 }

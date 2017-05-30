@@ -3,7 +3,7 @@
     "Autofac": "4.6.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
     "NLog": "5.0.0-beta07",
-    "sqlite-net-pcl": "1.3.1",
+    "sqlite-net-pcl": "1.3.3",
     "SSH.NET": "2016.1.0-beta1",
     "Xamarin.Forms": "2.3.5.239-pre3"
   },

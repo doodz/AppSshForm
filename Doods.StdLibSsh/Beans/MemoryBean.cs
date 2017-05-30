@@ -22,7 +22,7 @@ namespace Doods.StdLibSsh.Beans
 
         public static MemoryBean From(Memory scale, long data)
         {
-            var memoryBean = new MemoryBean(0);
+            var memoryBean = new MemoryBean(data);
             if (scale == Memory.B)
                 memoryBean.Bytes = data * Memory.B.Scale;
             else if (scale == Memory.KB)

@@ -113,6 +113,16 @@
     <None Include="ApptestSsh.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ic_add_box_black_24dp_1x.png" />
+    <Content Include="Assets\ic_add_box_black_24dp_2x.png" />
+    <Content Include="Assets\ic_delete_black_24dp_1x.png" />
+    <Content Include="Assets\ic_delete_black_24dp_2x.png" />
+    <Content Include="Assets\ic_file_download_black_24dp_1x.png" />
+    <Content Include="Assets\ic_file_download_black_24dp_2x.png" />
+    <Content Include="Assets\ic_file_upload_black_24dp_1x.png" />
+    <Content Include="Assets\ic_file_upload_black_24dp_2x.png" />
+    <Content Include="Assets\ic_storage_black_24dp_1x.png" />
+    <Content Include="Assets\ic_storage_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />

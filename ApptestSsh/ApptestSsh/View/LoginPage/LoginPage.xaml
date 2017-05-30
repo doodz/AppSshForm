@@ -3,8 +3,10 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
                 xmlns:login="clr-namespace:ApptestSsh.Core.View.Login;assembly=ApptestSsh.Core"
+                xmlns:loginPage="clr-namespace:ApptestSsh.Core.View.LoginPage;assembly=ApptestSsh.Core"
                 x:Class="ApptestSsh.Core.View.Login.LoginPage"
-                x:TypeArguments="login:LoginViewModel">
+                x:TypeArguments="loginPage:LoginViewModel"
+                Title="{Binding Title}">
 
     <StackLayout>
 
@@ -18,7 +20,9 @@
         <Entry Text="{Binding Password}"
                IsPassword="True"
                Placeholder="Password" />
+        <Button Text="Test"
+                Command="{Binding TestCmd, Mode=OneWay}" />
         <Button Text="Save"
-                Clicked="Button_OnClicked" />
+                Command="{Binding SaveCmd, Mode=OneWay}" />
     </StackLayout>
 </mvvm:ViewPage>

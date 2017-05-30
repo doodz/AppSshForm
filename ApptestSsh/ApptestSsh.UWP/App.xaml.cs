@@ -33,7 +33,7 @@ namespace ApptestSsh.UWP
         {
             this.InitializeComponent();
 
-            Core.App.SetupContainer(new Setup());
+            Core.CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
             this.Suspending += OnSuspending;

@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core
 {
-    public partial class MainPage
+    public partial class MainPage : ViewPage<MainPageViewModel>
     {
         
         public MainPage()
@@ -24,19 +24,7 @@ namespace ApptestSsh.Core
         public async void Button_Clicked(object sender, EventArgs e)
         {
 
-            await NavigationService.GoToLogin();
-
-            //rest();
-            //return;
-            //var client = new ClientSsh();
-            //var str = client.GetServeurVersion();
-
-            //var test = new VcgencmdQuery(client);
-            //var res = test.Run();
-
-
-            //MyLabel.Text = str;
-
+            await NavigationService.GoToHomeTabbed();
         }
 
         public ConnectionInfo CreateConnectionInfo()
@@ -80,17 +68,5 @@ namespace ApptestSsh.Core
 
         }
 
-
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-            await ViewModel.OnAppearing();
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-            ViewModel.OnDisappearing();
-        }
     }
 }

@@ -7,6 +7,10 @@
                xmlns:mainPage="clr-namespace:ApptestSsh.Core.View.MainPage;assembly=ApptestSsh.Core"
                x:Class="ApptestSsh.Core.MainPage"
                x:TypeArguments="mainPage:MainPageViewModel">
+    <mvvm:ViewPage.ToolbarItems>
+        <ToolbarItem Text="Manage Host"
+                     Command="{Binding ManageHostCmd}" />
+    </mvvm:ViewPage.ToolbarItems>
     <ContentPage.Resources>
 
         <ResourceDictionary>

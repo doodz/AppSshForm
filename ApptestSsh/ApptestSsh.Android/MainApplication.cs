@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android;
 using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using ApptestSsh.Core;
-
 using Android.Util;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
@@ -19,17 +11,22 @@ using Doods.StdRepository.Interfaces;
 [assembly: UsesPermission(Manifest.Permission.Internet)]
 [assembly: UsesPermission(Manifest.Permission.WakeLock)]
 [assembly: UsesPermission(Manifest.Permission.ReceiveBootCompleted)]
+
 namespace ApptestSsh.Droid
 {
     [Application(Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/MainTheme")]
     public class MainApplication : Application
     {
+        public MainApplication(IntPtr handle, JniHandleOwnership ownerShip) : base(handle, ownerShip)
+        {
+        }
+
         public override void OnCreate()
         {
             base.OnCreate();
             AndroidEnvironment.UnhandledExceptionRaiser += HandleAndroidException;
-
-            App.SetupContainer(new Setup());
+            //AppDomain.CurrentDomain.UnhandledException += (sender, args) => { };
+            CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
 #if !DEBUG
@@ -44,6 +41,5 @@ namespace ApptestSsh.Droid
             Log.Debug("MainApplication", "exception-stack:" + e.Exception.StackTrace);
             Log.Debug("MainApplication", "exception-source:" + e.Exception.Source);
         }
-
     }
 }

@@ -27,7 +27,7 @@ namespace ApptestSsh.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            App.SetupContainer(new Setup());
+            CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
             LoadApplication(new App());

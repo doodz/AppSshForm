@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApptestSsh.Core.DataBase;
 using Autofac;
 using Doods.StdFramework.Mvvm;
 using Xamarin.Forms;
@@ -20,10 +21,10 @@ namespace ApptestSsh.Core.View.Login
             InitializeComponent();
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+        public LoginPage(Host host )
         {
-
-            ViewModel.TestLogin();
+            ViewModel.HostObj = host;
+            InitializeComponent();
         }
     }
 }
