@@ -6,17 +6,12 @@ namespace Doods.StdLibSsh.Queries
 {
     public class RebootQuery : GenericQuery<bool>
     {
-        private string _sudoPassword;
-
         public RebootQuery(IClientSsh client, string sudoPassword) : base(client)
         {
-
-            _sudoPassword = sudoPassword;
-
             var sb = new StringBuilder();
             if (!string.IsNullOrEmpty(sudoPassword))
             {
-                sb.AppendFormat("echo \"{0}\" | sudo -S /sbin/shutdown -h now", _sudoPassword);
+                sb.AppendFormat("echo \"{0}\" | sudo -S /sbin/shutdown -h now", sudoPassword);
                 //TODO : using halte command  
             }
         }

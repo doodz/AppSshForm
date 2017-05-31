@@ -33,7 +33,7 @@ namespace Doods.StdLibSsh.Queries
         }
         private string ParseFirmwareVersion(string output)
         {
-            string[] splitted = output.Split('\n');
+            var splitted = output.Split('\n');
             if (splitted.Length >= 3)
             {
                 if (splitted[2].StartsWith("version "))
@@ -48,16 +48,16 @@ namespace Doods.StdLibSsh.Queries
             }
             else
             {
-                //LOGGER.error("Could not parse firmware. Maybe the output of 'vcgencmd version' changed.");
-                //LOGGER.debug("Output of 'vcgencmd version': \n{}", output);
+                Logger.Instance.Error("Could not parse firmware. Maybe the output of 'vcgencmd version' changed.");
+                Logger.Instance.Error($"Output of 'vcgencmd version': {Environment.NewLine}{output}");
                 return "n/a";
             }
         }
 
         private string checkAndFormatVersionHash(string versionString)
         {
-            StringBuilder sb = new StringBuilder();
-            string[] splitted = versionString.Split(BLANK);
+            var sb = new StringBuilder();
+            var splitted = versionString.Split(BLANK);
             if (splitted.Length == 3)
             {
                 string hash = splitted[0];

@@ -38,16 +38,16 @@ namespace Doods.StdLibSsh.Queries
                     }
                     catch (FormatException e)
                     {
-                        //LOGGER.debug("Skipping line: {}", line);
+                        Logger.Instance.Debug($"Skipping line: {line}");
                     }
                 }
                 else
                 {
-                    //LOGGER.debug("Skipping line: {}", line);
+                    Logger.Instance.Debug($"Skipping line: {line}");
                 }
             }
-            //LOGGER.error("Expected a different output of command: {}", UPTIME_CMD);
-            //LOGGER.error("Actual output was: {}", output);
+            Logger.Instance.Error($"Expected a different output of command: {UPTIME_CMD}");
+            Logger.Instance.Error($"Actual output was: {output}");
             return 0D;
         }
     }

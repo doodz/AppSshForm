@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Interfaces;
@@ -39,8 +38,8 @@ namespace Doods.StdLibSsh.Queries
         }
         private IEnumerable<DiskUsageBean> ParseDiskUsage(string output)
         {
-            string[] lines = output.Split('\n');
-            IList<DiskUsageBean> disks = new List<DiskUsageBean>();
+            var lines = output.Split('\n');
+            var disks = new List<DiskUsageBean>();
             foreach (var line in lines)
             {
                 if (line.StartsWith(DF_COMMAND_HEADER_START))
@@ -56,7 +55,7 @@ namespace Doods.StdLibSsh.Queries
                     if (res.Length > 6)
                     {
                         // whitespace in mountpoint path
-                        StringBuilder sb = new StringBuilder();
+                        var sb = new StringBuilder();
                         foreach (var s in res)
                         {
                             sb.Append(s);
@@ -77,10 +76,8 @@ namespace Doods.StdLibSsh.Queries
                 }
                 else
                 {
-                    /* LOGGER.warn(
-                             "Expected another output of df -h. Skipping line: {}",
-                             line);
-                             */
+                   Logger.Instance.Warning(
+                             $"Expected another output of df -h. Skipping line: {line}");
                 }
             }
             return disks;

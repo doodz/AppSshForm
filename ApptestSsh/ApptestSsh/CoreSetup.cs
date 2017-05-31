@@ -3,6 +3,7 @@ using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.LoginPage;
 using ApptestSsh.Core.View.MainPage;
+using ApptestSsh.Core.View.ShellPage;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Base;
@@ -20,7 +21,8 @@ namespace ApptestSsh.Core
             appSetup.ContainerBuilder.RegisterType<LoginViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<HomeTabbedPageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<HostManagerPageViewModel>().AsSelf();
-
+            appSetup.ContainerBuilder.RegisterType<ShellPageViewModel>().AsSelf();
+            
             appSetup.ContainerBuilder.RegisterType<Database>().As<IDatabase>().SingleInstance();
             appSetup.ContainerBuilder.RegisterType<RepositoryBase>().As<IRepository>();
             appSetup.ContainerBuilder.RegisterType<SshService>().As<ISshService>().SingleInstance();

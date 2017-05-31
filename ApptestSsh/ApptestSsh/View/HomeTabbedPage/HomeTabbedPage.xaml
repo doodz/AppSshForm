@@ -20,6 +20,12 @@
         </ToolbarItem.Icon>
 
         </ToolbarItem>
+
+        <ToolbarItem Text="Shell"
+                     Command="{Binding ShellCmd}"/>
+           
+
+        
     </mvvm:BaseTabbedPage.ToolbarItems>
 
     <mvvm:BaseTabbedPage.Resources>
@@ -133,10 +139,8 @@
     </mvvm:BaseTabbedPage.Resources>
     <ContentPage Title="Overclocking / System">
         <StackLayout>
-            <Frame Margin="0"
-                   Padding="10"
-                   BackgroundColor="White"
-                   HasShadow="True">
+            <Frame
+                   Padding="10">
                 <Grid BindingContext="{Binding Path=VcgencmdBean}">
                     <Grid.Style>
                         <Style  TargetType="Label">
@@ -202,10 +206,8 @@
 
                 </Grid>
             </Frame>
-            <Frame Margin="0"
-                   Padding="10"
-                   BackgroundColor="Transparent"
-                   HasShadow="False">
+            <Frame 
+                   Padding="10">
                 <Grid BindingContext="{Binding Path=SystemBean}">
                     <Grid.Style>
                         <Style  TargetType="Label">

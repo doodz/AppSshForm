@@ -7,6 +7,7 @@ using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.ShellPage;
 using Doods.StdFramework.Navigation;
 using Xamarin.Forms;
 
@@ -118,6 +119,11 @@ namespace ApptestSsh.Core.Services
         {
             return PushAsync(Navigation, new HostManagerPage());
         }
+        public static Task GoToShellPage()
+        {
+            return PushAsync(Navigation, new ShellPage());
+        }
+        
         public static Task GoBack()
         {
             return PopAsync(Navigation);

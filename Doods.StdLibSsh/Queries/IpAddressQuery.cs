@@ -41,9 +41,9 @@ namespace Doods.StdLibSsh.Queries
             }
             else
             {
-                // LOGGER.error( "IP address pattern: No match found for output: {}.", output);
+                Logger.Instance.Error($"IP address pattern: No match found for output: {result}.");
             }
-            //LOGGER.info("'ip' command not available. Trying '/sbin/ifconfig' to get ip address of interface {}.",name);
+            Logger.Instance.Info($"'ip' command not available. Trying '/sbin/ifconfig' to get ip address of interface {_name}.");
 
             return new IfConfigQuery(Client, _name).Run();
         }

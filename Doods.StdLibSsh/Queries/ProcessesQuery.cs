@@ -36,12 +36,10 @@ namespace Doods.StdLibSsh.Queries
 
         private string PROCESS_NO_ROOT_CMD = "ps -U root -u root -N";
         private string PROCESS_ALL = "ps -A";
-        private bool _showRootProcesses;
+
         public ProcessesQuery(IClientSsh client, bool showRootProcesses) : base(client)
         {
-            _showRootProcesses = showRootProcesses;
-
-            CmdString = _showRootProcesses ? PROCESS_ALL : PROCESS_NO_ROOT_CMD;
+            CmdString = showRootProcesses ? PROCESS_ALL : PROCESS_NO_ROOT_CMD;
         }
 
         protected override IEnumerable<ProcessBean> PaseResult(string result)
@@ -56,11 +54,11 @@ namespace Doods.StdLibSsh.Queries
         /// </summary>
         /// <param name="output"></param>
         /// <returns></returns>
-        private List<ProcessBean> ParseProcesses(string output)
+        private IEnumerable<ProcessBean> ParseProcesses(string output)
         {
-            var lines = output.Split('\n');
+            //var lines = output.Split('\n');
 
-            var lines2 = output.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+            var lines = output.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
             var processes = new List<ProcessBean>();
             var count = 0;
             foreach (var line in lines)
@@ -88,17 +86,15 @@ namespace Doods.StdLibSsh.Queries
                     }
                     catch (FormatException e)
                     {
-                        //LOGGER.error("Could not parse processes.");
-                        //LOGGER.error("Error occured on following line: {}", line);
+                        Logger.Instance.Error("Could not parse processes.");
+                        Logger.Instance.Error($"Error occured on following line: {line}");
                     }
                 }
                 else
                 {
-                    /*LOGGER.error("Line[] length: {}", cols.size());
-                    LOGGER.error(
-                        "Expcected another output of ps. Skipping line: {}",
-                        line);
-                        */
+                    Logger.Instance.Error($"Line[] length: {cols.Length}");
+                    Logger.Instance.Error($"Expcected another output of ps. Skipping line: {line}");
+                        
                 }
             }
             return processes;

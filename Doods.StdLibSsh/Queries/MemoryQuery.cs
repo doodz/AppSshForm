@@ -52,14 +52,14 @@ namespace Doods.StdLibSsh.Queries
     /// </example>
     public class MemoryQuery : GenericQuery<OsMemoryBean>
     {
-        public  string MEMORY_INFO_CMD = "cat /proc/meminfo | tr -s \" \"";
-        public  string MEMORY_UNKNOWN_OUPUT = "Memory information could not be queried. See the log for details.";
-       
-        private  string KEY_TOTAL = "MemTotal:";
-        private  string KEY_AVAILABLE = "MemAvailable:";
-        private  string KEY_FREE = "MemFree:";
-        private  string KEY_BUFFERS = "Buffers:";
-        private  string KEY_CACHED = "Cached:";
+        public string MEMORY_INFO_CMD = "cat /proc/meminfo | tr -s \" \"";
+        public string MEMORY_UNKNOWN_OUPUT = "Memory information could not be queried. See the log for details.";
+
+        private string KEY_TOTAL = "MemTotal:";
+        private string KEY_AVAILABLE = "MemAvailable:";
+        private string KEY_FREE = "MemFree:";
+        private string KEY_BUFFERS = "Buffers:";
+        private string KEY_CACHED = "Cached:";
         public MemoryQuery(IClientSsh client) : base(client)
         {
             CmdString = MEMORY_INFO_CMD;
@@ -75,9 +75,9 @@ namespace Doods.StdLibSsh.Queries
             //var res = Regex.Matches(output, "[\r\n]+").Cast<Match>() .ToArray();
             var res = output.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
             foreach (var line in res)
-            { 
+            {
                 var paragraphs = line.Split(' ');
-            if (paragraphs.Length > 1)
+                if (paragraphs.Length > 1)
                 {
                     memoryData.Add(paragraphs[0], long.Parse(paragraphs[1]));
                 }
@@ -96,7 +96,7 @@ namespace Doods.StdLibSsh.Queries
                 var memFree = memoryData.ContainsKey(KEY_FREE);
                 var memCached = memoryData.ContainsKey(KEY_CACHED);
                 var memBuffers = memoryData.ContainsKey(KEY_BUFFERS);
-                if (memFree  && memCached  && memBuffers)
+                if (memFree && memCached && memBuffers)
                 {
                     var memUsed = memTotal - (memoryData[KEY_FREE] + memoryData[KEY_BUFFERS] + memoryData[KEY_CACHED]);
                     //LOGGER.debug("Using MemFree,Buffers and Cached for calculation of free memory.");
@@ -105,14 +105,14 @@ namespace Doods.StdLibSsh.Queries
 
             }
 
-                return ProduceError(output);
+            return ProduceError(output);
 
         }
 
         private OsMemoryBean ProduceError(string output)
         {
-            //LOGGER.error("Expected a different output of command: {}", MEMORY_INFO_CMD);
-            //LOGGER.error("Output was : {}", output);
+            Logger.Instance.Error($"Expected a different output of command: {MEMORY_INFO_CMD}");
+            Logger.Instance.Error($"Output was : {output}");
             return new OsMemoryBean(MEMORY_UNKNOWN_OUPUT);
         }
     }

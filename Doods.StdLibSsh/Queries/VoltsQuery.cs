@@ -1,4 +1,6 @@
-﻿using Doods.StdLibSsh.Base.Queries;
+﻿using System;
+using System.Globalization;
+using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries
@@ -26,15 +28,17 @@ namespace Doods.StdLibSsh.Queries
                 var voltsWithUnit = splitted[1];
                 var volts = voltsWithUnit.Substring(0,
                     voltsWithUnit.Length - 1);
-                return double.Parse(volts);
+
+                if (double.TryParse(volts, NumberStyles.None, CultureInfo.InvariantCulture, out double res))
+                {
+                    return res;
+                }
             }
-            else
-            {
-                //LOGGER.error("Could not parse cpu voltage.");
-                //LOGGER.error("Output of 'vcgencmd measure_volts core': \n{}",
-                //    output);
-                return 0D;
-            }
+
+            Logger.Instance.Error("Could not parse cpu voltage.");
+            Logger.Instance.Error($"Output of 'vcgencmd measure_volts core': {Environment.NewLine}{output}");
+            return 0D;
+
         }
     }
 }

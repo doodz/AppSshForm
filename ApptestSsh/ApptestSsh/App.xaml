@@ -7,7 +7,7 @@
 	        <Color x:Key="ColorTextGray">#B9B9B9</Color>
             <Style TargetType="Frame">
 	            <Setter Property="Margin"
-	                    Value="10,10" />
+	                    Value="10" />
 	            <Setter Property="HasShadow"
 	                    Value="True" />
 	        </Style>

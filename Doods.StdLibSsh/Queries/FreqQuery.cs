@@ -54,19 +54,17 @@ namespace Doods.StdLibSsh.Queries
                 }
                 catch (FormatException e)
                 {
-                    /*LOGGER.error("Could not parse frequency.");
-                    LOGGER.error(
-                            "Output of 'vcgencmd measure_clock [core/arm]': \n{}",
-                            output);
-                    */
+                    Logger.Instance.Error("Could not parse frequency.");
+                    Logger.Instance.Error(
+                            $"Output of 'vcgencmd measure_clock [core/arm]': {Environment.NewLine}{output}");
+                    
                 }
             }
             else
             {
-               /* LOGGER.error("Could not parse frequency.");
-                LOGGER.error("Output of 'vcgencmd measure_clock [core/arm]': \n{}",
-                        output);
-                        */
+                Logger.Instance.Error("Could not parse frequency.");
+                Logger.Instance.Error($"Output of 'vcgencmd measure_clock [core/arm]': {Environment.NewLine}{output}");
+
             }
             return formatted;
         }

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:shellPage="clr-namespace:ApptestSsh.Core.View.ShellPage;assembly=ApptestSsh.Core"
+               x:TypeArguments="shellPage:ShellPageViewModel"
+               x:Class="ApptestSsh.Core.View.ShellPage.ShellPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0"
+                Grid.Column="0"
+                Text="Update"
+                Command="{Binding UpdateCmd,Mode=OneWay}" />
+        <Button Grid.Row="0"
+                Grid.Column="1"
+                Text="Clear"
+                Command="{Binding ClearCmd,Mode=OneWay}" />
+        
+        <ScrollView Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="Fill">
+            <Label BackgroundColor="Black"
+                   TextColor="LightGreen"
+                   Text="{Binding Lines,Mode=OneWay }" />
+        </ScrollView>
+    </Grid>
+</mvvm:ViewPage>

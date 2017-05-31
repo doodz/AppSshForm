@@ -55,7 +55,7 @@ namespace Doods.StdLibSsh.Queries
                     }
                     catch (FormatException e)
                     {
-                        //LOGGER.warn( "Could not parse link quality field for input: {}.", linkQuality);
+                        Logger.Instance.Warning( $"Could not parse link quality field for input: {linkQuality}.");
                     }
                     int? signalLevelInt = null;
                     try
@@ -64,7 +64,7 @@ namespace Doods.StdLibSsh.Queries
                     }
                     catch (Exception e)
                     {
-                        //LOGGER.warn( "Could not parse link level field for input: {}.",linkLevel);
+                        Logger.Instance.Warning("Could not parse link level field for input: {linkLevel}.");
                     }
                    // LOGGER.debug( "WLAN status of {}: link quality {}, signal level {}.",
                    //     new Object[] { name, linkQualityInt, signalLevelInt });
@@ -76,7 +76,7 @@ namespace Doods.StdLibSsh.Queries
                             var wlanInfo = new WlanBean();
                             wlanInfo.LinkQuality =linkQualityInt.GetValueOrDefault();
                             wlanInfo.SignalLevel = signalLevelInt.GetValueOrDefault();
-                            //LOGGER.debug( "Adding wifi-status info to interface {}.", iface.getName());
+                            Logger.Instance.Debug($"Adding wifi-status info to interface {iface.Name}.");
                             iface.WlanInfo = wlanInfo;
                         }
                     }

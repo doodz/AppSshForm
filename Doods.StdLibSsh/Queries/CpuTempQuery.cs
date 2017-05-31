@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
 
@@ -27,7 +28,7 @@ namespace Doods.StdLibSsh.Queries
 
         protected override double PaseResult(string result)
         {
-           return parseTemperature(result);
+            return parseTemperature(result);
         }
 
         private double parseTemperature(string output)
@@ -40,12 +41,11 @@ namespace Doods.StdLibSsh.Queries
                 double temperature = double.Parse(match.Value);
                 return temperature;
             }
-            else
-            {
-                //LOGGER.error("Could not parse cpu temperature.");
-                //LOGGER.error("Output of 'vcgencmd measure_temp': \n{}", output);
-                return 0D;
-            }
+
+            Logger.Instance.Error("Could not parse cpu temperature.");
+            Logger.Instance.Error($"Output of 'vcgencmd measure_temp': {Environment.NewLine}{output}");
+            return 0D;
+
         }
     }
 }

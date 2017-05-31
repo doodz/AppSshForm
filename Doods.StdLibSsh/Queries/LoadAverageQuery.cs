@@ -82,7 +82,7 @@ namespace Doods.StdLibSsh.Queries
             }
             //LOGGER.error("Expected a different output of command: {}", LOAD_AVG_CMD);
             //LOGGER.error("Actual output was: {}", output);
-            return 0D;
+            return loadAvg;
         }
     }
 }

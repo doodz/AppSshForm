@@ -1,4 +1,5 @@
-﻿using Doods.StdLibSsh.Base.Queries;
+﻿using System;
+using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries
@@ -33,16 +34,12 @@ namespace Doods.StdLibSsh.Queries
                 var cpuSerial = split[1].Trim();
                 return cpuSerial;
             }
-            else
-            {
-                /*LOGGER.error(
-                    "Could not query cpu serial number. Expected another output of '{}'.",
-                    CAT_PROC_CPUINFO_GREP_SERIAL);
-                LOGGER.error("Output of '{}': \n{}", CAT_PROC_CPUINFO_GREP_SERIAL,
-                    output);
-                    */
-                return N_A;
-            }
+
+            Logger.Instance.Error(
+                 $"Could not query cpu serial number. Expected another output of '{CAT_PROC_CPUINFO_GREP_SERIAL}'.");
+            Logger.Instance.Error($"Output of '{CAT_PROC_CPUINFO_GREP_SERIAL}': {Environment.NewLine}{output}");
+            return N_A;
+
         }
     }
 }

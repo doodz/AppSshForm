@@ -21,6 +21,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
     {
         private VcgencmdBean _vcgencmdBean;
         public ICommand ManageHostCmd { get; }
+        public ICommand ShellCmd { get; }
         public VcgencmdBean VcgencmdBean
         {
             get => _vcgencmdBean;
@@ -45,6 +46,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             DiskUsage = new ObservableRangeCollection<DiskUsageBean>();
             Processes = new ObservableRangeCollection<ProcessBean>();
             ManageHostCmd = new Command(c =>NavigationService.GoToHostManagerPage());
+            ShellCmd = new Command(c => NavigationService.GoToShellPage());
         }
 
 

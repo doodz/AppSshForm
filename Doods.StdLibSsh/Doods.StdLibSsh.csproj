@@ -51,6 +51,8 @@
     <Compile Include="Enums\Memory.cs" />
     <Compile Include="Interfaces\IClientSsh.cs" />
     <Compile Include="Interfaces\IXamarinDeviceService.cs" />
+    <Compile Include="KeyboardKeys.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\checkCarrierQuery.cs" />
     <Compile Include="Queries\CpuTempQuery.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="SshServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="NLog.config" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

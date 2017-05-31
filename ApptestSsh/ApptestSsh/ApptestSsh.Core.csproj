@@ -65,6 +65,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SQLiteFactory.cs" />
     <Compile Include="View\MainPage\MainPageViewModel.cs" />
+    <Compile Include="View\ShellPage\ShellPage.xaml.cs">
+      <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShellPage\ShellPageViewModel.cs" />
     <Compile Include="View\TestUi\ListViewPage1.xaml.cs">
       <DependentUpon>ListViewPage1.xaml</DependentUpon>
     </Compile>
@@ -152,6 +156,12 @@
     <Reference Include="System.Data">
       <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Data.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ShellPage\ShellPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
