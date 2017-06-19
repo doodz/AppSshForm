@@ -55,8 +55,33 @@
     <Compile Include="Mvvm\ObservableObject.cs" />
     <Compile Include="List\ObservableRangeCollection.Cs" />
     <Compile Include="Navigation\BaseNavigationService.cs" />
+    <Compile Include="Navigation\DoodsNavigationPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="Views\AlwaysScrollView.cs" />
+    <Compile Include="Views\CardView.cs" />
+    <Compile Include="Views\DoodsButton.cs" />
+    <Compile Include="Views\DoodsEntry.cs" />
+    <Compile Include="Views\DoodsEntryBox.xaml.cs">
+      <DependentUpon>DoodsEntryBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FooterDivider.xaml.cs">
+      <DependentUpon>FooterDivider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderDivider.xaml.cs">
+      <DependentUpon>HeaderDivider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LabelSection.xaml.cs">
+      <DependentUpon>LabelSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyBoodsEntryBox.xaml.cs">
+      <DependentUpon>MyBoodsEntryBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationView.cs" />
+    <Compile Include="Views\NonScrollableListView.cs" />
+    <Compile Include="Views\SectionDivider.xaml.cs">
+      <DependentUpon>SectionDivider.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -67,7 +92,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
+    <EmbeddedResource Include="Views\SectionDivider.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FooterDivider.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LabelSection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HeaderDivider.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\DoodsEntryBox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MyBoodsEntryBox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

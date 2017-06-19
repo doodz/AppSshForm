@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="welcomeStartPage:WelcomeStartPageViewModel"
+               xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:welcomeStartPage="clr-namespace:ApptestSsh.Core.View.WelcomeStartPage;assembly=ApptestSsh.Core"
+               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+               x:Class="ApptestSsh.Core.View.WelcomeStartPage.WelcomeStartPage"
+               Title="WelcomeStartPage">
+
+    <Grid VerticalOptions="Fill"
+          HorizontalOptions="Fill"
+          Padding="24">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+       
+        <Label Grid.Row="0" Text="{Binding WelcomMessage}"              
+               FontSize="Medium"
+               XAlign="Center"
+               YAlign="Center"
+               VerticalOptions="EndAndExpand"
+               HeightRequest="70" />
+        <views:DoodsButton Grid.Row="1" Text="Go !!!"
+                           Style="StaticResource ButtonStyle" />
+    </Grid>
+</mvvm:ViewPage>

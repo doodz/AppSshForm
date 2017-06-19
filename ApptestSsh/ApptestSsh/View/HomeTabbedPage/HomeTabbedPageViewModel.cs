@@ -22,6 +22,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         private VcgencmdBean _vcgencmdBean;
         public ICommand ManageHostCmd { get; }
         public ICommand ShellCmd { get; }
+        public ICommand RefreshCommand { get; }
+        public ICommand GotoLoginCommand { get; }
         public VcgencmdBean VcgencmdBean
         {
             get => _vcgencmdBean;
@@ -36,6 +38,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             set => SetProperty(ref _systemBean, value);
         }
 
+        public DateTime NextForceRefresh { get; set; }
+
         public ObservableRangeCollection<NetworkInterfaceInformationBean> NetworkInterfaceInformation { get; }
         public ObservableRangeCollection<ProcessBean> Processes { get; }
         public ObservableRangeCollection<DiskUsageBean> DiskUsage { get; }
@@ -47,8 +51,19 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             Processes = new ObservableRangeCollection<ProcessBean>();
             ManageHostCmd = new Command(c =>NavigationService.GoToHostManagerPage());
             ShellCmd = new Command(c => NavigationService.GoToShellPage());
+            RefreshCommand = new Command(async () => await ExecuteRefreshCommandAsync());
+            GotoLoginCommand = new Command(async () => await NavigationService.GotoLoginModal());
+            NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
         }
 
+        async Task ExecuteRefreshCommandAsync()
+        {
+
+            NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
+            BusyCount++;
+            await Load();
+            BusyCount--;
+        }
 
         private async Task DoSomething()
         {
@@ -62,7 +77,10 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         {
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
-            
+
+            if (!ssh.IsConnected() && !ssh.CanConnect())
+               return;
+
             Logger.Info($"{Title} : get VcgencmdQuery");
             var test = new VcgencmdQuery(ssh);
             VcgencmdBean = await test.RunAsync(Token);

@@ -6,21 +6,21 @@
                      x:TypeArguments="homeTabbedPage:HomeTabbedPageViewModel"
                      xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core"
                      xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
+                     xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                      Title="TabbedPage">
 
     <mvvm:BaseTabbedPage.ToolbarItems>
         <ToolbarItem Text="Manage Host"
                      Command="{Binding ManageHostCmd}">
             <ToolbarItem.Icon>
-            <OnPlatform x:TypeArguments="FileImageSource">
+                <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS">ic_storage_black.png</On>
                     <On Platform="Android">ic_storage_black.png</On>
                     <On Platform="UWP">Assets/ic_storage_black_24dp_1x.png</On>
-            </OnPlatform>
-        </ToolbarItem.Icon>
+                </OnPlatform>
+            </ToolbarItem.Icon>
 
         </ToolbarItem>
-
         <ToolbarItem Text="Shell"
                      Command="{Binding ShellCmd}"/>
            
@@ -139,9 +139,8 @@
     </mvvm:BaseTabbedPage.Resources>
     <ContentPage Title="Overclocking / System">
         <StackLayout>
-            <Frame
-                   Padding="10">
-                <Grid BindingContext="{Binding Path=VcgencmdBean}">
+            <views:CardView Padding="10">
+                <Grid BindingContext="{Binding Path=VcgencmdBean}" BackgroundColor="White">
                     <Grid.Style>
                         <Style  TargetType="Label">
                             <Setter Property="HorizontalTextAlignment"
@@ -161,7 +160,14 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Label Grid.ColumnSpan="2"
+                    <StackLayout Spacing="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"
+                                 Grid.Row="0">
+                        <views:LabelSection Text="Overclocking" />
+                    <views:HeaderDivider />
+                    </StackLayout>
+                    <!--<Label Grid.ColumnSpan="2"
                            HorizontalTextAlignment="Center"
                            Grid.Column="0"
                            Grid.Row="0"
@@ -171,7 +177,7 @@
                              Grid.ColumnSpan="2"
                              Grid.Row="1"
                              Style="{StaticResource BoxViewSeparatorStype}"
-                             Margin="-10,0" />
+                             Margin="-10,0" />-->
                     <Label Grid.Column="0"
                            Grid.Row="2"
                            Text="Core temperature" />
@@ -205,8 +211,8 @@
                            Text="{Binding Path=Version}" />
 
                 </Grid>
-            </Frame>
-            <Frame 
+            </views:CardView>
+            <views:CardView 
                    Padding="10">
                 <Grid BindingContext="{Binding Path=SystemBean}">
                     <Grid.Style>
@@ -231,7 +237,15 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.ColumnSpan="2"
+                    <StackLayout Spacing="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"
+                                 Grid.Row="0">
+                        <views:LabelSection Text="System" />
+                        <views:HeaderDivider />
+                    </StackLayout>
+
+                    <!--<Label Grid.ColumnSpan="2"
                            Grid.Column="0"
                            HorizontalTextAlignment="Center"
                            Style="{DynamicResource TitleStyle}"
@@ -241,7 +255,7 @@
                              Grid.ColumnSpan="2"
                              Grid.Row="1"
                              Style="{StaticResource BoxViewSeparatorStype}"
-                             Margin="-10,0" />
+                             Margin="-10,0" />-->
                     <Label Grid.Column="0"
                            Grid.Row="2"
                            Text="Startup" />
@@ -285,7 +299,7 @@
                            Grid.Row="8"
                            Text="{Binding Path=CpuSerial}" />
                 </Grid>
-            </Frame>
+            </views:CardView>
         </StackLayout>
     </ContentPage>
 

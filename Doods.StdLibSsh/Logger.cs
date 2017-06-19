@@ -1,5 +1,4 @@
 ﻿using System;
-using NLog;
 
 namespace Doods.StdLibSsh
 {
@@ -15,50 +14,60 @@ namespace Doods.StdLibSsh
                 {
                     lock (Padlock)
                     {
-                        var loo = new Logger();
-
-                        return _instance ?? (_instance = new Doods.StdLibSsh.Logger());
+                        if (_instance == null)
+                        {
+                            //NLog.LogManager.Configuration =
+                            //    new NLog.Config.XmlLoggingConfiguration("NLog.config", true);
+                             _instance = new Doods.StdLibSsh.Logger();
+                        }
+                        return _instance;
                     }
                 }
                 return _instance;
             }
         }
 
-        private readonly NLog.Logger _log;
+        //private readonly NLog.Logger _log;
 
         private Logger()
         {
-            _log = LogManager.GetCurrentClassLogger();
+           // _log = LogManager.GetCurrentClassLogger();
         }
 
         public void Debug(string msg)
         {
-            _log.Debug(msg);
+            System.Diagnostics.Debug.WriteLine(msg);
+            //_log.Debug(msg);
         }
 
         public void Error(Exception e)
         {
-            _log.Error(e);
+            System.Diagnostics.Debug.WriteLine(e.Message);
+            //_log.Error(e);
         }
 
         public void Error(string msg)
         {
-            _log.Error(msg);
+            System.Diagnostics.Debug.WriteLine(msg);
+            //_log.Error(msg);
         }
 
         public void Info(string msg)
         {
-            _log.Info(msg);
+            System.Diagnostics.Debug.WriteLine(msg);
+            //_log.Info(msg);
         }
 
         public void Warning(Exception e)
         {
-            _log.Warn(e);
+            System.Diagnostics.Debug.WriteLine(e.Message);
+            //_log.Warn(e);
         }
 
         public void Warning(string msg)
         {
-            _log.Warn(msg);
+            System.Diagnostics.Debug.WriteLine(msg);
+            //_log.Warn(msg);
         }
     }
 }

@@ -76,6 +76,10 @@ namespace Doods.StdLibSsh
             }
         }
 
+        public bool CanConnect()
+        {
+            return HostName != null && UserName != null && Password != null;
+        }
         public bool IsAuthenticated()
         {
             lock (_lockObj)

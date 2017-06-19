@@ -6,7 +6,7 @@ namespace ApptestSsh.UWP.Services
     public class Logger : Doods.StdFramework.Interfaces.ILogger
     {
         private readonly NLog.Logger _log;
-
+        bool enableHockeyApp = false;
         public Logger()
         {
             _log = LogManager.GetCurrentClassLogger();
@@ -40,6 +40,33 @@ namespace ApptestSsh.UWP.Services
         public void Warning(string msg)
         {
             _log.Warn(msg);
+        }
+
+        public virtual void TrackPage(string page, string id = null)
+        {
+            Debug("Evolve Logger: TrackPage: " + page.ToString() + " Id: " + id ?? string.Empty);
+
+            if (!enableHockeyApp)
+                return;
+        }
+
+
+        public virtual void Track(string trackIdentifier)
+        {
+            Debug("Evolve Logger: Track: " + trackIdentifier);
+
+            if (!enableHockeyApp)
+                return;
+        }
+
+        public virtual void Track(string trackIdentifier, string key, string value)
+        {
+            Debug("Evolve Logger: Track: " + trackIdentifier + " key: " + key + " value: " + value);
+
+            if (!enableHockeyApp)
+                return;
+
+            trackIdentifier = $"{trackIdentifier}-{key}-{@value}";
         }
     }
 }

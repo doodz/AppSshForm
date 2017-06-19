@@ -1,34 +1,94 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
              x:Class="ApptestSsh.Core.App">
-	<Application.Resources>
-	    <ResourceDictionary>
-	        <Color x:Key="ColorTextGray">#B9B9B9</Color>
-            <Style TargetType="Frame">
-	            <Setter Property="Margin"
-	                    Value="10" />
-	            <Setter Property="HasShadow"
-	                    Value="True" />
-	        </Style>
-	        <Style x:Key="BoxViewSeparatorStype"
-	               TargetType="BoxView">
-	            <Setter Property="BackgroundColor"
-	                    Value="{StaticResource ColorTextGray}" />
-	            <Setter Property="HeightRequest"
-	                    Value="0.5" />
-	        </Style>
+    <Application.Resources>
+        <ResourceDictionary>
 
-	        <Style x:Key="BoxViewVerticalSeparatorStype"
-	               TargetType="BoxView">
-	            <Setter Property="BackgroundColor"
-	                    Value="{StaticResource ColorTextGray}" />
-	            <Setter Property="WidthRequest"
-	                    Value="0.5" />
-	        </Style>
+            <!--
+            uwp
+            -->
+           
+            <!--
+            uwp
+            -->
+            <!-- 
+            Navigation
+            -->
+            <Color x:Key="Primary">#7635EB</Color>
+            <Color x:Key="PrimaryDark">#5D2ABB</Color>
+            <Color x:Key="PrimaryDarkTranslucent">#9926213C</Color>
+            <Color x:Key="Accent">#753BE4</Color>
+            <Color x:Key="NavigationText">White</Color>
+            <Color x:Key="LabelSectionText">#6D6D72</Color>
+            <Color x:Key="DetailTextColor">#979797</Color>
+            <Color x:Key="ListSeparator">#C8C7CC</Color>
+            <!-- 
+            Navigation
+            -->
+
+            <OnPlatform x:TypeArguments="Color"
+                        Android="#F5F5F5"
+                        iOS="#EFEFF4"
+                        WinPhone="#EFEFF4"
+                        x:Key="WindowBackgroundTable" />
+
+            <Thickness x:Key="SmallPadding">4</Thickness>
+            <Thickness x:Key="MediumPadding">8</Thickness>
+            <Thickness x:Key="StandardPadding">16</Thickness>
+
+            <x:Double x:Key="SmallSpacing">4</x:Double>
+            <x:Double x:Key="MediumSpacing">8</x:Double>
+            <x:Double x:Key="StandardSpacing">16</x:Double>
+
+
+            <Color x:Key="ColorTextGray">#B9B9B9</Color>
+            <Style TargetType="Frame">
+                <Setter Property="Margin"
+                        Value="10" />
+                <Setter Property="HasShadow"
+                        Value="True" />
+            </Style>
+            <Style x:Key="BoxViewSeparatorStype"
+                   TargetType="BoxView">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource ColorTextGray}" />
+                <Setter Property="HeightRequest"
+                        Value="0.5" />
+            </Style>
+
+            <Style x:Key="BoxViewVerticalSeparatorStype"
+                   TargetType="BoxView">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource ColorTextGray}" />
+                <Setter Property="WidthRequest"
+                        Value="0.5" />
+            </Style>
+
+            <Style x:Key="ButtonStyle"
+                   TargetType="Button">
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="BorderRadius"
+                        Value="4" />
+                <Setter Property="HeightRequest"
+                        Value="50" />
+                <Setter Property="FontSize"
+                        Value="Medium" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource PrimaryDark}" />
+            </Style>
+            <Style TargetType="Button"
+                   BasedOn="{StaticResource ButtonStyle}" />
+
+            <Style TargetType="views:DoodsButton"
+                   BasedOn="{StaticResource ButtonStyle}" />
+
         </ResourceDictionary>
-            <!-- Application resource dictionary -->
-	    <!--<Style TargetType="ListView">
+        <!-- Application resource dictionary -->
+        <!--<Style TargetType="ListView">
 	        <Setter Property="SeparatorVisibility"
 	                Value="None" />
 	        <Setter Property="HasUnevenRows"

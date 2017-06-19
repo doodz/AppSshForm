@@ -51,7 +51,7 @@ namespace ApptestSsh.Core
             // Setup Credentials and Server Information
 
             // Execute a (SHELL) Command - prepare upload directory
-            using (var sshclient = new SshClient("192.168.1.50", "root", "nostrqdq;us"))
+            using (var sshclient = new SshClient("192.168.1.73", "pi", "raspberry"))
             {
                 sshclient.Connect();
                 using (var cmd = sshclient.CreateCommand("/usr/bin/which vcgencmd"))

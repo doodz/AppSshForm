@@ -1,4 +1,5 @@
 ﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.Helpers;
 using Doods.StdLibSsh;
 using Renci.SshNet;
 namespace ApptestSsh.Core.Services
@@ -16,6 +17,7 @@ namespace ApptestSsh.Core.Services
 
         public void Initialise()
         {
+            Settings.Current.LastHostId = Host.Id.GetValueOrDefault(-1);
             HostName = _host.HostName;
             UserName = _host.UserName;
             Password = _host.Password;

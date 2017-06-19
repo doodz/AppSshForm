@@ -113,14 +113,22 @@
     <None Include="ApptestSsh.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ic_account_box_black_24dp_1x.png" />
+    <Content Include="Assets\ic_account_box_black_24dp_2x.png" />
+    <Content Include="Assets\ic_account_circle_black_24dp_1x.png" />
+    <Content Include="Assets\ic_account_circle_black_24dp_2x.png" />
     <Content Include="Assets\ic_add_box_black_24dp_1x.png" />
     <Content Include="Assets\ic_add_box_black_24dp_2x.png" />
+    <Content Include="Assets\ic_close_black_24dp_1x.png" />
+    <Content Include="Assets\ic_close_black_24dp_2x.png" />
     <Content Include="Assets\ic_delete_black_24dp_1x.png" />
     <Content Include="Assets\ic_delete_black_24dp_2x.png" />
     <Content Include="Assets\ic_file_download_black_24dp_1x.png" />
     <Content Include="Assets\ic_file_download_black_24dp_2x.png" />
     <Content Include="Assets\ic_file_upload_black_24dp_1x.png" />
     <Content Include="Assets\ic_file_upload_black_24dp_2x.png" />
+    <Content Include="Assets\ic_refresh_black_24dp_1x.png" />
+    <Content Include="Assets\ic_refresh_black_24dp_2x.png" />
     <Content Include="Assets\ic_storage_black_24dp_1x.png" />
     <Content Include="Assets\ic_storage_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -167,9 +175,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Doods.StdFramework\Doods.StdFramework.csproj">
+    <ProjectReference Include="..\..\Doods.StdFramework\Doods.StdFramework.Core.csproj">
       <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
-      <Name>Doods.StdFramework</Name>
+      <Name>Doods.StdFramework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Doods.StdLibSsh\Doods.StdLibSsh.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>

@@ -10,6 +10,7 @@ namespace Doods.StdLibSsh.Interfaces
         void Connect();
         Task ConnectAsync();
         bool IsConnected();
+        bool CanConnect();
         bool IsAuthenticated();
         SshCommand RunQuerry(string cmd);
         Task<string> RunCommandAsync(string cmdStr, CancellationToken token);

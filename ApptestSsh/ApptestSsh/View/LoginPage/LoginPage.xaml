@@ -2,16 +2,46 @@
 <mvvm:ViewPage  xmlns="http://xamarin.com/schemas/2014/forms"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-                xmlns:login="clr-namespace:ApptestSsh.Core.View.Login;assembly=ApptestSsh.Core"
                 xmlns:loginPage="clr-namespace:ApptestSsh.Core.View.LoginPage;assembly=ApptestSsh.Core"
+                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                 x:Class="ApptestSsh.Core.View.Login.LoginPage"
                 x:TypeArguments="loginPage:LoginViewModel"
                 Title="{Binding Title}">
 
     <StackLayout>
 
-        <Entry Text="{Binding Host}"
-               Placeholder="127.0.0.1" />
+
+        <views:DoodsEntryBox Text="{Binding Host}"
+                             Label="Host"
+                             Placeholder="127.0.0.1"
+                             Font="Large"
+                             HasBorder="false"/>
+        <views:DoodsEntryBox Text="{Binding Port}"
+                             Label="Port"
+                             Placeholder="22"
+                             Font="Large"
+                             HasBorder="false" />
+        <views:DoodsEntryBox Text="{Binding Username}"
+                             Label="Username"
+                             Placeholder="Username"
+                             Font="Large"
+                             HasBorder="false" />
+        <views:DoodsEntryBox Text="{Binding Password}"
+                             Label="Password"
+                             Placeholder="Password"
+                             Font="Large"
+                             IsPassword="True"
+                             HasBorder="false" />
+        
+        <!--<views:DoodsEntry Text="{Binding Host}"
+                          Font="Large"
+                          TextColor="White"
+                          Placeholder="127.0.0.1"
+                          HasBorder="false"
+                          BackgroundColor="Transparent"
+                          VerticalOptions="Center"
+                          HorizontalOptions="FillAndExpand"
+                          MaxLength="14" />
         <Entry Text="{Binding Port}"
                Keyboard="Numeric"
                Placeholder="22" />
@@ -19,10 +49,10 @@
                Placeholder="User name" />
         <Entry Text="{Binding Password}"
                IsPassword="True"
-               Placeholder="Password" />
-        <Button Text="Test"
+               Placeholder="Password" />-->
+        <views:DoodsButton Text="Test"
                 Command="{Binding TestCmd, Mode=OneWay}" />
-        <Button Text="Save"
+        <views:DoodsButton Text="Save"
                 Command="{Binding SaveCmd, Mode=OneWay}" />
     </StackLayout>
 </mvvm:ViewPage>

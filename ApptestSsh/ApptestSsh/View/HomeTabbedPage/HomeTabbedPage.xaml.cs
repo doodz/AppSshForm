@@ -16,6 +16,27 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public HomeTabbedPage()
         {
             InitializeComponent();
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.WinPhone:
+                case Device.UWP:
+                case Device.WinRT:
+                    ToolbarItems.Add(new ToolbarItem
+                    {
+                        Text = "Refresh",
+                        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+                        Command = ViewModel.RefreshCommand
+                    });
+                    break;
+            }
+            
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "login",
+                Icon = "Assets/ic_account_box_black_24dp_1x.png",
+                Command = ViewModel.GotoLoginCommand
+            });
         }
     }
 }

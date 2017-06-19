@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.RootPage.Windows;
 using ApptestSsh.Core.View.ShellPage;
 using Doods.StdFramework.Navigation;
 using Xamarin.Forms;
@@ -47,9 +46,7 @@ namespace ApptestSsh.Core.Services
             _isNavigating = true;
 
             await navigation.PushAsync(page, animate);
-            _isNavigating = false;
-
-          
+            _isNavigating = false; 
         }
 
         private static async Task PushModalAsync(INavigation navigation, Page page, bool animate = true)
@@ -93,7 +90,10 @@ namespace ApptestSsh.Core.Services
             await PopToRootAsync(Navigation);
         }
 
-        
+        public static Task GotoLoginModal()
+        {
+            return PushModalAsync(Navigation,new DoodsNavigationPage( new LoginPage()));
+        }
 
         public static Task GoToLogin()
         {
@@ -127,6 +127,15 @@ namespace ApptestSsh.Core.Services
         public static Task GoBack()
         {
             return PopAsync(Navigation);
+        }
+
+        public static Task GoBackModal()
+        {
+            return PopModalAsync(Navigation);
+        }
+        public static Task GoToRootPageWindows()
+        {
+            return PushAsync(Navigation, new RootPageWindows());
         }
     }
 

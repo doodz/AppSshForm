@@ -26,6 +26,7 @@ namespace Doods.StdLibSsh.Base.Queries
            
             if (!Client.IsConnected())
             {
+                Logger.Instance.Info($"Client not connected, ConnectAsync.");
                 Client.Connect();
             }
             SshResult = Client.Client.CreateCommand(CmdString);
@@ -56,6 +57,7 @@ namespace Doods.StdLibSsh.Base.Queries
             }
             if (!Client.IsConnected())
             {
+                Logger.Instance.Info($"Client not connected, ConnectAsync.");
                 await Client.ConnectAsync();
             }
             Logger.Instance.Info($"Running command async : {CmdString}.");

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+             x:Class="Doods.StdFramework.Views.DoodsEntryBox">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Color x:Key="entry_background">#FAFAFA</Color>
+            <Color x:Key="entry_border">#7635EB</Color>
+            <Color x:Key="entry_placeholder_text">#753BE4</Color>
+
+            <Style x:Key="MyEntry"
+                   TargetType="views:DoodsEntry">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource entry_background}" />
+                <Setter Property="PlaceholderColor"
+                        Value="{StaticResource entry_placeholder_text}" />
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+        </ResourceDictionary>
+
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal"
+                     Spacing="20"
+                     Padding="40,8"
+                     HeightRequest="56"
+                     HorizontalOptions="Fill">
+            <Label x:Name="MyLabel"
+                   Text="{Binding Label,Mode=OneWay}"
+                   VerticalOptions="Center"
+                   FontSize="Large" />
+            <views:DoodsEntry x:Name="Entry"
+                              Style="{x:StaticResource MyEntry}"
+                              HasBorder="{Binding HasBorder,Mode=OneWay}"
+                              Font="{Binding Font}"
+                              FontFamily="{Binding FontFamily}"
+                              MaxLength="{Binding MaxLength}"
+                              XAlign="{Binding XAlign}"
+                              TextColor="{Binding TextColor}"
+                              Text="{Binding Text}"
+                              Placeholder="{Binding Placeholder}"
+                              IsPassword="{Binding IsPassword}"
+                              BackgroundColor="Transparent"
+                              VerticalOptions="Center"
+                              Focused="VisualElement_OnFocused"
+                              Unfocused="VisualElement_OnUnfocused"
+                              FocusChangeRequested="VisualElement_OnFocusChangeRequested"
+                              HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

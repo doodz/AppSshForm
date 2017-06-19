@@ -42,6 +42,10 @@ namespace Doods.StdLibSsh
            
         }
 
+        public bool CanConnect()
+        {
+            return true;
+        }
 
         public SshCommand RunQuerry(string cmd)
         {
