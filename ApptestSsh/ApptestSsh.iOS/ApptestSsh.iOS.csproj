@@ -89,6 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\NonScrollableListViewRenderer.cs" />
@@ -126,7 +127,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.5.0.0-beta07\lib\xamarinios10\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.5.0.0-beta08\lib\xamarinios10\NLog.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Connectivity, Version=2.4.0.72, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.4.0.72-beta\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
@@ -134,11 +135,11 @@
     <Reference Include="Plugin.Connectivity.Abstractions, Version=2.4.0.72, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.4.0.72-beta\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Plugin.Settings, Version=3.0.0.66, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.0.66-beta\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    <Reference Include="Plugin.Settings, Version=3.0.0.72, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.0.72-beta\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Settings.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.0.66-beta\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.0.0.72-beta\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SSH.NET.2016.1.0-beta1\lib\netstandard1.3\Renci.SshNet.dll</HintPath>

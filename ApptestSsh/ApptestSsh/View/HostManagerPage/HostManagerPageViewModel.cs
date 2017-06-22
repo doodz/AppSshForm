@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.Services;
@@ -97,7 +90,7 @@ namespace ApptestSsh.Core.View.HostManagerPage
             BusyCount++;
             IsBusyList = true;
             //Load Data Here
-            await Task.Delay(2000);
+            //await Task.Delay(2000);
             var list = await _repository.GetAllAsync<Host>();
 
             Items.Clear();

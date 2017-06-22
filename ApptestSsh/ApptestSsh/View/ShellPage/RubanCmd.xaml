@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+             x:Class="ApptestSsh.Core.View.ShellPage.RubanCmd">
+  <ContentView.Content>
+      <StackLayout>
+            <views:DoodsButton Text="enter"
+                               Command="{Binding CmdEnter}"
+                               CommandParameter="Enter"/>
+            <views:DoodsButton Text="left"
+                               Command="{Binding CmdEnter}"
+                               CommandParameter="Left" />
+            <views:DoodsButton Text="right"
+                               Command="{Binding CmdEnter}"
+                               CommandParameter="Right" />
+            <views:DoodsButton Text="tab"
+                               Command="{Binding CmdEnter}"
+                               CommandParameter="Tab" />
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

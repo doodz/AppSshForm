@@ -1,15 +1,8 @@
 ﻿using System;
-using System.IO;
-using System.Threading.Tasks;
 using ApptestSsh.Core.Services;
-using ApptestSsh.Core.View.Login;
 using ApptestSsh.Core.View.MainPage;
-using Autofac;
 using Doods.StdFramework.Mvvm;
-using Doods.StdLibSsh;
-using Doods.StdLibSsh.Queries.GroupedQueries;
 using Renci.SshNet;
-using Xamarin.Forms;
 
 namespace ApptestSsh.Core
 {
@@ -27,24 +20,24 @@ namespace ApptestSsh.Core
             await NavigationService.GoToHomeTabbed();
         }
 
-        public ConnectionInfo CreateConnectionInfo()
-        {
-            const string privateKeyFilePath = @"C:\some\private\key.pem";
-            ConnectionInfo connectionInfo;
-            using (var stream = new FileStream(privateKeyFilePath, FileMode.Open, FileAccess.Read))
-            {
-                var privateKeyFile = new PrivateKeyFile(stream);
-                AuthenticationMethod authenticationMethod =
-                    new PrivateKeyAuthenticationMethod("ubuntu", privateKeyFile);
+        //public ConnectionInfo CreateConnectionInfo()
+        //{
+        //    const string privateKeyFilePath = @"C:\some\private\key.pem";
+        //    ConnectionInfo connectionInfo;
+        //    using (var stream = new FileStream(privateKeyFilePath, FileMode.Open, FileAccess.Read))
+        //    {
+        //        var privateKeyFile = new PrivateKeyFile(stream);
+        //        AuthenticationMethod authenticationMethod =
+        //            new PrivateKeyAuthenticationMethod("ubuntu", privateKeyFile);
 
-                connectionInfo = new ConnectionInfo(
-                    "my.server.com",
-                    "ubuntu",
-                    authenticationMethod);
-            }
+        //        connectionInfo = new ConnectionInfo(
+        //            "my.server.com",
+        //            "ubuntu",
+        //            authenticationMethod);
+        //    }
 
-            return connectionInfo;
-        }
+        //    return connectionInfo;
+        //}
 
         private void rest()
         {

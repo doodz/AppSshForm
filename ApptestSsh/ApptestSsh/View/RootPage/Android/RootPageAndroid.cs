@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using ApptestSsh.Core.View.RootPage.MenuItem;
 using ApptestSsh.Core.View.Settings;

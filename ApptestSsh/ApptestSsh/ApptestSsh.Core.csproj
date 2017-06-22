@@ -39,6 +39,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\CommandSsh.cs" />
     <Compile Include="DataBase\Database.cs" />
     <Compile Include="DataBase\Host.cs" />
     <Compile Include="DataBase\Migration1.cs" />
@@ -48,6 +49,14 @@
     <Compile Include="Services\SshService.cs" />
     <Compile Include="Services\XamarinDeviceService.cs" />
     <Compile Include="CoreSetup.cs" />
+    <Compile Include="View\CommandPage\AddCommandPage.xaml.cs">
+      <DependentUpon>AddCommandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CommandPage\AddCommandPageViewModel.cs" />
+    <Compile Include="View\CommandPage\CommandListViewPage.xaml.cs">
+      <DependentUpon>CommandListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CommandPage\CommandListViewPageViewModel.cs" />
     <Compile Include="View\HomeTabbedPage\HomeTabbedPage.xaml.cs">
       <DependentUpon>HomeTabbedPage.xaml</DependentUpon>
     </Compile>
@@ -82,6 +91,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Settings\SettingsPageViewModel.cs" />
+    <Compile Include="View\ShellPage\RubanCmd.xaml.cs">
+      <DependentUpon>RubanCmd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShellPage\RubanCmdViewModel.cs" />
     <Compile Include="View\ShellPage\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
     </Compile>
@@ -204,6 +217,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\WelcomeStartPage\WelcomeStartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ShellPage\RubanCmd.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\CommandPage\AddCommandPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\CommandPage\CommandListViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

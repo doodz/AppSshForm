@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApptestSsh.Core.Helpers;
-using ApptestSsh.Core.Services;
 using ApptestSsh.Core.View.RootPage.MenuItem;
 using ApptestSsh.Core.View.Settings;
 using Doods.StdFramework.Navigation;
@@ -51,8 +45,6 @@ namespace ApptestSsh.Core.View.RootPage.Windows
 
             NavigateAsync(AppPage.Home);
             Title = "Home";
-
-           
         }
 
         public void NavigateAsync(AppPage menuId)
@@ -99,8 +91,6 @@ namespace ApptestSsh.Core.View.RootPage.Windows
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-
             if (Helpers.Settings.Current.FirstRun)
             {
                 //TODO doods : go to login page whiout navigation .

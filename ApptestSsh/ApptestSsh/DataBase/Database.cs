@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Doods.StdRepository.Interfaces;
 using mDatabase= Doods.StdRepository.Base.Database;
@@ -27,7 +25,7 @@ namespace ApptestSsh.Core.DataBase
             try
             {
                 await AsyncConnection.CreateTableAsync<Host>();
-               
+                await AsyncConnection.CreateTableAsync<Command>();
 
                 await Migrate();
 
@@ -42,7 +40,8 @@ namespace ApptestSsh.Core.DataBase
         public override async Task Drop()
         {
             await AsyncConnection.DropTableAsync<Host>();
-           
+            await AsyncConnection.DropTableAsync<Command>();
+
 
             await SetSchemaVersion(0);
         }

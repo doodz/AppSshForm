@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -16,7 +17,6 @@ namespace ApptestSsh.Core.View.ShellPage
 {
     public class ShellPageViewModel : BaseViewModel
     {
-
         //enter \r
         //tab \t
         // up \0
@@ -28,9 +28,13 @@ namespace ApptestSsh.Core.View.ShellPage
         private StreamReader _streamReader;
         private string _lines;
 
+
+        public RubanCmdViewModel RubanCmdViewModel { get; private set; }
         public ICommand UpdateCmd { get; }
         public ICommand ClearCmd { get; }
         private string _lasteReceived;
+
+        public string Textbash { get; set; }
 
         public string Lines
         {
@@ -40,25 +44,37 @@ namespace ApptestSsh.Core.View.ShellPage
 
         public ShellPageViewModel(ILogger logger) : base(logger)
         {
-            UpdateCmd = new Command(installPiHole);
+            UpdateCmd = new Command(Update);
             ClearCmd = new Command(p => Lines = string.Empty);
+            RubanCmdViewModel = new RubanCmdViewModel();
+            RubanCmdViewModel.PropertyChanged += RubanCmdViewModelOnPropertyChanged;
+        }
+
+        private void RubanCmdViewModelOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName == "CmdStr")
+            {
+                Textbash += RubanCmdViewModel.CmdStr;
+            }
         }
 
         private async void Update()
         {
-            await _streamWriter.WriteLineAsync("sudo apt-get update");
+
+            if (Textbash != null)
+                await _streamWriter.WriteAsync(Textbash);
+            //await _streamWriter.WriteLineAsync(Textbash);
+            //await _streamWriter.WriteLineAsync("sudo apt-get update");
             //Lines = _shell.Expect(new Regex(@":.*>#"), new TimeSpan(0, 0, 5));
         }
 
 
-
         private void installPiHole()
         {
-            var str = "curl - sSL https://install.pi-hole.net | bash";
+            var str = "curl -sSL https://install.pi-hole.net | bash";
 
 
             _streamWriter.WriteAsync('\r');
-
         }
 
         protected override Task OnInternalAppearing()
@@ -94,12 +110,18 @@ namespace ApptestSsh.Core.View.ShellPage
 
         protected override Task OnInternalDisappearing()
         {
-            _shell.DataReceived -= ShellOnDataReceived;
-            _shell.Dispose();
-             _streamWriter?.Dispose();
-            _streamReader?.Dispose();
+            RubanCmdViewModel.PropertyChanged -= RubanCmdViewModelOnPropertyChanged;
+
+            if (_shell != null)
+            {
+                _shell.DataReceived -= ShellOnDataReceived;
+                _shell.Dispose();
+            }
+            //_streamWriter?.Dispose();
+            //_streamReader?.Dispose();
             _lines = _lasteReceived = null;
             return Task.FromResult(0);
+
         }
 
         //~ShellPageViewModel()

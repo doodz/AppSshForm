@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.StdFramework;
 using Doods.StdFramework.Interfaces;
 using Doods.StdFramework.Mvvm;
 
@@ -10,14 +9,14 @@ namespace Doods.StdFramework
     /// <summary>
     /// Base view model.
     /// </summary>
-    public class BaseViewModel : ObservableObject, IViewModel
+    public class BaseViewModel : ObservableObject, IViewModel, IBuzy
     {
         private bool _isLoad;
         protected bool ReloadOnAppearing;
         private int _busyCount;
 
 
-        protected int BusyCount
+        public int BusyCount
         {
             get => _busyCount;
             set

@@ -3,12 +3,15 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
                xmlns:shellPage="clr-namespace:ApptestSsh.Core.View.ShellPage;assembly=ApptestSsh.Core"
+               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                x:TypeArguments="shellPage:ShellPageViewModel"
                x:Class="ApptestSsh.Core.View.ShellPage.ShellPage">
 
     <Grid>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -19,14 +22,22 @@
         </Grid.ColumnDefinitions>
         <Button Grid.Row="0"
                 Grid.Column="0"
-                Text="Update"
+                Text="Send"
                 Command="{Binding UpdateCmd,Mode=OneWay}" />
         <Button Grid.Row="0"
                 Grid.Column="1"
                 Text="Clear"
                 Command="{Binding ClearCmd,Mode=OneWay}" />
-        
-        <ScrollView Grid.Row="1"
+
+        <views:DoodsEntry Grid.Row="1"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Text="{Binding Textbash,Mode=TwoWay}" />
+        <shellPage:RubanCmd Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            BindingContext="{Binding RubanCmdViewModel,Mode=OneWay}"/>
+        <ScrollView Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     VerticalOptions="Fill">

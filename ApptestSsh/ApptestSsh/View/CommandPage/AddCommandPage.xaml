@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="commandPage:AddCommandPageViewModel"
+               xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:commandPage="clr-namespace:ApptestSsh.Core.View.CommandPage;assembly=ApptestSsh.Core"
+               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+               x:Class="ApptestSsh.Core.View.CommandPage.AddCommandPage">
+
+    <Grid VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <views:DoodsEntry Grid.Row="0"
+                          Text="{Binding CmdName}" />
+        <views:DoodsEntry Grid.Row="1"
+                          Text="{Binding CmdString}" />
+        <views:DoodsButton  Grid.Row="2"
+                            Text="Save"
+                            Command="{Binding SaveCmd,Mode=OneWay}" />
+    </Grid>
+</mvvm:ViewPage>

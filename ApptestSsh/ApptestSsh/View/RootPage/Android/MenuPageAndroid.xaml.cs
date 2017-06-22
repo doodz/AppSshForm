@@ -21,7 +21,5 @@ namespace ApptestSsh.Core.View.RootPage.Android
                 await _root.NavigateAsync(e.Index);
             };
         }
-    }
-
-   
+    }  
 }

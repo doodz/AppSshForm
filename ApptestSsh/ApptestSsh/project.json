@@ -4,9 +4,9 @@
     "Autofac": "4.6.0",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "2.0.0-preview1-25301-01",
-    "NLog": "5.0.0-beta07",
+    "NLog": "5.0.0-beta08",
     "sqlite-net-pcl": "1.4.83-beta",
-    "Xam.Plugins.Settings": "3.0.0.66-beta",
+    "Xam.Plugins.Settings": "3.0.0.72-beta",
     "Xamarin.Forms": "2.3.5.239-pre3"
   },
   "frameworks": {
