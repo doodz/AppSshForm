@@ -6,8 +6,20 @@
                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                x:TypeArguments="shellPage:ShellPageViewModel"
                x:Class="ApptestSsh.Core.View.ShellPage.ShellPage">
+    <mvvm:ViewPage.ToolbarItems>
+        <ToolbarItem Text="Install PiHole"
+                     Command="{Binding InstallPiHoleCmd,Mode=OneWay}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS">ic_storage_black.png</On>
+                    <On Platform="Android">ic_storage_black.png</On>
+                    <On Platform="UWP">Assets/ic_storage_black_24dp_1x.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
 
-    <Grid>
+        </ToolbarItem>
+    </mvvm:ViewPage.ToolbarItems>
+        <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

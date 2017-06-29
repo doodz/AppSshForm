@@ -29,6 +29,13 @@
             Navigation
             -->
 
+
+            <Color x:Key="grayUltraLight">#FFFFFF</Color>
+            <Color x:Key="grayLight">#F2F2F2</Color>
+            <Color x:Key="grayPrimary">#B9B9B9</Color>
+            <Color x:Key="grayDark">#959595</Color>
+            <Color x:Key="grayMedium">#B9B9B9</Color>
+
             <OnPlatform x:TypeArguments="Color"
                         Android="#F5F5F5"
                         iOS="#EFEFF4"

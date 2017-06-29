@@ -40,6 +40,8 @@ namespace ApptestSsh.Core.View.ShellPage
                     return KeyboardKeys.Arrow_Right;
                 case "tab":
                     return KeyboardKeys.Tab;
+                case "up":
+                    return KeyboardKeys.Arrow_Up;
                 default:
                     return string.Empty;
             }

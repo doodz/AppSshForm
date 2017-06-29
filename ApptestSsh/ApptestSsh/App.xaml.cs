@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.Helpers;
 using ApptestSsh.Core.Services;
+using ApptestSsh.Core.View.RootPage.Android;
 using ApptestSsh.Core.View.RootPage.Windows;
 using ApptestSsh.Core.View.WelcomeStartPage;
 using Autofac;
@@ -22,8 +23,7 @@ namespace ApptestSsh.Core
         public App()
         {
             InitializeComponent();
-            FirstLogin();
-            var res =Settings.Current.LastHostId;
+            FirstLogin();           
             GetMainPage();
         }
 
@@ -51,7 +51,8 @@ namespace ApptestSsh.Core
             switch (Device.RuntimePlatform)
             {
                 case Device.Android:
-                    NavigationService.GoToHome();
+                    MainPage = new RootPageAndroid();
+                    NavigationService.Navigation = MainPage.Navigation;
                     break;
                 case Device.iOS:
                     NavigationService.GoToHome();
@@ -78,6 +79,7 @@ namespace ApptestSsh.Core
         private void FirstLogin()
         {
             MainPage = new WelcomeStartPage();
+            NavigationService.Navigation = MainPage.Navigation;
         }
 
         protected override void OnSleep()

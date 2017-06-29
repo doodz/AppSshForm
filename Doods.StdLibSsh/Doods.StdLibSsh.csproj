@@ -71,7 +71,7 @@
     <Compile Include="Queries\NetstatQuery.cs" />
     <Compile Include="Queries\NetworkInformationQuery.cs" />
     <Compile Include="Queries\ProcessesQuery.cs" />
-    <Compile Include="Queries\Queries.cs" />
+    <Compile Include="Base\Queries\Queries.cs" />
     <Compile Include="Queries\RebootQuery.cs" />
     <Compile Include="Queries\SerialNoQuery.cs" />
     <Compile Include="Queries\UptimeQuery.cs" />

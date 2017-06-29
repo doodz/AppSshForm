@@ -46,7 +46,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             NetworkInterfaceInformation = new ObservableRangeCollection<NetworkInterfaceInformationBean>();
             DiskUsage = new ObservableRangeCollection<DiskUsageBean>();
             Processes = new ObservableRangeCollection<ProcessBean>();
-            ManageHostCmd = new Command(c =>NavigationService.GoToHostManagerPage());
+            ManageHostCmd = new Command(c =>NavigationService.GoToModalHostManagerPage());
             ShellCmd = new Command(c => NavigationService.GoToShellPage());
             RefreshCommand = new Command(async () => await ExecuteRefreshCommandAsync());
             GotoLoginCommand = new Command(async () => await NavigationService.GotoLoginModal());
@@ -84,6 +84,9 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
             Logger.Info($"{Title} : get SystemInfoQueries");
             SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
+
+
+
             var netinfo = await new NetworkInformationQuery(ssh).RunAsync(Token);
             if (NetworkInterfaceInformation.Any())
                 NetworkInterfaceInformation.Clear();

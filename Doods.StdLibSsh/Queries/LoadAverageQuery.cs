@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Enums;
 using Doods.StdLibSsh.Interfaces;
@@ -44,13 +45,13 @@ namespace Doods.StdLibSsh.Queries
                         switch (_period)
                         {
                             case LoadAveragePeriod.OneMinute:
-                                loadAvg = double.Parse(split[0]);
+                                loadAvg = double.Parse(split[0], CultureInfo.InvariantCulture);
                                 break;
                             case LoadAveragePeriod.FiveMinutes:
-                                loadAvg = double.Parse(split[1]);
+                                loadAvg = double.Parse(split[1], CultureInfo.InvariantCulture);
                                 break;
                             case LoadAveragePeriod.FifteenMinutes:
-                                loadAvg = double.Parse(split[2]);
+                                loadAvg = double.Parse(split[2], CultureInfo.InvariantCulture);
                                 break;
                             default:
                                 loadAvg = 0D;

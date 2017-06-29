@@ -129,6 +129,8 @@
     <Content Include="Assets\ic_file_upload_black_24dp_2x.png" />
     <Content Include="Assets\ic_refresh_black_24dp_1x.png" />
     <Content Include="Assets\ic_refresh_black_24dp_2x.png" />
+    <Content Include="Assets\ic_settings_applications_black_24dp_1x.png" />
+    <Content Include="Assets\ic_settings_applications_black_24dp_2x.png" />
     <Content Include="Assets\ic_storage_black_24dp_1x.png" />
     <Content Include="Assets\ic_storage_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />

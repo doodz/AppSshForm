@@ -20,7 +20,7 @@ namespace Doods.StdLibSsh.Queries.GroupedQueries
             bean.OsMemory = new MemoryQuery(GetClient()).Run();
             bean.CpuSerial = new SerialNoQuery(GetClient()).Run();
             bean.AverageLoad = new LoadAverageQuery(GetClient(), LoadAveragePeriod.FifteenMinutes).Run();
-
+            bean.Uptime = new UptimeQuery(GetClient()).Run();
             return bean;
         }
 

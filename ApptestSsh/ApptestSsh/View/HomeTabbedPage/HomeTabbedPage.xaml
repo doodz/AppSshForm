@@ -11,7 +11,7 @@
 
     <mvvm:BaseTabbedPage.ToolbarItems>
         <ToolbarItem Text="Manage Host"
-                     Command="{Binding ManageHostCmd}">
+                     Command="{Binding ManageHostCmd,Mode=OneWay}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS">ic_storage_black.png</On>
@@ -22,10 +22,8 @@
 
         </ToolbarItem>
         <ToolbarItem Text="Shell"
-                     Command="{Binding ShellCmd}"/>
-           
+                     Command="{Binding ShellCmd,Mode=OneWay}" />
 
-        
     </mvvm:BaseTabbedPage.ToolbarItems>
 
     <mvvm:BaseTabbedPage.Resources>
@@ -140,7 +138,8 @@
     <ContentPage Title="Overclocking / System">
         <StackLayout>
             <views:CardView Padding="10">
-                <Grid BindingContext="{Binding Path=VcgencmdBean}" BackgroundColor="White">
+                <Grid BindingContext="{Binding Path=VcgencmdBean}"
+                      BackgroundColor="White">
                     <Grid.Style>
                         <Style  TargetType="Label">
                             <Setter Property="HorizontalTextAlignment"
@@ -149,9 +148,7 @@
                     </Grid.Style>
                     <Grid.RowDefinitions>
                         <RowDefinition />
-                        <RowDefinition  Height="0.5" />
-                        <RowDefinition />
-                        <RowDefinition />
+                        <RowDefinition  Height="0.5"/>
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
@@ -160,13 +157,28 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <StackLayout Spacing="0"
+
+                    <StackLayout BackgroundColor="{StaticResource grayPrimary}"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="14,8"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"
+                                 Grid.Row="0">
+
+                        <Label Text="Overclocking"
+                               FontSize="Medium"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               LineBreakMode="NoWrap" />
+                    </StackLayout>
+                    <!--<StackLayout Spacing="0"
                                  Grid.ColumnSpan="2"
                                  Grid.Column="0"
                                  Grid.Row="0">
                         <views:LabelSection Text="Overclocking" />
-                    <views:HeaderDivider />
-                    </StackLayout>
+                        <views:HeaderDivider />
+                    </StackLayout>-->
                     <!--<Label Grid.ColumnSpan="2"
                            HorizontalTextAlignment="Center"
                            Grid.Column="0"
@@ -178,42 +190,146 @@
                              Grid.Row="1"
                              Style="{StaticResource BoxViewSeparatorStype}"
                              Margin="-10,0" />-->
-                    <Label Grid.Column="0"
+                    <!--<Label Grid.Column="0"
                            Grid.Row="2"
-                           Text="Core temperature" />
-                    <Label Grid.Column="0"
-                           Grid.Row="3"
-                           Text="Arm frequency" />
-                    <Label Grid.Column="0"
-                           Grid.Row="4"
-                           Text="Core frequency" />
-                    <Label Grid.Column="0"
-                           Grid.Row="5"
-                           Text="Core Volt" />
-                    <Label Grid.Column="0"
-                           Grid.Row="6"
-                           Text="Firmware" />
+                           Text="Core temperature" />-->
 
-                    <Label Grid.Column="1"
-                           Grid.Row="2"
-                           Text="{Binding Path=CpuTemperature}" />
-                    <Label Grid.Column="1"
+                    <views:DoodsRoundedRectangleView Grid.Column="0"
+                                                     Grid.Row="2"
+                                                     CornerRadius="8"
+                                                     FillColor="Coral">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Core temperature"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=CpuTemperature,StringFormat='{0}°C'}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+
+                    <views:DoodsRoundedRectangleView Grid.Column="1"
+                                                     Grid.Row="2"
+                                                     CornerRadius="8"
+                                                     FillColor="Coral">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Core frequency"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=CoreFrequency,Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+
+                    <!--<Label Grid.Column="0"
                            Grid.Row="3"
-                           Text="{Binding Path=ArmFrequency}" />
-                    <Label Grid.Column="1"
+                           Text="Arm frequency" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="4"
-                           Text="{Binding Path=CoreFrequency}" />
-                    <Label Grid.Column="1"
+                           Text="Core frequency" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="5"
-                           Text="{Binding Path=CoreVolts}" />
-                    <Label Grid.Column="1"
+                           Text="Core Volt" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="6"
-                           Text="{Binding Path=Version}" />
+                           Text="Firmware" />-->
+                    <views:DoodsRoundedRectangleView Grid.Column="0"
+                                                     Grid.Row="3"
+                                                     CornerRadius="8"
+                                                     FillColor="Coral">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Core Volt"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=CoreVolts}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+
+                    <views:DoodsRoundedRectangleView Grid.Column="1"
+                                                     Grid.Row="3"
+                                                     CornerRadius="8"
+                                                     FillColor="Coral">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Arm frequency"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=ArmFrequency,Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+
+                    <views:DoodsRoundedRectangleView Grid.Column="0"
+                                                     Grid.Row="4"
+                                                     Grid.ColumnSpan="2"
+                                                     CornerRadius="8"
+                                                     FillColor="Coral">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Firmware"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=Version}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="{Binding Path=CpuTemperature}" />-->
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="3"
+                           Text="{Binding Path=ArmFrequency}" />-->
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="4"
+                           Text="{Binding Path=CoreFrequency}" />-->
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="5"
+                           Text="{Binding Path=CoreVolts}" />-->
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="6"
+                           Text="{Binding Path=Version}" />-->
 
                 </Grid>
             </views:CardView>
-            <views:CardView 
-                   Padding="10">
+            <views:CardView Padding="10">
                 <Grid BindingContext="{Binding Path=SystemBean}">
                     <Grid.Style>
                         <Style  TargetType="Label">
@@ -228,22 +344,32 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
+                    <StackLayout BackgroundColor="{StaticResource grayPrimary}"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="14,8"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"
+                                 Grid.Row="0">
 
-                    <StackLayout Spacing="0"
+                        <Label Text="System"
+                               FontSize="Medium"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               LineBreakMode="NoWrap" />
+                    </StackLayout>
+                    <!--<StackLayout Spacing="0"
                                  Grid.ColumnSpan="2"
                                  Grid.Column="0"
                                  Grid.Row="0">
                         <views:LabelSection Text="System" />
                         <views:HeaderDivider />
-                    </StackLayout>
+                    </StackLayout>-->
 
                     <!--<Label Grid.ColumnSpan="2"
                            Grid.Column="0"
@@ -256,10 +382,156 @@
                              Grid.Row="1"
                              Style="{StaticResource BoxViewSeparatorStype}"
                              Margin="-10,0" />-->
-                    <Label Grid.Column="0"
+
+                    <views:DoodsRoundedRectangleView Grid.Column="0"
+                                                     Grid.Row="2"
+                                                     CornerRadius="8"
+                                                     FillColor="DarkCyan">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Startup"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=Uptime}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+                    <views:DoodsRoundedRectangleView Grid.Column="1"
+                                                     Grid.Row="2"
+                                                     CornerRadius="8"
+                                                     FillColor="DarkCyan">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Last refresh"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=LastRefresh}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+
+
+                    <StackLayout Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="3"
+                                 Orientation="Horizontal">
+                        <views:DoodsRoundedRectangleView HorizontalOptions="FillAndExpand"
+                                                         CornerRadius="8"
+                                                         FillColor="DarkCyan">
+                            <views:DoodsRoundedRectangleView.InnerContent>
+                                <StackLayout Spacing="0">
+                                    <Label Text="Free memory"
+                                           FontSize="20"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center" />
+                                    <Label Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="Small"
+                                           LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </views:DoodsRoundedRectangleView.InnerContent>
+                        </views:DoodsRoundedRectangleView>
+                        <views:DoodsRoundedRectangleView HorizontalOptions="FillAndExpand"
+                                                         CornerRadius="8"
+                                                         FillColor="DarkCyan">
+                            <views:DoodsRoundedRectangleView.InnerContent>
+                                <StackLayout Spacing="0">
+                                    <Label Text="Used memory"
+                                           FontSize="20"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center" />
+                                    <Label Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="Small"
+                                           LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </views:DoodsRoundedRectangleView.InnerContent>
+                        </views:DoodsRoundedRectangleView>
+                        <views:DoodsRoundedRectangleView HorizontalOptions="FillAndExpand"
+                                                         CornerRadius="8"
+                                                         FillColor="DarkCyan">
+                            <views:DoodsRoundedRectangleView.InnerContent>
+                                <StackLayout Spacing="0">
+                                    <Label Text="Total memory"
+                                           FontSize="20"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center" />
+                                    <Label Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="Small"
+                                           LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </views:DoodsRoundedRectangleView.InnerContent>
+                        </views:DoodsRoundedRectangleView>
+                    </StackLayout>
+
+                    <views:DoodsRoundedRectangleView Grid.Column="0"
+                                                     Grid.Row="4"
+                                                     CornerRadius="8"
+                                                     FillColor="DarkCyan">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Distribution"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="{Binding Path=DistributionName}"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        TextColor="White"
+                                        FontSize="Small"
+                                        LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+                    <views:DoodsRoundedRectangleView Grid.Column="1"
+                                                     Grid.Row="4"
+                                                     CornerRadius="8"
+                                                     FillColor="DarkCyan">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Serial No"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=CpuSerial}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+                    <!--<Label Grid.Column="0"
                            Grid.Row="2"
-                           Text="Startup" />
-                    <Label Grid.Column="0"
+                           Text="Startup" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="3"
                            Text="Average load" />
                     <Label Grid.Column="0"
@@ -267,20 +539,41 @@
                            Text="Total memory" />
                     <Label Grid.Column="0"
                            Grid.Row="5"
-                           Text="Free memory" />
-                    <Label Grid.Column="0"
+                           Text="Free memory" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="6"
                            Text="Distribution" />
                     <Label Grid.Column="0"
                            Grid.Row="7"
-                           Text="Serial No" />
-                    <Label Grid.Column="0"
+                           Text="Serial No" />-->
+                    <!--<Label Grid.Column="0"
                            Grid.Row="8"
-                           Text="Last refresh" />
-                    <Label Grid.Column="1"
-                           Grid.Row="2"
-                           Text="{Binding Path=AverageLoad}" />
-                    <Label Grid.Column="1"
+                           Text="Last refresh" />-->
+
+                    <views:DoodsRoundedRectangleView Grid.Column="1"
+                                                     Grid.Row="5"
+                                                     CornerRadius="8"
+                                                     FillColor="DarkCyan">
+                        <views:DoodsRoundedRectangleView.InnerContent>
+                            <StackLayout Spacing="0">
+                                <Label Text="Average load"
+                                       FontSize="20"
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Path=AverageLoad}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </views:DoodsRoundedRectangleView.InnerContent>
+                    </views:DoodsRoundedRectangleView>
+                    <!--<Label Grid.Column="1"
+                           Grid.Row="5"
+                           Text="{Binding Path=AverageLoad}" />-->
+                    <!--<Label Grid.Column="1"
                            Grid.Row="3"
                            Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
                     <Label Grid.Column="1"
@@ -288,16 +581,16 @@
                            Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
                     <Label Grid.Column="1"
                            Grid.Row="5"
-                           Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
-                    <Label Grid.Column="1"
+                           Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />-->
+                    <!--<Label Grid.Column="1"
                            Grid.Row="6"
                            Text="{Binding Path=DistributionName}" />
                     <Label Grid.Column="1"
                            Grid.Row="7"
-                           Text="{Binding Path=CpuSerial}" />
-                    <Label Grid.Column="1"
+                           Text="{Binding Path=CpuSerial}" />-->
+                    <!--<Label Grid.Column="1"
                            Grid.Row="8"
-                           Text="{Binding Path=CpuSerial}" />
+                           Text="{Binding Path=CpuSerial}" />-->
                 </Grid>
             </views:CardView>
         </StackLayout>

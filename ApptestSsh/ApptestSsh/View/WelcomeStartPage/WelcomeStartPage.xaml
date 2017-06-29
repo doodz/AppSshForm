@@ -23,6 +23,7 @@
                VerticalOptions="EndAndExpand"
                HeightRequest="70" />
         <views:DoodsButton Grid.Row="1" Text="Go !!!"
+                           Command="{Binding GoToRootPageCmd,Mode=OneWay}"
                            Style="StaticResource ButtonStyle" />
     </Grid>
 </mvvm:ViewPage>

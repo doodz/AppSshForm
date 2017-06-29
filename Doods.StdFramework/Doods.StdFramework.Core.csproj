@@ -63,10 +63,12 @@
     <Compile Include="Views\AlwaysScrollView.cs" />
     <Compile Include="Views\CardView.cs" />
     <Compile Include="Views\DoodsButton.cs" />
+    <Compile Include="Views\DoodsCircleView.cs" />
     <Compile Include="Views\DoodsEntry.cs" />
     <Compile Include="Views\DoodsEntryBox.xaml.cs">
       <DependentUpon>DoodsEntryBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DoodsRoundedRectangleView.cs" />
     <Compile Include="Views\FooterDivider.xaml.cs">
       <DependentUpon>FooterDivider.xaml</DependentUpon>
     </Compile>

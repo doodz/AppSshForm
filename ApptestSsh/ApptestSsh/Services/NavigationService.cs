@@ -5,6 +5,7 @@ using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.RootPage.Android;
 using ApptestSsh.Core.View.RootPage.Windows;
 using ApptestSsh.Core.View.ShellPage;
 using Doods.StdFramework.Navigation;
@@ -104,7 +105,10 @@ namespace ApptestSsh.Core.Services
         {
             return PushAsync(Navigation, new LoginPage(host));
         }
-
+        public static Task GoToLoginModal(Host host)
+        {
+            return PushModalAsync(Navigation, new LoginPage(host));
+        }
         public static Task GoToHome()
         {
             return PushAsync(Navigation, new MainPage());
@@ -119,6 +123,12 @@ namespace ApptestSsh.Core.Services
         {
             return PushAsync(Navigation, new HostManagerPage());
         }
+
+        public static Task GoToModalHostManagerPage()
+        {
+            return PushModalAsync(Navigation, new HostManagerPage());
+        }
+
         public static Task GoToShellPage()
         {
             return PushAsync(Navigation, new ShellPage());
@@ -129,6 +139,9 @@ namespace ApptestSsh.Core.Services
             return PopAsync(Navigation);
         }
 
+
+       
+
         public static Task GoBackModal()
         {
             return PopModalAsync(Navigation);
@@ -136,6 +149,10 @@ namespace ApptestSsh.Core.Services
         public static Task GoToRootPageWindows()
         {
             return PushAsync(Navigation, new RootPageWindows());
+        }
+        public static Task GoToRootPageAndroid()
+        {
+            return PushAsync(Navigation, new RootPageAndroid());
         }
     }
 

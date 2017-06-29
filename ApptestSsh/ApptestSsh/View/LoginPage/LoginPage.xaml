@@ -9,9 +9,30 @@
                 Title="{Binding Title}">
 
     <StackLayout>
+        <views:DoodsEntry Text="{Binding Host}"
+                             
+                             Placeholder="127.0.0.1"
+                             Font="Large"
+                             HasBorder="false" />
+        <views:DoodsEntry Text="{Binding Port}"
+                            
+                             Placeholder="22"
+                             Font="Large"
+                             HasBorder="false" />
+        <views:DoodsEntry Text="{Binding Username}"
+                            
+                             Placeholder="Username"
+                             Font="Large"
+                             HasBorder="false" />
+        <views:DoodsEntry Text="{Binding Password}"
+                            
+                             Placeholder="Password"
+                             Font="Large"
+                             IsPassword="True"
+                             HasBorder="false" />
 
 
-        <views:DoodsEntryBox Text="{Binding Host}"
+        <!--<views:DoodsEntryBox Text="{Binding Host}"
                              Label="Host"
                              Placeholder="127.0.0.1"
                              Font="Large"
@@ -31,7 +52,7 @@
                              Placeholder="Password"
                              Font="Large"
                              IsPassword="True"
-                             HasBorder="false" />
+                             HasBorder="false" />-->
         
         <!--<views:DoodsEntry Text="{Binding Host}"
                           Font="Large"

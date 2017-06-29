@@ -118,7 +118,8 @@ namespace ApptestSsh.Core.View.LoginPage
         private async void SaveHost()
         {
             await _repository.InsertAsync(_hostObj);
-            await NavigationService.GoToHomeTabbed();
+            //await NavigationService.GoToHomeTabbed();
+            await NavigationService.GoBackModal();
         }
     }
 }

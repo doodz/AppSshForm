@@ -38,5 +38,12 @@ namespace Doods.StdLibSsh.Beans
             get => _averageLoad;
             set => SetProperty(ref _averageLoad, value);
         }
+
+        private double _uptime;
+        public double Uptime
+        {
+            get => _uptime;
+            set => SetProperty(ref _uptime, value);
+        }
     }
 }

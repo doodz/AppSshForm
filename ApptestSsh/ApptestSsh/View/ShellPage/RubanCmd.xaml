@@ -13,6 +13,9 @@
             <views:DoodsButton Text="right"
                                Command="{Binding CmdEnter}"
                                CommandParameter="Right" />
+          <views:DoodsButton Text="up"
+                             Command="{Binding CmdEnter}"
+                             CommandParameter="Up" />
             <views:DoodsButton Text="tab"
                                Command="{Binding CmdEnter}"
                                CommandParameter="Tab" />

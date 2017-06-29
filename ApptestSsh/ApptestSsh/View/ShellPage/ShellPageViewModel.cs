@@ -32,6 +32,7 @@ namespace ApptestSsh.Core.View.ShellPage
         public RubanCmdViewModel RubanCmdViewModel { get; private set; }
         public ICommand UpdateCmd { get; }
         public ICommand ClearCmd { get; }
+        public ICommand InstallPiHoleCmd { get; }
         private string _lasteReceived;
 
         public string Textbash { get; set; }
@@ -46,40 +47,42 @@ namespace ApptestSsh.Core.View.ShellPage
         {
             UpdateCmd = new Command(Update);
             ClearCmd = new Command(p => Lines = string.Empty);
+            InstallPiHoleCmd = new Command(p=> InstallPiHole());
+
             RubanCmdViewModel = new RubanCmdViewModel();
             RubanCmdViewModel.PropertyChanged += RubanCmdViewModelOnPropertyChanged;
+
         }
 
         private void RubanCmdViewModelOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
             if (propertyChangedEventArgs.PropertyName == "CmdStr")
             {
-                Textbash += RubanCmdViewModel.CmdStr;
+                //Textbash += RubanCmdViewModel.CmdStr;
+                _shell.Write(RubanCmdViewModel.CmdStr);
             }
         }
 
         private async void Update()
         {
-
-            if (Textbash != null)
-                await _streamWriter.WriteAsync(Textbash);
+            _shell.WriteLine(Textbash);
+            //if (Textbash != null)
+            //    await _streamWriter.WriteAsync(Textbash);
             //await _streamWriter.WriteLineAsync(Textbash);
             //await _streamWriter.WriteLineAsync("sudo apt-get update");
             //Lines = _shell.Expect(new Regex(@":.*>#"), new TimeSpan(0, 0, 5));
         }
 
 
-        private void installPiHole()
+        private void InstallPiHole()
         {
             var str = "curl -sSL https://install.pi-hole.net | bash";
-
-
-            _streamWriter.WriteAsync('\r');
+            _streamWriter.WriteLineAsync(str);
         }
 
         protected override Task OnInternalAppearing()
         {
-            return ExecuteAsync(p => CreateShell());
+            return ExecuteAsync(p => CreateShell(),true);
         }
 
         private Task CreateShell()
@@ -92,9 +95,10 @@ namespace ApptestSsh.Core.View.ShellPage
             _streamWriter = new StreamWriter(_shell);
             _streamReader = new StreamReader(_shell);
 
-            _streamWriter.AutoFlush = true;
+            _streamWriter.AutoFlush = false;
             //wr.WriteLine("sudo apt-get update");
             return Task.FromResult(0);
+
         }
 
         private void ShellOnDataReceived(object sender, ShellDataEventArgs shellDataEventArgs)

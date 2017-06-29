@@ -17,8 +17,9 @@ namespace ApptestSsh.Core.View.RootPage.Android
             _pages = new Dictionary<int, DoodsNavigationPage>();
             Master = new MenuPageAndroid(this);
 
-            _pages.Add(0, new DoodsNavigationPage(new HomeTabbedPage.HomeTabbedPage()));
 
+            _pages.Add(0, new DoodsNavigationPage(new HomeTabbedPage.HomeTabbedPage()));
+           
             Detail = _pages[0];
             //MessagingService.Current.Subscribe<DeepLinkPage>("DeepLinkPage", async (m, p) =>
             //{

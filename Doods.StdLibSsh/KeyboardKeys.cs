@@ -56,7 +56,7 @@ namespace Doods.StdLibSsh
         public static string Minus = "\u001bOm";
         public static string Comma = "\u001bOl";
         public static string Period = "\u001bOn";
-        public static string Enter = "\u001bOM";
+        public static string Enter = "\r";//"\u001bOM";
         public static string Do = "\u001b[29~";
         public static string Find = "\u001b[1~";
         public static string Help = "\u001b[28~";

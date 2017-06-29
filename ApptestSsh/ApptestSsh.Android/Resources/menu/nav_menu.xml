@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:id="@+id/nav_section_main"
+         android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_home"
+      android:icon="@drawable/ic_account_box_black_24dp"
+      android:title="Evolve Feed"/>
+    <item
+      android:id="@+id/nav_hostManager"
+      android:icon="@drawable/ic_storage_black_24dp"
+      android:title="Sessions"/>
+    <item
+      android:id="@+id/nav_Shell"
+      android:icon="@drawable/ic_file_upload_black_24dp"
+      android:title="Events" />
+  </group>
+
+  <item android:title="Information" >
+    <menu>
+      <item
+        android:title="Settings"
+        android:icon="@drawable/ic_settings_applications_black_24dp"
+        android:id="@+id/nav_settings"
+        android:checkable="true" />
+    </menu>
+  </item>
+</menu>

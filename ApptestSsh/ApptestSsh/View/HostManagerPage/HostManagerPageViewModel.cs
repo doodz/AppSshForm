@@ -45,10 +45,10 @@ namespace ApptestSsh.Core.View.HostManagerPage
                     var ssh = AppContainer.Container.Resolve<ISshService>();
                     ssh.Host = SelectedHost;
                     ssh.Initialise();
-                    await NavigationService.GoToHomeTabbed();
+                    await NavigationService.GoBackModal();
                     break;
                 case "Edite":
-                    await NavigationService.GoToLogin(SelectedHost);
+                    await NavigationService.GoToLoginModal(SelectedHost);
                     break;
                 case "Delete":
                     await _repository.DeleteAsync<Host>(SelectedHost);

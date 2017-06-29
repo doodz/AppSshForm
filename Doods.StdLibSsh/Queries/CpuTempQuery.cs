@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
@@ -38,7 +39,7 @@ namespace Doods.StdLibSsh.Queries
             if (match.Success)
             {
 
-                double temperature = double.Parse(match.Value);
+                var temperature = double.Parse(match.Value, CultureInfo.InvariantCulture);
                 return temperature;
             }
 

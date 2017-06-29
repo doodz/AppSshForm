@@ -25,7 +25,7 @@ namespace ApptestSsh.Core.DataBase
             try
             {
                 await AsyncConnection.CreateTableAsync<Host>();
-                await AsyncConnection.CreateTableAsync<Command>();
+                await AsyncConnection.CreateTableAsync<CommandSsh>();
 
                 await Migrate();
 
@@ -40,7 +40,7 @@ namespace ApptestSsh.Core.DataBase
         public override async Task Drop()
         {
             await AsyncConnection.DropTableAsync<Host>();
-            await AsyncConnection.DropTableAsync<Command>();
+            await AsyncConnection.DropTableAsync<CommandSsh>();
 
 
             await SetSchemaVersion(0);
