@@ -3,8 +3,8 @@
   "dependencies": {
     "Autofac": "4.6.0",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-    "NETStandard.Library": "2.0.0-preview1-25301-01",
-    "Xamarin.Forms": "2.3.5.239-pre3"
+    "NETStandard.Library": "2.0.0-preview2-25401-01",
+    "Xamarin.Forms": "2.3.5.256-pre6"
   },
   "frameworks": {
     "netstandard1.3": {}

@@ -16,12 +16,10 @@ namespace Doods.StdLibSsh
 
         }
 
-       
-
         public string GetServeurVersion()
         {
 
-            using (var client = new SshClient("192.168.1.50", "root", "nostrqdq;us"))
+            using (var client = new SshClient("192.168.1.73", "pi", "raspberry"))
             {
                 client.Connect();
                 
@@ -52,10 +50,16 @@ namespace Doods.StdLibSsh
             return Client.RunCommand(cmd);
         }
 
-        public Task<string> RunCommandAsync(string cmdStr, CancellationToken token)
+        public Task<string> RunCommandAsync(SshCommand cmd, CancellationToken token)
         {
             throw new System.NotImplementedException();
         }
+
+        public ShellStream CreateShell()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task ConnectAsync()
         {
             throw new System.NotImplementedException();

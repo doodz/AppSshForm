@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <mvvm:BaseTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                      x:Class="ApptestSsh.Core.View.HomeTabbedPage.HomeTabbedPage"
@@ -7,6 +8,7 @@
                      xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core"
                      xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
                      xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+                     x:Name="TabbedHomePage"
                      Title="TabbedPage">
 
     <mvvm:BaseTabbedPage.ToolbarItems>
@@ -45,26 +47,25 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
+
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Column="0"
                                Grid.Row="0"
-                               Text="{Binding Name}" />
+                               Text="{Binding Name,Mode=OneWay}" />
                         <Label Grid.Column="0"
                                Grid.Row="1"
-                               Text="{Binding IpAdress}" />
+                               Text="{Binding IpAdress,Mode=OneWay}" />
                         <Label Grid.Column="1"
                                Grid.Row="0"
                                Grid.RowSpan="2"
                                Text="Up"
-                               IsVisible="{Binding HasCarrier}" />
+                               IsVisible="{Binding HasCarrier,Mode=OneWay}" />
                         <Label Grid.Column="1"
                                Grid.Row="0"
                                Grid.RowSpan="2"
                                Text="Down"
-                               IsVisible="{Binding HasCarrier,Converter={x:Static converters:InverseBooleanConverter.Default}}" />
-
-
+                               IsVisible="{Binding HasCarrier,Converter={x:Static converters:InverseBooleanConverter.Default},Mode=OneWay,}" />
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -72,7 +73,7 @@
             <DataTemplate x:Key="DiskUsageTemplate">
                 <ViewCell>
                     <Frame>
-                        <Grid Margin="-10">
+                        <Grid Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
@@ -80,20 +81,32 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Column="0"
                                    Grid.Row="0"
-                                   Text="{Binding FileSystem}" />
+                                   Text="{Binding FileSystem,Mode=OneWay}" />
                             <Label Grid.Column="1"
                                    Grid.Row="0"
-                                   Text="{Binding MountedOn}" />
+                                   Text="{Binding MountedOn,Mode=OneWay}" />
                             <Label Grid.Column="0"
                                    Grid.Row="1"
-                                   Text="{Binding Size}" />
+                                   Text="{Binding Size,Mode=OneWay}" />
                             <Label Grid.Column="1"
                                    Grid.Row="1"
-                                   Text="{Binding UsedPercent}" />
+                                   Text="{Binding UsedPercent,Mode=OneWay}" />
+
+                            <views:DoodsButton VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               Grid.Column="2"
+                                               Grid.RowSpan="2"
+                                               Grid.Row="0"
+                                               Text="Umount"
+                                               IsEnabled="False"
+                                               Command="{Binding BindingContext.MountUmountCmd,Mode=OneWay,Source={x:Reference TabbedHomePage}}"
+                                               CommandParameter="{Binding .}" />
+
 
 
                         </Grid>
@@ -101,11 +114,10 @@
                 </ViewCell>
             </DataTemplate>
 
-            <!--DataType="ProcessBean"-->
-            <DataTemplate x:Key="ProcessTemplate">
+            <DataTemplate x:Key="UpgradablesTemplate">
                 <ViewCell>
                     <Frame>
-                        <Grid Margin="-10">
+                        <Grid Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
@@ -113,22 +125,77 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
+
                             <Label Grid.Column="0"
                                    Grid.Row="0"
-                                   Text="{Binding Pid}" />
-                            <Label Grid.Column="1"
-                                   Grid.Row="0"
-                                   Text="{Binding Tty}" />
+                                   FontSize="14"
+                                   Text="{Binding Name,Mode=OneWay}" />
+
                             <Label Grid.Column="0"
                                    Grid.Row="1"
-                                   Text="{Binding CpuTime}" />
+                                   Text="{Binding HoldHold,Mode=OneWay,StringFormat='from: {0}'}" />
                             <Label Grid.Column="1"
                                    Grid.Row="1"
-                                   Text="{Binding Command}" />
+                                   Text="{Binding NewVersion,Mode=OneWay,StringFormat='to: {0}'}" />
+                            <Label Grid.Column="2"
+                                   Grid.Row="0"
+                                   Text="{Binding FromRepo,Mode=OneWay}" />
 
 
+                            <views:DoodsButton VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               Grid.Column="2"
+                                               Grid.Row="1"
+                                               Text="Update"
+                                               Command="{Binding BindingContext.UpdateCmd,Mode=OneWay,Source={x:Reference TabbedHomePage}}"
+                                               CommandParameter="{Binding .}" />
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+            <!--DataType="ProcessBean"-->
+            <DataTemplate x:Key="ProcessTemplate">
+                <ViewCell>
+                    <Frame>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Grid.Column="0"
+                                   Grid.Row="0"
+                                   FontSize="14"
+                                   Text="{Binding CommandName,Mode=OneWay}" />
+
+                            <Label Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="{Binding Pid,Mode=OneWay,StringFormat='( {0} )'}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding Tty,Mode=OneWay}" />
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   Text="{Binding CpuTime,Mode=OneWay}" />
+
+
+                            <views:DoodsButton VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               Grid.Column="2"
+                                               Grid.RowSpan="2"
+                                               Grid.Row="0"
+                                               Text="Kill"
+                                               Command="{Binding BindingContext.KillProcessCmd,Mode=OneWay,Source={x:Reference TabbedHomePage}}"
+                                               CommandParameter="{Binding .}" />
                         </Grid>
                     </Frame>
                 </ViewCell>
@@ -138,17 +205,17 @@
     <ContentPage Title="Overclocking / System">
         <StackLayout>
             <views:CardView Padding="10">
-                <Grid BindingContext="{Binding Path=VcgencmdBean}"
+                <Grid BindingContext="{Binding Path=VcgencmdBean,Mode=OneWay}"
                       BackgroundColor="White">
                     <Grid.Style>
-                        <Style  TargetType="Label">
+                        <Style TargetType="Label">
                             <Setter Property="HorizontalTextAlignment"
                                     Value="Start" />
                         </Style>
                     </Grid.Style>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition  Height="0.5"/>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5" />
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
@@ -172,27 +239,6 @@
                                VerticalOptions="Center"
                                LineBreakMode="NoWrap" />
                     </StackLayout>
-                    <!--<StackLayout Spacing="0"
-                                 Grid.ColumnSpan="2"
-                                 Grid.Column="0"
-                                 Grid.Row="0">
-                        <views:LabelSection Text="Overclocking" />
-                        <views:HeaderDivider />
-                    </StackLayout>-->
-                    <!--<Label Grid.ColumnSpan="2"
-                           HorizontalTextAlignment="Center"
-                           Grid.Column="0"
-                           Grid.Row="0"
-                           Style="{DynamicResource TitleStyle}"
-                           Text="Overclocking" />
-                    <BoxView Grid.Column="0"
-                             Grid.ColumnSpan="2"
-                             Grid.Row="1"
-                             Style="{StaticResource BoxViewSeparatorStype}"
-                             Margin="-10,0" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="2"
-                           Text="Core temperature" />-->
 
                     <views:DoodsRoundedRectangleView Grid.Column="0"
                                                      Grid.Row="2"
@@ -236,18 +282,6 @@
                         </views:DoodsRoundedRectangleView.InnerContent>
                     </views:DoodsRoundedRectangleView>
 
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="3"
-                           Text="Arm frequency" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="4"
-                           Text="Core frequency" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="5"
-                           Text="Core Volt" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="6"
-                           Text="Firmware" />-->
                     <views:DoodsRoundedRectangleView Grid.Column="0"
                                                      Grid.Row="3"
                                                      CornerRadius="8"
@@ -311,35 +345,20 @@
                             </StackLayout>
                         </views:DoodsRoundedRectangleView.InnerContent>
                     </views:DoodsRoundedRectangleView>
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="2"
-                           Text="{Binding Path=CpuTemperature}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="3"
-                           Text="{Binding Path=ArmFrequency}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="4"
-                           Text="{Binding Path=CoreFrequency}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="5"
-                           Text="{Binding Path=CoreVolts}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="6"
-                           Text="{Binding Path=Version}" />-->
 
                 </Grid>
             </views:CardView>
             <views:CardView Padding="10">
                 <Grid BindingContext="{Binding Path=SystemBean}">
                     <Grid.Style>
-                        <Style  TargetType="Label">
+                        <Style TargetType="Label">
                             <Setter Property="HorizontalTextAlignment"
                                     Value="Start" />
                         </Style>
                     </Grid.Style>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition  Height="0.5" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5" />
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
@@ -363,25 +382,6 @@
                                VerticalOptions="Center"
                                LineBreakMode="NoWrap" />
                     </StackLayout>
-                    <!--<StackLayout Spacing="0"
-                                 Grid.ColumnSpan="2"
-                                 Grid.Column="0"
-                                 Grid.Row="0">
-                        <views:LabelSection Text="System" />
-                        <views:HeaderDivider />
-                    </StackLayout>-->
-
-                    <!--<Label Grid.ColumnSpan="2"
-                           Grid.Column="0"
-                           HorizontalTextAlignment="Center"
-                           Style="{DynamicResource TitleStyle}"
-                           Grid.Row="0"
-                           Text="System" />
-                    <BoxView Grid.Column="0"
-                             Grid.ColumnSpan="2"
-                             Grid.Row="1"
-                             Style="{StaticResource BoxViewSeparatorStype}"
-                             Margin="-10,0" />-->
 
                     <views:DoodsRoundedRectangleView Grid.Column="0"
                                                      Grid.Row="2"
@@ -499,12 +499,12 @@
                                        TextColor="White"
                                        VerticalOptions="Center"
                                        HorizontalOptions="Center" />
-                                <Label  Text="{Binding Path=DistributionName}"
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Center"
-                                        TextColor="White"
-                                        FontSize="Small"
-                                        LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Path=DistributionName}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       LineBreakMode="TailTruncation" />
                             </StackLayout>
                         </views:DoodsRoundedRectangleView.InnerContent>
                     </views:DoodsRoundedRectangleView>
@@ -528,27 +528,6 @@
                             </StackLayout>
                         </views:DoodsRoundedRectangleView.InnerContent>
                     </views:DoodsRoundedRectangleView>
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="2"
-                           Text="Startup" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="3"
-                           Text="Average load" />
-                    <Label Grid.Column="0"
-                           Grid.Row="4"
-                           Text="Total memory" />
-                    <Label Grid.Column="0"
-                           Grid.Row="5"
-                           Text="Free memory" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="6"
-                           Text="Distribution" />
-                    <Label Grid.Column="0"
-                           Grid.Row="7"
-                           Text="Serial No" />-->
-                    <!--<Label Grid.Column="0"
-                           Grid.Row="8"
-                           Text="Last refresh" />-->
 
                     <views:DoodsRoundedRectangleView Grid.Column="1"
                                                      Grid.Row="5"
@@ -570,27 +549,60 @@
                             </StackLayout>
                         </views:DoodsRoundedRectangleView.InnerContent>
                     </views:DoodsRoundedRectangleView>
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="5"
-                           Text="{Binding Path=AverageLoad}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="3"
-                           Text="{Binding Path=OsMemory.TotalUsed.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
-                    <Label Grid.Column="1"
-                           Grid.Row="4"
-                           Text="{Binding Path=OsMemory.TotalMemory.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />
-                    <Label Grid.Column="1"
-                           Grid.Row="5"
-                           Text="{Binding Path=OsMemory.TotalFree.Bytes, Converter={x:Static converters:ByteCountToHumanReadableConverter.Default}, ConverterParameter=true}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="6"
-                           Text="{Binding Path=DistributionName}" />
-                    <Label Grid.Column="1"
-                           Grid.Row="7"
-                           Text="{Binding Path=CpuSerial}" />-->
-                    <!--<Label Grid.Column="1"
-                           Grid.Row="8"
-                           Text="{Binding Path=CpuSerial}" />-->
+
+                </Grid>
+            </views:CardView>
+            <views:CardView Padding="10">
+                <Grid BackgroundColor="White">
+                    <Grid.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="HorizontalTextAlignment"
+                                    Value="Start" />
+                        </Style>
+                    </Grid.Style>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5" />
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <StackLayout BackgroundColor="{StaticResource grayPrimary}"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="14,8"
+                                 Grid.Column="0"
+                                 Grid.Row="0">
+
+                        <!--<Label Text="Upgradables"
+                               FontSize="Medium"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               LineBreakMode="NoWrap" />-->
+                        <Label Text="{Binding Path=Upgradables.Count,Mode=OneWay,StringFormat='there are {0} package can be updated.'}" />
+                       
+                    </StackLayout>
+                   
+                    <ActivityIndicator Grid.Row="2"
+                                       HeightRequest="50"
+                                       WidthRequest="100"
+                                       Color="{StaticResource PrimaryDark}"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       IsRunning="{Binding Path=OnUpdate,Mode=OneWay}"
+                                       IsVisible="{Binding Path=OnUpdate,Mode=OneWay}" />
+
+                    <views:DoodsButton Grid.Row="2"
+                                       Text="Update"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       Command="{Binding Path=UpdateAllCmd,Mode=OneWay}"
+                                       IsVisible="{Binding Path=OnUpdate,Mode=OneWay,Converter={x:Static converters:InverseBooleanConverter.Default}}" />
+                    <!--<ListView
+                        Grid.Row="2" ItemsSource="{Binding Upgradables}"
+                              CachingStrategy="RecycleElement"
+                              ItemTemplate="{StaticResource UpgradablesTemplate}" />-->
+
                 </Grid>
             </views:CardView>
         </StackLayout>
@@ -606,7 +618,6 @@
 
     <ContentPage Title="Disk Usage">
         <ListView ItemsSource="{Binding DiskUsage}"
-                  HasUnevenRows="False"
                   CachingStrategy="RecycleElement"
                   ItemTemplate="{StaticResource DiskUsageTemplate}" />
     </ContentPage>

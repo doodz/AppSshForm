@@ -1,19 +1,22 @@
 ﻿using ApptestSsh.Core.DataBase;
 using ApptestSsh.Core.Helpers;
 using Doods.StdLibSsh;
-using Renci.SshNet;
+
 namespace ApptestSsh.Core.Services
 {
-    public class SshService : SshServiceBase , ISshService
+    public class SshService : SshServiceBase, ISshService
     {
         private Host _host;
 
         public Host Host
         {
-            get { return _host; }
-            set { _host = value;Initialise(); }
+            get => _host;
+            set
+            {
+                _host = value;
+                Initialise();
+            }
         }
-        
 
         public void Initialise()
         {
@@ -23,7 +26,5 @@ namespace ApptestSsh.Core.Services
             Password = _host.Password;
             Dispose();
         }
-
-        
     }
 }

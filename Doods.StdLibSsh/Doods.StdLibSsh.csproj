@@ -37,13 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Base\Queries\GenericQuery.cs" />
+    <Compile Include="Base\Queries\GenericBashQuery.cs" />
     <Compile Include="Base\Queries\MultiGenericQueries.cs" />
+    <Compile Include="Base\Queries\QueryResult.cs" />
     <Compile Include="Beans\DiskUsageBean.cs" />
     <Compile Include="Beans\MemoryBean.cs" />
     <Compile Include="Beans\NetworkInterfaceInformationBean.cs" />
     <Compile Include="Beans\OsMemoryBean.cs" />
     <Compile Include="Beans\ProcessBean.cs" />
     <Compile Include="Beans\SystemBean.cs" />
+    <Compile Include="Beans\UpgradableBean.cs" />
     <Compile Include="Beans\VcgencmdBean.cs" />
     <Compile Include="Beans\WlanBean.cs" />
     <Compile Include="ClientSsh.cs" />
@@ -54,6 +57,7 @@
     <Compile Include="KeyboardKeys.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\AptListQuery.cs" />
     <Compile Include="Queries\checkCarrierQuery.cs" />
     <Compile Include="Queries\CpuTempQuery.cs" />
     <Compile Include="Queries\DiskUsageQuery.cs" />
@@ -66,14 +70,22 @@
     <Compile Include="Queries\IfConfigQuery.cs" />
     <Compile Include="Queries\InterfaceQuery.cs" />
     <Compile Include="Queries\IpAddressQuery.cs" />
+    <Compile Include="Queries\IsRunningPidQuery.cs" />
+    <Compile Include="Queries\KillProcessQuery.cs" />
     <Compile Include="Queries\LoadAverageQuery.cs" />
     <Compile Include="Queries\MemoryQuery.cs" />
+    <Compile Include="Queries\MountQuery.cs" />
     <Compile Include="Queries\NetstatQuery.cs" />
     <Compile Include="Queries\NetworkInformationQuery.cs" />
+    <Compile Include="Queries\NoHupQuery.cs" />
+    <Compile Include="Queries\NuHupQueryWithWaitPid.cs" />
     <Compile Include="Queries\ProcessesQuery.cs" />
     <Compile Include="Base\Queries\Queries.cs" />
     <Compile Include="Queries\RebootQuery.cs" />
+    <Compile Include="Base\ReturnQuery.cs" />
     <Compile Include="Queries\SerialNoQuery.cs" />
+    <Compile Include="Queries\UmountQuery.cs" />
+    <Compile Include="Queries\UpdateAllQuery.cs" />
     <Compile Include="Queries\UptimeQuery.cs" />
     <Compile Include="Queries\VoltsQuery.cs" />
     <Compile Include="Queries\WlanInfoQuery.cs" />
@@ -88,6 +100,9 @@
       <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
       <Name>Doods.StdFramework.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="var\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
@@ -47,8 +48,6 @@ namespace Doods.StdLibSsh.Queries
             return ParseProcesses(result);
         }
 
-
-
         /// <summary>
         /// Parses the output of the ps command.
         /// </summary>
@@ -71,7 +70,7 @@ namespace Doods.StdLibSsh.Queries
                 }
                 // split line at whitespaces
 
-                var cols = line.Split();
+                var cols = line.Trim().Split().Where(l => !string.IsNullOrWhiteSpace(l)).ToArray();
                 if (cols.Length >= 4)
                 {
                     try
@@ -82,7 +81,7 @@ namespace Doods.StdLibSsh.Queries
                         var cmd = string.Join(" ", cols);
 
                         processes.Add(new ProcessBean(
-                            int.Parse(cols[0]), cols[1], cols[2], cmd));
+                            int.Parse(cols[0]), cols[1], cols[2],cols[3], cmd));
                     }
                     catch (FormatException e)
                     {
@@ -99,8 +98,5 @@ namespace Doods.StdLibSsh.Queries
             }
             return processes;
         }
-
-
-
     }
 }

@@ -14,31 +14,37 @@ namespace ApptestSsh.Droid.Services
 
         public void Debug(string msg)
         {
+            System.Diagnostics.Debug.WriteLine(msg);
             _log.Debug(msg);
         }
 
         public void Error(Exception e)
         {
+            System.Diagnostics.Debug.WriteLine(e);
             _log.Error(e);
         }
 
         public void Error(string msg)
         {
+            System.Diagnostics.Debug.WriteLine(msg);
             _log.Error(msg);
         }
 
         public void Info(string msg)
         {
+            System.Diagnostics.Debug.WriteLine(msg);
             _log.Info(msg);
         }
 
         public void Warning(Exception e)
         {
+            System.Diagnostics.Debug.WriteLine(e);
             _log.Warn(e);
         }
 
         public void Warning(string msg)
         {
+            System.Diagnostics.Debug.WriteLine(msg);
             _log.Warn(msg);
         }
 

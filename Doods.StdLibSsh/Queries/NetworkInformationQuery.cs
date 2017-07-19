@@ -24,10 +24,12 @@ namespace Doods.StdLibSsh.Queries
 
             foreach (var interfaceName in interfaces)
             {
-                var interfaceInfo = new NetworkInterfaceInformationBean();
-                interfaceInfo.Name = interfaceName;
+                var interfaceInfo = new NetworkInterfaceInformationBean
+                {
+                    Name = interfaceName,
+                    HasCarrier = CheckCarrier(interfaceName)
+                };
                 // check carrier
-                interfaceInfo.HasCarrier = checkCarrier(interfaceName);
                 interfacesInfo.Add(interfaceInfo);
             }
             var wirelessInterfaces = new List<NetworkInterfaceInformationBean>();
@@ -53,13 +55,14 @@ namespace Doods.StdLibSsh.Queries
             return interfacesInfo;
         }
 
-        private bool checkCarrier(string interfaceName)
+        private bool CheckCarrier(string interfaceName)
         {
             return new CheckCarrierQuery(Client, interfaceName).Run();
         }
         protected override IEnumerable<NetworkInterfaceInformationBean> PaseResult(string result)
         {
-            var res = result.Split('\n').Where(r => !r.StartsWith("lo"));
+           
+            var res = result.Split('\n').Where(r => !r.StartsWith("lo") && !string.IsNullOrWhiteSpace(r) && !string.IsNullOrEmpty(r));
             return GetInterfeces(res);
         }
     }

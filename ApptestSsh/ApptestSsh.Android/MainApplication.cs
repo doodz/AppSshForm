@@ -33,9 +33,9 @@ namespace ApptestSsh.Droid
             CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
-#if !DEBUG
-            MobileCenter.Start(config.MobileCenterKey, typeof(Analytics), typeof(Crashes));
-#endif
+//#if !DEBUG
+//            MobileCenter.Start(config.MobileCenterKey, typeof(Analytics), typeof(Crashes));
+//#endif
         }
 
         private void HandleAndroidException(object sender, RaiseThrowableEventArgs e)

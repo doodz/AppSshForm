@@ -86,11 +86,11 @@
       <DependentUpon>MenuPageUWP.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RootPage\Windows\RootPageWindows.cs" />
-    <Compile Include="View\Settings\SettingsMenuItem.cs" />
-    <Compile Include="View\Settings\SettingsPage.xaml.cs">
+    <Compile Include="View\SettingsPage\SettingsMenuItem.cs" />
+    <Compile Include="View\SettingsPage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Settings\SettingsPageViewModel.cs" />
+    <Compile Include="View\SettingsPage\SettingsPageViewModel.cs" />
     <Compile Include="View\ShellPage\RubanCmd.xaml.cs">
       <DependentUpon>RubanCmd.xaml</DependentUpon>
     </Compile>
@@ -204,7 +204,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\Settings\SettingsPage.xaml">
+    <EmbeddedResource Include="View\SettingsPage\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

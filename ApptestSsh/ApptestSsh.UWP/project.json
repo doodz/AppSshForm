@@ -2,12 +2,12 @@
   "dependencies": {
     "Autofac": "4.6.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
-    "NLog": "5.0.0-beta08",
+    "NLog": "5.0.0-beta09",
     "sqlite-net-pcl": "1.4.83-beta",
     "SSH.NET": "2016.1.0-beta1",
-    "Xam.Plugin.Connectivity": "2.4.0.72-beta",
-    "Xam.Plugins.Settings": "3.0.0.72-beta",
-    "Xamarin.Forms": "2.3.5.239-pre3"
+    "Xam.Plugin.Connectivity": "3.0.2-beta106",
+    "Xam.Plugins.Settings": "3.0.1",
+    "Xamarin.Forms": "2.3.5.256-pre6"
   },
   "frameworks": {
     "uap10.0": {}

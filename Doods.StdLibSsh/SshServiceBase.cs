@@ -15,6 +15,8 @@ namespace Doods.StdLibSsh
         protected  string HostName;
         protected  string UserName;
         protected  string Password;
+        private ShellStream _shell;
+
 
         public SshClient Client => _client;
         //private ConnectionInfo _connectionInfo;
@@ -29,16 +31,15 @@ namespace Doods.StdLibSsh
         }
 
 
-        public Task<string> RunCommandAsync(string cmdStr, CancellationToken token)
+        public Task<string> RunCommandAsync(SshCommand cmd, CancellationToken token)
         {
             if (_client == null) return null;
 
-            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(token))
+            using (CancellationTokenSource.CreateLinkedTokenSource(token))
             {
 
-                var request = _client.CreateCommand(cmdStr);
-
-                var res =  Task.Factory.FromAsync((callback, stateObject) => request.BeginExecute(callback, stateObject), request.EndExecute, null);
+                //var request = _client.CreateCommand(cmdStr);
+                var res =  Task.Factory.FromAsync(cmd.BeginExecute, cmd.EndExecute, null);
                 return res;
             }
 
@@ -97,6 +98,11 @@ namespace Doods.StdLibSsh
                 _client = null;
             }
 
+        }
+
+        public ShellStream CreateShell()
+        {
+            return _shell = Client.CreateShellStream(nameof(SshServiceBase), 0, 0, 0, 0, 1024);
         }
     }
 }
