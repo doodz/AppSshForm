@@ -80,8 +80,8 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Column="0"
@@ -97,7 +97,8 @@
                                    Grid.Row="1"
                                    Text="{Binding UsedPercent,Mode=OneWay}" />
 
-                            <views:DoodsButton VerticalOptions="Center"
+                            <views:DoodsButton Margin="1"
+                                               VerticalOptions="Center"
                                                HorizontalOptions="Center"
                                                Grid.Column="2"
                                                Grid.RowSpan="2"
@@ -145,7 +146,8 @@
                                    Text="{Binding FromRepo,Mode=OneWay}" />
 
 
-                            <views:DoodsButton VerticalOptions="Center"
+                            <views:DoodsButton Margin="1"
+                                               VerticalOptions="Center"
                                                HorizontalOptions="Center"
                                                Grid.Column="2"
                                                Grid.Row="1"
@@ -188,7 +190,8 @@
                                    Text="{Binding CpuTime,Mode=OneWay}" />
 
 
-                            <views:DoodsButton VerticalOptions="Center"
+                            <views:DoodsButton Margin="1"
+                                               VerticalOptions="Center"
                                                HorizontalOptions="Center"
                                                Grid.Column="2"
                                                Grid.RowSpan="2"
@@ -563,7 +566,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="0.5" />
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
 
@@ -580,9 +583,9 @@
                                VerticalOptions="Center"
                                LineBreakMode="NoWrap" />-->
                         <Label Text="{Binding Path=Upgradables.Count,Mode=OneWay,StringFormat='there are {0} package can be updated.'}" />
-                       
+
                     </StackLayout>
-                   
+
                     <ActivityIndicator Grid.Row="2"
                                        HeightRequest="50"
                                        WidthRequest="100"

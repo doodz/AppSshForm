@@ -11,8 +11,12 @@ using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 using NLog;
 using Xamarin.Forms;
+using Device = Xamarin.Forms.Device;
 using ILogger = Doods.StdFramework.Interfaces.ILogger;
 
 namespace ApptestSsh.Core
@@ -70,6 +74,10 @@ namespace ApptestSsh.Core
 
         protected async override void OnStart()
         {
+
+            MobileCenter.Start("ios={a1180a5d-28a0-4ea3-9eda-7b2aa8d4cba3};android={e3bb5908-01c3-4286-811f-b07537a6a632};uwp={4fb715f8-a0ed-46ce-8ac8-9785a6ca11e4}", typeof(Analytics), typeof(Crashes));
+
+
             //MobileCenter.Start(typeof(Analytics), typeof(Crashes));
             //MessagingCenter.Subscribe<object, Exception>(this, Messages.ExceptionOccurred, OnAppExceptionOccurred);
             //MobileCenter.Start(typeof(Analytics), typeof(Crashes));

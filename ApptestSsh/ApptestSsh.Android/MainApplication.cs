@@ -8,6 +8,9 @@ using Android.Util;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 [assembly: UsesPermission(Manifest.Permission.Internet)]
 [assembly: UsesPermission(Manifest.Permission.WakeLock)]
@@ -33,9 +36,9 @@ namespace ApptestSsh.Droid
             CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
-//#if !DEBUG
-//            MobileCenter.Start(config.MobileCenterKey, typeof(Analytics), typeof(Crashes));
-//#endif
+#if !DEBUG
+            //MobileCenter.Start("e3bb5908-01c3-4286-811f-b07537a6a632", typeof(Analytics), typeof(Crashes));
+#endif
         }
 
         private void HandleAndroidException(object sender, RaiseThrowableEventArgs e)

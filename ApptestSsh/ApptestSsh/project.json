@@ -2,6 +2,9 @@
   "supports": {},
   "dependencies": {
     "Autofac": "4.6.0",
+    "Microsoft.Azure.Mobile": "0.14.0",
+    "Microsoft.Azure.Mobile.Analytics": "0.14.0",
+    "Microsoft.Azure.Mobile.Crashes": "0.14.0",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "2.0.0-preview2-25401-01",
     "NLog": "5.0.0-beta09",
@@ -11,6 +14,8 @@
     "Xamarin.Forms": "2.3.5.256-pre6"
   },
   "frameworks": {
-    "netstandard1.3": {}
+    "netstandard1.3": {
+      "imports": "portable-net45+win8+wpa81"
+    }
   }
 }
