@@ -24,7 +24,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                     });
                     break;
             }
-            
+
             ToolbarItems.Add(new ToolbarItem
             {
                 Text = "login",

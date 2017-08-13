@@ -1,23 +1,22 @@
-﻿using System;
-using ApptestSsh.Core.Services;
-using ApptestSsh.Core.View.MainPage;
+﻿using ApptestSsh.Core.View.MainPage;
 using Doods.StdFramework.Mvvm;
 using Renci.SshNet;
+using System;
 
 namespace ApptestSsh.Core
 {
     public partial class MainPage : ViewPage<MainPageViewModel>
     {
-        
+
         public MainPage()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 
         public async void Button_Clicked(object sender, EventArgs e)
         {
 
-            await NavigationService.GoToHomeTabbed();
+            await ViewModel.NavigationService.GoToHomeTabbed();
         }
 
         //public ConnectionInfo CreateConnectionInfo()

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Doods.StdFramework.Interfaces;
+using Doods.StdFramework.Mvvm;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.StdFramework.Interfaces;
-using Doods.StdFramework.Mvvm;
 
 namespace Doods.StdFramework
 {
@@ -14,7 +14,6 @@ namespace Doods.StdFramework
         private bool _isLoad;
         protected bool ReloadOnAppearing;
         private int _busyCount;
-
 
         public int BusyCount
         {

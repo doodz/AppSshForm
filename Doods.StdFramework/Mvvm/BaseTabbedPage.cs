@@ -23,6 +23,11 @@ namespace Doods.StdFramework.Mvvm
         {
             base.OnAppearing();
             await ViewModel.OnAppearing();
+
+            //TODO THE : A voir pour remettre ça en place , ou alors faire une abstraction
+            //Analytics.TrackEvent("OnAppearing", new Dictionary<string, string> {
+            //    { "Title", Title }
+            //});
         }
 
         protected override void OnDisappearing()

@@ -1,18 +1,19 @@
-﻿using System.Windows.Input;
-using ApptestSsh.Core.DataBase;
-using Doods.StdFramework;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.Base;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.CommandPage
 {
-    public class AddCommandPageViewModel : BaseViewModel
+    public class AddCommandPageViewModel : LocalViewModel
     {
         private readonly IRepository _repository;
         public string CmdName { get; set; }
         public string CmdString { get; set; }
-        public ICommand SaveCmd { get;}
+        public ICommand SaveCmd { get; }
+
         public AddCommandPageViewModel(ILogger logger, IRepository reposotiry) : base(logger)
         {
             _repository = reposotiry;
@@ -21,12 +22,16 @@ namespace ApptestSsh.Core.View.CommandPage
 
         private async void Save(object obj)
         {
-            var comm = new CommandSsh();
-
-            if(comm.Id ==null)
+            var comm = new CommandSsh
+            {
+                Name = CmdName,
+                CommandString = CmdString
+            };
+            if (comm.Id == null)
                 await _repository.InsertAsync(comm);
             else
                 await _repository.UpdateAsync(comm);
+            await NavigationService.GoBack();
         }
     }
 }

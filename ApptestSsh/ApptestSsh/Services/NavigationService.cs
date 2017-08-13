@@ -1,159 +1,120 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using ApptestSsh.Core.DataBase;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.CommandPage;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
-using ApptestSsh.Core.View.RootPage.Android;
+using ApptestSsh.Core.View.RootPage.MasterDetailPage;
 using ApptestSsh.Core.View.RootPage.Windows;
+using ApptestSsh.Core.View.Settings;
 using ApptestSsh.Core.View.ShellPage;
+using ApptestSsh.Core.View.UpgradablePage;
+using ApptestSsh.Core.View.WelcomeStartPage;
 using Doods.StdFramework.Navigation;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.Services
 {
-    public static class NavigationService
+    public class NavigationService : BaseNavigationService, INavigationService
     {
-        private static bool _isNavigating;
-
-        public static INavigation Navigation { get; set; }
-
-        public static Page CurrentPage
+        public Task GotoLoginModal()
         {
-            get { return Navigation.NavigationStack.FirstOrDefault(); }
+            return PushModalAsync(Navigation, new DoodsNavigationPage(new LoginPage()));
         }
 
-        public static Page CurrentModalPage
-        {
-            get { return Navigation.ModalStack.FirstOrDefault(); }
-        }
-
-        public static void RemovePageFromHistory(Type type)
-        {
-            var last = Navigation.NavigationStack.ToList().First(p => p.GetType() == type);
-            Navigation.RemovePage(last);
-        }
-
-        public static void ClearHistory()
-        {
-            foreach (var page in Navigation.NavigationStack.ToList())
-                Navigation.RemovePage(page);
-        }
-
-        private static async Task PushAsync(INavigation navigation, Page page, bool animate = true)
-        {
-            if (_isNavigating) return;
-            _isNavigating = true;
-
-            await navigation.PushAsync(page, animate);
-            _isNavigating = false; 
-        }
-
-        private static async Task PushModalAsync(INavigation navigation, Page page, bool animate = true)
-        {
-            if (_isNavigating) return;
-            _isNavigating = true;
-
-            await navigation.PushModalAsync(page, animate);
-            _isNavigating = false;
-        }
-
-        private static async Task PopAsync(INavigation navigation, bool animate = true)
-        {
-            if (_isNavigating) return;
-            _isNavigating = true;
-
-            await navigation.PopAsync(animate);
-            _isNavigating = false;
-        }
-
-        private static async Task PopModalAsync(INavigation navigation, bool animate = true)
-        {
-            if (_isNavigating) return;
-            _isNavigating = true;
-
-            await navigation.PopModalAsync(animate);
-            _isNavigating = false;
-        }
-
-        private static async Task PopToRootAsync(INavigation navigation, bool animate = true)
-        {
-            if (_isNavigating) return;
-            _isNavigating = true;
-
-            await navigation.PopToRootAsync(animate);
-            _isNavigating = false;
-        }
-
-        public static async Task GoBackToRoot()
-        {
-            await PopToRootAsync(Navigation);
-        }
-
-        public static Task GotoLoginModal()
-        {
-            return PushModalAsync(Navigation,new DoodsNavigationPage( new LoginPage()));
-        }
-
-        public static Task GoToLogin()
+        public Task GoToLogin()
         {
             return PushAsync(Navigation, new LoginPage());
         }
 
-        public static Task GoToLogin(Host host)
+        public Task GoToLogin(Host host)
         {
             return PushAsync(Navigation, new LoginPage(host));
         }
-        public static Task GoToLoginModal(Host host)
+
+        public Task GoToLoginModal(Host host)
         {
             return PushModalAsync(Navigation, new LoginPage(host));
         }
-        public static Task GoToHome()
+
+        public Page GetRootPage()
+        {
+            return new DoodsNavigationPage(new RootMasterDetailPage());
+        }
+
+        public Task GoToRootPage()
+        {
+            return PushAsync(Navigation, new RootMasterDetailPage());
+        }
+
+        public Task GoToHome()
         {
             return PushAsync(Navigation, new MainPage());
         }
 
-        public static Task GoToHomeTabbed()
+        public Task GoToHomeTabbed()
         {
             return PushAsync(Navigation, new HomeTabbedPage());
         }
 
-        public static Task GoToHostManagerPage()
+        public Task GoToHostManagerPage()
         {
             return PushAsync(Navigation, new HostManagerPage());
         }
 
-        public static Task GoToModalHostManagerPage()
+        public Task GoToModalHostManagerPage()
         {
             return PushModalAsync(Navigation, new HostManagerPage());
         }
 
-        public static Task GoToShellPage()
+        public Task GoToShellPage()
         {
             return PushAsync(Navigation, new ShellPage());
         }
-        
-        public static Task GoBack()
+
+        public Task GoToSettingsPage()
         {
-            return PopAsync(Navigation);
+            return PushModalAsync(Navigation, new DoodsNavigationPage(new SettingsPage()));
+        }
+
+        public Page GetWelcomeStartPage()
+        {
+            return new DoodsNavigationPage(new WelcomeStartPage());
         }
 
 
-       
 
-        public static Task GoBackModal()
-        {
-            return PopModalAsync(Navigation);
-        }
-        public static Task GoToRootPageWindows()
+
+        public Task GoToRootPageWindows()
         {
             return PushAsync(Navigation, new RootPageWindows());
         }
-        public static Task GoToRootPageAndroid()
+
+        //public Task GoToRootPageAndroid()
+        //{
+        //    return PushAsync(Navigation, new RootPageAndroid());
+        //}
+
+        public Task GoToRootPageWindowsModal()
         {
-            return PushAsync(Navigation, new RootPageAndroid());
+            return PushModalAsync(Navigation, new RootPageWindows());
+        }
+
+        //public Task GoToRootPageAndroidModal()
+        //{
+        //    return PushModalAsync(Navigation, new RootPageAndroid());
+        //}
+
+
+        public Task GoUpgradableListViewPageModal()
+        {
+            return PushModalAsync(Navigation, new UpgradableListViewPage());
+        }
+
+
+        public Task GoToAddCommandPage()
+        {
+            return PushAsync(Navigation, new AddCommandPage());
         }
     }
-
 }

@@ -1,18 +1,17 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using ApptestSsh.Core.DataBase;
-using ApptestSsh.Core.Services;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.Base;
 using Autofac;
-using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.MainPage
 {
-    public class MainPageViewModel : BaseViewModel
+    public class MainPageViewModel : LocalViewModel
     {
         private readonly IRepository _repository;
         public ICommand ManageHostCmd { get; }

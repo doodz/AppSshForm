@@ -6,6 +6,6 @@
     "SSH.NET": "2016.1.0-beta1"
   },
   "frameworks": {
-    "netstandard1.3": {}
+    "netstandard1.4": {}
   }
 }

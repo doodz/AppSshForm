@@ -17,12 +17,32 @@ namespace Doods.StdFramework.Mvvm
             }
             BindingContext = ViewModel;
             Title = ViewModel.Title;
+
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    Padding = new Thickness(0, 20, 0, 0);
+                    break;
+                case Device.Android:
+                    Padding = new Thickness(10, 20, 0, 0);
+                    break;
+                case Device.WinPhone:
+                case Device.UWP:
+                    Padding = new Thickness(30, 20, 0, 0);
+                    break;
+            }
         }
 
         protected override async void OnAppearing()
         {
-            base.OnAppearing();          
+            base.OnAppearing();
             await ViewModel.OnAppearing();
+            //TODO THE : A voir pour remettre ça en place , ou alors faire une abstraction
+            //Analytics.TrackEvent("OnAppearing", new Dictionary<string, string>
+            //{
+            //    {"Title", Title}
+            //});
         }
 
         protected override void OnDisappearing()
@@ -30,6 +50,5 @@ namespace Doods.StdFramework.Mvvm
             base.OnDisappearing();
             ViewModel.OnDisappearing();
         }
-  
     }
 }

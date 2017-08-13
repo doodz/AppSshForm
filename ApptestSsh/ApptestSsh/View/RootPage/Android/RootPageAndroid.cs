@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.RootPage.Android
 {
-    public class RootPageAndroid : MasterDetailPage
+    public class RootPageAndroid : Xamarin.Forms.MasterDetailPage
     {
         Dictionary<int, DoodsNavigationPage> _pages;
         DeepLinkPage page;

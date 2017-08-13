@@ -7,7 +7,7 @@
                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                x:Class="ApptestSsh.Core.View.CommandPage.AddCommandPage">
 
-    <Grid VerticalOptions="Fill">
+    <Grid VerticalOptions="StartAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -15,8 +15,10 @@
         </Grid.RowDefinitions>
 
         <views:DoodsEntry Grid.Row="0"
+                          Placeholder="Command name"
                           Text="{Binding CmdName}" />
         <views:DoodsEntry Grid.Row="1"
+                          Placeholder="Command in shell"
                           Text="{Binding CmdString}" />
         <views:DoodsButton  Grid.Row="2"
                             Text="Save"

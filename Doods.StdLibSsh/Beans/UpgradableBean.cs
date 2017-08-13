@@ -1,6 +1,8 @@
-﻿namespace Doods.StdLibSsh.Beans
+﻿using Doods.StdFramework.Mvvm;
+
+namespace Doods.StdLibSsh.Beans
 {
-    public class UpgradableBean
+    public class UpgradableBean : IName
     {
         public string Name { get; set; }
         public string NewVersion { get; set; }

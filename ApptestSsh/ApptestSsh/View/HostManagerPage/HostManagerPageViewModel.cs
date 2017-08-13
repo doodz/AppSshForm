@@ -1,18 +1,20 @@
-﻿using System.Threading.Tasks;
-using System.Windows.Input;
-using ApptestSsh.Core.DataBase;
-using ApptestSsh.Core.Services;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.Base;
 using Autofac;
 using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.HostManagerPage
 {
-    public class HostManagerPageViewModel : BaseViewModel
+    public class HostManagerPageViewModel : LocalViewModel
     {
+
+        public ICommand AddHostCmd { get; }
         private readonly IRepository _repository;
         public ObservableRangeCollection<Host> Items { get; }
 
@@ -28,15 +30,16 @@ namespace ApptestSsh.Core.View.HostManagerPage
         /// There is a bug.
         /// When i select an item, xamarin.forms set selecteditem two time.
         /// </summary>
-        private bool OnDisplayAction;
+        private bool _onDisplayAction;
 
         public async void DisplayAction()
         {
-            if (SelectedHost == null || OnDisplayAction) return;
+            if (SelectedHost == null || _onDisplayAction) return;
 
-            OnDisplayAction = true;
+            _onDisplayAction = true;
             var action =
-                await Application.Current.MainPage.DisplayActionSheet(SelectedHost.HostName, "Cancel", null, "Select", "Edite",
+                await Application.Current.MainPage.DisplayActionSheet(SelectedHost.HostName, "Cancel", null, "Select",
+                    "Edite",
                     "Delete");
 
             switch (action)
@@ -45,19 +48,25 @@ namespace ApptestSsh.Core.View.HostManagerPage
                     var ssh = AppContainer.Container.Resolve<ISshService>();
                     ssh.Host = SelectedHost;
                     ssh.Initialise();
-                    await NavigationService.GoBackModal();
+                    await NavigationService.GoBack();
                     break;
                 case "Edite":
-                    await NavigationService.GoToLoginModal(SelectedHost);
+                    await NavigationService.GoToLogin(SelectedHost);
                     break;
                 case "Delete":
                     await _repository.DeleteAsync<Host>(SelectedHost);
+
+
+                    if (Helpers.Settings.Current.LastHostId == SelectedHost.Id)
+                        Helpers.Settings.Current.LastHostId = -1;
+
+                    Items.Remove(SelectedHost);
                     SelectedHost = null;
                     break;
                 default:
                     break;
             }
-            OnDisplayAction = false;
+            _onDisplayAction = false;
         }
 
         public HostManagerPageViewModel(ILogger logger, IRepository reposotiry) : base(logger)
@@ -68,6 +77,8 @@ namespace ApptestSsh.Core.View.HostManagerPage
 
             RefreshDataCommand = new Command(
                 async () => await RefreshData());
+
+            AddHostCmd = new Command(() => NavigationService.GoToLogin());
         }
 
         protected override async Task Load()
@@ -97,7 +108,7 @@ namespace ApptestSsh.Core.View.HostManagerPage
             Items.AddRange(list);
             BusyCount--;
             IsBusyList = false;
-            ((Command) RefreshDataCommand).ChangeCanExecute();
+            ((Command)RefreshDataCommand).ChangeCanExecute();
         }
     }
 }

@@ -9,22 +9,24 @@ namespace ApptestSsh.Core.View.CommandPage
     {
         public CommandListViewPage()
         {
-			InitializeComponent ();
-            
+            InitializeComponent();
+
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-            => ((ListView)sender).SelectedItem = null;
+        {
+            ViewModel.DisplayAction();
+        }
 
         async void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
-                return;
+            //if (e.SelectedItem == null)
+            //    return;
 
-            await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
+            //await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
 
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            ////Deselect Item
+            //((ListView)sender).SelectedItem = null;
         }
     }
 

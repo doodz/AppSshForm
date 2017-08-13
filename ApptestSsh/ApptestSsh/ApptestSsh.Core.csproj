@@ -45,10 +45,13 @@
     <Compile Include="DataBase\Migration1.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="ISshService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SshService.cs" />
     <Compile Include="Services\XamarinDeviceService.cs" />
     <Compile Include="CoreSetup.cs" />
+    <Compile Include="View\Base\LocalListViewModel.cs" />
+    <Compile Include="View\Base\LocalViewModel.cs" />
     <Compile Include="View\CommandPage\AddCommandPage.xaml.cs">
       <DependentUpon>AddCommandPage.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,17 @@
     </Compile>
     <Compile Include="View\RootPage\Android\RootPageAndroid.cs" />
     <Compile Include="View\RootPage\iOS\RootPageiOS.cs" />
+    <Compile Include="View\RootPage\MasterDetailPage\RootMasterDetailPage.xaml.cs">
+      <DependentUpon>RootMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RootPage\MasterDetailPage\RootMasterDetailPageDetail.xaml.cs">
+      <DependentUpon>RootMasterDetailPageDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RootPage\MasterDetailPage\RootMasterDetailPageMaster.xaml.cs">
+      <DependentUpon>RootMasterDetailPageMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RootPage\MasterDetailPage\RootMasterDetailPageMasterViewModel.cs" />
+    <Compile Include="View\RootPage\MasterDetailPage\RootMasterDetailPageMenuItem.cs" />
     <Compile Include="View\RootPage\MenuItem\AppPage.cs" />
     <Compile Include="View\RootPage\MenuItem\MenuItem.cs" />
     <Compile Include="View\RootPage\Windows\MenuPageUWP.xaml.cs">
@@ -112,6 +126,10 @@
       <DependentUpon>MyMasterDetailPageMaster.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TestUi\MyMasterDetailPageMenuItem.cs" />
+    <Compile Include="View\HomeTabbedPage\UpgradablePage\UpgradableListViewPage.xaml.cs">
+      <DependentUpon>UpgradableListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeTabbedPage\UpgradablePage\UpgradableListViewPageViewModel.cs" />
     <Compile Include="View\WelcomeStartPage\WelcomeStartPage.xaml.cs">
       <DependentUpon>WelcomeStartPage.xaml</DependentUpon>
     </Compile>
@@ -235,6 +253,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\CommandPage\CommandListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\HomeTabbedPage\UpgradablePage\UpgradableListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\RootPage\MasterDetailPage\RootMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\RootPage\MasterDetailPage\RootMasterDetailPageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\RootPage\MasterDetailPage\RootMasterDetailPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

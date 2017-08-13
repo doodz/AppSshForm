@@ -7,7 +7,7 @@
                x:Class="ApptestSsh.Core.View.HostManagerPage.HostManagerPage">
     <mvvm:ViewPage.ToolbarItems>
         <ToolbarItem Text="Add Host"
-                     Command="{Binding ManageHostCmd}">
+                     Command="{Binding AddHostCmd,Mode=OneWay}">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS">ic_add_box_black.png</On>

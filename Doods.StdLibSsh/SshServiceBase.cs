@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Doods.StdLibSsh.Interfaces;
+using Renci.SshNet;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.StdLibSsh.Interfaces;
-using Renci.SshNet;
 
 namespace Doods.StdLibSsh
 {
@@ -12,9 +12,9 @@ namespace Doods.StdLibSsh
         protected const int TimeoutInSecond = 60;
         private SshClient _client;
 
-        protected  string HostName;
-        protected  string UserName;
-        protected  string Password;
+        protected string HostName;
+        protected string UserName;
+        protected string Password;
         private ShellStream _shell;
 
 
@@ -22,6 +22,7 @@ namespace Doods.StdLibSsh
         //private ConnectionInfo _connectionInfo;
         protected SshServiceBase()
         {
+
             _lockObj = new object();
         }
 
@@ -39,7 +40,7 @@ namespace Doods.StdLibSsh
             {
 
                 //var request = _client.CreateCommand(cmdStr);
-                var res =  Task.Factory.FromAsync(cmd.BeginExecute, cmd.EndExecute, null);
+                var res = Task.Factory.FromAsync(cmd.BeginExecute, cmd.EndExecute, null);
                 return res;
             }
 
@@ -54,7 +55,7 @@ namespace Doods.StdLibSsh
 
         public async Task ConnectAsync()
         {
-            await Task.Factory.StartNew(Connect);   
+            await Task.Factory.StartNew(Connect);
         }
 
         public void Connect()

@@ -110,7 +110,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="ApptestSsh.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\ic_account_box_black_24dp_1x.png" />
@@ -137,6 +136,8 @@
     <Content Include="Assets\ic_refresh_black_24dp_2x.png" />
     <Content Include="Assets\ic_settings_applications_black_24dp_1x.png" />
     <Content Include="Assets\ic_settings_applications_black_24dp_2x.png" />
+    <Content Include="Assets\ic_settings_remote_black_24dp_1x.png" />
+    <Content Include="Assets\ic_settings_remote_black_24dp_2x.png" />
     <Content Include="Assets\ic_storage_black_24dp_1x.png" />
     <Content Include="Assets\ic_storage_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />

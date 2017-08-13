@@ -6,6 +6,8 @@ namespace ApptestSsh.Core.Services
 {
     public class SshService : SshServiceBase, ISshService
     {
+
+        public bool IsInitialised => _host != null;
         private Host _host;
 
         public Host Host

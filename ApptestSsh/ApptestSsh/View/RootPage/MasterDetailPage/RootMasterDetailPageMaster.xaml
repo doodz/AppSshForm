@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="masterDetailPage:RootMasterDetailPageMasterViewModel"
+               xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:masterDetailPage="clr-namespace:ApptestSsh.Core.View.RootPage.MasterDetailPage;assembly=ApptestSsh.Core"
+               x:Class="ApptestSsh.Core.View.RootPage.MasterDetailPage.RootMasterDetailPageMaster"
+               Title="Master">
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding MenuItems}"
+                  SelectedItem="{Binding Item}">
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource PrimaryDark}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="Ssh pi"
+                           Style="{DynamicResource SubtitleStyle}" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10"
+                                     HorizontalOptions="FillAndExpand">
+                            <Label VerticalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   Text="{Binding Title}"
+                                   FontSize="24" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</mvvm:ViewPage>

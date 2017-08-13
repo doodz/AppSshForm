@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseMasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApptestSsh.Core.View.RootPage.MasterDetailPage.RootMasterDetailPage"
+             xmlns:pages="clr-namespace:ApptestSsh.Core.View.RootPage.MasterDetailPage"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core">
+  <MasterDetailPage.Master>
+    <pages:RootMasterDetailPageMaster x:Name="MasterPage" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+          <!--<homeTabbedPage:HomeTabbedPage />-->
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</mvvm:BaseMasterDetailPage>

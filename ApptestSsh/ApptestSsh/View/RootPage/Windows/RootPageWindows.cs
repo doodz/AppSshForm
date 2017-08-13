@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using ApptestSsh.Core.View.RootPage.MenuItem;
+﻿using ApptestSsh.Core.View.RootPage.MenuItem;
 using ApptestSsh.Core.View.Settings;
 using Doods.StdFramework.Navigation;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.RootPage.Windows
 {
-    public class RootPageWindows : MasterDetailPage
+    public class RootPageWindows : Xamarin.Forms.MasterDetailPage
     {
         private Dictionary<AppPage, Page> _pages = new Dictionary<AppPage, Page>();
         private readonly MenuPageUWP _menu;
@@ -19,7 +19,7 @@ namespace ApptestSsh.Core.View.RootPage.Windows
             var items = new ObservableCollection<MenuItem.MenuItem>
             {
                 new MenuItem.MenuItem { Name = "Home", Icon = "menu_feed.png", Page = AppPage.Home },
-                new MenuItem.MenuItem { Name = "Shell", Icon = "menu_sessions.png", Page = AppPage.Shell },    
+                new MenuItem.MenuItem { Name = "Shell", Icon = "menu_sessions.png", Page = AppPage.Shell },
                 new MenuItem.MenuItem { Name = "Settings", Icon = "menu_settings.png", Page = AppPage.Settings }
             };
 

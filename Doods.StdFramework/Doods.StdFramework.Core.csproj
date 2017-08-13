@@ -41,6 +41,7 @@
     <Compile Include="Interfaces\IViewModel.cs" />
     <Compile Include="Markups\ImageResourceExtension.cs" />
     <Compile Include="Mvvm\BaseListViewModel.cs" />
+    <Compile Include="Mvvm\BaseMasterDetailPage.cs" />
     <Compile Include="Mvvm\BaseTabbedPage.cs" />
     <Compile Include="Mvvm\RunBusy.cs" />
     <Compile Include="Mvvm\ViewPage.cs" />
@@ -58,7 +59,9 @@
     <Compile Include="List\ObservableRangeCollection.Cs" />
     <Compile Include="Navigation\BaseNavigationService.cs" />
     <Compile Include="Navigation\DoodsNavigationPage.cs" />
+    <Compile Include="Navigation\IBaseNavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Notificator.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Views\AlwaysScrollView.cs" />
     <Compile Include="Views\CardView.cs" />
@@ -130,6 +133,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Navigation\Menu\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

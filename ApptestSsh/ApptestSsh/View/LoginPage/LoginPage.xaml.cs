@@ -1,5 +1,4 @@
 ﻿using ApptestSsh.Core.DataBase;
-using ApptestSsh.Core.Services;
 using ApptestSsh.Core.View.LoginPage;
 using Doods.StdFramework.Mvvm;
 using Xamarin.Forms;
@@ -9,10 +8,10 @@ namespace ApptestSsh.Core.View.Login
 
     public partial class LoginPage : ViewPage<LoginViewModel>
     {
-       
+
         public LoginPage()
         {
-           
+
             InitializeComponent();
 
             var cancel = new ToolbarItem
@@ -22,11 +21,11 @@ namespace ApptestSsh.Core.View.Login
                 {
                     if (ViewModel.IsBusy)
                         return;
-                    await NavigationService.GoBackModal();
+                    await ViewModel.NavigationService.GoBack();
                 })
             };
 
-            
+
             ToolbarItems.Add(cancel);
 
             switch (Device.RuntimePlatform)
@@ -40,7 +39,7 @@ namespace ApptestSsh.Core.View.Login
             }
         }
 
-        public LoginPage(Host host )
+        public LoginPage(Host host)
         {
             ViewModel.HostObj = host;
             InitializeComponent();

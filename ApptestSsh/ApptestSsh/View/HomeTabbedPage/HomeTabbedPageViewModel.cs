@@ -1,23 +1,22 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using ApptestSsh.Core.Services;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.Base;
 using Autofac;
 using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
-using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Queries;
 using Doods.StdLibSsh.Queries.GroupedQueries;
-using Renci.SshNet.Common;
+using Doods.StdRepository.Base;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.HomeTabbedPage
 {
-    public class HomeTabbedPageViewModel : BaseViewModel
+    public class HomeTabbedPageViewModel : LocalViewModel
     {
         private VcgencmdBean _vcgencmdBean;
         public ICommand ManageHostCmd { get; }
@@ -28,6 +27,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public ICommand MountUmountCmd { get; }
         public ICommand UpdateCmd { get; }
         public ICommand UpdateAllCmd { get; }
+        public ICommand ShowUpgradablesCmd { get; }
+
 
         public bool _onUpdate;
 
@@ -35,6 +36,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         {
             get => _onUpdate;
             set => SetProperty(ref _onUpdate, value);
+        }
+
+        private bool _onUpdateVcgencmdBean;
+        public bool OnUpdateVcgencmdBean
+        {
+            get => _onUpdateVcgencmdBean;
+            set => SetProperty(ref _onUpdateVcgencmdBean, value);
         }
 
         public VcgencmdBean VcgencmdBean
@@ -65,7 +73,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             DiskUsage = new ObservableRangeCollection<DiskUsageBean>();
             Processes = new ObservableRangeCollection<ProcessBean>();
             Upgradables = new ObservableRangeCollection<UpgradableBean>();
-            ManageHostCmd = new Command(c => NavigationService.GoToModalHostManagerPage());
+            ManageHostCmd = new Command(c => NavigationService.GoToHostManagerPage());
             ShellCmd = new Command(c => NavigationService.GoToShellPage());
             RefreshCommand = new Command(async () => await ExecuteRefreshCommandAsync());
             GotoLoginCommand = new Command(async () => await NavigationService.GotoLoginModal());
@@ -75,6 +83,24 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             MountUmountCmd = new Command(MountUmount);
             UpdateCmd = new Command(Update);
             UpdateAllCmd = new Command(UpdateAll);
+            ShowUpgradablesCmd = new Command(async () => await NavigationService.GoUpgradableListViewPageModal());
+        }
+
+
+        private async Task CheckSshParams(ISshService ssh)
+        {
+            var repo = AppContainer.Container.Resolve<IRepository>();
+            var list = await repo.GetAllAsync<Host>();
+            if (!list.Any())
+            {
+                var logger = AppContainer.Container.Resolve<ILogger>();
+                logger.Info($"{Title} : No host in repository.");
+            }
+
+            var host = list.FirstOrDefault(l => l.Id == Helpers.Settings.Current.LastHostId) ?? list.First();
+
+            ssh.Host = host;
+            ssh.Initialise();
         }
 
         private async void UpdateAll(object obj)
@@ -82,7 +108,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             OnUpdate = true;
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
-
 
             //var res = await new NoHupQuery(ssh, UpdateAllQuery.Query).RunAsync(Token);
             //bool isRunningIpd;
@@ -96,13 +121,12 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             //    if (delay > 5000)
             //        delay = 1000;
             //} while (isRunningIpd);
-            
+
             var res = await new NuHupQueryWithWaitPid(ssh, UpdateAllQuery.Query).RunAsync(Token);
-            if(res)
-                await GetaptList(ssh);
+            if (res)
+                await GetAptList(ssh);
             OnUpdate = false;
         }
-
 
         private async void Update(object obj)
         {
@@ -124,7 +148,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
             var res = await new KillProcessQuery(ssh, pb.Pid).RunAsync(Token);
-
 
             if (res)
                 Processes.Remove(pb);
@@ -156,32 +179,45 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         protected override async Task Load()
         {
             var ssh = AppContainer.Container.Resolve<ISshService>();
+            if (!ssh.IsInitialised)
+                await CheckSshParams(ssh);
+
             //var contectSynchro = SynchronizationContext.Current;
             //await new Task(()=>{ }).ConfigureAwait(false);
             if (!ssh.IsConnected() && !ssh.CanConnect())
+            {
+                Logger.Info($"{Title} :can't connect");
+                if (ssh.Host != null)
+                    Logger.Info($"{Title} :host is null");
                 return;
-
+            }
+            OnUpdateVcgencmdBean = true;
             Logger.Info($"{Title} : get VcgencmdQuery");
             var test = new VcgencmdQuery(ssh);
             VcgencmdBean = await test.RunAsync(Token);
-
+            
             Logger.Info($"{Title} : get SystemInfoQueries");
             SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
-
+            
             var netinfo = await new NetworkInformationQuery(ssh).RunAsync(Token);
             if (NetworkInterfaceInformation.Any())
                 NetworkInterfaceInformation.Clear();
             NetworkInterfaceInformation.AddRange(netinfo);
 
-            await GetaptList(ssh);
+            await GetAptList(ssh);
 
-            Logger.Info($"{Title} : get DiskUsageQuery");
-            var diskuse = await new DiskUsageQuery(ssh).RunAsync(Token);
-            if (DiskUsage.Any())
-                DiskUsage.Clear();
-            DiskUsage.AddRange(diskuse);
-            var cur = SynchronizationContext.Current;
+            await GetDiskUsage(ssh);
 
+            //var cur = SynchronizationContext.Current;
+
+            await GetProcesses(ssh);
+            OnUpdateVcgencmdBean = false;
+        }
+
+
+
+        private async Task GetProcesses(ISshService ssh)
+        {
             Logger.Info($"{Title} : get ProcessesQuery");
             var process = await new ProcessesQuery(ssh, false).RunAsync(Token);
 
@@ -191,8 +227,16 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Processes.AddRange(process);
         }
 
+        private async Task GetDiskUsage(ISshService ssh)
+        {
+            Logger.Info($"{Title} : get DiskUsageQuery");
+            var diskuse = await new DiskUsageQuery(ssh).RunAsync(Token);
+            if (DiskUsage.Any())
+                DiskUsage.Clear();
+            DiskUsage.AddRange(diskuse);
+        }
 
-        private async Task GetaptList(ISshService ssh)
+        private async Task GetAptList(ISshService ssh)
         {
             Logger.Info($"{Title} : get AptListQuery");
             var upgradablesBean = await new AptListQuery(ssh).RunAsync(Token);

@@ -1,11 +1,8 @@
 ﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
-using System;
+using Doods.StdLibSsh.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -69,7 +66,7 @@ namespace Doods.StdLibSsh.Queries
             //libraspberrypi-bin/stable 1.20170703-1 armhf [upgradable from: 1.20170515-1]
             //                0                 1      2        3        4       5
 
-            foreach(var upgradable in upgradables)
+            foreach (var upgradable in upgradables)
             {
                 var res = upgradable.Split().Where(u => !string.IsNullOrWhiteSpace(u) && !string.IsNullOrEmpty(u));
 

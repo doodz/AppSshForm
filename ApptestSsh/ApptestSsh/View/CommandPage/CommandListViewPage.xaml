@@ -4,65 +4,44 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
                xmlns:commandPage="clr-namespace:ApptestSsh.Core.View.CommandPage;assembly=ApptestSsh.Core"
-               x:Class="ApptestSsh.Core.View.CommandPage.CommandListViewPage"
-               Title="ListView">
-    <ListView ItemsSource="{Binding ItemsGrouped}"
+               x:Class="ApptestSsh.Core.View.CommandPage.CommandListViewPage">
+    <mvvm:ViewPage.ToolbarItems>
+        <ToolbarItem Text="Add Command"
+                     Command="{Binding AddCmdCmd}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS">ic_add_box_black.png</On>
+                    <On Platform="Android">ic_add_box.png</On>
+                    <On Platform="UWP">Assets/ic_add_box_black_24dp_1x.png</On>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+
+        </ToolbarItem>
+    </mvvm:ViewPage.ToolbarItems>
+    <ListView ItemsSource="{Binding Items}"
+              SelectedItem="{Binding SelectedCommand}"
               ItemTapped="Handle_ItemTapped"
               ItemSelected="Handle_ItemSelected"
               HasUnevenRows="true"
-              GroupShortNameBinding="{Binding Key}"
-              IsGroupingEnabled="true"
-              GroupDisplayBinding="{Binding Key}"
               IsPullToRefreshEnabled="true"
               CachingStrategy="RecycleElement"
-              IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-              RefreshCommand="{Binding RefreshDataCommand}">
-        <ListView.Header>
-            <StackLayout Padding="10"
-                         Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#dadada">
-                <Label Text="Header"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="FillAndExpand"
-                       TextColor="Black"
-                       FontAttributes="Bold" />
-            </StackLayout>
-        </ListView.Header>
+              IsRefreshing="{Binding IsBusyList, Mode=TwoWay}"
+              RefreshCommand="{Binding RefreshDataCommand,Mode=OneWay}">
+              
         <!--Built in Cells-->
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Name}"
-                          Detail="{Binding CommandString}" />
+              <ImageCell Text="{Binding Name}"
+                          Detail="{Binding CommandString}" >
+                  <ImageCell.ImageSource>
+                      <OnPlatform x:TypeArguments="ImageSource">
+                          <On Platform="iOS">ic_settings_remote.png</On>
+                          <On Platform="Android">ic_settings_remote.png</On>
+                          <On Platform="UWP">Assets/ic_settings_remote_24dp_1x.png</On>
+                      </OnPlatform>
+                  </ImageCell.ImageSource>
+              </ImageCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-
-        <!--Custom View Cells-->
-        <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
-        <ListView.Footer>
-            <StackLayout Padding="10"
-                         Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#dadada">
-                <Label Text="Footer"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="FillAndExpand"
-                       TextColor="Black"
-                       FontAttributes="Bold" />
-            </StackLayout>
-        </ListView.Footer>
     </ListView>
 </mvvm:ViewPage>

@@ -1,16 +1,17 @@
-﻿using System;
-using System.Windows.Input;
-using ApptestSsh.Core.DataBase;
-using ApptestSsh.Core.Services;
-using Doods.StdFramework;
+﻿using ApptestSsh.Core.DataBase;
+using ApptestSsh.Core.View.Base;
+using Autofac;
+using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
 using Renci.SshNet;
+using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.LoginPage
 {
-    public class LoginViewModel : BaseViewModel
+    public class LoginViewModel : LocalViewModel
     {
         //private ConnectionInfo _connectionInfo;
 
@@ -18,8 +19,10 @@ namespace ApptestSsh.Core.View.LoginPage
 
         public Host HostObj
         {
-            get { return _hostObj; }
-            set { SetProperty(ref _hostObj,value);
+            get => _hostObj;
+            set
+            {
+                SetProperty(ref _hostObj, value);
                 InitDisplay();
             }
         }
@@ -28,10 +31,10 @@ namespace ApptestSsh.Core.View.LoginPage
         {
             if (_hostObj == null) return;
 
-             _host = _hostObj.HostName;
-             _port = _hostObj.Port;
-             _username = _hostObj.UserName;
-             _password = _hostObj.Password;
+            _host = _hostObj.HostName;
+            _port = _hostObj.Port;
+            _username = _hostObj.UserName;
+            _password = _hostObj.Password;
         }
 
         private string _host;
@@ -96,7 +99,7 @@ namespace ApptestSsh.Core.View.LoginPage
             try
             {
                 var test =
-                    new PasswordConnectionInfo(_host, _port, _username, _password) {Timeout = TimeSpan.FromSeconds(3)};
+                    new PasswordConnectionInfo(_host, _port, _username, _password) { Timeout = TimeSpan.FromSeconds(3) };
 
                 using (var client = new SshClient(test))
                 {
@@ -118,8 +121,12 @@ namespace ApptestSsh.Core.View.LoginPage
         private async void SaveHost()
         {
             await _repository.InsertAsync(_hostObj);
-            //await NavigationService.GoToHomeTabbed();
-            await NavigationService.GoBackModal();
+
+            var ssh = AppContainer.Container.Resolve<ISshService>();
+            ssh.Host = _hostObj;
+            ssh.Initialise();
+
+            await NavigationService.GoBackToRoot();
         }
     }
 }

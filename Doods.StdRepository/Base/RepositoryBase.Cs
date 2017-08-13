@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Doods.StdRepository.Interfaces;
+﻿using Doods.StdRepository.Interfaces;
 using SQLite;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 //using SQLiteNetExtensionsAsync.Extensions;
 
@@ -73,9 +71,10 @@ namespace Doods.StdRepository.Base
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync<T>(T value) where T : TableBase, new()
+        public async Task DeleteAsync<T>(T value) where T : TableBase, new()
         {
-            throw new NotImplementedException();
+            var cnt = await _database.GetConnection();
+            await cnt.DeleteAsync(value);
         }
 
         public Task DeleteWithChildrenAsync<T>(T value) where T : TableBase, new()
