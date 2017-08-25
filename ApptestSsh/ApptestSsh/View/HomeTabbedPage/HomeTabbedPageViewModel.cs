@@ -4,6 +4,7 @@ using Autofac;
 using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
+using Doods.StdFramework.Mvvm;
 using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Queries;
 using Doods.StdLibSsh.Queries.GroupedQueries;
@@ -30,7 +31,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public ICommand ShowUpgradablesCmd { get; }
 
 
-        public bool _onUpdate;
+        private bool _onUpdate;
 
         public bool OnUpdate
         {
@@ -39,6 +40,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         }
 
         private bool _onUpdateVcgencmdBean;
+
         public bool OnUpdateVcgencmdBean
         {
             get => _onUpdateVcgencmdBean;
@@ -58,6 +60,15 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             get => _systemBean;
             set => SetProperty(ref _systemBean, value);
         }
+
+        private bool _vcgencmdBeanNotOnRpi;
+
+        public bool VcgencmdBeanNotOnRpi
+        {
+            get => _vcgencmdBeanNotOnRpi;
+            set => SetProperty(ref _vcgencmdBeanNotOnRpi, value);
+        }
+
 
         public DateTime NextForceRefresh { get; set; }
 
@@ -83,7 +94,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             MountUmountCmd = new Command(MountUmount);
             UpdateCmd = new Command(Update);
             UpdateAllCmd = new Command(UpdateAll);
-            ShowUpgradablesCmd = new Command(async () => await NavigationService.GoUpgradableListViewPageModal());
+            ShowUpgradablesCmd = new Command(async () => await NavigationService.GoUpgradableListViewPage());
         }
 
 
@@ -108,20 +119,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             OnUpdate = true;
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
-
-            //var res = await new NoHupQuery(ssh, UpdateAllQuery.Query).RunAsync(Token);
-            //bool isRunningIpd;
-
-            //var delay = 1000;
-            //do
-            //{
-            //    await Task.Delay(delay);
-            //    isRunningIpd = await new IsRunningPidQuery(ssh, res).RunAsync(Token);
-            //    delay += 1000;
-            //    if (delay > 5000)
-            //        delay = 1000;
-            //} while (isRunningIpd);
-
             var res = await new NuHupQueryWithWaitPid(ssh, UpdateAllQuery.Query).RunAsync(Token);
             if (res)
                 await GetAptList(ssh);
@@ -131,15 +128,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         private async void Update(object obj)
         {
             if (!(obj is UpgradableBean pb)) return;
-
-            //var ssh = AppContainer.Container.Resolve<ISshService>();
-            //var res = await new KillProcessQuery(ssh, pb.Pid).RunAsync(Token);
-
-
-            //if (res)
-            //{
-            //    //Processes.Remove(pb);
-            //}
         }
 
         private async void Killprocess(object obj)
@@ -158,22 +146,18 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             if (!(obj is DiskUsageBean disk)) return;
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
-            //var res = await new KillProcessQuery(ssh, pb.Pid).RunAsync(Token);
+            var res = await new UmountQuery(ssh, disk.MountedOn).RunAsync(Token);
+
+
         }
 
         private async Task ExecuteRefreshCommandAsync()
         {
             NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
-            BusyCount++;
-            await Load();
-            BusyCount--;
-        }
-
-        private async Task DoSomething()
-        {
-            await Task.Delay(10000);
-
-            await Application.Current.MainPage.DisplayAlert("Alert", "Finished", "OK");
+            using (new RunWithBusyCount(this))
+            {
+                await Load();
+            }
         }
 
         protected override async Task Load()
@@ -181,9 +165,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             var ssh = AppContainer.Container.Resolve<ISshService>();
             if (!ssh.IsInitialised)
                 await CheckSshParams(ssh);
-
-            //var contectSynchro = SynchronizationContext.Current;
-            //await new Task(()=>{ }).ConfigureAwait(false);
             if (!ssh.IsConnected() && !ssh.CanConnect())
             {
                 Logger.Info($"{Title} :can't connect");
@@ -191,36 +172,69 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                     Logger.Info($"{Title} :host is null");
                 return;
             }
-            OnUpdateVcgencmdBean = true;
-            Logger.Info($"{Title} : get VcgencmdQuery");
-            var test = new VcgencmdQuery(ssh);
-            VcgencmdBean = await test.RunAsync(Token);
-            
-            Logger.Info($"{Title} : get SystemInfoQueries");
-            SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
-            
-            var netinfo = await new NetworkInformationQuery(ssh).RunAsync(Token);
-            if (NetworkInterfaceInformation.Any())
-                NetworkInterfaceInformation.Clear();
-            NetworkInterfaceInformation.AddRange(netinfo);
+
+            await GetVcgenResults(ssh);
+
+            await GetSystemInfo(ssh);
+
+            await GetNetWorkInfo(ssh);
 
             await GetAptList(ssh);
 
             await GetDiskUsage(ssh);
 
-            //var cur = SynchronizationContext.Current;
+            ////var cur = SynchronizationContext.Current;
 
             await GetProcesses(ssh);
-            OnUpdateVcgencmdBean = false;
         }
 
+        private async Task GetSystemInfo(ISshService ssh)
+        {
+            Logger.Info($"{Title} : get SystemInfoQueries");
+            SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
+        }
+
+        private async Task GetNetWorkInfo(ISshService ssh)
+        {
+            var netinfo = await new NetworkInformationQuery(ssh).RunAsync(Token);
+            if (netinfo == null) return;
+            if (NetworkInterfaceInformation.Any())
+                NetworkInterfaceInformation.Clear();
+            NetworkInterfaceInformation.AddRange(netinfo);
+        }
+
+
+        private async Task GetVcgenResults(ISshService ssh)
+        {
+            OnUpdateVcgencmdBean = true;
+            Logger.Info($"{Title} : get VcgencmdQuery");
+            var test = new VcgencmdQuery(ssh);
+
+            await test.RunAsync(Token).ContinueWith(res =>
+            {
+
+
+                if (res.IsCanceled) return;
+
+                VcgencmdBean = res.Result;
+                if (VcgencmdBean.ArmFrequency == 0 && VcgencmdBean.CoreFrequency == 0 && VcgencmdBean.CoreVolts == 0d &&
+                    VcgencmdBean.CpuTemperature == 0d && VcgencmdBean.Version == "n/a")
+                {
+                    //Rien est initialisé, on n’est peut-être pas sur une Raspberry pi.
+                    VcgencmdBeanNotOnRpi = true;
+                }
+
+                OnUpdateVcgencmdBean = false;
+            }, TaskContinuationOptions.NotOnCanceled);
+            //}, TaskScheduler.FromCurrentSynchronizationContext());
+        }
 
 
         private async Task GetProcesses(ISshService ssh)
         {
             Logger.Info($"{Title} : get ProcessesQuery");
             var process = await new ProcessesQuery(ssh, false).RunAsync(Token);
-
+            if (process == null) return;
             if (Processes.Any())
                 Processes.Clear();
             if (process != null)
@@ -231,6 +245,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         {
             Logger.Info($"{Title} : get DiskUsageQuery");
             var diskuse = await new DiskUsageQuery(ssh).RunAsync(Token);
+            if (diskuse == null) return;
             if (DiskUsage.Any())
                 DiskUsage.Clear();
             DiskUsage.AddRange(diskuse);
@@ -240,6 +255,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         {
             Logger.Info($"{Title} : get AptListQuery");
             var upgradablesBean = await new AptListQuery(ssh).RunAsync(Token);
+            if (upgradablesBean == null) return;
             if (Upgradables.Any())
                 Upgradables.Clear();
             Upgradables.AddRange(upgradablesBean);

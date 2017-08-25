@@ -1,10 +1,7 @@
-﻿using System.IO;
+﻿using Doods.StdLibSsh.Interfaces;
+using Renci.SshNet;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.StdFramework.Mvvm;
-using Doods.StdLibSsh.Interfaces;
-using Renci.SshNet;
-using Renci.SshNet.Common;
 
 namespace Doods.StdLibSsh.Base.Queries
 {
@@ -35,16 +32,14 @@ namespace Doods.StdLibSsh.Base.Queries
 
 
             string str;
-            
+
             using (Sshcmd)
             {
                 Logger.Instance.Info($"Running command : {CmdString}.");
                 str = Sshcmd.Execute();
                 Logger.Instance.Info($"Return Value from command : {str}.");
-                
-
             }
-            
+
             var result = PaseResult(str);
             //TODO Doods : QueryResult
             var objres = new QueryResult<T>()
@@ -62,7 +57,8 @@ namespace Doods.StdLibSsh.Base.Queries
         {
             if (token.IsCancellationRequested)
             {
-                return await Task.FromCanceled<T>(token);
+                return await Task.FromResult<T>(default(T));
+                //return await Task.FromCanceled<T>(token);
             }
             if (!Client.IsConnected())
             {
@@ -92,11 +88,13 @@ namespace Doods.StdLibSsh.Base.Queries
 
         private async Task<T> PaseResultAsync(string result, CancellationToken token)
         {
-            using (CancellationTokenSource.CreateLinkedTokenSource(token))
-            {
-                var res = await Task.Factory.StartNew<T>(() => PaseResult(result), token);
-                return res;
-            }
+            
+            //using (CancellationTokenSource.CreateLinkedTokenSource(token))
+            //{
+            var res = await Task.Run(() => PaseResult(result));
+            //var res = await Task.Factory.StartNew<T>(() => PaseResult(result), token);
+            return res;
+            //}
         }
 
         protected virtual T PaseResult(string result)

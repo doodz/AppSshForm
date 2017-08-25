@@ -10,6 +10,19 @@ namespace ApptestSsh.Core.View.CommandPage
         public CommandListViewPage()
         {
             InitializeComponent();
+            switch (Device.RuntimePlatform)
+            {
+                case Device.WinPhone:
+                case Device.UWP:
+                case Device.WinRT:
+                    ToolbarItems.Add(new ToolbarItem
+                    {
+                        Text = "Refresh",
+                        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+                        Command = ViewModel.RefreshDataCommand
+                    });
+                    break;
+            }
 
         }
 

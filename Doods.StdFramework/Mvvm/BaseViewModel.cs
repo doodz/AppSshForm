@@ -56,7 +56,7 @@ namespace Doods.StdFramework
             set => SetProperty(ref _title, value);
         }
 
-        private string subtitle = string.Empty;
+        private string _subtitle = string.Empty;
 
         /// <summary>
         ///Obtient ou définit le sous-titre.
@@ -64,11 +64,11 @@ namespace Doods.StdFramework
         /// <value>Le sous-titre..</value>
         public string Subtitle
         {
-            get => subtitle;
-            set => SetProperty(ref subtitle, value);
+            get => _subtitle;
+            set => SetProperty(ref _subtitle, value);
         }
 
-        private string icon = string.Empty;
+        private string _icon = string.Empty;
 
         /// <summary>
         ///Obtient ou définit l'icône.
@@ -76,8 +76,8 @@ namespace Doods.StdFramework
         /// <value>L'icône.</value>
         public string Icon
         {
-            get => icon;
-            set => SetProperty(ref icon, value);
+            get => _icon;
+            set => SetProperty(ref _icon, value);
         }
 
 
@@ -95,7 +95,7 @@ namespace Doods.StdFramework
         public bool IsNotBusy => !IsBusy;
 
 
-        private bool canLoadMore = true;
+        private bool _canLoadMore = true;
 
         /// <summary>
         /// Obtient ou définit une valeur indiquant si cette instance peut charger plus.
@@ -103,8 +103,8 @@ namespace Doods.StdFramework
         /// <value><c>true</c> si cette instance peut charger plus; autrement, <c>false</c>.</value>
         public bool CanLoadMore
         {
-            get => canLoadMore;
-            set => SetProperty(ref canLoadMore, value);
+            get => _canLoadMore;
+            set => SetProperty(ref _canLoadMore, value);
         }
 
 
@@ -156,10 +156,9 @@ namespace Doods.StdFramework
 
             try
             {
-                var delayTask = Task.Delay(TimeSpan.FromMilliseconds(50));
-                var executeTask = ExecuteAsync(token => Load(), true);
 
-                await Task.WhenAll(delayTask, executeTask);
+                if (Token.IsCancellationRequested) return;
+                await ExecuteAsync(token => Load(), true);
 
                 if (ViewModelState == ViewModelState.Loading)
                     ViewModelState = ViewModelState.Loaded;
@@ -198,6 +197,7 @@ namespace Doods.StdFramework
                 Logger.Error(e.Message);
                 if (!safeExecution) throw;
             }
+
         }
 
         /// <summary>
@@ -238,8 +238,13 @@ namespace Doods.StdFramework
 
         public void CancelExecutions()
         {
+
             if (Token.CanBeCanceled && !_cts.IsCancellationRequested)
+            {
                 _cts.Cancel();
+            }
+
+
         }
     }
 }

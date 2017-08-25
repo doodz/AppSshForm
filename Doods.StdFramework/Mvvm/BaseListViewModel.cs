@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Doods.StdFramework.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Doods.StdFramework.Interfaces;
 using Xamarin.Forms;
 
 namespace Doods.StdFramework.Mvvm
@@ -25,10 +24,10 @@ namespace Doods.StdFramework.Mvvm
             Items = new ObservableRangeCollection<T>();
 
             var sorted = from item in Items
-                orderby item.Name
-                group item by item.Name[0].ToString()
+                         orderby item.Name
+                         group item by item.Name[0].ToString()
                 into itemGroup
-                select new Grouping<string, T>(itemGroup.Key, itemGroup);
+                         select new Grouping<string, T>(itemGroup.Key, itemGroup);
 
             ItemsGrouped = new ObservableRangeCollection<Grouping<string, T>>(sorted);
 
@@ -41,7 +40,7 @@ namespace Doods.StdFramework.Mvvm
         }
         protected virtual async Task RefreshData()
         {
-            throw new NotImplementedException();
+            await Task.FromResult(0);
         }
     }
     public class Grouping<TK, T> : ObservableRangeCollection<T>

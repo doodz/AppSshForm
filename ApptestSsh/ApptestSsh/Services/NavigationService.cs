@@ -5,13 +5,13 @@ using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
 using ApptestSsh.Core.View.RootPage.MasterDetailPage;
 using ApptestSsh.Core.View.RootPage.Windows;
-using ApptestSsh.Core.View.Settings;
 using ApptestSsh.Core.View.ShellPage;
 using ApptestSsh.Core.View.UpgradablePage;
 using ApptestSsh.Core.View.WelcomeStartPage;
 using Doods.StdFramework.Navigation;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using SettingsPage = ApptestSsh.Core.View.SettingsPage.SettingsPage;
 
 namespace ApptestSsh.Core.Services
 {
@@ -110,11 +110,18 @@ namespace ApptestSsh.Core.Services
         {
             return PushModalAsync(Navigation, new UpgradableListViewPage());
         }
-
-
+        public Task GoUpgradableListViewPage()
+        {
+            return PushAsync(Navigation, new UpgradableListViewPage());
+        }
         public Task GoToAddCommandPage()
         {
             return PushAsync(Navigation, new AddCommandPage());
+        }
+
+        public Task GoToEditCommandPage(CommandSsh cmd)
+        {
+            return PushAsync(Navigation, new AddCommandPage(cmd));
         }
     }
 }

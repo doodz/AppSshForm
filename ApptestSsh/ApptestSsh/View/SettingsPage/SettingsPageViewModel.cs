@@ -1,13 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using ApptestSsh.Core.View.Settings;
 using Doods.StdFramework;
 using Doods.StdFramework.Interfaces;
+using System;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ApptestSsh.Core.View.Settings
+namespace ApptestSsh.Core.View.SettingsPage
 {
-    public class SettingsPageViewModel: BaseViewModel
+    public class SettingsPageViewModel : BaseViewModel
     {
         public ObservableRangeCollection<SettingsMenuItem> AboutItems { get; } = new ObservableRangeCollection<SettingsMenuItem>();
         public ObservableRangeCollection<SettingsMenuItem> TechnologyItems { get; } = new ObservableRangeCollection<SettingsMenuItem>();
@@ -18,7 +19,7 @@ namespace ApptestSsh.Core.View.Settings
             {
                 new SettingsMenuItem { Name = "Created by Xamarin with <3", Command=LaunchBrowserCommand, Parameter="http://www.xamarin.com" },
                 new SettingsMenuItem { Name = "Open source on GitHub!", Command=LaunchBrowserCommand, Parameter="https://github.com/doodz/AppSshForm"},
-                new SettingsMenuItem { Name = "License", Command=LaunchBrowserCommand, Parameter="https://opensource.org/licenses/GPL-3.0/"}
+                new SettingsMenuItem { Name = "License GPL 3", Command=LaunchBrowserCommand, Parameter="https://opensource.org/licenses/GPL-3.0/"}
             });
 
             TechnologyItems.AddRange(new[]

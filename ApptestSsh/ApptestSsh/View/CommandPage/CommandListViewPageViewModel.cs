@@ -35,7 +35,7 @@ namespace ApptestSsh.Core.View.CommandPage
 
         protected override async Task RefreshData()
         {
-            using (new RunBusy(this))
+            using (new RunWithBusyCount(this))
             {
                 var list = await _repository.GetAllAsync<CommandSsh>();
                 Items.Clear();
@@ -69,6 +69,8 @@ namespace ApptestSsh.Core.View.CommandPage
                     break;
                 case "Edite":
 
+
+                    await NavigationService.GoToEditCommandPage(SelectedCommand);
                     break;
                 case "Delete":
                     await _repository.DeleteAsync<CommandSsh>(SelectedCommand);

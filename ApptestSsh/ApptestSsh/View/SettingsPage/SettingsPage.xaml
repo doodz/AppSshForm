@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<mvvm:ViewPage x:TypeArguments="settings:SettingsPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+<mvvm:ViewPage x:TypeArguments="settingsPage:SettingsPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
              xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
              xmlns:settings="clr-namespace:ApptestSsh.Core.View.Settings;assembly=ApptestSsh.Core"
-             x:Class="ApptestSsh.Core.View.Settings.SettingsPage"
+             xmlns:settingsPage="clr-namespace:ApptestSsh.Core.View.SettingsPage;assembly=ApptestSsh.Core"
+             x:Class="ApptestSsh.Core.View.SettingsPage.SettingsPage"
              >
     <views:AlwaysScrollView>
         <StackLayout Spacing="0">
@@ -21,37 +22,23 @@
                                     WinPhone="true" />
                     </views:CardView.IsVisible>
                     <StackLayout Spacing="0">
-                        <views:LabelSection Text="Data Sync" />
+                        <views:LabelSection Text="About" />
                         <views:HeaderDivider />
                         <StackLayout BackgroundColor="White"
                                      Padding="{StaticResource StandardPadding}">
-                            <Label Text="Sign in with your Xamarin account to save and sync favorites and session feedback across devices."
+                            <Label Text="AppSshForm is an app who manage rpi updates and show information like ram free and cpu temps.
+You can also unmount devices if you are root and stop process.
+AppSshForm is multi platform you can get it on :
+    -Android Market
+    
+    -windows store
+    
+    -apple store (soon)
+"
                                    HorizontalOptions="Center"
                                    Style="{DynamicResource EvolveListItemDetailTextStyle}" />
 
                         </StackLayout>
-                        <views:SectionDivider />
-                        <Grid Padding="{StaticResource StandardPadding}"
-                              ColumnSpacing="{StaticResource StandardSpacing}"
-                              BackgroundColor="White">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Button Text="{Binding LoginText}"
-                                    Command="{Binding LoginCommand}"
-                                    BackgroundColor="{StaticResource PrimaryDark}"
-                                    IsEnabled="{Binding IsNotBusy}"
-                                    TextColor="White" />
-                            <Button Grid.Column="1"
-                                    Text="Sync Now"
-                                    Command="{Binding SyncCommand}"
-                                    BackgroundColor="{StaticResource PrimaryDark}"
-                                    IsEnabled="{Binding IsNotBusy}"
-                                    TextColor="White" />
-                        </Grid>
-
-                        <views:SectionDivider />
                         <Grid Padding="{StaticResource StandardPadding}"
                               BackgroundColor="White">
                             <Grid.ColumnDefinitions>
@@ -108,16 +95,6 @@
                             </views:NonScrollableListView.ItemTemplate>
                         </views:NonScrollableListView>
                         <views:FooterDivider />
-                        <StackLayout>
-                            <StackLayout.Padding>
-                                <OnPlatform x:TypeArguments="Thickness"
-                                            iOS="16,8,16,0"
-                                            Android="16,8"
-                                            WinPhone="16,8" />
-                            </StackLayout.Padding>
-                            <Label Text="Copyright 2016 - Xamarin Inc."
-                                   Style="{DynamicResource EvolveListItemDetailTextStyle}" />
-                        </StackLayout>
                     </StackLayout>
                 </views:CardView>
 
@@ -153,13 +130,16 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
                             </StackLayout.GestureRecognizers>
-                            <Label Text="8 more than 92"
+                            <Label Text="and more"
                                    Style="{DynamicResource EvolveListItemDetailTextStyle}">
 
                             </Label>
                         </StackLayout>
                     </StackLayout>
                 </views:CardView>
+              
+                <views:DoodsButton Text="Credits" Clicked="OnTapGestureRecognizerTapped"/>
+              
             </StackLayout>
         </StackLayout>
     </views:AlwaysScrollView>

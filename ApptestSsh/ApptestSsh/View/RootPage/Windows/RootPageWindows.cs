@@ -1,5 +1,4 @@
 ﻿using ApptestSsh.Core.View.RootPage.MenuItem;
-using ApptestSsh.Core.View.Settings;
 using Doods.StdFramework.Navigation;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -73,7 +72,7 @@ namespace ApptestSsh.Core.View.RootPage.Windows
                         newPage = new DoodsNavigationPage(new Login.LoginPage());
                         break;
                     case AppPage.Settings:
-                        newPage = new DoodsNavigationPage(new SettingsPage());
+                        newPage = new DoodsNavigationPage(new SettingsPage.SettingsPage());
                         break;
                 }
             }

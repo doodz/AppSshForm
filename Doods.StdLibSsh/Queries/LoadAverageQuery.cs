@@ -1,8 +1,8 @@
-﻿using System;
-using System.Globalization;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Enums;
 using Doods.StdLibSsh.Interfaces;
+using System;
+using System.Globalization;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -32,8 +32,8 @@ namespace Doods.StdLibSsh.Queries
 
         private double ParseLoadAverage(string output)
         {
-            string[] lines = output.Split('\n');
-            double loadAvg = 0D;
+            var lines = output.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var loadAvg = 0D;
             foreach (var line in lines)
             {
                 //LOGGER.debug("Checking line: {}", line);

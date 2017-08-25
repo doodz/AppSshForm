@@ -1,5 +1,5 @@
-﻿using Windows.System.Profile;
-using ApptestSsh.Core.View.RootPage.Windows;
+﻿using ApptestSsh.Core.View.RootPage.Windows;
+using Windows.System.Profile;
 
 namespace ApptestSsh.UWP
 {
@@ -7,9 +7,11 @@ namespace ApptestSsh.UWP
     {
         public MainPage()
         {
+
             InitializeComponent();
             RootPageWindows.IsDesktop = AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop";
             LoadApplication(new Core.App());
+
         }
     }
 }

@@ -126,6 +126,8 @@
     <Content Include="Assets\ic_file_download_black_24dp_2x.png" />
     <Content Include="Assets\ic_file_upload_black_24dp_1x.png" />
     <Content Include="Assets\ic_file_upload_black_24dp_2x.png" />
+    <Content Include="Assets\ic_info_black_24dp_1x.png" />
+    <Content Include="Assets\ic_info_black_24dp_2x.png" />
     <Content Include="Assets\ic_play_arrow_black_24dp_1x.png" />
     <Content Include="Assets\ic_play_arrow_black_24dp_2x.png" />
     <Content Include="Assets\ic_play_circle_filled_black_24dp_1x.png" />

@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using ApptestSsh.Core.View.RootPage.MenuItem;
-using ApptestSsh.Core.View.Settings;
+﻿using ApptestSsh.Core.View.RootPage.MenuItem;
 using Doods.StdFramework.Navigation;
-using Xamarin.Forms;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ApptestSsh.Core.View.RootPage.Android
 {
@@ -19,7 +17,7 @@ namespace ApptestSsh.Core.View.RootPage.Android
 
 
             _pages.Add(0, new DoodsNavigationPage(new HomeTabbedPage.HomeTabbedPage()));
-           
+
             Detail = _pages[0];
             //MessagingService.Current.Subscribe<DeepLinkPage>("DeepLinkPage", async (m, p) =>
             //{
@@ -56,7 +54,7 @@ namespace ApptestSsh.Core.View.RootPage.Android
                         newPage = new DoodsNavigationPage(new Login.LoginPage());
                         break;
                     case (int)AppPage.Settings:
-                        newPage = new DoodsNavigationPage(new SettingsPage());
+                        newPage = new DoodsNavigationPage(new SettingsPage.SettingsPage());
                         break;
                 }
             }

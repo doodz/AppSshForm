@@ -1,5 +1,4 @@
 ﻿using ApptestSsh.Core.View.RootPage.MenuItem;
-using ApptestSsh.Core.View.Settings;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
@@ -19,7 +18,7 @@ namespace ApptestSsh.Core.View.RootPage.iOS
             Children.Add(new DoodsNavigationPage(new HostManagerPage.HostManagerPage()));
             Children.Add(new DoodsNavigationPage(new ShellPage.ShellPage()));
             Children.Add(new DoodsNavigationPage(new Login.LoginPage()));
-            Children.Add(new DoodsNavigationPage(new SettingsPage()));
+            Children.Add(new DoodsNavigationPage(new SettingsPage.SettingsPage()));
 
             //MessagingService.Current.Subscribe<DeepLinkPage>("DeepLinkPage", async (m, p) =>
             //{
@@ -83,7 +82,7 @@ namespace ApptestSsh.Core.View.RootPage.iOS
                 case (int)AppPage.Shell: CurrentPage = Children[2]; break;
                 case (int)AppPage.Login: CurrentPage = Children[3]; break;
                 case (int)AppPage.Settings: CurrentPage = Children[4]; break;
-               
+
             }
         }
 

@@ -1,6 +1,7 @@
-﻿using System;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
+using System;
+using System.Globalization;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -21,12 +22,12 @@ namespace Doods.StdLibSsh.Queries
 
         protected override double PaseResult(string result)
         {
-           return FormatUptime(result);
+            return FormatUptime(result);
         }
 
         private double FormatUptime(string output)
         {
-            var lines = output.Split('\n');
+            var lines = output.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var line in lines)
             {
                 var split = line.Split(' ');
@@ -34,7 +35,7 @@ namespace Doods.StdLibSsh.Queries
                 {
                     try
                     {
-                        return double.Parse(split[0]);
+                        return double.Parse(split[0], CultureInfo.InvariantCulture);
                     }
                     catch (FormatException e)
                     {

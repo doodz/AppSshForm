@@ -4,6 +4,7 @@ using Autofac;
 using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
+using Doods.StdFramework.Mvvm;
 using Doods.StdRepository.Base;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -81,6 +82,11 @@ namespace ApptestSsh.Core.View.HostManagerPage
             AddHostCmd = new Command(() => NavigationService.GoToLogin());
         }
 
+        protected override Task OnInternalAppearing()
+        {
+            return Load();
+        }
+
         protected override async Task Load()
         {
             await RefreshData();
@@ -98,17 +104,20 @@ namespace ApptestSsh.Core.View.HostManagerPage
 
         private async Task RefreshData()
         {
-            BusyCount++;
-            IsBusyList = true;
-            //Load Data Here
-            //await Task.Delay(2000);
-            var list = await _repository.GetAllAsync<Host>();
 
-            Items.Clear();
-            Items.AddRange(list);
-            BusyCount--;
+            using (new RunWithBusyCount(this))
+            {
+                IsBusyList = true;
+                //Load Data Here
+                //await Task.Delay(2000);
+                var list = await _repository.GetAllAsync<Host>();
+
+                Items.Clear();
+                Items.AddRange(list);
+            }
             IsBusyList = false;
             ((Command)RefreshDataCommand).ChangeCanExecute();
+
         }
     }
 }

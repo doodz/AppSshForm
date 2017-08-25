@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using ApptestSsh.Core.View.MainPage;
+﻿using ApptestSsh.Core.View.Settings;
 using Doods.StdFramework.Mvvm;
-using Xamarin.Forms;
+using System;
 using Xamarin.Forms.Xaml;
 
-namespace ApptestSsh.Core.View.Settings
+namespace ApptestSsh.Core.View.SettingsPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : ViewPage<SettingsPageViewModel>
@@ -19,10 +11,9 @@ namespace ApptestSsh.Core.View.Settings
         public SettingsPage()
         {
             InitializeComponent();
-
         }
 
-        async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+        private async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
         {
             await DisplayAlert("Credits",
                 "AppSshForm was handcrafted by Doods.\n\n" +
@@ -40,7 +31,5 @@ namespace ApptestSsh.Core.View.Settings
                 "\n" +
                 "...and of course you! <3", "OK");
         }
-
-
     }
 }

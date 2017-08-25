@@ -1,14 +1,14 @@
-﻿using System;
-using System.Globalization;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
+using System;
+using System.Globalization;
 
 namespace Doods.StdLibSsh.Queries
 {
     public class VoltsQuery : GenericQuery<double>
     {
-        private string VOLTS_CMD = " measure_volts core";
-        private string _vcgencmdPath;
+        private readonly string VOLTS_CMD = " measure_volts core";
+        private readonly string _vcgencmdPath;
         public VoltsQuery(IClientSsh client, string vcgencmdPath) : base(client)
         {
 
@@ -29,10 +29,13 @@ namespace Doods.StdLibSsh.Queries
                 var volts = voltsWithUnit.Substring(0,
                     voltsWithUnit.Length - 1);
 
-                if (double.TryParse(volts, NumberStyles.None, CultureInfo.InvariantCulture, out double res))
+
+                if (double.TryParse(volts, NumberStyles.Float, CultureInfo.InvariantCulture, out double res2))
                 {
-                    return res;
+                    return res2;
                 }
+
+
             }
 
             Logger.Instance.Error("Could not parse cpu voltage.");

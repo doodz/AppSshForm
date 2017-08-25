@@ -15,9 +15,11 @@
         </Grid.RowDefinitions>
 
         <views:DoodsEntry Grid.Row="0"
+                         
                           Placeholder="Command name"
                           Text="{Binding CmdName}" />
         <views:DoodsEntry Grid.Row="1"
+                          
                           Placeholder="Command in shell"
                           Text="{Binding CmdString}" />
         <views:DoodsButton  Grid.Row="2"

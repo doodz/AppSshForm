@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Doods.StdLibSsh.Interfaces;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Base.Queries
 {
@@ -29,15 +29,16 @@ namespace Doods.StdLibSsh.Base.Queries
         {
             if (token.IsCancellationRequested)
             {
-                return await Task.FromCanceled<T>(token);
+                return await Task.FromResult<T>(default(T));
+                //return await Task.FromCanceled<T>(token);
             }
 
             if (!Client.IsConnected())
             {
                 await Client.ConnectAsync();
             }
-            //return await Task.FromResult<T>(Action());
-            return await Task.Run(() => Action(), token);
+            return await Task.FromResult<T>(Action());
+
         }
     }
 }

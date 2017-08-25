@@ -10,11 +10,11 @@ namespace Doods.StdFramework.Mvvm
         int BusyCount { get; set; }
     }
 
-    public class RunBusy : IDisposable
+    public class RunWithBusyCount : IDisposable
     {
         private readonly IBuzy _buzyObject;
 
-        public RunBusy(IBuzy buzyObject)
+        public RunWithBusyCount(IBuzy buzyObject)
         {
             _buzyObject = buzyObject;
             _buzyObject.BusyCount++;

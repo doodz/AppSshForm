@@ -34,10 +34,11 @@ namespace ApptestSsh.Core.Services
         Page CurrentModalPage { get; }
 
         void ClearHistory();
-
+        Task GoUpgradableListViewPage();
 
         Task GoBack();
         Page GetRootPage();
         Task GoToAddCommandPage();
+        Task GoToEditCommandPage(CommandSsh cmd);
     }
 }

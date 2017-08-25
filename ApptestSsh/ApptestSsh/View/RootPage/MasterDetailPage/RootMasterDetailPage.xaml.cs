@@ -1,5 +1,4 @@
 ﻿using Doods.StdFramework.Mvvm;
-using Doods.StdFramework.Navigation;
 using System;
 using System.Linq;
 using Xamarin.Forms;
@@ -49,7 +48,6 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
         {
             if (IsPresented)
                 return base.OnBackButtonPressed();
-
 
             if (_date < DateTime.Now.AddSeconds(-3))
             {

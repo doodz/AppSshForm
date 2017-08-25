@@ -5,7 +5,7 @@ using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.LoginPage;
 using ApptestSsh.Core.View.MainPage;
 using ApptestSsh.Core.View.RootPage.MasterDetailPage;
-using ApptestSsh.Core.View.Settings;
+using ApptestSsh.Core.View.SettingsPage;
 using ApptestSsh.Core.View.ShellPage;
 using ApptestSsh.Core.View.UpgradablePage;
 using ApptestSsh.Core.View.WelcomeStartPage;

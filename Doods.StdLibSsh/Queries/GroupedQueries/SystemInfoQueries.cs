@@ -12,7 +12,7 @@ namespace Doods.StdLibSsh.Queries.GroupedQueries
             Action = CreateSystemBean;
         }
 
-        private  SystemBean CreateSystemBean()
+        private SystemBean CreateSystemBean()
         {
             var bean = new SystemBean();
 
@@ -23,8 +23,5 @@ namespace Doods.StdLibSsh.Queries.GroupedQueries
             bean.Uptime = new UptimeQuery(GetClient()).Run();
             return bean;
         }
-
-
-
     }
 }
