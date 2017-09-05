@@ -73,7 +73,7 @@
             <DataTemplate x:Key="DiskUsageTemplate">
                 <ViewCell>
                     <Frame>
-                        <Grid Margin="10">
+                        <Grid Margin="5,1">
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
@@ -81,7 +81,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Column="0"
@@ -97,9 +97,9 @@
                                    Grid.Row="1"
                                    Text="{Binding UsedPercent,Mode=OneWay}" />
 
-                            <views:DoodsButton Margin="1"
-                                               VerticalOptions="Center"
-                                               HorizontalOptions="Center"
+                            <views:DoodsButton Margin="2"
+                                               VerticalOptions="CenterAndExpand"
+                                               HorizontalOptions="CenterAndExpand"
                                                Grid.Column="2"
                                                Grid.RowSpan="2"
                                                Grid.Row="0"
@@ -143,8 +143,9 @@
                                    Grid.Row="0"
                                    Text="{Binding FromRepo,Mode=OneWay}" />
 
-
+                           
                             <views:DoodsButton Margin="1"
+                                               
                                                VerticalOptions="Center"
                                                HorizontalOptions="Center"
                                                Grid.Column="2"

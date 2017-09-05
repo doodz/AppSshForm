@@ -120,7 +120,7 @@ AppSshForm is multi platform you can get it on :
                             </views:NonScrollableListView.ItemTemplate>
                         </views:NonScrollableListView>
                         <views:FooterDivider />
-                        <StackLayout>
+                        <!--<StackLayout>
                             <StackLayout.Padding>
                                 <OnPlatform x:TypeArguments="Thickness"
                                             iOS="16,8,16,0"
@@ -131,14 +131,21 @@ AppSshForm is multi platform you can get it on :
                                 <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
                             </StackLayout.GestureRecognizers>
                             <Label Text="and more"
-                                   Style="{DynamicResource EvolveListItemDetailTextStyle}">
-
-                            </Label>
-                        </StackLayout>
+                                   Style="{DynamicResource EvolveListItemDetailTextStyle}"/>
+                        </StackLayout>-->
                     </StackLayout>
                 </views:CardView>
-              
-                <views:DoodsButton Text="Credits" Clicked="OnTapGestureRecognizerTapped"/>
+                <views:CardView>
+                    <StackLayout Spacing="0">
+                        <views:LabelSection Text="Credits and Issues" />
+                        <views:HeaderDivider />
+                        <views:DoodsButton Text="Credits" Clicked="OnTapGestureRecognizerTapped"/>
+                        <Label Text="You want report a bug or ask a new features, please use GitHub issues :"
+                               Style="{DynamicResource EvolveListItemDetailTextStyle}"/>
+                        <views:DoodsButton Text="Go on github issues" Command="{Binding Path=LaunchBrowserCommand}" CommandParameter="https://github.com/doodz/AppSshForm/issues"/>
+                      </StackLayout>
+                  </views:CardView>
+                
               
             </StackLayout>
         </StackLayout>

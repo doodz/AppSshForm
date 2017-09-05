@@ -40,5 +40,6 @@ namespace ApptestSsh.Core.Services
         Page GetRootPage();
         Task GoToAddCommandPage();
         Task GoToEditCommandPage(CommandSsh cmd);
+        Task GotoOmvPage();
     }
 }

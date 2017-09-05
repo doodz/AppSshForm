@@ -1,13 +1,13 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Doods.StdLibSsh.Interfaces;
+﻿using Doods.StdLibSsh.Interfaces;
 using Renci.SshNet;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Doods.StdLibSsh
 {
     public class ClientSsh : IClientSsh
     {
-        public  SshClient Client { get; private set; }
+        public SshClient Client { get; private set; }
 
         public void Connect()
         {
@@ -22,9 +22,9 @@ namespace Doods.StdLibSsh
             using (var client = new SshClient("192.168.1.73", "pi", "raspberry"))
             {
                 client.Connect();
-                
+
                 return client.ConnectionInfo.ServerVersion;
-              
+
             }
         }
 
@@ -37,7 +37,7 @@ namespace Doods.StdLibSsh
         public bool IsConnected()
         {
             return IsAuthenticated();
-           
+
         }
 
         public bool CanConnect()

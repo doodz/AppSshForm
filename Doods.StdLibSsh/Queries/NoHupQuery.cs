@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Interfaces;
+using System;
+using System.Linq;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -33,10 +33,8 @@ namespace Doods.StdLibSsh.Queries
 
         private string ParsePid(string result)
         {
-
-
             //var tab = result.Trim().Split(new[] {"] "}, StringSplitOptions.RemoveEmptyEntries);
-            var tab = result.Trim().Split(new[] {ReturnQuery.ResultPid}, StringSplitOptions.RemoveEmptyEntries);
+            var tab = result.Trim().Split(new[] { ReturnQuery.ResultPid }, StringSplitOptions.RemoveEmptyEntries);
             if (!tab.Any()) return null;
             return tab?.Last().Trim();
         }

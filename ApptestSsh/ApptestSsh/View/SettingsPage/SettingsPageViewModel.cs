@@ -14,7 +14,6 @@ namespace ApptestSsh.Core.View.SettingsPage
         public ObservableRangeCollection<SettingsMenuItem> TechnologyItems { get; } = new ObservableRangeCollection<SettingsMenuItem>();
         public SettingsPageViewModel(ILogger logger) : base(logger)
         {
-
             AboutItems.AddRange(new[]
             {
                 new SettingsMenuItem { Name = "Created by Xamarin with <3", Command=LaunchBrowserCommand, Parameter="http://www.xamarin.com" },
@@ -29,6 +28,7 @@ namespace ApptestSsh.Core.View.SettingsPage
                 new SettingsMenuItem { Name = "sqlite-net-pcl", Command=LaunchBrowserCommand, Parameter="https://github.com/praeclarum/sqlite-net"},
                 new SettingsMenuItem { Name = "Autofac", Command=LaunchBrowserCommand, Parameter="https://github.com/autofac/Autofac"},
                 new SettingsMenuItem { Name = "NLog", Command=LaunchBrowserCommand, Parameter="https://github.com/NLog/NLog/"},
+                new SettingsMenuItem { Name = "SSH.NET", Command=LaunchBrowserCommand, Parameter="https://github.com/sshnet/SSH.NET/"},
                 new SettingsMenuItem { Name = "Xamarin.Forms", Command=LaunchBrowserCommand, Parameter="http://xamarin.com/forms"}
             });
         }

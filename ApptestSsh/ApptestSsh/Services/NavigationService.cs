@@ -3,6 +3,7 @@ using ApptestSsh.Core.View.CommandPage;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.Omv.OmvServices;
 using ApptestSsh.Core.View.RootPage.MasterDetailPage;
 using ApptestSsh.Core.View.RootPage.Windows;
 using ApptestSsh.Core.View.ShellPage;
@@ -122,6 +123,11 @@ namespace ApptestSsh.Core.Services
         public Task GoToEditCommandPage(CommandSsh cmd)
         {
             return PushAsync(Navigation, new AddCommandPage(cmd));
+        }
+
+        public Task GotoOmvPage()
+        {
+            return PushAsync(Navigation, new OmvServicesPage());
         }
     }
 }

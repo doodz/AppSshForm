@@ -42,7 +42,7 @@ namespace ApptestSsh.Core.View.HostManagerPage
             //    await DisplayAlert("Selected",h.HostName, "OK");
             //}
 
-            ////Deselect Item
+            ////Deselect PluginFormsItem
             //((ListView)sender).SelectedItem = null;
         }
     }

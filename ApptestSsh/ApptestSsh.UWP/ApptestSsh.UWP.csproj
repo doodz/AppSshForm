@@ -17,7 +17,11 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>ApptestSsh.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>ApptestSsh.UWP_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>451859431A099AA1EA7D196152B642B260FCA478</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -91,6 +95,7 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <AndroidAsset Include="NLog.config" />
+    <None Include="ApptestSsh.UWP_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +127,8 @@
     <Content Include="Assets\ic_close_black_24dp_2x.png" />
     <Content Include="Assets\ic_delete_black_24dp_1x.png" />
     <Content Include="Assets\ic_delete_black_24dp_2x.png" />
+    <Content Include="Assets\ic_dns_black_24dp_1x.png" />
+    <Content Include="Assets\ic_dns_black_24dp_2x.png" />
     <Content Include="Assets\ic_file_download_black_24dp_1x.png" />
     <Content Include="Assets\ic_file_download_black_24dp_2x.png" />
     <Content Include="Assets\ic_file_upload_black_24dp_1x.png" />
@@ -142,6 +149,8 @@
     <Content Include="Assets\ic_settings_remote_black_24dp_2x.png" />
     <Content Include="Assets\ic_storage_black_24dp_1x.png" />
     <Content Include="Assets\ic_storage_black_24dp_2x.png" />
+    <Content Include="Assets\web_hi_res_512.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
@@ -187,7 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Doods.StdFramework\Doods.StdFramework.Core.csproj">
-      <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
+      <Project>{e0e74a7b-2314-49ff-b002-86f2bd3c0fed}</Project>
       <Name>Doods.StdFramework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Doods.StdLibSsh\Doods.StdLibSsh.csproj">

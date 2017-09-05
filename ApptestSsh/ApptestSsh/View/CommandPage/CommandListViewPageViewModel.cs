@@ -22,25 +22,25 @@ namespace ApptestSsh.Core.View.CommandPage
             set => SetProperty(ref _selectedCommand, value);
         }
 
-
         public ICommand AddCmdCmd { get; }
 
         public CommandListViewPageViewModel(ILogger logger, IRepository reposotiry) : base(logger)
         {
             _repository = reposotiry;
-
             AddCmdCmd = new Command(() => NavigationService.GoToAddCommandPage());
-
         }
 
         protected override async Task RefreshData()
         {
+            IsBusyList = true;
             using (new RunWithBusyCount(this))
             {
+
                 var list = await _repository.GetAllAsync<CommandSsh>();
                 Items.Clear();
                 Items.AddRange(list);
             }
+            IsBusyList = false;
         }
 
         /// <summary>

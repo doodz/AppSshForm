@@ -31,6 +31,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Icon = "Assets/ic_account_box_black_24dp_1x.png",
                 Command = ViewModel.GotoLoginCommand
             });
+
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "OMV",
+                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Command = ViewModel.GotoOmvPage
+            });
         }
     }
 }

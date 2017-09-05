@@ -1,0 +1,16 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "NETStandard.Library": "2.0.0",
+    "Newtonsoft.Json": "10.0.3",
+    "sqlite-net-pcl": "1.4.118",
+    "SSH.NET": "2016.1.0-beta2",
+    "SshNet.Security.Cryptography": "1.2.0"
+  },
+  "frameworks": {
+    "netstandard1.4": {
+      "imports": "portable-net45+win8+wpa81"
+    }
+  }
+}

@@ -1,16 +1,13 @@
-﻿using System;
-using Android;
+﻿using Android;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using ApptestSsh.Core;
 using Android.Util;
+using ApptestSsh.Core;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;
-using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
-using Microsoft.Azure.Mobile.Crashes;
+using System;
 
 [assembly: UsesPermission(Manifest.Permission.Internet)]
 [assembly: UsesPermission(Manifest.Permission.WakeLock)]
@@ -18,8 +15,8 @@ using Microsoft.Azure.Mobile.Crashes;
 
 namespace ApptestSsh.Droid
 {
-    [Application(Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/MainTheme")]
-    public class MainApplication : Application , Application.IActivityLifecycleCallbacks
+    [Application(Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@style/MainTheme")]
+    public class MainApplication : Application, Application.IActivityLifecycleCallbacks
     {
         public MainApplication(IntPtr handle, JniHandleOwnership ownerShip) : base(handle, ownerShip)
         {
@@ -36,9 +33,9 @@ namespace ApptestSsh.Droid
             CoreSetup.SetupContainer(new Setup());
             AppContainer.Container.Resolve<IDatabase>().Initialize();
 
-#if !DEBUG
-            //MobileCenter.Start("e3bb5908-01c3-4286-811f-b07537a6a632", typeof(Analytics), typeof(Crashes));
-#endif
+            //#if !DEBUG
+            //            //MobileCenter.Start("e3bb5908-01c3-4286-811f-b07537a6a632", typeof(Analytics), typeof(Crashes));
+            //#endif
         }
 
         private void HandleAndroidException(object sender, RaiseThrowableEventArgs e)
@@ -52,27 +49,27 @@ namespace ApptestSsh.Droid
         public void OnActivityCreated(Activity activity, Bundle savedInstanceState)
         {
 
-           
+
         }
 
         public void OnActivityDestroyed(Activity activity)
         {
-            
+
         }
 
         public void OnActivityPaused(Activity activity)
         {
-           
+
         }
 
         public void OnActivityResumed(Activity activity)
         {
-            
+
         }
 
         public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
         {
-            
+
         }
 
         public void OnActivityStarted(Activity activity)

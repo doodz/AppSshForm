@@ -25,7 +25,7 @@ namespace ApptestSsh.Core.View.UpgradablePage
             using (new RunWithBusyCount(this))
             {
                 var ssh = AppContainer.Container.Resolve<ISshService>();
-                var res = await new NuHupQueryWithWaitPid(ssh, UpdateAllQuery.Query).RunAsync(Token);
+                var res = await new NuHupQueryWithWaitPid(ssh, UpgradeAllQuery.Query).RunAsync(Token);
             }
         }
 

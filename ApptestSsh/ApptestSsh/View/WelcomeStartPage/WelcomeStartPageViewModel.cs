@@ -4,7 +4,6 @@ using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdRepository.Base;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,32 +33,13 @@ namespace ApptestSsh.Core.View.WelcomeStartPage
             NavigationService.GoToLogin();
         }
 
-        private static void GotoHomePage()
-        {
-            switch (Device.RuntimePlatform)
-            {
-                case Device.Android:
-
-                    //NavigationService.GoToRootPageAndroidModal();
-                    break;
-                case Device.iOS:
-                    //NavigationService.GoToHome();
-                    break;
-                case Device.UWP:
-                case Device.WinPhone:
-
-                    //NavigationService.GoToRootPageWindowsModal();
-                    //await NavigationService.GoToRootPageWindows(); 
-                    break;
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
         protected override async Task OnInternalAppearing()
         {
             if (await HaveHost())
+            {
+                //NavigationService.ClearHistory();
                 await NavigationService.GoToRootPage();
+            }
         }
 
         private async Task<bool> HaveHost()

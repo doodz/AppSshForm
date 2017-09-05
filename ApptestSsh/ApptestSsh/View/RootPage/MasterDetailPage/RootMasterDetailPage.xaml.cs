@@ -16,7 +16,7 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
 
             var res = MasterPage.ListView.ItemsSource.Cast<RootMasterDetailPageMenuItem>().FirstOrDefault();
 
-            var select = MasterPage.ListView.SelectedItem;
+            //var select = MasterPage.ListView.SelectedItem;
             SetPage(res);
 
         }
@@ -57,5 +57,21 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
             }
             return true;
         }
+
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
+
+        //    var navigation = AppContainer.Container.Resolve<INavigationService>();
+        //    var stackPages = navigation.Navigation.NavigationStack.ToList();
+
+        //    stackPages = stackPages.Where(p => p.GetType() != typeof(RootMasterDetailPage)).ToList();
+
+        //    foreach (var stackPage in stackPages)
+        //    {
+        //        navigation.RemovePageFromHistory(stackPage.GetType());
+        //    }
+
+        //}
     }
 }

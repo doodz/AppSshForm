@@ -68,6 +68,14 @@
       <DependentUpon>HostManagerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HostManagerPage\HostManagerPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvRddPage\RrdPage.xaml.cs">
+      <DependentUpon>RrdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Omv\OmvRddPage\RrdPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvServicesPage\OmvServicesPage.xaml.cs">
+      <DependentUpon>OmvServicesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Omv\OmvServicesPage\OmvServicesPageViewModel.cs" />
     <Compile Include="View\LoginPage\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -150,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Doods.StdFramework\Doods.StdFramework.Core.csproj">
-      <Project>{CF24EF32-35FF-4EE7-8306-B078EF0A5E73}</Project>
+      <Project>{e0e74a7b-2314-49ff-b002-86f2bd3c0fed}</Project>
       <Name>Doods.StdFramework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Doods.StdLibSsh\Doods.StdLibSsh.csproj">
@@ -160,6 +168,10 @@
     <ProjectReference Include="..\..\Doods.StdRepository\Doods.StdRepository.csproj">
       <Project>{13F126E6-AB09-4AAC-871E-5BC9B48E3E22}</Project>
       <Name>Doods.StdRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Omv.Rpc.StdClient\Omv.Rpc.StdClient.csproj">
+      <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
+      <Name>Omv.Rpc.StdClient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +289,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\RootPage\MasterDetailPage\RootMasterDetailPageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Omv\OmvServicesPage\OmvServicesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Omv\OmvRddPage\RrdPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

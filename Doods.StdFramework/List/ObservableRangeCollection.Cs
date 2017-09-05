@@ -38,9 +38,9 @@ namespace Doods.StdFramework
         {
             if (notificationMode != NotifyCollectionChangedAction.Add &&
                 notificationMode != NotifyCollectionChangedAction.Reset)
-                throw new ArgumentException("Mode must be either Add or Reset for AddRange.", "notificationMode");
+                throw new ArgumentException("Mode must be either Add or Reset for AddRange.", nameof(notificationMode));
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             CheckReentrancy();
 
@@ -75,9 +75,9 @@ namespace Doods.StdFramework
         {
             if (notificationMode != NotifyCollectionChangedAction.Remove &&
                 notificationMode != NotifyCollectionChangedAction.Reset)
-                throw new ArgumentException("Mode must be either Remove or Reset for RemoveRange.", "notificationMode");
+                throw new ArgumentException("Mode must be either Remove or Reset for RemoveRange.", nameof(notificationMode));
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             CheckReentrancy();
 
@@ -119,7 +119,7 @@ namespace Doods.StdFramework
         public void ReplaceRange(IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+                throw new ArgumentNullException(nameof(collection));
 
             Items.Clear();
             AddRange(collection, NotifyCollectionChangedAction.Reset);

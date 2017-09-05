@@ -38,7 +38,7 @@ namespace ApptestSsh.Core.View.CommandPage
 
             //await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
 
-            ////Deselect Item
+            ////Deselect PluginFormsItem
             //((ListView)sender).SelectedItem = null;
         }
     }

@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF24EF32-35FF-4EE7-8306-B078EF0A5E73}</ProjectGuid>
+    <ProjectGuid>{E0E74A7B-2314-49FF-B002-86F2BD3C0FED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Doods.StdFramework</RootNamespace>
@@ -44,6 +44,7 @@
     <Compile Include="Mvvm\BaseListViewModel.cs" />
     <Compile Include="Mvvm\BaseMasterDetailPage.cs" />
     <Compile Include="Mvvm\BaseTabbedPage.cs" />
+    <Compile Include="Mvvm\RunWithBool.cs" />
     <Compile Include="Mvvm\RunWithBusyCount.cs" />
     <Compile Include="Mvvm\ViewPage.cs" />
     <Compile Include="Mvvm\BaseViewModel.cs" />

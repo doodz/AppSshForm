@@ -32,7 +32,7 @@ namespace ApptestSsh.Core.View.TestUi
 
             await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
 
-            //Deselect Item
+            //Deselect PluginFormsItem
             ((ListView)sender).SelectedItem = null;
         }
     }

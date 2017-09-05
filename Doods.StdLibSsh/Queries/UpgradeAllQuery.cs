@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Doods.StdLibSsh.Base.Queries;
+using Doods.StdLibSsh.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Doods.StdLibSsh.Base.Queries;
-using Doods.StdLibSsh.Interfaces;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -47,18 +44,15 @@ namespace Doods.StdLibSsh.Queries
     /// Conf raspberrypi-kernel(1.20170703-1 Raspberry Pi Foundation:stable[armhf])
     /// Conf libraspberrypi-bin(1.20170703-1 Raspberry Pi Foundation:stable[armhf])
     /// </example>
-    public class UpdateAllQuery : GenericQuery<bool>
+    public class UpgradeAllQuery : GenericQuery<bool>
     {
         public static readonly string Query = "sudo apt-get upgrade -y";
         // $"sudo bash -c 'exec  apt-get upgrade -y' && echo \"{ReturnQuery.ResultOk}\" || echo \"{ReturnQuery.ResultKo}\""
-            
 
-        public UpdateAllQuery(IClientSsh client) : base(client)
+
+        public UpgradeAllQuery(IClientSsh client) : base(client)
         {
-           
             CmdString = Query;
-
-
         }
 
         protected override bool PaseResult(string result)

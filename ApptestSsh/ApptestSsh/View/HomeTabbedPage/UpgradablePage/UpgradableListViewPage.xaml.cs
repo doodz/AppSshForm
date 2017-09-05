@@ -24,7 +24,7 @@ namespace ApptestSsh.Core.View.UpgradablePage
 
             //await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
 
-            //Deselect Item
+            //Deselect PluginFormsItem
             ((ListView)sender).SelectedItem = null;
         }
     }

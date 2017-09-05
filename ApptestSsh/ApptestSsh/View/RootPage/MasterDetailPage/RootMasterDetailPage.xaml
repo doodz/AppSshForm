@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApptestSsh.Core.View.RootPage.MasterDetailPage.RootMasterDetailPage"
              xmlns:pages="clr-namespace:ApptestSsh.Core.View.RootPage.MasterDetailPage"
-             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-             xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core">
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework">
   <MasterDetailPage.Master>
     <pages:RootMasterDetailPageMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>

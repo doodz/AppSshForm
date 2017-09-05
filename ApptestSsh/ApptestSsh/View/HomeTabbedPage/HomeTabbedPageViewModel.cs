@@ -24,6 +24,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public ICommand ShellCmd { get; }
         public ICommand RefreshCommand { get; }
         public ICommand GotoLoginCommand { get; }
+        public ICommand GotoOmvPage { get; }
+
         public ICommand KillProcessCmd { get; }
         public ICommand MountUmountCmd { get; }
         public ICommand UpdateCmd { get; }
@@ -88,6 +90,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             ShellCmd = new Command(c => NavigationService.GoToShellPage());
             RefreshCommand = new Command(async () => await ExecuteRefreshCommandAsync());
             GotoLoginCommand = new Command(async () => await NavigationService.GotoLoginModal());
+            GotoOmvPage = new Command(async () => await NavigationService.GotoOmvPage());
             NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
 
             KillProcessCmd = new Command(Killprocess);
@@ -116,13 +119,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         private async void UpdateAll(object obj)
         {
-            OnUpdate = true;
-
-            var ssh = AppContainer.Container.Resolve<ISshService>();
-            var res = await new NuHupQueryWithWaitPid(ssh, UpdateAllQuery.Query).RunAsync(Token);
-            if (res)
-                await GetAptList(ssh);
-            OnUpdate = false;
+            using (new RunWithBool(val => { OnUpdate = val; }))
+            {
+                var ssh = AppContainer.Container.Resolve<ISshService>();
+                var res = await new NuHupQueryWithWaitPid(ssh, UpgradeAllQuery.Query).RunAsync(Token);
+                if (res)
+                    await GetAptList(ssh);
+            }
         }
 
         private async void Update(object obj)
@@ -147,8 +150,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
             var ssh = AppContainer.Container.Resolve<ISshService>();
             var res = await new UmountQuery(ssh, disk.MountedOn).RunAsync(Token);
-
-
         }
 
         private async Task ExecuteRefreshCommandAsync()
@@ -212,17 +213,12 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
             await test.RunAsync(Token).ContinueWith(res =>
             {
-
-
                 if (res.IsCanceled) return;
 
                 VcgencmdBean = res.Result;
                 if (VcgencmdBean.ArmFrequency == 0 && VcgencmdBean.CoreFrequency == 0 && VcgencmdBean.CoreVolts == 0d &&
                     VcgencmdBean.CpuTemperature == 0d && VcgencmdBean.Version == "n/a")
-                {
-                    //Rien est initialisé, on n’est peut-être pas sur une Raspberry pi.
                     VcgencmdBeanNotOnRpi = true;
-                }
 
                 OnUpdateVcgencmdBean = false;
             }, TaskContinuationOptions.NotOnCanceled);
@@ -237,8 +233,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             if (process == null) return;
             if (Processes.Any())
                 Processes.Clear();
-            if (process != null)
-                Processes.AddRange(process);
+            Processes.AddRange(process);
         }
 
         private async Task GetDiskUsage(ISshService ssh)

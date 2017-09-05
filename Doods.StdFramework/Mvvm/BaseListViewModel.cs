@@ -15,6 +15,15 @@ namespace Doods.StdFramework.Mvvm
     }
     public class BaseListViewModel<T> : BaseViewModel where T : IName
     {
+
+        protected bool _isBusyList;
+
+        public bool IsBusyList
+        {
+            get => _isBusyList;
+            set => SetProperty(ref _isBusyList, value);
+        }
+
         public ObservableRangeCollection<T> Items { get; }
         public ObservableRangeCollection<Grouping<string, T>> ItemsGrouped { get; }
         public ICommand RefreshDataCommand { get; }
