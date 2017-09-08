@@ -1,56 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<mvvm:ViewPage x:TypeArguments="omvServicesPage1:OmvPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+<mvvm:ViewPage x:TypeArguments="omvServicesPage1:OmvServicesPageViewModel"
+               xmlns="http://xamarin.com/schemas/2014/forms"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-              
                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
-               
                xmlns:omvServicesPage1="clr-namespace:ApptestSsh.Core.View.Omv.OmvServices;assembly=ApptestSsh.Core"
                x:Class="ApptestSsh.Core.View.Omv.OmvServices.OmvServicesPage">
-  <views:AlwaysScrollView >
-      <views:CardView VerticalOptions="FillAndExpand">
-        <Grid >
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-              <RowDefinition Height="Auto" />
-          </Grid.RowDefinitions>
+    <views:AlwaysScrollView>
+        <views:CardView VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-          <StackLayout Grid.Row="0">
-            <views:LabelSection Text="Services" />
-            <views:HeaderDivider />
-            <StackLayout Orientation="Horizontal">
-              <Label HorizontalOptions="FillAndExpand" Text="Service Name" />
-              <Label WidthRequest="70" Text="Enabled" />
-              <Label WidthRequest="70" Text="Running" />
-            </StackLayout>
-          </StackLayout>
-          <views:NonScrollableListView
-              Grid.Row="1"
-              ItemsSource="{Binding Services,Mode=OneWay}"
-              RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
-              IsRefreshing="{Binding IsRefreshing}"
-              RowHeight="44">
-            <views:NonScrollableListView.SeparatorColor>
-              <OnPlatform x:TypeArguments="Color"
-                          iOS="{StaticResource ListSeparator}" />
-            </views:NonScrollableListView.SeparatorColor>
-            <views:NonScrollableListView.ItemTemplate>
-              <DataTemplate>
-                <ViewCell>
-                  <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
-                               MinimumHeightRequest="20">
-                    <Label VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="{Binding Name}" />
-                    <Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="False" />
-                    <Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="False" />
-                  </StackLayout>
-                </ViewCell>
-              </DataTemplate>
-            </views:NonScrollableListView.ItemTemplate>
-          </views:NonScrollableListView>
-          <views:FooterDivider Grid.Row="2"/>
-        </Grid>
-      </views:CardView>
-  </views:AlwaysScrollView>
+
+                <Frame Grid.Row="0">
+                    <Grid BindingContext="{Binding SystemInfo,Mode=OneWay}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Text="HostName" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="Version" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="Processor" />
+                        <Label Grid.Row="3" Grid.Column="0" Text="Kernel" />
+                        <Label Grid.Row="4" Grid.Column="0" Text="System time" />
+                        <Label Grid.Row="5" Grid.Column="0" Text="Uptime" />
+                        <Label Grid.Row="6" Grid.Column="0" Text="LoadAverage" />
+                        <Label Grid.Row="7" Grid.Column="0" Text="CPU usage" />
+                        <Label Grid.Row="8" Grid.Column="0" Text="Memory usage" />
+
+                        <Label BackgroundColor="Blue" Grid.Row="0" Grid.Column="1"
+                               Text="{Binding Path=HostName.Value.Value,Mode=OneWay}" />
+                        <Label BackgroundColor="Aquamarine" Grid.Row="1" Grid.Column="1"
+                               Text="{Binding Version.Value.Value,Mode=OneWay}" />
+                        <Label BackgroundColor="Bisque" Grid.Row="2" Grid.Column="1"
+                               Text="{Binding Processor.Value.Value,Mode=OneWay}" />
+                        <Label BackgroundColor="Brown" Grid.Row="3" Grid.Column="1"
+                               Text="{Binding Kernel.Value.Value,Mode=OneWay}" />
+                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding SystemTime.Value.Value,Mode=OneWay}" />
+                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding Uptime.Value.Value,Mode=OneWay}" />
+                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding LoadAverage.Value.Value,Mode=OneWay}" />
+                        <Label Grid.Row="7" Grid.Column="1"
+                               Text="{Binding Path=CpuUsage.Value.Value,Mode=OneWay}" />
+                        <Label Grid.Row="8" Grid.Column="1"
+                               Text="{Binding Path=MemoryUsage.Value.Value,Mode=OneWay}" />
+                    </Grid>
+                </Frame>
+
+                <StackLayout Grid.Row="1">
+                    <views:LabelSection Text="Services" />
+                    <views:HeaderDivider />
+                    <StackLayout Orientation="Horizontal">
+                        <Label HorizontalOptions="FillAndExpand" Text="Service Name" />
+                        <Label WidthRequest="70" Text="Enabled" />
+                        <Label WidthRequest="70" Text="Running" />
+                    </StackLayout>
+                </StackLayout>
+
+
+                <views:NonScrollableListView
+                    Grid.Row="2"
+                    ItemsSource="{Binding Services,Mode=OneWay}"
+                    RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
+                    IsRefreshing="{Binding IsRefreshing}"
+                    RowHeight="44">
+                    <views:NonScrollableListView.SeparatorColor>
+                        <OnPlatform x:TypeArguments="Color"
+                                    iOS="{StaticResource ListSeparator}" />
+                    </views:NonScrollableListView.SeparatorColor>
+                    <views:NonScrollableListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                             MinimumHeightRequest="20">
+                                    <Label VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                                           Text="{Binding Name}" />
+                                    <Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="False" />
+                                    <Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="False" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </views:NonScrollableListView.ItemTemplate>
+                </views:NonScrollableListView>
+                <views:FooterDivider Grid.Row="3" />
+            </Grid>
+        </views:CardView>
+    </views:AlwaysScrollView>
 </mvvm:ViewPage>

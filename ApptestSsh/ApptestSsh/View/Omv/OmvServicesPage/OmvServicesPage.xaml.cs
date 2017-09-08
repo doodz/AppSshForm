@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 namespace ApptestSsh.Core.View.Omv.OmvServices
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OmvServicesPage : ViewPage<OmvPageViewModel>
+    public partial class OmvServicesPage : ViewPage<OmvServicesPageViewModel>
     {
         public OmvServicesPage()
         {
@@ -23,6 +23,13 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
                     });
                     break;
             }
+
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "OMV",
+                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Command = ViewModel.GotoRrdPage
+            });
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Doods.StdLibSsh.Beans;
+using PCLStorage;
 using Renci.SshNet;
 using Renci.SshNet.Sftp;
 using System;
@@ -55,6 +56,21 @@ namespace Doods.StdLibSsh
             }
         }
 
+
+        public async Task<Stream> GetFile(string filePath, IFile localFile)
+        {
+            if (!_client.Value.IsConnected) _client.Value.Connect();
+            using (var saveFile = await localFile.OpenAsync(PCLStorage.FileAccess.ReadAndWrite))
+            {
+                Func<IAsyncResult, Stream> endMethod = (a) =>
+                {
+                    _client.Value.EndDownloadFile(a);
+                    return saveFile;
+                };
+                return await Task.Factory.FromAsync(_client.Value.BeginDownloadFile(filePath, saveFile), endMethod);
+            }
+        }
+
         public async Task GetFiles(IEnumerable<SftpFile> files, string localFolder)
         {
             foreach (var file in files)
@@ -76,7 +92,7 @@ namespace Doods.StdLibSsh
                     (asyncCallback, state) => sftp.BeginListDirectory(remoteDirectory, asyncCallback, state),
                     sftp.EndListDirectory, null);
 
-                return res.Where(f => f.Name.StartsWith("."));
+                return res.Where(f => !f.Name.StartsWith("."));
             }
         }
 

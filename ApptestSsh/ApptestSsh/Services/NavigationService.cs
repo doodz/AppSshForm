@@ -3,6 +3,7 @@ using ApptestSsh.Core.View.CommandPage;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.Omv.OmvRrdPage;
 using ApptestSsh.Core.View.Omv.OmvServices;
 using ApptestSsh.Core.View.RootPage.MasterDetailPage;
 using ApptestSsh.Core.View.RootPage.Windows;
@@ -125,9 +126,14 @@ namespace ApptestSsh.Core.Services
             return PushAsync(Navigation, new AddCommandPage(cmd));
         }
 
-        public Task GotoOmvPage()
+        public Task GoToOmvServicesPage()
         {
             return PushAsync(Navigation, new OmvServicesPage());
+        }
+
+        public Task GotoRddPage()
+        {
+            return PushAsync(Navigation, new RrdPage());
         }
     }
 }

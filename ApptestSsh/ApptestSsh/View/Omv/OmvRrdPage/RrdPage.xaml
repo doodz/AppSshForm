@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="omvRddPage:RrdPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:omvRddPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvRddPage;assembly=ApptestSsh.Core"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+             x:Class="ApptestSsh.Core.View.Omv.OmvRrdPage.RrdPage">
+    <views:AlwaysScrollView VerticalOptions="StartAndExpand">
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Welcome to Xamarin Forms!" />
+            <views:DoodsButton Command="{Binding Path=MkGraphCommand,Mode=OneWay}" Text="Refresh graphs"/>
+            <ListView VerticalOptions="StartAndExpand" ItemsSource="{Binding Path=RrdList,Mode=OneWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Height="30"
+                                   Text="{Binding Title}"
+                                   Detail="{Binding Description}"
+                                   ImageSource="{Binding ImageSource2}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </views:AlwaysScrollView>
+</mvvm:ViewPage>

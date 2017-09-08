@@ -78,7 +78,7 @@ namespace Omv.Rpc.StdClient.Ssh.Queries
 
             foreach (var line in lines.Skip(1)) // remove "total xxxx"
             {
-                var split = line.Trim().Split(' ');
+                var split = line.Trim().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                 var fileInfo = new FileInfoBean();
                 fileInfo.Path = GetRrdListQuery.Path;
                 fileInfo.AccessRights = split[0];

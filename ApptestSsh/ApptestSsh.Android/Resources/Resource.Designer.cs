@@ -26,6 +26,8 @@ namespace ApptestSsh.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::ApptestSsh.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::ApptestSsh.Droid.Resource.String.Hello;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::ApptestSsh.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::ApptestSsh.Droid.Resource.Animation.abc_fade_out;
 			global::Plugin.Toasts.Resource.Animation.abc_grow_fade_in_from_bottom = global::ApptestSsh.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;

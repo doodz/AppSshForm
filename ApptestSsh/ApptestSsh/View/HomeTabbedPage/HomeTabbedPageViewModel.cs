@@ -90,7 +90,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             ShellCmd = new Command(c => NavigationService.GoToShellPage());
             RefreshCommand = new Command(async () => await ExecuteRefreshCommandAsync());
             GotoLoginCommand = new Command(async () => await NavigationService.GotoLoginModal());
-            GotoOmvPage = new Command(async () => await NavigationService.GotoOmvPage());
+            GotoOmvPage = new Command(async () => await NavigationService.GoToOmvServicesPage());
             NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
 
             KillProcessCmd = new Command(Killprocess);

@@ -43,6 +43,7 @@
     <Compile Include="Commands\OmvCommand.cs" />
     <Compile Include="Commands\OmvCommandError.cs" />
     <Compile Include="Commands\OmvCommandResult.cs" />
+    <Compile Include="Conterters\SystemInfoDataToValueConverter.cs" />
     <Compile Include="Datas\AptSettings.cs" />
     <Compile Include="Datas\CountResultReturn.cs" />
     <Compile Include="Datas\NetworkSettings.cs" />
@@ -51,6 +52,8 @@
     <Compile Include="Datas\Plugins\PluginFormsItem.cs" />
     <Compile Include="Datas\Plugins\PluginFormsItemType.cs" />
     <Compile Include="Datas\Service.cs" />
+    <Compile Include="Datas\SystemInfo.cs" />
+    <Compile Include="Datas\SystemInfoData.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CertificateService.cs" />
@@ -61,6 +64,7 @@
     <Compile Include="Services\RrdService.cs" />
     <Compile Include="Services\SystemService.cs" />
     <Compile Include="Services\UpdateService.cs" />
+    <Compile Include="Services\WebGuiService.cs" />
     <Compile Include="Ssh\OmvSshRrd.cs" />
     <Compile Include="Ssh\Queries\GenerateRrdQuery.cs" />
     <Compile Include="Ssh\Queries\GetRrdListQuery.cs" />

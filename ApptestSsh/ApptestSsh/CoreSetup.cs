@@ -24,6 +24,7 @@ namespace ApptestSsh.Core
         public static void SetupContainer(AppSetup appSetup)
         {
 
+
             appSetup.ContainerBuilder.RegisterType<MainPageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<LoginViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<HomeTabbedPageViewModel>().AsSelf();
@@ -35,7 +36,7 @@ namespace ApptestSsh.Core
             appSetup.ContainerBuilder.RegisterType<CommandListViewPageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<UpgradableListViewPageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<RootMasterDetailPageMasterViewModel>().AsSelf();
-            appSetup.ContainerBuilder.RegisterType<OmvPageViewModel>().AsSelf();
+            appSetup.ContainerBuilder.RegisterType<OmvServicesPageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<RrdPageViewModel>().AsSelf();
 
             appSetup.ContainerBuilder.RegisterType<Database>().As<IDatabase>().SingleInstance();
