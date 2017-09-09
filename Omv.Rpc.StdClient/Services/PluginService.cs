@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using Omv.Rpc.StdClient.Commands;
 using Omv.Rpc.StdClient.Helpers;
+using System.Collections.Generic;
 
 namespace Omv.Rpc.StdClient.Services
 {
@@ -39,7 +39,7 @@ namespace Omv.Rpc.StdClient.Services
                 ServiceName = ServiceName,
                 MethodName = "install"
             };
-
+            //TODO : doods: a revoir 
             var array = JsonHelper.CreateArray("packages", pluginNames);
             cmd.Params = new[] { array };
 

@@ -14,6 +14,18 @@ namespace Omv.Rpc.StdClient.Services
                 ServiceName = ServiceName,
                 MethodName = "getList"
             };
+
+
+            var paramsObj = new JObject();
+            paramsObj.Add(new JProperty("start", 0));
+            paramsObj.Add(new JProperty("limit", 25));
+            paramsObj.Add(new JProperty("sortfield", "devicefile"));
+            paramsObj.Add(new JProperty("sortdir", "ASC"));
+            //TODO : doods: a revoir, C’est fonctionnelle mais pas pratique . :/
+            cmd.Params = new[]
+            {
+                "\""+paramsObj.ToString().Replace("\"","\\\"")+"\""
+            };
             return cmd;
         }
 
@@ -25,8 +37,14 @@ namespace Omv.Rpc.StdClient.Services
                 MethodName = "mount"
             };
 
-
-            cmd.Params = new[] { new JProperty("fstab", true).ToString(), new JProperty("id", deviceFile).ToString() };
+            var paramsObj = new JObject();
+            paramsObj.Add(new JProperty("fstab", true));
+            paramsObj.Add(new JProperty("id", deviceFile));
+            //TODO : doods: a revoir, C’est fonctionnelle mais pas pratique . :/
+            cmd.Params = new[]
+            {
+                "\""+paramsObj.ToString().Replace("\"","\\\"")+"\""
+            };
 
             return cmd;
         }
@@ -39,8 +57,14 @@ namespace Omv.Rpc.StdClient.Services
                 MethodName = "umount"
             };
 
-
-            cmd.Params = new[] { new JProperty("fstab", true).ToString(), new JProperty("id", deviceFile).ToString() };
+            var paramsObj = new JObject();
+            paramsObj.Add(new JProperty("fstab", true));
+            paramsObj.Add(new JProperty("id", deviceFile));
+            //TODO : doods: a revoir, C’est fonctionnelle mais pas pratique . :/
+            cmd.Params = new[]
+            {
+                "\""+paramsObj.ToString().Replace("\"","\\\"")+"\""
+            };
 
             return cmd;
         }

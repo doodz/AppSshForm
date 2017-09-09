@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<mvvm:ViewPage x:TypeArguments="omvFileSystemsPage:OmvFileSystemsPageViewModel"
+               xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:omvFileSystemsPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvFileSystemsPage;assembly=ApptestSsh.Core"
+               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+               x:Class="ApptestSsh.Core.View.Omv.OmvFileSystemsPage.OmvFileSystemsPage">
+    <ContentPage.Content>
+        <views:NonScrollableListView Grid.Row="2"
+                                     x:Name="ListView"
+                                     ItemsSource="{Binding FileSystems,Mode=OneWay}"
+                                     RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
+                                     IsRefreshing="{Binding IsRefreshing}"
+                                     VerticalOptions="StartAndExpand">
+            <views:NonScrollableListView.SeparatorColor>
+                <OnPlatform x:TypeArguments="Color"
+                            iOS="{StaticResource ListSeparator}" />
+            </views:NonScrollableListView.SeparatorColor>
+            <views:NonScrollableListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                            <Grid Margin="5,1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       Text="{Binding Devicefile,Mode=OneWay}" />
+                                <Label Grid.Column="0"
+                                       Grid.Row="1"
+                                       Text="{Binding Mountpoint,Mode=OneWay}" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="0"
+                                       Text="{Binding Type,Mode=OneWay}" />
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding Used,Mode=OneWay}" />
+
+                                <views:DoodsButton Margin="2"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   Grid.Column="2"
+                                                   Grid.RowSpan="2"
+                                                   Grid.Row="0"
+                                                   Text="Umount"
+                                                   Command="{Binding BindingContext.MountUmountCmd,Mode=OneWay,Source={x:Reference ListView}}"
+                                                   CommandParameter="{Binding .}">
+
+                                    <views:DoodsButton.Triggers>
+                                        <DataTrigger TargetType="views:DoodsButton"
+                                                     Binding="{Binding Mounted}"
+                                                     Value="False">
+                                            <Setter Property="Text"
+                                                    Value="Mount" />
+                                        </DataTrigger>
+                                    </views:DoodsButton.Triggers>
+                                </views:DoodsButton>
+
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </views:NonScrollableListView.ItemTemplate>
+        </views:NonScrollableListView>
+    </ContentPage.Content>
+</mvvm:ViewPage>

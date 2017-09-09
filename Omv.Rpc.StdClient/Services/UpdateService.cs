@@ -39,7 +39,7 @@ namespace Omv.Rpc.StdClient.Services
                 ServiceName = ServiceName,
                 MethodName = "upgrade"
             };
-
+            //TODO : doods: a revoir 
             var array = JsonHelper.CreateArray("packages", packageNames);
             cmd.Params = new[] { array };
             return cmd;
@@ -54,7 +54,7 @@ namespace Omv.Rpc.StdClient.Services
                 ServiceName = ServiceName,
                 MethodName = "setSettings"
             };
-
+            //TODO : doods: a revoir 
             //var obj = new JObject("params")
             //{
             //    new JProperty("partner", aptSettings.Partner),
@@ -85,7 +85,7 @@ namespace Omv.Rpc.StdClient.Services
                 ServiceName = ServiceName,
                 MethodName = "getChangeLog"
             };
-
+            //TODO : doods: a revoir 
             cmd.Params = new[] { new JProperty("filename", fileName).ToString() };
             return cmd;
 

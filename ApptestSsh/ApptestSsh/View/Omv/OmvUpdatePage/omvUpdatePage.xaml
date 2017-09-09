@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="omvUpdatePage:OmvUpdatePageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:omvUpdatePage="clr-namespace:ApptestSsh.Core.View.Omv.OmvUpdatePage;assembly=ApptestSsh.Core"
+             x:Class="ApptestSsh.Core.View.Omv.OmvUpdatePage.OmvUpdatePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+        </StackLayout>
+    </ContentPage.Content>
+</mvvm:ViewPage>

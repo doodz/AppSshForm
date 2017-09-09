@@ -26,11 +26,16 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
 
             ToolbarItems.Add(new ToolbarItem
             {
-                Text = "OMV",
+                Text = "Rrd",
                 Icon = "Assets/ic_dns_black_24dp_1x.png",
                 Command = ViewModel.GotoRrdPage
             });
-
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "File systems",
+                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Command = ViewModel.GotoOmvFileSystemsPage
+            });
         }
     }
 }

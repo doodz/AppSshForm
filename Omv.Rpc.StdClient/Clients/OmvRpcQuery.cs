@@ -2,6 +2,7 @@
 using Doods.StdLibSsh.Interfaces;
 using Newtonsoft.Json;
 using Omv.Rpc.StdClient.Commands;
+using System;
 using System.Text;
 
 namespace Omv.Rpc.StdClient.Clients
@@ -28,17 +29,24 @@ namespace Omv.Rpc.StdClient.Clients
             sb.Append(_omvCommand.MethodName);
 
             if (_omvCommand.Params != null)
+            {
                 foreach (var param in _omvCommand.Params)
                 {
                     sb.Append(" ");
                     sb.Append(param);
                 }
+            }
 
             CmdString = sb.ToString();
         }
 
         protected override T PaseResult(string result)
         {
+            if (result.StartsWith("ERROR", StringComparison.OrdinalIgnoreCase))
+            {
+                //TODO : doods : gerer les erreurs.
+            }
+
             var res = JsonConvert.DeserializeObject<T>(result);
             return res;
         }

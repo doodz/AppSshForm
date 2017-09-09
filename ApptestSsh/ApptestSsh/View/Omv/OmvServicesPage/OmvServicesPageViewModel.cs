@@ -44,12 +44,14 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
         }
 
         public ICommand GotoRrdPage { get; private set; }
+        public ICommand GotoOmvFileSystemsPage { get; private set; }
 
         public OmvServicesPageViewModel(ILogger logger) : base(logger)
         {
             Services = new ObservableRangeCollection<Service>();
             RefreshCommand = new Command(async () => await Load());
             GotoRrdPage = new Command(async () => await NavigationService.GotoRddPage());
+            GotoOmvFileSystemsPage = new Command(async () => await NavigationService.GotoOmvFileSystemsPage());
             //SystemInfoTmp = new SystemInfo();
         }
 

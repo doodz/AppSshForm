@@ -68,6 +68,10 @@
       <DependentUpon>HostManagerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HostManagerPage\HostManagerPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml.cs">
+      <DependentUpon>OmvFileSystemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPageViewModel.cs" />
     <Compile Include="View\Omv\OmvRrdPage\RrdPage.xaml.cs">
       <DependentUpon>RrdPage.xaml</DependentUpon>
     </Compile>
@@ -86,6 +90,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SQLiteFactory.cs" />
     <Compile Include="View\MainPage\MainPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvUpdatePage\OmvUpdatePage.xaml.cs">
+      <DependentUpon>OmvUpdatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Omv\OmvUpdatePage\OmvUpdatePageViewModel.cs" />
     <Compile Include="View\RootPage\Android\MenuPageAndroid.xaml.cs">
       <DependentUpon>MenuPageAndroid.xaml</DependentUpon>
     </Compile>
@@ -304,6 +312,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Omv\OmvRrdPage\RrdPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Omv\OmvUpdatePage\OmvUpdatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

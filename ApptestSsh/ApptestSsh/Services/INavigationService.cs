@@ -42,5 +42,7 @@ namespace ApptestSsh.Core.Services
         Task GoToEditCommandPage(CommandSsh cmd);
         Task GoToOmvServicesPage();
         Task GotoRddPage();
+        Task GotoOmvUpdatePage();
+        Task GotoOmvFileSystemsPage();
     }
 }
