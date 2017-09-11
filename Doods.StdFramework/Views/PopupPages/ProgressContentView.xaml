@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Doods.StdFramework.Views.PopupPages.ProgressContentView">
+    <ContentView.Content>
+
+        <Grid Padding="10"
+              BackgroundColor="White"
+              HorizontalOptions="CenterAndExpand"
+              VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   x:Name="TitleLabel"
+                   FontSize="Medium"
+                   Text="Enter the value:" />
+            <ActivityIndicator Grid.Row="1"
+                               IsRunning="True"
+                               IsEnabled="True"
+                               IsVisible="True"
+                               Color="Blue"
+                               HeightRequest="50"
+                               WidthRequest="100"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand" />
+            <Button Grid.Row="2"
+                    x:Name="CloseButton"
+                    Text="Stop">
+                <Button.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android"
+                            Value="40" />
+                        <On Platform="UWP"
+                            Value="40" />
+                        <On Platform="iOS"
+                            Value="30" />
+                    </OnPlatform>
+                </Button.HeightRequest>
+            </Button>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

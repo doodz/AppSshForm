@@ -88,6 +88,10 @@
     </Compile>
     <Compile Include="Views\NavigationView.cs" />
     <Compile Include="Views\NonScrollableListView.cs" />
+    <Compile Include="Views\PopupPages\InputAlertDialogBase.cs" />
+    <Compile Include="Views\PopupPages\ProgressContentView.xaml.cs">
+      <DependentUpon>ProgressContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SectionDivider.xaml.cs">
       <DependentUpon>SectionDivider.xaml</DependentUpon>
     </Compile>
@@ -138,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Navigation\Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PopupPages\ProgressContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

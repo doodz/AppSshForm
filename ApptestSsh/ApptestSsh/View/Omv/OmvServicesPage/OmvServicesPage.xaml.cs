@@ -36,6 +36,13 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
                 Icon = "Assets/ic_dns_black_24dp_1x.png",
                 Command = ViewModel.GotoOmvFileSystemsPage
             });
+
+            //ToolbarItems.Add(new ToolbarItem
+            //{
+            //    Text = "My PopUp",
+            //    Icon = "Assets/ic_dns_black_24dp_1x.png",
+            //    Command = ViewModel.GotoPopUpPage
+            //});
         }
     }
 }

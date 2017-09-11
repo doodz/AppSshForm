@@ -3,7 +3,7 @@ using Omv.Rpc.StdClient.Commands;
 
 namespace Omv.Rpc.StdClient.Services
 {
-    public class ConfigService
+    public static class ConfigService
     {
         private const string ServiceName = "Config";
 
@@ -11,6 +11,9 @@ namespace Omv.Rpc.StdClient.Services
         /// 
         /// </summary>
         /// <returns></returns>
+        /// <example>
+        /// {"service":"Config","method":"applyChangesBg","params":{"modules":[],"force":false},"options":null}
+        /// </example>
         public static OmvCommand CreateApplyChangesBgCommand()
         {
             var cmd = new OmvCommand
@@ -19,10 +22,40 @@ namespace Omv.Rpc.StdClient.Services
                 MethodName = "applyChangesBg"
             };
 
-            var array = new JArray("modules");
-            var obj = new JProperty("force", false);
-            cmd.Params = new[] { array.ToString(), obj.ToString() };
+            var paramsObj = new JObject();
+            paramsObj.Add(new JProperty("modules", new JArray()));
+            paramsObj.Add(new JProperty("force", false));
 
+            cmd.Params = new[]
+            {
+                "\""+paramsObj.ToString().Replace("\"","\\\"")+"\""
+            };
+            return cmd;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <example>
+        /// {"service":"Config","method":"revertChangesBg","params":{"filename":""},"options":null}
+        /// </example>
+        public static OmvCommand CreateRevertChangesBgCommand()
+        {
+            var cmd = new OmvCommand
+            {
+                ServiceName = ServiceName,
+                MethodName = "revertChangesBg"
+            };
+
+            var paramsObj = new JObject();
+            paramsObj.Add(new JProperty("filename", ""));
+            //TODO : doods: a revoir, C’est fonctionnelle mais pas pratique . :/
+            cmd.Params = new[]
+            {
+                "\""+paramsObj.ToString().Replace("\"","\\\"")+"\""
+            };
             return cmd;
 
         }

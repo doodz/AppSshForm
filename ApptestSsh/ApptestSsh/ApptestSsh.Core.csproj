@@ -51,6 +51,7 @@
     <Compile Include="Services\XamarinDeviceService.cs" />
     <Compile Include="CoreSetup.cs" />
     <Compile Include="View\Base\LocalListViewModel.cs" />
+    <Compile Include="View\Base\LocalOmvViewModel.cs" />
     <Compile Include="View\Base\LocalViewModel.cs" />
     <Compile Include="View\CommandPage\AddCommandPage.xaml.cs">
       <DependentUpon>AddCommandPage.xaml</DependentUpon>
@@ -94,6 +95,12 @@
       <DependentUpon>OmvUpdatePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Omv\OmvUpdatePage\OmvUpdatePageViewModel.cs" />
+    <Compile Include="View\PopupPages\MyPopupPage.xaml.cs">
+      <DependentUpon>MyPopupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PopupPages\TestContentView.xaml.cs">
+      <DependentUpon>TestContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RootPage\Android\MenuPageAndroid.xaml.cs">
       <DependentUpon>MenuPageAndroid.xaml</DependentUpon>
     </Compile>
@@ -322,9 +329,20 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\PopupPages\MyPopupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\PopupPages\TestContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

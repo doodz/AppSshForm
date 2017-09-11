@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
 {
-    public class OmvFileSystemsPageViewModel : LocalViewModel
+    public class OmvFileSystemsPageViewModel : LocalOmvViewModel
     {
         public ObservableRangeCollection<FileSystem> FileSystems { get; }
         public ICommand RefreshCommand { get; }
@@ -42,13 +42,17 @@ namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
                     ? FileSystemService.CreateUmountCommand(fileSystem.Devicefile)
                     : FileSystemService.CreateMountCommand(fileSystem.Devicefile);
                 var res = await new OmvRpcQuery<object>(ssh, cmd).RunAsync(Token);
-                if (res != null)
+                if (res == null)
                 {
+                    await ApplyChanges(ssh,true);
                     await GetFileSystems(ssh);
                 }
 
             }
         }
+
+
+
 
         protected override async Task Load()
         {

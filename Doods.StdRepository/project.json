@@ -3,7 +3,7 @@
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "2.0.0",
-    "sqlite-net-pcl": "1.4.118"
+    "sqlite-net-pcl": "1.5.166-beta"
   },
   "frameworks": {
     "netstandard1.4": {}

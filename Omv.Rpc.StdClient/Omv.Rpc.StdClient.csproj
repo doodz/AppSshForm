@@ -47,6 +47,7 @@
     <Compile Include="Datas\AptSettings.cs" />
     <Compile Include="Datas\CountResultReturn.cs" />
     <Compile Include="Datas\FileSystem.cs" />
+    <Compile Include="Datas\IsRunningData.cs" />
     <Compile Include="Datas\NetworkSettings.cs" />
     <Compile Include="Datas\Plugins\PluginForms.cs" />
     <Compile Include="Datas\Plugins\PluginFormsDefaults.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Services\CertificateService.cs" />
     <Compile Include="Services\ConfigService.cs" />
     <Compile Include="Services\DiskMgmtService.cs" />
+    <Compile Include="Services\ExecService.cs" />
     <Compile Include="Services\FileSystemService.cs" />
     <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Services\PluginService.cs" />
