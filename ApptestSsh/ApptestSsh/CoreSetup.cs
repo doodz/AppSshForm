@@ -47,7 +47,7 @@ namespace ApptestSsh.Core
             appSetup.ContainerBuilder.RegisterType<OmvUpdatePageViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<OmvSharedsServersViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<LocalViewModel>().AsSelf();
-            appSetup.ContainerBuilder.RegisterType<LogsPageViewModel>().AsSelf();
+            appSetup.ContainerBuilder.RegisterType<LogsListViewPageViewModel>().AsSelf();
 
             appSetup.ContainerBuilder.RegisterType<Database>().As<IDatabase>().SingleInstance();
             appSetup.ContainerBuilder.RegisterType<RepositoryBase>().As<IRepository>();

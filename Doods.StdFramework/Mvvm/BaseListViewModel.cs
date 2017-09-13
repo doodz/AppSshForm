@@ -13,8 +13,16 @@ namespace Doods.StdFramework.Mvvm
         string Name { get; }
         //string Description { get; }
     }
-    public class BaseListViewModel<T> : BaseViewModel where T : IName
+    public class BaseListViewModel<T> : BaseViewModel, IListViewModel where T : IName
     {
+
+        private T _selectedItem;
+
+        public T SelectedItem
+        {
+            get => _selectedItem;
+            set => SetProperty(ref _selectedItem, value);
+        }
 
         protected bool _isBusyList;
 
@@ -48,6 +56,11 @@ namespace Doods.StdFramework.Mvvm
             await RefreshData();
         }
         protected virtual async Task RefreshData()
+        {
+            await Task.FromResult(0);
+        }
+
+        public virtual async Task DisplayActionItemTapped()
         {
             await Task.FromResult(0);
         }

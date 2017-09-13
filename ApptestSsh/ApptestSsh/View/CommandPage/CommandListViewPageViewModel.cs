@@ -14,13 +14,7 @@ namespace ApptestSsh.Core.View.CommandPage
     public class CommandListViewPageViewModel : LocalListViewModel<CommandSsh>
     {
         private readonly IRepository _repository;
-        private CommandSsh _selectedCommand;
 
-        public CommandSsh SelectedCommand
-        {
-            get => _selectedCommand;
-            set => SetProperty(ref _selectedCommand, value);
-        }
 
         public ICommand AddCmdCmd { get; }
 
@@ -35,10 +29,8 @@ namespace ApptestSsh.Core.View.CommandPage
             IsBusyList = true;
             using (new RunWithBusyCount(this))
             {
-
                 var list = await _repository.GetAllAsync<CommandSsh>();
-                Items.Clear();
-                Items.AddRange(list);
+                Items.ReplaceRange(list);
             }
             IsBusyList = false;
         }
@@ -49,38 +41,40 @@ namespace ApptestSsh.Core.View.CommandPage
         /// </summary>
         private bool _onDisplayAction;
 
-        public async void DisplayAction()
+        public override async Task DisplayActionItemTapped()
         {
-            if (SelectedCommand == null || _onDisplayAction) return;
+            if (SelectedItem == null || _onDisplayAction) return;
 
-            _onDisplayAction = true;
-            var action =
-                await Application.Current.MainPage.DisplayActionSheet(SelectedCommand.Name, "Cancel", null, "Run",
-                    "Edite",
-                    "Delete");
 
-            switch (action)
+            using (new RunWithBool(val => { _onDisplayAction = val; }))
             {
-                case "Run":
-                    var ssh = AppContainer.Container.Resolve<ISshService>();
+                var action =
+                    await Application.Current.MainPage.DisplayActionSheet(SelectedItem.Name, "Cancel", null, "Run",
+                        "Edite",
+                        "Delete");
 
-                    var cmd = ssh.RunQuerry(SelectedCommand.CommandString);
-                    await Application.Current.MainPage.DisplayAlert(SelectedCommand.Name, cmd.Result, "ok");
-                    break;
-                case "Edite":
+                switch (action)
+                {
+                    case "Run":
+                        var ssh = AppContainer.Container.Resolve<ISshService>();
+
+                        var cmd = ssh.RunQuerry(SelectedItem.CommandString);
+                        await Application.Current.MainPage.DisplayAlert(SelectedItem.Name, cmd.Result, "ok");
+                        break;
+                    case "Edite":
 
 
-                    await NavigationService.GoToEditCommandPage(SelectedCommand);
-                    break;
-                case "Delete":
-                    await _repository.DeleteAsync<CommandSsh>(SelectedCommand);
-                    Items.Remove(SelectedCommand);
-                    SelectedCommand = null;
-                    break;
-                default:
-                    break;
+                        await NavigationService.GoToEditCommandPage(SelectedItem);
+                        break;
+                    case "Delete":
+                        await _repository.DeleteAsync<CommandSsh>(SelectedItem);
+                        Items.Remove(SelectedItem);
+                        SelectedItem = null;
+                        break;
+                    default:
+                        break;
+                }
             }
-            _onDisplayAction = false;
         }
     }
 }

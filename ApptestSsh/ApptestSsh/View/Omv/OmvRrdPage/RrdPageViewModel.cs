@@ -14,24 +14,29 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.Omv.OmvRddPage
 {
-    public class RrdPageViewModel : LocalViewModel
+    public class RrdPageViewModel : LocalListViewModel<RddGraph>
     {
         public static string RrdFolder = "RrdFiles";
 
         public ICommand MkGraphCommand { get; }
         public bool OnUpdateGraph { get; set; }
 
-        public ObservableRangeCollection<RddGraph> RrdList { get; set; }
+
 
         public RrdPageViewModel(ILogger logger) : base(logger)
         {
-            MkGraphCommand = new Command(MkGraph);
-            RrdList = new ObservableRangeCollection<RddGraph>();
+            MkGraphCommand = new Command(c => MkGraph());
+
         }
 
-        private async void MkGraph()
+        protected override async Task RefreshData()
         {
-            RrdList.Clear();
+            await MkGraph();
+        }
+
+        private async Task MkGraph()
+        {
+            Items.Clear();
             using (new RunWithBool(val => { OnUpdateGraph = val; }))
             {
                 var ssh = AppContainer.Container.Resolve<ISshService>();
@@ -62,8 +67,8 @@ namespace ApptestSsh.Core.View.Omv.OmvRddPage
                 var file = await folder.CreateFileAsync(l.Name,
                     CreationCollisionOption.ReplaceExisting);
                 await sftpclient.GetFile(l.FullName, file);
-                var gr = new RddGraph() { Title = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
-                RrdList.Add(gr);
+                var gr = new RddGraph() { Name = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
+                Items.Add(gr);
             }
         }
 
@@ -77,9 +82,9 @@ namespace ApptestSsh.Core.View.Omv.OmvRddPage
         }
     }
 
-    public class RddGraph : ObservableObject
+    public class RddGraph : ObservableObject, IName
     {
-        public string Title { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
 

@@ -46,19 +46,31 @@
             <Label Grid.Row="8" Grid.Column="0" Text="Memory usage" />
 
             <Label Grid.Row="0" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Path=HostName.Value.Value,Mode=OneWay}" />
             <Label Grid.Row="1" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Version.Value.Value,Mode=OneWay}" />
             <Label Grid.Row="2" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Processor.Value.Value,Mode=OneWay}" />
             <Label Grid.Row="3" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Kernel.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="4" Grid.Column="1" Text="{Binding SystemTime.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="5" Grid.Column="1" Text="{Binding Uptime.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="6" Grid.Column="1" Text="{Binding LoadAverage.Value.Value,Mode=OneWay}" />
+            <Label Grid.Row="4" Grid.Column="1" 
+                   HorizontalOptions="EndAndExpand"
+                   Text="{Binding SystemTime.Value.Value,Mode=OneWay}" />
+            <Label Grid.Row="5" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
+                   Text="{Binding Uptime.Value.Value,Mode=OneWay}" />
+            <Label Grid.Row="6" Grid.Column="1" 
+                   HorizontalOptions="EndAndExpand"
+                   Text="{Binding LoadAverage.Value.Value,Mode=OneWay}" />
             <Label Grid.Row="7" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Path=CpuUsage.Value.Value,Mode=OneWay}" />
             <Label Grid.Row="8" Grid.Column="1"
+                   HorizontalOptions="EndAndExpand"
                    Text="{Binding Path=MemoryUsage.Value.Value,Mode=OneWay}" />
           </Grid>
         </Frame>

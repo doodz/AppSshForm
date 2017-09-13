@@ -1,32 +1,29 @@
 ﻿using ApptestSsh.Core.View.Base;
-using ApptestSsh.Core.View.Omv.OmvRddPage;
 using Autofac;
-using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
+using Doods.StdFramework.Mvvm;
 using Doods.StdLibSsh;
 using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Queries;
-using Omv.Rpc.StdClient.Ssh.Queries;
 using PCLStorage;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
 namespace ApptestSsh.Core.View.LogsPage
 {
-    public class LogsPageViewModel : LocalViewModel
+    public class LogsListViewPageViewModel : LocalListViewModel<FileInfoBean>
     {
 
         public static string LocalLogsFolder = "LogsFiles";
 
-        public ObservableRangeCollection<FileInfoBean> LogsFiles { get; }
-        public LogsPageViewModel(ILogger logger) : base(logger)
+
+        public LogsListViewPageViewModel(ILogger logger) : base(logger)
         {
-            LogsFiles = new ObservableRangeCollection<FileInfoBean>();
+
         }
 
-        protected override async Task Load()
+        protected override async Task RefreshData()
         {
             var ssh = AppContainer.Container.Resolve<ISshService>();
 
@@ -35,8 +32,13 @@ namespace ApptestSsh.Core.View.LogsPage
 
         private async Task GetLogsList(ISshService client)
         {
-            var files = await GetLogsList(client, GetLogsListQuery.Path);
-            LogsFiles.ReplaceRange(files);
+            IsBusyList = true;
+            using (new RunWithBusyCount(this))
+            {
+                var files = await GetLogsList(client, GetLogsListQuery.Path);
+                Items.ReplaceRange(files);
+            }
+            IsBusyList = false;
         }
 
         private async Task<IEnumerable<FileInfoBean>> GetLogsList(ISshService client, string path)
@@ -68,6 +70,38 @@ namespace ApptestSsh.Core.View.LogsPage
         }
 
 
+        /// <summary>
+        /// There is a bug.
+        /// When i select an item, xamarin.forms set selecteditem two time.
+        /// </summary>
+        private bool _onDisplayAction;
+
+        public override async Task DisplayActionItemTapped()
+        {
+            if (SelectedItem == null || _onDisplayAction) return;
+
+
+            using (new RunWithBool(val => { _onDisplayAction = val; }))
+            {
+                var action =
+                    await Application.Current.MainPage.DisplayActionSheet(SelectedItem.Name, "Cancel", null, "Show",
+                        "Download");
+
+                switch (action)
+                {
+                    case "Show":
+
+                        break;
+                    case "Download":
+
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+
         private async Task GetLogFile(ISshService client, FileInfoBean fileinfo)
         {
             var sftpclient = new ClientSftp(client.Host.HostName, client.Host.UserName, client.Host.Password);
@@ -78,7 +112,7 @@ namespace ApptestSsh.Core.View.LogsPage
             var localfile = await folder.CreateFileAsync(fileinfo.Name,
                 CreationCollisionOption.ReplaceExisting);
             var file = await sftpclient.GetFile(fileinfo.FullPath, localfile);
-           
+
         }
     }
 }

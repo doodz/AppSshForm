@@ -108,9 +108,12 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         }
 
         private ToolbarItem _omvToolbarItem;
+
         public override IEnumerable<ToolbarItem> GetToolbarItems()
         {
-
+            //var ssh = AppContainer.Container.Resolve<ISshService>();
+            //CheckSshParams(ssh).Wait();
+            //if (ssh.Host != null)
             switch (Device.RuntimePlatform)
             {
                 case Device.WinPhone:
@@ -132,6 +135,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Command = GotoLoginCommand
             };
 
+            //if (ssh.Host != null && ssh.Host.IsOmvServer)
             yield return _omvToolbarItem = new ToolbarItem
             {
                 Text = "OMV",
@@ -301,7 +305,5 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Upgradables.Clear();
             Upgradables.AddRange(upgradablesBean);
         }
-
-
     }
 }

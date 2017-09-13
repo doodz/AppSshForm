@@ -73,7 +73,7 @@
     <Compile Include="View\LogsPage\LogsPage.xaml.cs">
       <DependentUpon>LogsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\LogsPage\LogsPageViewModel.cs" />
+    <Compile Include="View\LogsPage\LogsListViewPageViewModel.cs" />
     <Compile Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml.cs">
       <DependentUpon>OmvFileSystemsPage.xaml</DependentUpon>
     </Compile>

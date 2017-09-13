@@ -1,12 +1,14 @@
-﻿using Doods.StdFramework.Mvvm;
+﻿using System.Threading.Tasks;
+using Doods.StdFramework.Mvvm;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ApptestSsh.Core.View.LogsPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LogsPage : ViewPage<LogsPageViewModel>
+    public partial class LogsPage : ListViewPage<LogsListViewPageViewModel>
     {
+
         public LogsPage()
         {
             InitializeComponent();
@@ -23,6 +25,25 @@ namespace ApptestSsh.Core.View.LogsPage
                     });
                     break;
             }
+
+        }
+
+        public  void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+             ViewModel.DisplayActionItemTapped();
+        }
+
+        public  void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+             Task.FromResult(0);
+            //TODO doods : prendre en compte la selection.
+            //if (e.SelectedItem == null)
+            //    return;
+
+            //await DisplayAlert("Selected", e.SelectedItem.ToString(), "OK");
+
+            ////Deselect PluginFormsItem
+            //((ListView)sender).SelectedItem = null;
         }
     }
 }

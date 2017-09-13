@@ -1,9 +1,10 @@
 ﻿using Doods.StdFramework;
+using Doods.StdFramework.Mvvm;
 using System;
 
 namespace Doods.StdLibSsh.Beans
 {
-    public class FileInfoBean : ObservableObject
+    public class FileInfoBean : ObservableObject, IName
     {
         /// <summary>
         /// -rw-r--r--

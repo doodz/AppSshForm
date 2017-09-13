@@ -39,11 +39,13 @@
     <Compile Include="ApplicationObjects\AppContainer.cs" />
     <Compile Include="ApplicationObjects\AppSetup.cs" />
     <Compile Include="Converters\TimeSpanToDateStringConverter.cs" />
+    <Compile Include="Interfaces\IListViewModel.cs" />
     <Compile Include="Interfaces\IViewModel.cs" />
     <Compile Include="Markups\ImageResourceExtension.cs" />
     <Compile Include="Mvvm\BaseListViewModel.cs" />
     <Compile Include="Mvvm\BaseMasterDetailPage.cs" />
     <Compile Include="Mvvm\BaseTabbedPage.cs" />
+    <Compile Include="Mvvm\ListViewPage.cs" />
     <Compile Include="Mvvm\RunWithBool.cs" />
     <Compile Include="Mvvm\RunWithBusyCount.cs" />
     <Compile Include="Mvvm\ViewPage.cs" />
