@@ -43,6 +43,7 @@
     <Compile Include="DataBase\Database.cs" />
     <Compile Include="DataBase\Host.cs" />
     <Compile Include="DataBase\Migration1.cs" />
+    <Compile Include="DataBase\Migration2.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="ISshService.cs" />
     <Compile Include="Services\INavigationService.cs" />
@@ -69,6 +70,10 @@
       <DependentUpon>HostManagerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HostManagerPage\HostManagerPageViewModel.cs" />
+    <Compile Include="View\LogsPage\LogsPage.xaml.cs">
+      <DependentUpon>LogsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogsPage\LogsPageViewModel.cs" />
     <Compile Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml.cs">
       <DependentUpon>OmvFileSystemsPage.xaml</DependentUpon>
     </Compile>
@@ -91,6 +96,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SQLiteFactory.cs" />
     <Compile Include="View\MainPage\MainPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvSharedsFoldersPage\OmvSharedsServersPage.xaml.cs">
+      <DependentUpon>OmvSharedsServersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Omv\OmvSharedsFoldersPage\OmvSharedsServersViewModel.cs" />
     <Compile Include="View\Omv\OmvUpdatePage\OmvUpdatePage.xaml.cs">
       <DependentUpon>OmvUpdatePage.xaml</DependentUpon>
     </Compile>
@@ -347,5 +356,22 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Omv\OmvSharedsFoldersPage\OmvSharedsServersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\LogsPage\LogsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties project_1json__JSONSchema="http://json.schemastore.org/project-1.0.0-beta6" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

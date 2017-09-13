@@ -9,7 +9,6 @@ namespace Omv.Rpc.StdClient.Datas
         Initializing = 2,
         Missing = 3
     }
-
     public class FileSystem
     {
         [JsonProperty("devicefile")]
@@ -80,7 +79,7 @@ namespace Omv.Rpc.StdClient.Datas
         //public FileSystemStatus Status { get; set; }
         public int Status { get; set; }
         [JsonProperty("_used")]
-        public bool IsUsed { get; set; }
+        public bool IsReferenced { get; set; }
 
         [JsonProperty("parentdevicefile")]
         public string Parentdevicefile { get; set; }
@@ -93,5 +92,19 @@ namespace Omv.Rpc.StdClient.Datas
 
         [JsonProperty("_readonly")]
         public bool? IsReadonly { get; set; }
+
+
+        [JsonIgnore]
+        public string LabelDescription
+        {
+            get
+            {
+                var str = Label;
+                if (string.IsNullOrEmpty(Label))
+                    str = Devicefile;
+
+                return $"{str} - {(FileSystemStatus)Status}  referenced: {IsReferenced} mounted: {Mounted}";
+            }
+        }
     }
 }

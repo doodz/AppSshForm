@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Doods.StdRepository.Interfaces;
+﻿using Doods.StdRepository.Interfaces;
 using SQLite;
 
 namespace ApptestSsh.Core.DataBase
@@ -14,7 +9,7 @@ namespace ApptestSsh.Core.DataBase
 
         public void Run(SQLiteConnection connection)
         {
-           
+
         }
     }
 }

@@ -1,15 +1,12 @@
 using ApptestSsh.Core.View.Base;
-using ApptestSsh.Core.View.PopupPages;
 using Autofac;
 using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdFramework.Mvvm;
-using Doods.StdFramework.Views.PopupPages;
 using Omv.Rpc.StdClient.Clients;
 using Omv.Rpc.StdClient.Datas;
 using Omv.Rpc.StdClient.Services;
-using Rg.Plugins.Popup.Extensions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -23,14 +20,7 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
         private SystemInfo _systemInfoTmp;
         private Service _selectedService;
 
-        public ICommand RefreshCommand { get; }
-        private bool _isRefreshing;
 
-        public bool IsRefreshing
-        {
-            get => _isRefreshing;
-            set => SetProperty(ref _isRefreshing, value);
-        }
 
         public Service SelectedService
         {
@@ -46,77 +36,17 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
 
         public ICommand GotoRrdPage { get; private set; }
         public ICommand GotoOmvFileSystemsPage { get; private set; }
-        public ICommand GotoPopUpPage { get; private set; }
+        public ICommand GotoSheredsFolders { get; private set; }
         public OmvServicesPageViewModel(ILogger logger) : base(logger)
         {
             Services = new ObservableRangeCollection<Service>();
-            RefreshCommand = new Command(async () => await Load());
             GotoRrdPage = new Command(async () => await NavigationService.GotoRddPage());
             GotoOmvFileSystemsPage = new Command(async () => await NavigationService.GotoOmvFileSystemsPage());
-            GotoPopUpPage = new Command(ShowPopUpPage);
+            GotoSheredsFolders = new Command(async () => await NavigationService.GotoSharedsFolders());
             //SystemInfoTmp = new SystemInfo();
         }
 
-        private async void ShowPopUpPage(object obj)
-        {
 
-
-            await LaunchTextInputPopup();
-
-
-            //var page = new MyPopupPage();
-            //await NavigationService.Navigation.PushPopupAsync(page);
-        }
-
-
-        private async Task<string> LaunchTextInputPopup()
-        {
-            // create the TextInputView
-            var inputView = new TestContentView(
-                "What's your name?", "enter here...",
-                "Ok", "Ops! Can't leave this empty!");
-
-            // create the Transparent Popup Page
-            // of type string since we need a string return
-            var popup = new InputAlertDialogBase<string>(inputView);
-
-            // subscribe to the TextInputView's Button click event
-            inputView.CloseButtonEventHandler +=
-                (sender, obj) =>
-                {
-                    if (!string.IsNullOrEmpty(
-                        ((TestContentView)sender).TextInputResult))
-                    {
-
-                        ((TestContentView)sender)
-                            .IsValidationLabelVisible = false;
-
-                        // update the page completion source
-                        popup.PageClosedTaskCompletionSource
-                            .SetResult(
-                                ((TestContentView)sender)
-                                .TextInputResult);
-                    }
-                    else
-                    {
-
-                        ((TestContentView)sender)
-                            .IsValidationLabelVisible = true;
-                    }
-                };
-
-            // Push the page to Navigation Stack
-            await NavigationService.Navigation.PushPopupAsync(popup);
-
-            // await for the user to enter the text input
-            var result = await popup.PageClosedTask;
-
-            // Pop the page from Navigation Stack
-            await NavigationService.Navigation.PopPopupAsync();
-
-            // return user inserted text value
-            return result;
-        }
 
         protected override async Task Load()
         {

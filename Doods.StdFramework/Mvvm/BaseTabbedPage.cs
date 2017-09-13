@@ -17,6 +17,12 @@ namespace Doods.StdFramework.Mvvm
             }
             BindingContext = ViewModel;
             Title = ViewModel.Title;
+
+            foreach (var toolbarItem in ViewModel.GetToolbarItems())
+            {
+                ToolbarItems.Add(toolbarItem);
+            }
+
         }
 
         protected override async void OnAppearing()

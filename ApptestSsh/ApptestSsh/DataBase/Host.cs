@@ -11,5 +11,8 @@ namespace ApptestSsh.Core.DataBase
         public string UserName { get; set; }
 
         public string Password { get; set; }
+        public bool IsOmvServer { get; set; }
+        public bool IsRpi { get; set; }
     }
 }
+

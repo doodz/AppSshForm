@@ -37,12 +37,12 @@ namespace ApptestSsh.Core.View.Omv.OmvServices
                 Command = ViewModel.GotoOmvFileSystemsPage
             });
 
-            //ToolbarItems.Add(new ToolbarItem
-            //{
-            //    Text = "My PopUp",
-            //    Icon = "Assets/ic_dns_black_24dp_1x.png",
-            //    Command = ViewModel.GotoPopUpPage
-            //});
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "Shereds folders",
+                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Command = ViewModel.GotoSheredsFolders
+            });
         }
     }
 }

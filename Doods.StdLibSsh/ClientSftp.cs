@@ -79,7 +79,7 @@ namespace Doods.StdLibSsh
 
         public async Task<Stream> GetFile(SftpFile file, string localPath)
         {
-            return await GetFile(Path.Combine(file.FullName), localPath);
+            return await GetFile(file.FullName, localPath);
         }
 
         public async Task<IEnumerable<SftpFile>> GetAllFileFromPath(string remoteDirectory)

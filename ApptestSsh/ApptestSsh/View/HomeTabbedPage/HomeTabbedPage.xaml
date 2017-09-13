@@ -143,9 +143,9 @@
                                    Grid.Row="0"
                                    Text="{Binding FromRepo,Mode=OneWay}" />
 
-                           
+
                             <views:DoodsButton Margin="1"
-                                               
+
                                                VerticalOptions="Center"
                                                HorizontalOptions="Center"
                                                Grid.Column="2"
@@ -213,7 +213,8 @@
                 <Label
                     Text="Are you sure that you use a RPI ? I can't get arm and core info." />
             </views:CardView>
-            <views:CardView Padding="10">
+            <views:CardView Padding="10"
+                            IsVisible="{Binding IsRpi,Mode=OneWay}">
 
                 <!--<Frame VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand"

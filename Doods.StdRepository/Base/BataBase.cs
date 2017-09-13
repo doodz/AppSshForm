@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Doods.StdRepository.Interfaces;
+using SQLite;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Doods.StdRepository.Interfaces;
-using SQLite;
 
 namespace Doods.StdRepository.Base
 {
@@ -38,8 +36,8 @@ namespace Doods.StdRepository.Base
 
         public virtual async Task Initialize()
         {
-            
 
+            await Task.FromResult(0);
         }
 
         public virtual async Task Drop()

@@ -1,8 +1,11 @@
 ﻿using Doods.StdFramework.Interfaces;
 using Doods.StdFramework.Mvvm;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Doods.StdFramework
 {
@@ -11,6 +14,17 @@ namespace Doods.StdFramework
     /// </summary>
     public class BaseViewModel : ObservableObject, IViewModel, IBuzy
     {
+
+
+        public ICommand RefreshCommand { get; protected set; }
+        private bool _isRefreshing;
+
+        public bool IsRefreshing
+        {
+            get => _isRefreshing;
+            set => SetProperty(ref _isRefreshing, value);
+        }
+
         private bool _isLoad;
         protected bool ReloadOnAppearing;
         private int _busyCount;
@@ -42,6 +56,7 @@ namespace Doods.StdFramework
             Title = GetType().Name.Replace("ViewModel", "");
             Logger = logger;
             Logger.Info($"{Title} : opened.");
+            RefreshCommand = new Command(async () => await Load());
         }
 
         private string _title = string.Empty;
@@ -245,6 +260,11 @@ namespace Doods.StdFramework
             }
 
 
+        }
+
+        public virtual IEnumerable<ToolbarItem> GetToolbarItems()
+        {
+            return new List<ToolbarItem>();
         }
     }
 }

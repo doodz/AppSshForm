@@ -35,8 +35,7 @@ namespace ApptestSsh.Core.View.UpgradablePage
             {
                 var ssh = AppContainer.Container.Resolve<ISshService>();
                 var upgradablesBean = await new AptListQuery(ssh).RunAsync(Token);
-                Items.Clear();
-                Items.AddRange(upgradablesBean);
+                Items.ReplaceRange(upgradablesBean);
             }
         }
     }

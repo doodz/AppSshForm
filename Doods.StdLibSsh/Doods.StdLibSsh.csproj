@@ -68,6 +68,8 @@
     <Compile Include="Queries\DistributionNameQuery.cs" />
     <Compile Include="Queries\FirmwareQuery.cs" />
     <Compile Include="Queries\FreqQuery.cs" />
+    <Compile Include="Queries\GetListFileBaseQuery.cs" />
+    <Compile Include="Queries\GetLogsListQuery.cs" />
     <Compile Include="Queries\GroupedQueries\SystemInfoQueries.cs" />
     <Compile Include="Queries\GroupedQueries\VcgencmdQuery.cs" />
     <Compile Include="Queries\HaltSignalQuery.cs" />

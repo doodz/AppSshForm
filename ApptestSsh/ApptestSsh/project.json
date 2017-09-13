@@ -8,6 +8,7 @@
     "NLog": "5.0.0-beta10",
     "PCLStorage": "1.0.2",
     "Rg.Plugins.Popup": "1.1.0-pre2",
+    "SharpCifs.Std": "0.2.9",
     "sqlite-net-pcl": "1.5.166-beta",
     "Xam.Plugin.Connectivity": "4.0.0-beta130",
     "Xam.Plugins.Settings": "3.1.0-beta103",

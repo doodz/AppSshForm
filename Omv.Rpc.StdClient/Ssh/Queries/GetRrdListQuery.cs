@@ -1,9 +1,5 @@
-﻿using Doods.StdLibSsh.Base.Queries;
-using Doods.StdLibSsh.Beans;
-using Doods.StdLibSsh.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Doods.StdLibSsh.Interfaces;
+using Doods.StdLibSsh.Queries;
 
 namespace Omv.Rpc.StdClient.Ssh.Queries
 {
@@ -59,41 +55,12 @@ namespace Omv.Rpc.StdClient.Ssh.Queries
     ///  -rw-r--r-- 1 root root 12404 2017-09-05 12:00 sensors-week.png
     ///  -rw-r--r-- 1 root root 12578 2017-09-05 12:00 sensors-year.png
     /// </example>
-    public class GetRrdListQuery : GenericQuery<List<FileInfoBean>>
+    public class GetRrdListQuery : GetListFileBaseQuery
     {
         public static readonly string Path = "/var/lib/openmediavault/rrd";
-        private static readonly string Query = $"ls -l {Path} --time-style=long-iso";
-        public GetRrdListQuery(IClientSsh client) : base(client)
+        public GetRrdListQuery(IClientSsh client) : base(client, Path)
         {
-            CmdString = Query;
-        }
 
-        protected override List<FileInfoBean> PaseResult(string result)
-        {
-            var lst = new List<FileInfoBean>();
-
-
-            var lines = result.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-
-
-            foreach (var line in lines.Skip(1)) // remove "total xxxx"
-            {
-                var split = line.Trim().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
-                var fileInfo = new FileInfoBean();
-                fileInfo.Path = GetRrdListQuery.Path;
-                fileInfo.AccessRights = split[0];
-                fileInfo.Id = int.Parse(split[1]);
-                fileInfo.Owner = split[2];
-                fileInfo.Group = split[3];
-                fileInfo.Size = long.Parse(split[4]);
-                fileInfo.Date = DateTime.Parse(split[5]);
-                fileInfo.Hour = split[6];
-                fileInfo.Name = split[7];
-
-                lst.Add(fileInfo);
-            }
-
-            return lst;
         }
     }
 }

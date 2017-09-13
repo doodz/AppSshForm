@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="logsPage:LogsPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:logsPage="clr-namespace:ApptestSsh.Core.View.LogsPage;assembly=ApptestSsh.Core"
+             x:Class="ApptestSsh.Core.View.LogsPage.LogsPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="StartAndExpand"
+              HorizontalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            
+            <ListView Grid.Row="1"
+                      ItemsSource="{Binding LogsFiles,Mode=OneWay}"
+                      VerticalOptions="StartAndExpand"
+                      HorizontalOptions="StartAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name,Mode=OneWay}"
+                                  Detail="{Binding Date,Mode=OneWay}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</mvvm:ViewPage>

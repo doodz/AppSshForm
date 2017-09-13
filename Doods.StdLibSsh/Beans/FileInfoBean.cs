@@ -21,5 +21,9 @@ namespace Doods.StdLibSsh.Beans
 
         public string Path { get; set; }
 
+        public bool IsFolder { get; set; }
+
+
+        public string FullPath => $"{Path}/{Name}";
     }
 }

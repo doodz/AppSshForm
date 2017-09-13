@@ -10,6 +10,7 @@ using Doods.StdLibSsh.Queries;
 using Doods.StdLibSsh.Queries.GroupedQueries;
 using Doods.StdRepository.Base;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -22,7 +23,6 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         private VcgencmdBean _vcgencmdBean;
         public ICommand ManageHostCmd { get; }
         public ICommand ShellCmd { get; }
-        public ICommand RefreshCommand { get; }
         public ICommand GotoLoginCommand { get; }
         public ICommand GotoOmvPage { get; }
 
@@ -32,6 +32,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public ICommand UpdateAllCmd { get; }
         public ICommand ShowUpgradablesCmd { get; }
 
+        private bool _isRpi;
+
+        public bool IsRpi
+        {
+            get => _isRpi;
+            set => SetProperty(ref _isRpi, value);
+        }
 
         private bool _onUpdate;
 
@@ -100,6 +107,38 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             ShowUpgradablesCmd = new Command(async () => await NavigationService.GoUpgradableListViewPage());
         }
 
+        private ToolbarItem _omvToolbarItem;
+        public override IEnumerable<ToolbarItem> GetToolbarItems()
+        {
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.WinPhone:
+                case Device.UWP:
+                case Device.WinRT:
+                    yield return new ToolbarItem
+                    {
+                        Text = "Refresh",
+                        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+                        Command = RefreshCommand
+                    };
+                    break;
+            }
+
+            yield return new ToolbarItem
+            {
+                Text = "login",
+                Icon = "Assets/ic_account_box_black_24dp_1x.png",
+                Command = GotoLoginCommand
+            };
+
+            yield return _omvToolbarItem = new ToolbarItem
+            {
+                Text = "OMV",
+                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Command = GotoOmvPage
+            };
+        }
 
         private async Task CheckSshParams(ISshService ssh)
         {
@@ -174,7 +213,9 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 return;
             }
 
-            await GetVcgenResults(ssh);
+            IsRpi = ssh.Host.IsRpi;
+            if (IsRpi)
+                await GetVcgenResults(ssh);
 
             await GetSystemInfo(ssh);
 
@@ -187,6 +228,11 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             ////var cur = SynchronizationContext.Current;
 
             await GetProcesses(ssh);
+        }
+
+        protected override Task OnInternalAppearing()
+        {
+            return Task.FromResult(0);
         }
 
         private async Task GetSystemInfo(ISshService ssh)
@@ -255,5 +301,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Upgradables.Clear();
             Upgradables.AddRange(upgradablesBean);
         }
+
+
     }
 }

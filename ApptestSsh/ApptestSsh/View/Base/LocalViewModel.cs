@@ -22,5 +22,8 @@ namespace ApptestSsh.Core.View.Base
             _navigationService =
                 new Lazy<INavigationService>(() => AppContainer.Container.Resolve<INavigationService>());
         }
+
+
+
     }
 }

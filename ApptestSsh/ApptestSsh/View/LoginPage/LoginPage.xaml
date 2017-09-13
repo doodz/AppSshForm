@@ -71,6 +71,14 @@
         <Entry Text="{Binding Password}"
                IsPassword="True"
                Placeholder="Password" />-->
+      <StackLayout Orientation="Horizontal">
+        <Label HorizontalOptions="StartAndExpand" Text="Is openmediavault server"/>
+        <Switch HorizontalOptions="End" IsToggled="{Binding IsOmvServer}"/>
+      </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label HorizontalOptions="StartAndExpand" Text="Is a raspberry pi"/>
+            <Switch HorizontalOptions="End" IsToggled="{Binding IsRpi}"/>
+        </StackLayout>
         <views:DoodsButton Text="Test"
                 Command="{Binding TestCmd, Mode=OneWay}" />
         <views:DoodsButton Text="Save"

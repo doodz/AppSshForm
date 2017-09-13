@@ -44,5 +44,6 @@ namespace ApptestSsh.Core.Services
         Task GotoRddPage();
         Task GotoOmvUpdatePage();
         Task GotoOmvFileSystemsPage();
+        Task GotoSharedsFolders();
     }
 }

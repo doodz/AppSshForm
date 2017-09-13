@@ -48,12 +48,16 @@
     <Compile Include="Datas\CountResultReturn.cs" />
     <Compile Include="Datas\FileSystem.cs" />
     <Compile Include="Datas\IsRunningData.cs" />
+    <Compile Include="Datas\Mntent.cs" />
     <Compile Include="Datas\NetworkSettings.cs" />
     <Compile Include="Datas\Plugins\PluginForms.cs" />
     <Compile Include="Datas\Plugins\PluginFormsDefaults.cs" />
     <Compile Include="Datas\Plugins\PluginFormsItem.cs" />
     <Compile Include="Datas\Plugins\PluginFormsItemType.cs" />
+    <Compile Include="Datas\Privilege.cs" />
+    <Compile Include="Datas\Privileges.cs" />
     <Compile Include="Datas\Service.cs" />
+    <Compile Include="Datas\SharedFolder.cs" />
     <Compile Include="Datas\SystemInfo.cs" />
     <Compile Include="Datas\SystemInfoData.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
@@ -66,6 +70,7 @@
     <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Services\PluginService.cs" />
     <Compile Include="Services\RrdService.cs" />
+    <Compile Include="Services\ShareMgmtService.cs" />
     <Compile Include="Services\SystemService.cs" />
     <Compile Include="Services\UpdateService.cs" />
     <Compile Include="Services\WebGuiService.cs" />

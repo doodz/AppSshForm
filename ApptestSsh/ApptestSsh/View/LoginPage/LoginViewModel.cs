@@ -15,6 +15,23 @@ namespace ApptestSsh.Core.View.LoginPage
     {
         //private ConnectionInfo _connectionInfo;
 
+
+        private bool _isOmvServer;
+
+        public bool IsOmvServer
+        {
+            get => _isOmvServer;
+            set => SetProperty(ref _isOmvServer, value);
+        }
+
+        private bool _isRpi;
+
+        public bool IsRpi
+        {
+            get => _isRpi;
+            set => SetProperty(ref _isRpi, value);
+        }
+
         private Host _hostObj;
 
         public Host HostObj
@@ -35,6 +52,8 @@ namespace ApptestSsh.Core.View.LoginPage
             _port = _hostObj.Port;
             _username = _hostObj.UserName;
             _password = _hostObj.Password;
+            _isOmvServer = _hostObj.IsOmvServer;
+            _isRpi = _hostObj.IsRpi;
         }
 
         private string _host;
@@ -95,6 +114,8 @@ namespace ApptestSsh.Core.View.LoginPage
             _hostObj.Port = _port;
             _hostObj.UserName = _username;
             _hostObj.Password = _password;
+            _hostObj.IsOmvServer = _isOmvServer;
+            _hostObj.IsRpi = _isRpi;
 
             try
             {

@@ -34,6 +34,17 @@ namespace Doods.StdFramework.Mvvm
             }
         }
 
+
+        //protected void AddRefreshToolbarItem()
+        //{
+        //    ToolbarItems.Add(new ToolbarItem
+        //    {
+        //        Text = "Refresh",
+        //        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+        //        Command = ViewModel.RefreshCommand
+        //    });
+        //}
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
