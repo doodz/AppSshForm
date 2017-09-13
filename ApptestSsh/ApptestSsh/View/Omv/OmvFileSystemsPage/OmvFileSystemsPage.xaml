@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<mvvm:ViewPage x:TypeArguments="omvFileSystemsPage:OmvFileSystemsPageViewModel"
+<mvvm:ListViewPage x:TypeArguments="omvFileSystemsPage:OmvFileSystemsPageViewModel"
                xmlns="http://xamarin.com/schemas/2014/forms"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
@@ -8,17 +8,23 @@
                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
                x:Class="ApptestSsh.Core.View.Omv.OmvFileSystemsPage.OmvFileSystemsPage">
     <ContentPage.Content>
-        <views:NonScrollableListView Grid.Row="2"
+        <ListView Grid.Row="2"
                                      x:Name="ListView"
-                                     ItemsSource="{Binding FileSystems,Mode=OneWay}"
-                                     RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
-                                     IsRefreshing="{Binding IsRefreshing}"
+                                     ItemsSource="{Binding Items}"
+                                     SelectedItem="{Binding SelectedItem}"
+                                     ItemTapped="Handle_ItemTapped"
+                                     ItemSelected="Handle_ItemSelected"
+                                     HasUnevenRows="true"
+                                     IsPullToRefreshEnabled="true"
+                                     CachingStrategy="RecycleElement"
+                                     IsRefreshing="{Binding IsBusyList, Mode=TwoWay}"
+                                     RefreshCommand="{Binding RefreshDataCommand,Mode=OneWay}"
                                      VerticalOptions="StartAndExpand">
-            <views:NonScrollableListView.SeparatorColor>
+            <ListView.SeparatorColor>
                 <OnPlatform x:TypeArguments="Color"
                             iOS="{StaticResource ListSeparator}" />
-            </views:NonScrollableListView.SeparatorColor>
-            <views:NonScrollableListView.ItemTemplate>
+            </ListView.SeparatorColor>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Frame>
@@ -70,7 +76,7 @@
                         </Frame>
                     </ViewCell>
                 </DataTemplate>
-            </views:NonScrollableListView.ItemTemplate>
-        </views:NonScrollableListView>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
-</mvvm:ViewPage>
+</mvvm:ListViewPage>

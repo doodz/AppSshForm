@@ -52,6 +52,7 @@
     <Compile Include="Services\XamarinDeviceService.cs" />
     <Compile Include="CoreSetup.cs" />
     <Compile Include="View\Base\LocalListViewModel.cs" />
+    <Compile Include="View\Base\LocalOmvListViewModel.cs" />
     <Compile Include="View\Base\LocalOmvViewModel.cs" />
     <Compile Include="View\Base\LocalViewModel.cs" />
     <Compile Include="View\CommandPage\AddCommandPage.xaml.cs">

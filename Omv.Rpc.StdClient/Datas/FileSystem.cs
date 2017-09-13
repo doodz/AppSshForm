@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Doods.StdFramework.Mvvm;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Omv.Rpc.StdClient.Datas
@@ -9,7 +10,8 @@ namespace Omv.Rpc.StdClient.Datas
         Initializing = 2,
         Missing = 3
     }
-    public class FileSystem
+
+    public class FileSystem : IName
     {
         [JsonProperty("devicefile")]
         public string Devicefile { get; set; }
@@ -78,6 +80,7 @@ namespace Omv.Rpc.StdClient.Datas
         //[JsonConverter(typeof(StringEnumConverter))]
         //public FileSystemStatus Status { get; set; }
         public int Status { get; set; }
+
         [JsonProperty("_used")]
         public bool IsReferenced { get; set; }
 
@@ -106,5 +109,7 @@ namespace Omv.Rpc.StdClient.Datas
                 return $"{str} - {(FileSystemStatus)Status}  referenced: {IsReferenced} mounted: {Mounted}";
             }
         }
+
+        public string Name => Label;
     }
 }

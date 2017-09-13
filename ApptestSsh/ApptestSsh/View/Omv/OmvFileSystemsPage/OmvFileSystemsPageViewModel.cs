@@ -1,6 +1,5 @@
 ﻿using ApptestSsh.Core.View.Base;
 using Autofac;
-using Doods.StdFramework;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdFramework.Interfaces;
 using Doods.StdFramework.Mvvm;
@@ -13,24 +12,15 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
 {
-    public class OmvFileSystemsPageViewModel : LocalOmvViewModel
+    public class OmvFileSystemsPageViewModel : LocalOmvListViewModel<FileSystem>
     {
-        public ObservableRangeCollection<FileSystem> FileSystems { get; }
-        public ICommand RefreshCommand { get; }
         public ICommand MountUmountCmd { get; }
-        private bool _isRefreshing;
-
-        public bool IsRefreshing
-        {
-            get => _isRefreshing;
-            set => SetProperty(ref _isRefreshing, value);
-        }
 
         public OmvFileSystemsPageViewModel(ILogger logger) : base(logger)
         {
             RefreshCommand = new Command(async () => await Load());
             MountUmountCmd = new Command(MountUmount);
-            FileSystems = new ObservableRangeCollection<FileSystem>();
+
         }
 
         private async void MountUmount(object obj)
@@ -44,19 +34,16 @@ namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
                 var res = await new OmvRpcQuery<object>(ssh, cmd).RunAsync(Token);
                 if (res == null)
                 {
-                    await ApplyChanges(ssh,true);
+                    await ApplyChanges(ssh, true);
                     await GetFileSystems(ssh);
                 }
 
             }
         }
 
-
-
-
-        protected override async Task Load()
+        protected override async Task RefreshData()
         {
-            using (new RunWithBool(val => { IsRefreshing = val; }))
+            using (new RunWithBool(val => { IsBusyList = val; }))
             {
                 var ssh = AppContainer.Container.Resolve<ISshService>();
                 if (!ssh.IsConnected() && !ssh.CanConnect())
@@ -74,7 +61,7 @@ namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
         {
             var cmd = FileSystemService.CreateEnumerateFileSystemCommand();
             var res = await new OmvRpcQuery<CountResultReturn<FileSystem>>(ssh, cmd).RunAsync(Token);
-            FileSystems.ReplaceRange(res.Data);
+            Items.ReplaceRange(res.Data);
         }
     }
 }
