@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Doods.StdFramework.Interfaces;
+using System;
 using System.IO;
-using Doods.StdFramework.Interfaces;
 
 namespace ApptestSsh.iOS.Services
 {
@@ -17,6 +17,12 @@ namespace ApptestSsh.iOS.Services
             }
 
             return Path.Combine(libFolder, filename);
+        }
+
+        public string GetDownloadPath()
+        {
+            return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), fileName);
         }
     }
 }

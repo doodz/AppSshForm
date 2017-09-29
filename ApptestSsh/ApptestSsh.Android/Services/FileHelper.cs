@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Doods.StdFramework.Interfaces;
+using System;
 using System.IO;
-using Doods.StdFramework.Interfaces;
+
 namespace ApptestSsh.Droid.Services
 {
     public class FileHelper : IFileHelper
@@ -9,6 +10,14 @@ namespace ApptestSsh.Droid.Services
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             return Path.Combine(path, filename);
+        }
+
+        public string GetDownloadPath()
+        {
+            var directory = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath,
+                Android.OS.Environment.DirectoryDownloads);
+            return directory;
+            //return Path.Combine(directory, fileName);
         }
     }
 }

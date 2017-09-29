@@ -94,6 +94,9 @@
     <Compile Include="Views\PopupPages\ProgressContentView.xaml.cs">
       <DependentUpon>ProgressContentView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PopupPages\ShowFileContentView.xaml.cs">
+      <DependentUpon>ShowFileContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SectionDivider.xaml.cs">
       <DependentUpon>SectionDivider.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\monoandroid\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data">
       <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Data.dll</HintPath>
     </Reference>
@@ -147,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PopupPages\ProgressContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PopupPages\ShowFileContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

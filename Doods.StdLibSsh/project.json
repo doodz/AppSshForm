@@ -3,9 +3,11 @@
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "2.0.0",
-    "SSH.NET": "2016.1.0-beta2"
+    "SSH.NET": "2016.1.0-beta3"
   },
   "frameworks": {
-    "netstandard1.4": {}
+    "netstandard1.4": {
+      "imports": "portable-net45+win8+wp8+wpa81"
+    }
   }
 }

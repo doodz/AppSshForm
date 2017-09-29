@@ -1,6 +1,6 @@
-﻿using System.IO;
+﻿using Doods.StdFramework.Interfaces;
+using System.IO;
 using Windows.Storage;
-using Doods.StdFramework.Interfaces;
 
 namespace ApptestSsh.UWP.Services
 {
@@ -9,6 +9,12 @@ namespace ApptestSsh.UWP.Services
         public string GetLocalFilePath(string filename)
         {
             return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
+        }
+
+        public string GetDownloadPath()
+        {
+            return ApplicationData.Current.LocalFolder.Path;
+            //return Path.Combine(ApplicationData.Current.LocalFolder.Path, fileName);
         }
     }
 }

@@ -79,6 +79,8 @@
     <Compile Include="Queries\IpAddressQuery.cs" />
     <Compile Include="Queries\IsRunningPidQuery.cs" />
     <Compile Include="Queries\KillProcessQuery.cs" />
+    <Compile Include="Beans\LastloginBean.cs" />
+    <Compile Include="Queries\LastloginsQuery.cs" />
     <Compile Include="Queries\LoadAverageQuery.cs" />
     <Compile Include="Queries\MemoryQuery.cs" />
     <Compile Include="Queries\MountQuery.cs" />

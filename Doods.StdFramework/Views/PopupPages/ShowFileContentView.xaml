@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Doods.StdFramework.Views.PopupPages.ShowFileContentView">
+    <ContentView.Content>
+
+        <Grid Padding="10"
+              BackgroundColor="White"
+              HorizontalOptions="CenterAndExpand"
+              VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   VerticalOptions="Start"
+                   BackgroundColor="Blue"
+                   x:Name="TitleLabel"
+                   FontSize="Medium"
+                   Text="File name" />
+            <ScrollView Grid.Row="1"
+                        Margin="0"
+                        Padding="2"
+                        BackgroundColor="Aqua"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="StartAndExpand">
+                <Label 
+                    Margin="0"
+                    
+                    BackgroundColor="Red"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   x:Name="ContentFile"
+                   />
+                </ScrollView>
+            <Button Grid.Row="2"
+                    BackgroundColor="Yellow"
+                    VerticalOptions="End"
+                    x:Name="CloseButton"
+                    Text="Close">
+                <Button.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android"
+                            Value="40" />
+                        <On Platform="UWP"
+                            Value="40" />
+                        <On Platform="iOS"
+                            Value="30" />
+                    </OnPlatform>
+                </Button.HeightRequest>
+            </Button>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

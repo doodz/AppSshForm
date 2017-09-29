@@ -217,6 +217,9 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 return;
             }
 
+
+            var resultatttt = await new LastloginsQuery(ssh).RunAsync(Token);
+
             IsRpi = ssh.Host.IsRpi;
             if (IsRpi)
                 await GetVcgenResults(ssh);

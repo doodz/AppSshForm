@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Doods.StdFramework.Interfaces
+﻿namespace Doods.StdFramework.Interfaces
 {
     /// <summary>
-    /// Interface qui consiste à déterminer l'emplacement d'un fichier en fonctione de l'environement de dev (ios,UWP, android ...).
+    /// Interface that consists of determining the location of a file according to the environment of dev (ios, UWP, Android ...).
     /// </summary>
     public interface IFileHelper
     {
         /// <summary>
-        /// Détermine l'emplacement du fichier.
+        /// Determines the location of the file.
         /// </summary>
-        /// <param name="filename">Le nom du fichier</param>
-        /// <returns>Le path.</returns>
+        /// <param name="filename">The name of the file</param>
+        /// <returns>The path.</returns>
         string GetLocalFilePath(string filename);
+
+        /// <summary>
+        /// Get the local download folder
+        /// </summary>
+        /// <param name="fileName">The name of the file.</param>
+        /// <returns>The path.</returns>
+        string GetDownloadPath();
     }
 }
