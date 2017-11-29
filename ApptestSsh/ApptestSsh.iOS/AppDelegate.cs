@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ApptestSsh.Core;
+﻿using ApptestSsh.Core;
 using Autofac;
 using Doods.StdFramework.ApplicationObjects;
 using Doods.StdRepository.Interfaces;

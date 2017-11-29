@@ -1,5 +1,4 @@
-﻿using System;
-using Doods.StdFramework.ApplicationObjects;
+﻿using Doods.StdFramework.ApplicationObjects;
 
 namespace ApptestSsh.UWP
 {

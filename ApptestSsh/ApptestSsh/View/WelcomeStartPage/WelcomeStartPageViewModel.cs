@@ -13,7 +13,7 @@ namespace ApptestSsh.Core.View.WelcomeStartPage
 {
     public class WelcomeStartPageViewModel : LocalViewModel
     {
-        private string _welcomMessage = "Welcome to SshPi";
+        private string _welcomMessage = "Welcome to Monitor my server";
 
         public ICommand GoToRootPageCmd { get; }
 

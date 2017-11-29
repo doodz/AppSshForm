@@ -3,13 +3,11 @@
 <mvvm:ListViewPage x:TypeArguments="omvRddPage:RrdPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                    xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-                   xmlns:omvRddPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvRddPage;assembly=ApptestSsh.Core"
                    xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+                   xmlns:omvRddPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvRrdPage;assembly=ApptestSsh.Core"
                    x:Class="ApptestSsh.Core.View.Omv.OmvRrdPage.RrdPage">
     <views:AlwaysScrollView VerticalOptions="StartAndExpand">
         <StackLayout VerticalOptions="StartAndExpand">
-            <Label Text="Welcome to Xamarin Forms!" />
-            <views:DoodsButton Command="{Binding Path=MkGraphCommand,Mode=OneWay}" Text="Refresh graphs" />
             <ListView VerticalOptions="StartAndExpand"
                       ItemsSource="{Binding Items}"
                       SelectedItem="{Binding SelectedItem}"
@@ -21,7 +19,7 @@
                       IsRefreshing="{Binding IsBusyList, Mode=TwoWay}"
                       RefreshCommand="{Binding RefreshDataCommand,Mode=OneWay}">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate >
                         <ImageCell Height="30"
                                    Text="{Binding Name}"
                                    Detail="{Binding Description}"

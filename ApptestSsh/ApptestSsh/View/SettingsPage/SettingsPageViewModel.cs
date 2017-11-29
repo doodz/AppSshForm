@@ -30,6 +30,8 @@ namespace ApptestSsh.Core.View.SettingsPage
                 new SettingsMenuItem { Name = "NLog", Command=LaunchBrowserCommand, Parameter="https://github.com/NLog/NLog/"},
                 new SettingsMenuItem { Name = "SSH.NET", Command=LaunchBrowserCommand, Parameter="https://github.com/sshnet/SSH.NET/"},
                 new SettingsMenuItem { Name = "Rg.Plugins.Popup", Command=LaunchBrowserCommand, Parameter="https://github.com/rotorgames/Rg.Plugins.Popup/"},
+                new SettingsMenuItem { Name = "Microcharts", Command=LaunchBrowserCommand, Parameter="https://github.com/aloisdeniel/Microcharts"},
+                new SettingsMenuItem { Name = "httptransfertasks", Command=LaunchBrowserCommand, Parameter="https://github.com/aritchie/httptransfertasks"},
                 new SettingsMenuItem { Name = "Xamarin.Forms", Command=LaunchBrowserCommand, Parameter="http://xamarin.com/forms"}
             });
         }
@@ -48,6 +50,7 @@ namespace ApptestSsh.Core.View.SettingsPage
 
             Logger.Track(DoodsLoggerKeys.LaunchedBrowser, "Url", arg);
             Device.OpenUri(new Uri(arg));
+
         }
     }
 }

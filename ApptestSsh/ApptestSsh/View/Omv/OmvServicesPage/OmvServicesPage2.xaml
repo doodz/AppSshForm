@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<mvvm:ViewPage x:TypeArguments="omvServicesPage1:OmvServicesPageViewModel"
+<mvvm:ViewPage x:TypeArguments="omvServicesPage:OmvServicesPageViewModel"
                xmlns="http://xamarin.com/schemas/2014/forms"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
-               xmlns:omvServicesPage1="clr-namespace:ApptestSsh.Core.View.Omv.OmvServices;assembly=ApptestSsh.Core"
-               x:Class="ApptestSsh.Core.View.Omv.OmvServices.OmvServicesPage">
+               xmlns:omvServicesPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvServicesPage;assembly=ApptestSsh.Core"
+               xmlns:converters="clr-namespace:ApptestSsh.Core.Converters;assembly=ApptestSsh.Core"
+               x:Class="ApptestSsh.Core.View.Omv.OmvServicesPage.OmvServicesPage2">
   <views:AlwaysScrollView>
     <views:CardView VerticalOptions="FillAndExpand">
       <Grid>
@@ -19,8 +20,13 @@
 
         <Frame Grid.Row="0">
           <Grid BindingContext="{Binding SystemInfo,Mode=OneWay}">
+              <Grid.Resources>
+                  <!--<Style TargetType="{x:Type Label}">
+                      <Setter Property="Margin" Value="1"/>                     
+                  </Style>-->
+              </Grid.Resources>
             <Grid.ColumnDefinitions>
-              <ColumnDefinition />
+              <ColumnDefinition Width="Auto"/>
               <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -35,15 +41,15 @@
               <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0" Text="HostName" />
-            <Label Grid.Row="1" Grid.Column="0" Text="Version" />
-            <Label Grid.Row="2" Grid.Column="0" Text="Processor" />
-            <Label Grid.Row="3" Grid.Column="0" Text="Kernel" />
-            <Label Grid.Row="4" Grid.Column="0" Text="System time" />
-            <Label Grid.Row="5" Grid.Column="0" Text="Uptime" />
-            <Label Grid.Row="6" Grid.Column="0" Text="LoadAverage" />
-            <Label Grid.Row="7" Grid.Column="0" Text="CPU usage" />
-            <Label Grid.Row="8" Grid.Column="0" Text="Memory usage" />
+            <Label Margin="1" Grid.Row="0" Grid.Column="0" Text="HostName" />
+            <Label Margin="1" Grid.Row="1" Grid.Column="0" Text="Version" />
+            <Label Margin="1" Grid.Row="2" Grid.Column="0" Text="Processor" />
+            <Label  Margin="1" Grid.Row="3" Grid.Column="0" Text="Kernel" />
+            <Label  Margin="1" Grid.Row="4" Grid.Column="0" Text="System time" />
+            <Label  Margin="1" Grid.Row="5" Grid.Column="0" Text="Uptime" />
+            <Label  Margin="1" Grid.Row="6" Grid.Column="0" Text="LoadAverage" />
+            <Label  Margin="1" Grid.Row="7" Grid.Column="0" Text="CPU usage" />
+            <Label  Margin="1" Grid.Row="8" Grid.Column="0" Text="Memory usage" />
 
             <Label Grid.Row="0" Grid.Column="1"
                    HorizontalOptions="EndAndExpand"
@@ -102,9 +108,22 @@
                              MinimumHeightRequest="20">
                   <Label  VerticalOptions="Center" HorizontalOptions="FillAndExpand"
                          Text="{Binding Name}" />
-                  <Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="False" />
-                  <Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="False" />
+                  <ContentView HorizontalOptions="End">
+                    <!--<Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="true" />-->
+                    <Button HorizontalOptions="FillAndExpand" Opacity="0.2"
+                            BackgroundColor="{Binding Enabled,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}"
+                            />
+                  </ContentView>
+
+                  <ContentView HorizontalOptions="End">
+                    
+                      <Button HorizontalOptions="FillAndExpand" Opacity="0.2"  BackgroundColor="{Binding Running,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}"
+                      />
+                      <!--<Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="true" />-->
+                  </ContentView>
+                  
                 </StackLayout>
+               
               </ViewCell>
             </DataTemplate>
           </views:NonScrollableListView.ItemTemplate>

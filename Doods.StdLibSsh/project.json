@@ -2,8 +2,8 @@
   "supports": {},
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-    "NETStandard.Library": "2.0.0",
-    "SSH.NET": "2016.1.0-beta3"
+    "NETStandard.Library": "2.0.1",
+    "SSH.NET": "2016.1.0"
   },
   "frameworks": {
     "netstandard1.4": {

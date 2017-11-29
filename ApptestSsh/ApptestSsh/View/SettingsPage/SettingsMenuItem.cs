@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using ApptestSsh.Core.View.RootPage.MenuItem;
+﻿using ApptestSsh.Core.View.RootPage.MenuItem;
 using Doods.StdFramework;
+using System.Windows.Input;
 
 namespace ApptestSsh.Core.View.Settings
 {
     public class SettingsMenuItem : ObservableObject
     {
-        private string name;
+        private string _name;
 
         public string Name
         {
-            get => name;
-            set => SetProperty(ref name, value);
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
-        private string subtitle;
+        private string _subtitle;
 
         public string Subtitle
         {
-            get => subtitle;
-            set => SetProperty(ref subtitle, value);
+            get => _subtitle;
+            set => SetProperty(ref _subtitle, value);
         }
 
         public string Icon { get; set; }

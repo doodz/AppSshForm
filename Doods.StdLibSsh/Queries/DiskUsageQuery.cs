@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Doods.StdLibSsh.Base.Queries;
+﻿using Doods.StdLibSsh.Base.Queries;
 using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Doods.StdLibSsh.Queries
 {
@@ -49,7 +49,7 @@ namespace Doods.StdLibSsh.Queries
 
                 // split string at whitespaces
                 var res = line.Split().Where(l => !string.IsNullOrWhiteSpace(l)).ToArray();
-                
+
                 if (res.Length >= 6)
                 {
                     if (res.Length > 6)
@@ -76,8 +76,8 @@ namespace Doods.StdLibSsh.Queries
                 }
                 else
                 {
-                   Logger.Instance.Warning(
-                             $"Expected another output of df -h. Skipping line: {line}");
+                    Logger.Instance.Warning(
+                              $"Expected another output of df -h. Skipping line: {line}");
                 }
             }
             return disks;

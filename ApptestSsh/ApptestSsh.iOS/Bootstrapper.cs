@@ -1,8 +1,6 @@
-﻿using ApptestSsh.Core.Services;
-using ApptestSsh.iOS.Services;
+﻿using ApptestSsh.iOS.Services;
 using Autofac;
 using Doods.StdFramework.Interfaces;
-using Doods.StdRepository.Interfaces;
 
 namespace ApptestSsh.iOS
 {

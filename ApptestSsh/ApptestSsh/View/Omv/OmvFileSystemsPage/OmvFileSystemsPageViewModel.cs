@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
 {
-    public class OmvFileSystemsPageViewModel : LocalOmvListViewModel<FileSystem>
+    public class OmvFileSystemsPageViewModel : LocalOmvListViewModel<FileSystemVieModel>
     {
         public ICommand MountUmountCmd { get; }
 
@@ -60,7 +60,8 @@ namespace ApptestSsh.Core.View.Omv.OmvFileSystemsPage
         private async Task GetFileSystems(ISshService ssh)
         {
             var cmd = FileSystemService.CreateEnumerateFileSystemCommand();
-            var res = await new OmvRpcQuery<CountResultReturn<FileSystem>>(ssh, cmd).RunAsync(Token);
+            var res = await new OmvRpcQuery<CountResultReturn<FileSystemVieModel>>(ssh, cmd).RunAsync(Token);
+            res.Data.ForEach(d => d.MakeGraph());
             Items.ReplaceRange(res.Data);
         }
     }

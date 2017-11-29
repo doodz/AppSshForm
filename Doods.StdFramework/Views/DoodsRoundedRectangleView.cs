@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Doods.StdFramework.System.ComponentModel;
+using System;
 using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Doods.StdFramework.System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Doods.StdFramework.Views
@@ -34,7 +29,7 @@ namespace Doods.StdFramework.Views
         }
         public float CornerRadius
         {
-            get { return (float) GetValue(CornerRadiusProperty); }
+            get { return (float)GetValue(CornerRadiusProperty); }
             set { SetValue(CornerRadiusProperty, value); }
         }
 
@@ -45,8 +40,8 @@ namespace Doods.StdFramework.Views
         private static void OnFillColorChanged(BindableObject bindable, object oldvalue, object newvalue)
         {
             ((DoodsRoundedRectangleView)bindable).SetColor();
-            ((DoodsRoundedRectangleView) bindable).SetPropertyChanged(nameof(FillColor));
-           
+            ((DoodsRoundedRectangleView)bindable).SetPropertyChanged(nameof(FillColor));
+
         }
 
         private void SetColor()
@@ -55,7 +50,7 @@ namespace Doods.StdFramework.Views
         }
         public Color FillColor
         {
-            get { return (Color) GetValue(FillColorProperty); }
+            get { return (Color)GetValue(FillColorProperty); }
             set
             {
                 //_root.BackgroundColor = value;
@@ -90,14 +85,14 @@ namespace Doods.StdFramework.Views
         #endregion
 
 
-        private readonly Grid _root = new Grid() {BackgroundColor = Color.Transparent};
+        private readonly Grid _root = new Grid() { BackgroundColor = Color.Transparent };
         private readonly Frame _frame = new Frame();
         public DoodsRoundedRectangleView()
         {
 
 
             _frame.Margin = _frame.Padding = 0;
-            _frame.CornerRadius = (float) CornerRadius;
+            _frame.CornerRadius = (float)CornerRadius;
             _frame.Content = _root;
 
 
@@ -108,19 +103,19 @@ namespace Doods.StdFramework.Views
             ////f.BackgroundColor = FillColor;
             Content = _frame;
 
-           
+
 
             GestureRecognizers.Add(new TapGestureRecognizer((obj) => Clicked?.Invoke(this, new EventArgs())));
         }
 
+        //TODO DOODS :28/11/2017: error "xamarin GC_MINOR: (Nursery full)"
+        //protected override void OnSizeAllocated(double width, double height)
+        //{
+        //    base.OnSizeAllocated(width, height);
 
-        protected override void OnSizeAllocated(double width, double height)
-        {
-            base.OnSizeAllocated(width, height);
-
-            _root.HeightRequest = height;
-            _root.WidthRequest = width;
-        }
+        //    _root.HeightRequest = height;
+        //    _root.WidthRequest = width;
+        //}
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -18,5 +18,7 @@
         /// <param name="fileName">The name of the file.</param>
         /// <returns>The path.</returns>
         string GetDownloadPath();
+
+        void StartAppFromFile(string filePath);
     }
 }

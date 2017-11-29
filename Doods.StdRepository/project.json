@@ -2,10 +2,13 @@
   "supports": {},
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-    "NETStandard.Library": "2.0.0",
+    "NETStandard.Library": "2.0.1",
+    "PCLStorage": "1.0.2",
     "sqlite-net-pcl": "1.5.166-beta"
   },
   "frameworks": {
-    "netstandard1.4": {}
+    "netstandard1.4": {
+      "imports": "portable-net45+win8+wp8+wpa81"
+    }
   }
 }

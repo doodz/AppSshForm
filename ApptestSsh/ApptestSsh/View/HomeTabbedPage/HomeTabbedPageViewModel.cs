@@ -84,13 +84,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         public ObservableRangeCollection<UpgradableBean> Upgradables { get; }
         public ObservableRangeCollection<NetworkInterfaceInformationBean> NetworkInterfaceInformation { get; }
         public ObservableRangeCollection<ProcessBean> Processes { get; }
-        public ObservableRangeCollection<DiskUsageBean> DiskUsage { get; }
+        public ObservableRangeCollection<DiskUsageViewModel> DiskUsage { get; }
 
         public HomeTabbedPageViewModel(ILogger logger) : base(logger)
         {
             Title = "Home";
             NetworkInterfaceInformation = new ObservableRangeCollection<NetworkInterfaceInformationBean>();
-            DiskUsage = new ObservableRangeCollection<DiskUsageBean>();
+            DiskUsage = new ObservableRangeCollection<DiskUsageViewModel>();
             Processes = new ObservableRangeCollection<ProcessBean>();
             Upgradables = new ObservableRangeCollection<UpgradableBean>();
             ManageHostCmd = new Command(c => NavigationService.GoToHostManagerPage());
@@ -101,7 +101,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             NextForceRefresh = DateTime.UtcNow.AddMinutes(45);
 
             KillProcessCmd = new Command(Killprocess);
-            MountUmountCmd = new Command(MountUmount);
+            MountUmountCmd = new Command(MountUmount, o => false);
             UpdateCmd = new Command(Update);
             UpdateAllCmd = new Command(UpdateAll);
             ShowUpgradablesCmd = new Command(async () => await NavigationService.GoUpgradableListViewPage());
@@ -111,7 +111,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         public override IEnumerable<ToolbarItem> GetToolbarItems()
         {
-            //var ssh = AppContainer.Container.Resolve<ISshService>();
+            var ssh = AppContainer.Container.Resolve<ISshService>();
             //CheckSshParams(ssh).Wait();
             //if (ssh.Host != null)
             switch (Device.RuntimePlatform)
@@ -122,11 +122,18 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                     yield return new ToolbarItem
                     {
                         Text = "Refresh",
-                        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+                        Icon = "Assets/ic_storage_black.png",
                         Command = RefreshCommand
                     };
                     break;
             }
+
+            yield return new ToolbarItem
+            {
+                Text = "Manage Host",
+                Icon = "Assets/ic_storage_black_24dp_1x.png",
+                Command = ManageHostCmd
+            };
 
             yield return new ToolbarItem
             {
@@ -135,13 +142,13 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 Command = GotoLoginCommand
             };
 
-            //if (ssh.Host != null && ssh.Host.IsOmvServer)
-            yield return _omvToolbarItem = new ToolbarItem
-            {
-                Text = "OMV",
-                Icon = "Assets/ic_dns_black_24dp_1x.png",
-                Command = GotoOmvPage
-            };
+            if (ssh?.Host != null && ssh.Host.IsOmvServer)
+                yield return _omvToolbarItem = new ToolbarItem
+                {
+                    Text = "OMV",
+                    Icon = "Assets/ic_dns_black_24dp_1x.png",
+                    Command = GotoOmvPage
+                };
         }
 
         private async Task CheckSshParams(ISshService ssh)
@@ -217,24 +224,26 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 return;
             }
 
-
-            var resultatttt = await new LastloginsQuery(ssh).RunAsync(Token);
+            var res = ssh.Connect();
+            //var resultatttt = await new LastloginsQuery(ssh).RunAsync(Token);
 
             IsRpi = ssh.Host.IsRpi;
             if (IsRpi)
                 await GetVcgenResults(ssh);
 
-            await GetSystemInfo(ssh);
+            var t1 = GetSystemInfo(ssh);
 
-            await GetNetWorkInfo(ssh);
+            var t2 = GetNetWorkInfo(ssh);
 
-            await GetAptList(ssh);
+            var t3 = GetAptList(ssh);
 
-            await GetDiskUsage(ssh);
+            var t4 = GetDiskUsage(ssh);
 
             ////var cur = SynchronizationContext.Current;
 
-            await GetProcesses(ssh);
+            var t5 = GetProcesses(ssh);
+
+            //Task.WaitAll(new Task[] { /*t1,*/ t2, t3, t4, t5 });
         }
 
         protected override Task OnInternalAppearing()
@@ -244,13 +253,16 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         private async Task GetSystemInfo(ISshService ssh)
         {
-            Logger.Info($"{Title} : get SystemInfoQueries");
+            Logger.Info($"{Title} : get {nameof(SystemInfoQueries)}");
             SystemBean = await new SystemInfoQueries(ssh).RunAsync(Token);
         }
 
         private async Task GetNetWorkInfo(ISshService ssh)
         {
             var netinfo = await new NetworkInformationQuery(ssh).RunAsync(Token);
+            //var networkInformationQuery = new NetworkInformationQuery(ssh);
+            //await networkInformationQuery.SendCommandAsync(Token);
+            //var netinfo = await networkInformationQuery.PaseResultAsync(Token);
             if (netinfo == null) return;
             if (NetworkInterfaceInformation.Any())
                 NetworkInterfaceInformation.Clear();
@@ -261,7 +273,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
         private async Task GetVcgenResults(ISshService ssh)
         {
             OnUpdateVcgencmdBean = true;
-            Logger.Info($"{Title} : get VcgencmdQuery");
+            Logger.Info($"{Title} : get {nameof(VcgencmdQuery)}");
             var test = new VcgencmdQuery(ssh);
 
             await test.RunAsync(Token).ContinueWith(res =>
@@ -281,7 +293,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         private async Task GetProcesses(ISshService ssh)
         {
-            Logger.Info($"{Title} : get ProcessesQuery");
+            Logger.Info($"{Title} : get {nameof(ProcessesQuery)}");
             var process = await new ProcessesQuery(ssh, false).RunAsync(Token);
             if (process == null) return;
             if (Processes.Any())
@@ -291,17 +303,17 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         private async Task GetDiskUsage(ISshService ssh)
         {
-            Logger.Info($"{Title} : get DiskUsageQuery");
+            Logger.Info($"{Title} : get {nameof(DiskUsageQuery)}");
             var diskuse = await new DiskUsageQuery(ssh).RunAsync(Token);
             if (diskuse == null) return;
             if (DiskUsage.Any())
                 DiskUsage.Clear();
-            DiskUsage.AddRange(diskuse);
+            DiskUsage.AddRange(diskuse.Select(d => new DiskUsageViewModel(d)));
         }
 
         private async Task GetAptList(ISshService ssh)
         {
-            Logger.Info($"{Title} : get AptListQuery");
+            Logger.Info($"{Title} : get {nameof(AptListQuery)}");
             var upgradablesBean = await new AptListQuery(ssh).RunAsync(Token);
             if (upgradablesBean == null) return;
             if (Upgradables.Any())

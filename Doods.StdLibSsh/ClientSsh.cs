@@ -7,13 +7,14 @@ namespace Doods.StdLibSsh
 {
     public class ClientSsh : IClientSsh
     {
+        public SemaphoreSlim ReadLock { get; private set; } = new SemaphoreSlim(1, 1);
         public SshClient Client { get; private set; }
 
-        public void Connect()
+        public bool Connect()
         {
             Client = new SshClient("192.168.1.73", "pi", "raspberry");
             Client.Connect();
-
+            return Client.IsConnected;
         }
 
         public string GetServeurVersion()
@@ -60,7 +61,7 @@ namespace Doods.StdLibSsh
             throw new System.NotImplementedException();
         }
 
-        public Task ConnectAsync()
+        public Task<bool> ConnectAsync()
         {
             throw new System.NotImplementedException();
         }

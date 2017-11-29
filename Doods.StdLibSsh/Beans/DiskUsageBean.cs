@@ -30,7 +30,7 @@ namespace Doods.StdLibSsh.Beans
             set => SetProperty(ref _used, value);
         }
 
-        public string available
+        public string Available
         {
             get => _available;
             set => SetProperty(ref _available, value);

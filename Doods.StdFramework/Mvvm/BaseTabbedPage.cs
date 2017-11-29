@@ -18,10 +18,7 @@ namespace Doods.StdFramework.Mvvm
             BindingContext = ViewModel;
             Title = ViewModel.Title;
 
-            foreach (var toolbarItem in ViewModel.GetToolbarItems())
-            {
-                ToolbarItems.Add(toolbarItem);
-            }
+
 
         }
 
@@ -30,6 +27,11 @@ namespace Doods.StdFramework.Mvvm
             base.OnAppearing();
             await ViewModel.OnAppearing();
 
+            ToolbarItems.Clear();
+            foreach (var toolbarItem in ViewModel.GetToolbarItems())
+            {
+                ToolbarItems.Add(toolbarItem);
+            }
             //TODO THE : A voir pour remettre ça en place , ou alors faire une abstraction
             //Analytics.TrackEvent("OnAppearing", new Dictionary<string, string> {
             //    { "Title", Title }

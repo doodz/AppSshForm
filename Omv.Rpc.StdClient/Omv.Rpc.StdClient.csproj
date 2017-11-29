@@ -36,7 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Clients\HttpClient.cs" />
     <Compile Include="Clients\IOmvClient.cs" />
     <Compile Include="Clients\OmvRpcQuery.cs" />
     <Compile Include="Clients\SshClient.cs" />
@@ -80,11 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Data">
-      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Data.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Doods.StdFramework\Doods.StdFramework.Core.csproj">

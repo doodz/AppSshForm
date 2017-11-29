@@ -1,5 +1,4 @@
-﻿using ApptestSsh.Core.View.Omv.OmvRddPage;
-using Doods.StdFramework.Mvvm;
+﻿using Doods.StdFramework.Mvvm;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +11,26 @@ namespace ApptestSsh.Core.View.Omv.OmvRrdPage
         public RrdPage()
         {
             InitializeComponent();
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.WinPhone:
+                case Device.UWP:
+                case Device.WinRT:
+                    ToolbarItems.Add(new ToolbarItem
+                    {
+                        Text = "Refresh",
+                        Icon = "Assets/ic_refresh_black_24dp_2x.png",
+                        Command = ViewModel.RefreshCommand
+                    });
+                    break;
+            }
+            //ToolbarItems.Add(new ToolbarItem
+            //{
+            //    Text = "Rrd",
+            //    Icon = "Assets/ic_settings_applications_black_2x.png",
+            //    Command = ViewModel.GotoRrdPage
+            //});
         }
 
 

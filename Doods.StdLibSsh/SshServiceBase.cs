@@ -9,6 +9,7 @@ namespace Doods.StdLibSsh
     public class SshServiceBase : IDisposable, IClientSsh
     {
         private readonly object _lockObj;
+        public SemaphoreSlim ReadLock { get; private set; } = new SemaphoreSlim(1, 1);
         protected const int TimeoutInSecond = 60;
         private SshClient _client;
 
@@ -19,10 +20,10 @@ namespace Doods.StdLibSsh
 
 
         public SshClient Client => _client;
+
         //private ConnectionInfo _connectionInfo;
         protected SshServiceBase()
         {
-
             _lockObj = new object();
         }
 
@@ -35,15 +36,29 @@ namespace Doods.StdLibSsh
         public Task<string> RunCommandAsync(SshCommand cmd, CancellationToken token)
         {
             if (_client == null) return null;
-
-            using (CancellationTokenSource.CreateLinkedTokenSource(token))
+            try
             {
+                using (CancellationTokenSource.CreateLinkedTokenSource(token))
+                {
+                    //await _readLock.WaitAsync(token);
+                    //var request = _client.CreateCommand(cmdStr);
 
-                //var request = _client.CreateCommand(cmdStr);
-                var res = Task.Factory.FromAsync(cmd.BeginExecute, cmd.EndExecute, null);
-                return res;
+
+                    var ret = Task.Run(() => _client.RunCommand(cmd.CommandText).Result, token);
+                    //var res = Task.Factory.FromAsync(cmd.BeginExecute, cmd.EndExecute, null);
+                    return ret;
+                }
             }
+            catch (Exception ex)
+            {
+                Logger.Instance.Error(ex);
 
+                throw ex;
+            }
+            finally
+            {
+                //_readLock.Release();
+            }
             //return sshCommand.Result;
         }
 
@@ -53,12 +68,14 @@ namespace Doods.StdLibSsh
         }
 
 
-        public async Task ConnectAsync()
+        public async Task<bool> ConnectAsync()
         {
-            await Task.Factory.StartNew(Connect);
+            var res = await Task.Run(() => Connect());
+            return IsConnected();
+            //await Task.Factory.StartNew(Connect);
         }
 
-        public void Connect()
+        public bool Connect()
         {
             lock (_lockObj)
             {
@@ -67,6 +84,7 @@ namespace Doods.StdLibSsh
                     GetSshClient();
                 }
                 _client.Connect();
+                return _client.IsConnected;
             }
         }
 
@@ -82,6 +100,7 @@ namespace Doods.StdLibSsh
         {
             return HostName != null && UserName != null && Password != null;
         }
+
         public bool IsAuthenticated()
         {
             lock (_lockObj)
@@ -98,7 +117,6 @@ namespace Doods.StdLibSsh
                 _client?.Dispose();
                 _client = null;
             }
-
         }
 
         public ShellStream CreateShell()

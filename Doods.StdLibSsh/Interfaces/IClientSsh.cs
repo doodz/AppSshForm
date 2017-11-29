@@ -1,14 +1,17 @@
-﻿using System.Threading;
+﻿using Renci.SshNet;
+using System.Threading;
 using System.Threading.Tasks;
-using Renci.SshNet;
 
 namespace Doods.StdLibSsh.Interfaces
 {
     public interface IClientSsh
     {
+
+        SemaphoreSlim ReadLock { get; }
+
         SshClient Client { get; }
-        void Connect();
-        Task ConnectAsync();
+        bool Connect();
+        Task<bool> ConnectAsync();
         bool IsConnected();
         bool CanConnect();
         bool IsAuthenticated();

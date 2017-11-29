@@ -16,5 +16,10 @@ namespace ApptestSsh.UWP.Services
             return ApplicationData.Current.LocalFolder.Path;
             //return Path.Combine(ApplicationData.Current.LocalFolder.Path, fileName);
         }
+
+        public void StartAppFromFile(string filePath)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

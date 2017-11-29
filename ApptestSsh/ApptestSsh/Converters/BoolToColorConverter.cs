@@ -2,17 +2,19 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace Doods.StdFramework.Converters
+namespace ApptestSsh.Core.Converters
 {
-    public class InverseBooleanConverter : IValueConverter
+    public class BoolToColorConverter : IValueConverter
     {
-        public static InverseBooleanConverter Default = new InverseBooleanConverter();
-
+        public static readonly BoolToColorConverter Default = new BoolToColorConverter();
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var test = (value as bool?);
+            var val = (value is bool);
 
-            return !(value as bool?);
+            if (val)
+                val = (bool)value;
+
+            return val ? Color.Green : Color.Red;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -19,5 +19,10 @@ namespace ApptestSsh.Droid.Services
             return directory;
             //return Path.Combine(directory, fileName);
         }
+
+        public void StartAppFromFile(string filePath)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

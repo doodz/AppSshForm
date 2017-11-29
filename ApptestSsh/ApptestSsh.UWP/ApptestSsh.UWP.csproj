@@ -12,7 +12,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
@@ -206,6 +206,10 @@
     <ProjectReference Include="..\..\Doods.StdRepository\Doods.StdRepository.csproj">
       <Project>{13f126e6-ab09-4aac-871e-5bc9b48e3e22}</Project>
       <Name>Doods.StdRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Omv.Rpc.StdClient\Omv.Rpc.StdClient.csproj">
+      <Project>{cf24ef32-35ff-4ee7-8306-b078ef0a5e73}</Project>
+      <Name>Omv.Rpc.StdClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\ApptestSsh\ApptestSsh.Core.csproj">
       <Project>{4EE5BE30-F4A9-4F55-B180-91C440B40134}</Project>

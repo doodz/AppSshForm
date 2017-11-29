@@ -39,6 +39,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToColorConverter.cs" />
     <Compile Include="DataBase\CommandSsh.cs" />
     <Compile Include="DataBase\Database.cs" />
     <Compile Include="DataBase\Host.cs" />
@@ -63,6 +64,7 @@
       <DependentUpon>CommandListViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CommandPage\CommandListViewPageViewModel.cs" />
+    <Compile Include="View\HomeTabbedPage\DiskUsageViewModel.cs" />
     <Compile Include="View\HomeTabbedPage\HomeTabbedPage.xaml.cs">
       <DependentUpon>HomeTabbedPage.xaml</DependentUpon>
     </Compile>
@@ -75,6 +77,7 @@
       <DependentUpon>LogsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LogsPage\LogsListViewPageViewModel.cs" />
+    <Compile Include="View\Omv\OmvFileSystemsPage\FileSystemVieModel.cs" />
     <Compile Include="View\Omv\OmvFileSystemsPage\OmvFileSystemsPage.xaml.cs">
       <DependentUpon>OmvFileSystemsPage.xaml</DependentUpon>
     </Compile>
@@ -83,8 +86,8 @@
       <DependentUpon>RrdPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Omv\OmvRrdPage\RrdPageViewModel.cs" />
-    <Compile Include="View\Omv\OmvServicesPage\OmvServicesPage.xaml.cs">
-      <DependentUpon>OmvServicesPage.xaml</DependentUpon>
+    <Compile Include="View\Omv\OmvServicesPage\OmvServicesPage2.xaml.cs">
+      <DependentUpon>OmvServicesPage2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Omv\OmvServicesPage\OmvServicesPageViewModel.cs" />
     <Compile Include="View\LoginPage\LoginPage.xaml.cs">
@@ -322,7 +325,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\Omv\OmvServicesPage\OmvServicesPage.xaml">
+    <EmbeddedResource Include="View\Omv\OmvServicesPage\OmvServicesPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

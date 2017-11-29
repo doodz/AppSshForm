@@ -9,8 +9,10 @@ using Doods.StdLibSsh.Beans;
 using Doods.StdLibSsh.Queries;
 using PCLStorage;
 using Rg.Plugins.Popup.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Plugin.HttpTransferTasks;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.LogsPage
@@ -120,6 +122,31 @@ namespace ApptestSsh.Core.View.LogsPage
             var localfile = await folder.CreateFileAsync(fileinfo.Name,
                 CreationCollisionOption.ReplaceExisting);
             var file = await sftpclient.GetFile(fileinfo.FullPath, localfile);
+
+            var uri = new Uri(localfile.Path);
+
+            //Device.OpenUri(uri);
+
+
+
+            //test
+
+            //var task = CrossHttpTransfers.Current.Download(localfile.Path);
+            //task.PropertyChanged += (sender, args) =>
+            //{
+            //    //if (task.Status != nameof(IHttpStatus.Task))
+            //    //    return;
+
+            //    if (task.Status == Plugin.HttpTransferTasks.TaskStatus.Completed)
+            //    {
+            //        var local = task.LocalFilePath; // move this file appropriately here
+            //    }
+            //};
+            //WebClient client = new WebClient();
+            //client.DownloadFile(link, documentsPath);
+            //ViewPDF(documentsPath, filename);
+
+            //test
             return localfile;
         }
 
@@ -133,6 +160,7 @@ namespace ApptestSsh.Core.View.LogsPage
             var localfile = await folder.CreateFileAsync(fileinfo.Name,
                 CreationCollisionOption.ReplaceExisting);
             var file = await sftpclient.GetFile(fileinfo.FullPath, localfile);
+
             return localfile;
         }
 

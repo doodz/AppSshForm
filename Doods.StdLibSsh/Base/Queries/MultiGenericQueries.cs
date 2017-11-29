@@ -16,11 +16,8 @@ namespace Doods.StdLibSsh.Base.Queries
 
         public override T Run()
         {
-
             if (!Client.IsConnected())
-            {
                 Client.Connect();
-            }
 
             return Action();
         }
@@ -28,17 +25,27 @@ namespace Doods.StdLibSsh.Base.Queries
         public override async Task<T> RunAsync(CancellationToken token)
         {
             if (token.IsCancellationRequested)
-            {
                 return await Task.FromResult<T>(default(T));
-                //return await Task.FromCanceled<T>(token);
-            }
 
-            if (!Client.IsConnected())
+            try
             {
-                await Client.ConnectAsync();
-            }
-            return await Task.FromResult<T>(Action());
+                await Client.ReadLock.WaitAsync(token);
 
+                if (!Client.IsConnected())
+                {
+                    var res = await Client.ConnectAsync();
+                }
+                return await Task.FromResult<T>(Action());
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Error(ex);
+                throw ex;
+            }
+            finally
+            {
+                Client.ReadLock.Release();
+            }
         }
     }
 }

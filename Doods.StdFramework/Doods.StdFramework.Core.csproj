@@ -39,10 +39,16 @@
     <Compile Include="ApplicationObjects\AppContainer.cs" />
     <Compile Include="ApplicationObjects\AppSetup.cs" />
     <Compile Include="Converters\TimeSpanToDateStringConverter.cs" />
+    <Compile Include="Helpers\AsyncHelpers.cs" />
+    <Compile Include="Helpers\ColorsPalette.cs" />
+    <Compile Include="Helpers\NumbersHerpers.cs" />
+    <Compile Include="Http\DoodsDownloadBytesProgress.cs" />
     <Compile Include="Interfaces\IListViewModel.cs" />
+    <Compile Include="Interfaces\INotificationsHelper.cs" />
     <Compile Include="Interfaces\IViewModel.cs" />
     <Compile Include="Markups\ImageResourceExtension.cs" />
     <Compile Include="Mvvm\BaseListViewModel.cs" />
+    <Compile Include="Mvvm\BaseListViewPage.cs" />
     <Compile Include="Mvvm\BaseMasterDetailPage.cs" />
     <Compile Include="Mvvm\BaseTabbedPage.cs" />
     <Compile Include="Mvvm\ListViewPage.cs" />

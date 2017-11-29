@@ -12,20 +12,17 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ApptestSsh.Core.View.Omv.OmvRddPage
+namespace ApptestSsh.Core.View.Omv.OmvRrdPage
 {
-    public class RrdPageViewModel : LocalListViewModel<RddGraph>
+    public class RrdPageViewModel : LocalListViewModel<RddGraphItem>
     {
         public static string RrdFolder = "RrdFiles";
 
         public ICommand MkGraphCommand { get; }
-        public bool OnUpdateGraph { get; set; }
-
-
 
         public RrdPageViewModel(ILogger logger) : base(logger)
         {
-            MkGraphCommand = new Command(c => MkGraph());
+            MkGraphCommand = new Command(async () => await MkGraph());
 
         }
 
@@ -37,7 +34,7 @@ namespace ApptestSsh.Core.View.Omv.OmvRddPage
         private async Task MkGraph()
         {
             Items.Clear();
-            using (new RunWithBool(val => { OnUpdateGraph = val; }))
+            using (new RunWithBool(val => { IsBusyList = val; }))
             {
                 var ssh = AppContainer.Container.Resolve<ISshService>();
                 var res = await new NuHupQueryWithWaitPid(ssh, GenerateRrdQuery.Query).RunAsync(Token);
@@ -67,7 +64,7 @@ namespace ApptestSsh.Core.View.Omv.OmvRddPage
                 var file = await folder.CreateFileAsync(l.Name,
                     CreationCollisionOption.ReplaceExisting);
                 await sftpclient.GetFile(l.FullName, file);
-                var gr = new RddGraph() { Name = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
+                var gr = new RddGraphItem() { Name = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
                 Items.Add(gr);
             }
         }
@@ -82,7 +79,7 @@ namespace ApptestSsh.Core.View.Omv.OmvRddPage
         }
     }
 
-    public class RddGraph : ObservableObject, IName
+    public class RddGraphItem : ObservableObject, IName
     {
         public string Name { get; set; }
         public string Description { get; set; }

@@ -8,6 +8,8 @@
                      xmlns:homeTabbedPage="clr-namespace:ApptestSsh.Core.View.HomeTabbedPage;assembly=ApptestSsh.Core"
                      xmlns:converters="clr-namespace:Doods.StdFramework.Converters;assembly=Doods.StdFramework"
                      xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+                     xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+                     xmlns:microcharts="clr-namespace:Microcharts;assembly=Microcharts"
                      x:Name="TabbedHomePage"
                      Title="TabbedPage">
 
@@ -73,7 +75,7 @@
             <DataTemplate x:Key="DiskUsageTemplate">
                 <ViewCell>
                     <Frame>
-                        <Grid Margin="5,1">
+                        <Grid Margin="5,1" HeightRequest="100">
                             <Grid.RowDefinitions>
                                 <RowDefinition />
                                 <RowDefinition />
@@ -97,7 +99,15 @@
                                    Grid.Row="1"
                                    Text="{Binding UsedPercent,Mode=OneWay}" />
 
-                            <views:DoodsButton Margin="2"
+
+                            <forms:ChartView HeightRequest="50"  Grid.Column="2"
+                                              Grid.RowSpan="2"
+                                              Grid.Row="0" Chart="{Binding RadialGaugeChart,Mode=OneWay}"/>
+                          
+
+                          <views:DoodsButton
+                           IsVisible="False"
+                            Margin="2"
                                                VerticalOptions="CenterAndExpand"
                                                HorizontalOptions="CenterAndExpand"
                                                Grid.Column="2"

@@ -1,28 +1,25 @@
 ﻿{
   "dependencies": {
-    "Autofac": "4.6.1",
-    "Microsoft.Azure.Mobile": "0.15.0",
-    "Microsoft.Azure.Mobile.Analytics": "0.15.0",
-    "Microsoft.Azure.Mobile.Crashes": "0.15.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
-    "NETStandard.Library": "2.0.0",
+    "Autofac": "4.6.2",
+    "Microcharts": "0.8.3-pre",
+    "Microcharts.Forms": "0.8.3-pre",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.2",
+    "NETStandard.Library": "2.0.1",
     "Newtonsoft.Json": "10.0.3",
-    "NLog": "5.0.0-beta10",
+    "NLog": "5.0.0-beta11",
     "PCLStorage": "1.0.2",
-    "Rg.Plugins.Popup": "1.1.0-pre2",
-    "SharpCifs.Std": "0.2.10",
+    "Plugin.HttpTransferTasks": "1.0.0",
+    "Rg.Plugins.Popup": "1.1.0-pre3",
+    "SharpCifs.Std": "0.2.11",
     "sqlite-net-pcl": "1.5.166-beta",
-    "SSH.NET": "2016.1.0-beta3",
+    "SSH.NET": "2016.1.0",
     "Toasts.Forms.Plugin": "3.2.1",
-    "Xam.Plugin.Connectivity": "4.0.0-beta139",
-    "Xam.Plugins.Settings": "3.1.0-beta103",
-    "Xamarin.Forms": "2.4.0.275-pre3",
-    "Xamarin.Forms.DataGrid": "1.9.2",
-    "XLabs.Core": "2.3.0-pre05",
-    "XLabs.Forms.Charting": "2.3.0-pre05"
+    "Xam.Plugin.Connectivity": "4.0.0.171-beta",
+    "Xam.Plugins.Settings": "3.2.0.130-beta",
+    "Xamarin.Forms": "2.5.0.91635"
   },
   "frameworks": {
-    "uap10.0.10586": {}
+    "uap10.0.15063": {}
   },
   "runtimes": {
     "win10-arm": {},

@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <mvvm:ListViewPage x:TypeArguments="omvFileSystemsPage:OmvFileSystemsPageViewModel"
-               xmlns="http://xamarin.com/schemas/2014/forms"
-               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-               xmlns:omvFileSystemsPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvFileSystemsPage;assembly=ApptestSsh.Core"
-               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
-               x:Class="ApptestSsh.Core.View.Omv.OmvFileSystemsPage.OmvFileSystemsPage">
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+                   xmlns:omvFileSystemsPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvFileSystemsPage;assembly=ApptestSsh.Core"
+                   xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+                   xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+                   x:Class="ApptestSsh.Core.View.Omv.OmvFileSystemsPage.OmvFileSystemsPage">
     <ContentPage.Content>
-        <ListView Grid.Row="2"
-                                     x:Name="ListView"
-                                     ItemsSource="{Binding Items}"
-                                     SelectedItem="{Binding SelectedItem}"
-                                     ItemTapped="Handle_ItemTapped"
-                                     ItemSelected="Handle_ItemSelected"
-                                     HasUnevenRows="true"
-                                     IsPullToRefreshEnabled="true"
-                                     CachingStrategy="RecycleElement"
-                                     IsRefreshing="{Binding IsBusyList, Mode=TwoWay}"
-                                     RefreshCommand="{Binding RefreshDataCommand,Mode=OneWay}"
-                                     VerticalOptions="StartAndExpand">
+        <ListView
+            x:Name="ListView"
+            ItemsSource="{Binding Items}"
+            SelectedItem="{Binding SelectedItem}"
+            ItemTapped="Handle_ItemTapped"
+            ItemSelected="Handle_ItemSelected"
+            HasUnevenRows="true"
+            IsPullToRefreshEnabled="true"
+            CachingStrategy="RecycleElement"
+            IsRefreshing="{Binding IsBusyList, Mode=TwoWay}"
+            RefreshCommand="{Binding RefreshDataCommand,Mode=OneWay}">
             <ListView.SeparatorColor>
                 <OnPlatform x:TypeArguments="Color"
                             iOS="{StaticResource ListSeparator}" />
@@ -34,28 +34,34 @@
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="0"
+                                <forms:ChartView HeightRequest="50"
+                                                 Grid.Column="0"
+                                                 Grid.RowSpan="2"
+                                                 Grid.Row="0"
+                                                 Chart="{Binding RadialGaugeChart,Mode=OneWay}" />
+                                <Label Grid.Column="1"
                                        Grid.Row="0"
                                        Text="{Binding LabelDescription,Mode=OneWay}" />
-                                <Label Grid.Column="0"
+                                <Label Grid.Column="1"
                                        Grid.Row="1"
                                        Text="{Binding Description,Mode=OneWay}" />
-                                <Label Grid.Column="1"
+                                <Label Grid.Column="2"
                                        Grid.Row="0"
                                        Text="{Binding Type,Mode=OneWay}" />
-                                <Label Grid.Column="1"
+                                <Label Grid.Column="2"
                                        Grid.Row="1"
                                        Text="{Binding Used,Mode=OneWay}" />
 
                                 <views:DoodsButton Margin="2"
                                                    VerticalOptions="CenterAndExpand"
                                                    HorizontalOptions="CenterAndExpand"
-                                                   Grid.Column="2"
+                                                   Grid.Column="3"
                                                    Grid.RowSpan="2"
                                                    Grid.Row="0"
                                                    Text="Umount"

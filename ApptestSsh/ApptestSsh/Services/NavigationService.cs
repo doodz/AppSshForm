@@ -5,7 +5,6 @@ using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
 using ApptestSsh.Core.View.Omv.OmvFileSystemsPage;
 using ApptestSsh.Core.View.Omv.OmvRrdPage;
-using ApptestSsh.Core.View.Omv.OmvServices;
 using ApptestSsh.Core.View.Omv.OmvSharedsFoldersPage;
 using ApptestSsh.Core.View.Omv.OmvUpdatePage;
 using ApptestSsh.Core.View.RootPage.MasterDetailPage;
@@ -16,6 +15,7 @@ using ApptestSsh.Core.View.WelcomeStartPage;
 using Doods.StdFramework.Navigation;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using OmvServicesPage = ApptestSsh.Core.View.Omv.OmvServicesPage.OmvServicesPage2;
 using SettingsPage = ApptestSsh.Core.View.SettingsPage.SettingsPage;
 
 namespace ApptestSsh.Core.Services

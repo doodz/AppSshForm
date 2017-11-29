@@ -1,5 +1,5 @@
-﻿using Doods.StdFramework.Mvvm;
-using System;
+﻿using System;
+using Doods.StdFramework.Mvvm;
 using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RootMasterDetailPage : BaseMasterDetailPage
+    public partial class RootMasterDetailPage : BaseMasterDetailPage<RootMasterDetailPageMenuItem>
     {
         public RootMasterDetailPage()
         {
@@ -21,8 +21,19 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
 
         }
 
+        protected override void OnSetPage()
+        {
+            MasterPage.ListView.SelectedItem = null;
+        }
 
-        private void SetPage(RootMasterDetailPageMenuItem item)
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as RootMasterDetailPageMenuItem;
+            SetPage(item);
+        }
+
+        protected void SetPage(RootMasterDetailPageMenuItem item)
         {
             if (item == null)
                 return;
@@ -34,44 +45,7 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
             Detail = page;
             IsPresented = false;
 
-            MasterPage.ListView.SelectedItem = null;
+            OnSetPage();
         }
-
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = e.SelectedItem as RootMasterDetailPageMenuItem;
-            SetPage(item);
-        }
-
-        private DateTime _date;
-        protected override bool OnBackButtonPressed()
-        {
-            if (IsPresented)
-                return base.OnBackButtonPressed();
-
-            if (_date < DateTime.Now.AddSeconds(-3))
-            {
-                //App.Container.Resolve<INotificator>().Toast("Cliquer une nouvelle fois pour fermer l'application");
-                _date = DateTime.Now;
-                return true;
-            }
-            return true;
-        }
-
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-
-        //    var navigation = AppContainer.Container.Resolve<INavigationService>();
-        //    var stackPages = navigation.Navigation.NavigationStack.ToList();
-
-        //    stackPages = stackPages.Where(p => p.GetType() != typeof(RootMasterDetailPage)).ToList();
-
-        //    foreach (var stackPage in stackPages)
-        //    {
-        //        navigation.RemovePageFromHistory(stackPage.GetType());
-        //    }
-
-        //}
     }
 }

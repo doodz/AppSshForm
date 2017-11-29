@@ -1,19 +1,31 @@
 ﻿using Doods.StdLibSsh.Interfaces;
 using Renci.SshNet;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Doods.StdLibSsh.Base.Queries
 {
+    internal enum QueryState
+    {
+        Initialized = 1,
+        CommandSent,
+        ResultParsed,
+        OnError
+    }
+
     public class GenericQuery<T>
     {
         protected readonly IClientSsh Client;
         protected string CmdString;
         protected SshCommand Sshcmd;
+        private QueryState _state;
+        private string _resultStr;
 
         public GenericQuery(IClientSsh client)
         {
             Client = client;
+            _state = QueryState.Initialized;
         }
 
         protected IClientSsh GetClient()
@@ -31,67 +43,105 @@ namespace Doods.StdLibSsh.Base.Queries
             Sshcmd = Client.Client.CreateCommand(CmdString);
 
 
-            string str;
-
             using (Sshcmd)
             {
                 Logger.Instance.Info($"Running command : {CmdString}.");
-                str = Sshcmd.Execute();
-                Logger.Instance.Info($"Return Value from command : {str}.");
+                _resultStr = Sshcmd.Execute();
+                Logger.Instance.Info($"Return Value from command : {_resultStr}.");
+                _state = QueryState.CommandSent;
             }
 
-            var result = PaseResult(str);
+            var result = PaseResult(_resultStr);
+            _state = QueryState.ResultParsed;
             //TODO Doods : QueryResult
-            var objres = new QueryResult<T>()
-            {
-                Query = CmdString,
-                BashLines = str,
-                Result = result,
-                ExitStatus = Sshcmd.ExitStatus,
-                Error = Sshcmd.Error
-            };
+            var queryResult = ToQueryResult(result);
             return result;
         }
 
-        public virtual async Task<T> RunAsync(CancellationToken token)
+
+        private QueryResult<T> ToQueryResult(T result)
         {
-            if (token.IsCancellationRequested)
-            {
-                return await Task.FromResult<T>(default(T));
-                //return await Task.FromCanceled<T>(token);
-            }
-            if (!Client.IsConnected())
-            {
-                Logger.Instance.Info("Client not connected, ConnectAsync.");
-                await Client.ConnectAsync();
-            }
-            Logger.Instance.Info($"Running command async : {CmdString}.");
-
-            //TODO Doods : SshConnectionException
-            var cmd = Client.Client.CreateCommand(CmdString);
-            var str = await Client.RunCommandAsync(cmd, token);
-            Logger.Instance.Info($"Return Value from command async: {str}.");
-            var result = await PaseResultAsync(str, token);
-
-            //TODO Doods : QueryResult
             var objres = new QueryResult<T>
             {
                 Query = CmdString,
                 Result = result,
-                BashLines = str,
-                ExitStatus = cmd.ExitStatus,
-                Error = cmd.Error
+                BashLines = _resultStr,
+                ExitStatus = Sshcmd.ExitStatus,
+                Error = Sshcmd.Error
             };
+            if (!string.IsNullOrEmpty(Sshcmd.Error))
+                _state = QueryState.OnError;
+            return objres;
+        }
 
+        /// <summary>
+        /// Create the command, execute it at the client level and parse the result.
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public virtual async Task<T> RunAsync(CancellationToken token)
+        {
+            _resultStr = await SendCommandAsync(token);
+            _state = QueryState.CommandSent;
+            var result = await PaseResultAsync(token);
+            _state = QueryState.ResultParsed;
+            //TODO Doods : QueryResult
+            var queryResult = ToQueryResult(result);
             return result;
         }
 
-        private async Task<T> PaseResultAsync(string result, CancellationToken token)
+        /// <summary>
+        /// Create the command end execute it at the client level.
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns>Result from client in string.</returns>
+        public async Task<string> SendCommandAsync(CancellationToken token)
         {
-            
+            try
+            {
+                await Client.ReadLock.WaitAsync(token);
+                if (token.IsCancellationRequested)
+                    return await Task.FromResult<string>(default(string));
+
+                if (!Client.IsConnected())
+                {
+                    Logger.Instance.Info("Client not connected, ConnectAsync.");
+                    var res = await Client.ConnectAsync();
+                }
+                Logger.Instance.Info($"Creta command async : {CmdString}.");
+                //TODO Doods : SshConnectionException
+                Sshcmd = Client.Client.CreateCommand(CmdString);
+
+
+                Logger.Instance.Info($"Running command async : {CmdString}.");
+                var restask = Client.RunCommandAsync(Sshcmd, token);
+                _resultStr = restask.Result;
+                Logger.Instance.Info($"Return Value from command async: {_resultStr}.");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Client.ReadLock.Release();
+            }
+            return _resultStr;
+        }
+
+        /// <summary>
+        /// Parse the result from client 
+        /// </summary>
+        /// <param name="result"></param>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public async Task<T> PaseResultAsync(CancellationToken token)
+        {
+            if (token.IsCancellationRequested)
+                return await Task.FromResult<T>(default(T));
             //using (CancellationTokenSource.CreateLinkedTokenSource(token))
             //{
-            var res = await Task.Run(() => PaseResult(result));
+            var res = await Task.Run(() => PaseResult(_resultStr), token);
             //var res = await Task.Factory.StartNew<T>(() => PaseResult(result), token);
             return res;
             //}

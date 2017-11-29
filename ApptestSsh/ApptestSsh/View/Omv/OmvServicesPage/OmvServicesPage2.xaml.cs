@@ -2,12 +2,12 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ApptestSsh.Core.View.Omv.OmvServices
+namespace ApptestSsh.Core.View.Omv.OmvServicesPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OmvServicesPage : ViewPage<OmvServicesPageViewModel>
+    public partial class OmvServicesPage2 : ViewPage<OmvServicesPageViewModel>
     {
-        public OmvServicesPage()
+        public OmvServicesPage2()
         {
             InitializeComponent();
             switch (Device.RuntimePlatform)

@@ -24,5 +24,10 @@ namespace ApptestSsh.iOS.Services
             return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             //return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), fileName);
         }
+
+        public void StartAppFromFile(string filePath)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

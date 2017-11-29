@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ApptestSsh.Core.View.Omv.OmvServices
+namespace ApptestSsh.Core.View.Omv.OmvServicesPage
 {
     public class OmvServicesPageViewModel : LocalViewModel
     {
