@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="AboutPage:AboutPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:AboutPage="clr-namespace:ApptestSsh.Core.View.AboutPage;assembly=ApptestSsh.Core"
+             x:Class="ApptestSsh.Core.View.AboutPage.AboutPage"
+             >
+    <views:AlwaysScrollView >
+        <StackLayout Spacing="0">
+
+            <StackLayout BackgroundColor="{DynamicResource WindowBackgroundTable}"
+                         Spacing="{DynamicResource CardSpacing}"
+                         Padding="{DynamicResource CardPadding}">
+
+                <views:CardView>
+                    <views:CardView.IsVisible>
+                        <OnPlatform x:TypeArguments="x:Boolean"
+                                    Android="true"
+                                    iOS="false"
+                                    WinPhone="true" />
+                    </views:CardView.IsVisible>
+                    <StackLayout Spacing="0">
+                        <views:LabelSection Text="About" />
+                        <views:HeaderDivider />
+                        <StackLayout BackgroundColor="White"
+                                     Padding="{StaticResource StandardPadding}">
+                            <Label Text="AppSshForm is an app who manage rpi updates and show information like ram free and cpu temps.
+You can also unmount devices if you are root and stop process.
+AppSshForm is multi platform you can get it on :
+    -Android Market
+    
+    -windows store
+    
+    -apple store (soon)
+"
+                                   HorizontalOptions="Center"
+                                   Style="{DynamicResource EvolveListItemDetailTextStyle}" />
+
+                        </StackLayout>
+                        <Grid Padding="{StaticResource StandardPadding}"
+                              BackgroundColor="White">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="Center">
+                                <Label Text="{Binding SyncText}"
+                                       Style="{DynamicResource EvolveListItemTextStyle}" />
+                                <Label Text="{Binding LastSyncDisplay}"
+                                       Style="{DynamicResource EvolveListItemDetailTextStyle}" />
+                            </StackLayout>
+                            <ActivityIndicator Grid.Column="1"
+                                               IsRunning="{Binding IsBusy}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center">
+                                <ActivityIndicator.Color>
+                                    <OnPlatform x:TypeArguments="Color"
+                                                Android="{StaticResource Accent}" />
+                                </ActivityIndicator.Color>
+                            </ActivityIndicator>
+
+                        </Grid>
+                        <views:FooterDivider />
+                    </StackLayout>
+                </views:CardView>
+
+                <views:CardView>
+                    <StackLayout Spacing="0">
+                        <views:LabelSection>
+                            <views:LabelSection.Text>
+                                <OnPlatform x:TypeArguments="x:String"
+                                            Android="About the App"
+                                            iOS=" "
+                                            WinPhone="About the App" />
+                            </views:LabelSection.Text>
+                        </views:LabelSection>
+                        <views:HeaderDivider />
+                        <views:NonScrollableListView x:Name="ListViewAbout"
+                                                     ItemsSource="{Binding AboutItems}"
+                                                     RowHeight="44">
+                            <views:NonScrollableListView.SeparatorColor>
+                                <OnPlatform x:TypeArguments="Color"
+                                            iOS="{StaticResource ListSeparator}" />
+                            </views:NonScrollableListView.SeparatorColor>
+                            <views:NonScrollableListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Name}"
+                                              Detail="{Binding Subtitle}"
+                                              Command="{Binding Command}"
+                                              CommandParameter="{Binding Parameter}"
+                                              StyleId="disclosure" />
+                                </DataTemplate>
+                            </views:NonScrollableListView.ItemTemplate>
+                        </views:NonScrollableListView>
+                        <views:FooterDivider />
+                    </StackLayout>
+                </views:CardView>
+
+                <views:CardView>
+                    <StackLayout Spacing="0">
+                        <views:LabelSection Text="Technology Used" />
+                        <views:HeaderDivider />
+                        <views:NonScrollableListView x:Name="ListViewTechnology"
+                                                     ItemsSource="{Binding TechnologyItems}"
+                                                     RowHeight="44">
+                            <views:NonScrollableListView.SeparatorColor>
+                                <OnPlatform x:TypeArguments="Color"
+                                            iOS="{StaticResource ListSeparator}" />
+                            </views:NonScrollableListView.SeparatorColor>
+                            <views:NonScrollableListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Name}"
+                                              Detail="{Binding Subtitle}"
+                                              Command="{Binding Command}"
+                                              CommandParameter="{Binding Parameter}"
+                                              StyleId="disclosure" />
+                                </DataTemplate>
+                            </views:NonScrollableListView.ItemTemplate>
+                        </views:NonScrollableListView>
+                        <views:FooterDivider />
+                        <!--<StackLayout>
+                            <StackLayout.Padding>
+                                <OnPlatform x:TypeArguments="Thickness"
+                                            iOS="16,8,16,0"
+                                            Android="16,8"
+                                            WinPhone="16,8" />
+                            </StackLayout.Padding>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="and more"
+                                   Style="{DynamicResource EvolveListItemDetailTextStyle}"/>
+                        </StackLayout>-->
+                    </StackLayout>
+                </views:CardView>
+                <views:CardView>
+                    <StackLayout Spacing="0">
+                        <views:LabelSection Text="Credits and Issues" />
+                        <views:HeaderDivider />
+                        <views:DoodsButton Text="Credits" Clicked="OnTapGestureRecognizerTapped"/>
+                        <Label Text="You want report a bug or ask a new features, please use GitHub issues :"
+                               Style="{DynamicResource EvolveListItemDetailTextStyle}"/>
+                        <views:DoodsButton Text="Go on github issues" Command="{Binding Path=LaunchBrowserCommand}" CommandParameter="https://github.com/doodz/AppSshForm/issues"/>
+                      </StackLayout>
+                  </views:CardView>
+                
+              
+            </StackLayout>
+        </StackLayout>
+    </views:AlwaysScrollView>
+</mvvm:ViewPage>

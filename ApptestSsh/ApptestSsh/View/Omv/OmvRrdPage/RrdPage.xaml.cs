@@ -21,7 +21,7 @@ namespace ApptestSsh.Core.View.Omv.OmvRrdPage
                     {
                         Text = "Refresh",
                         Icon = "Assets/ic_refresh_black_24dp_2x.png",
-                        Command = ViewModel.RefreshCommand
+                        Command = ViewModel.RefreshDataCommand
                     });
                     break;
             }

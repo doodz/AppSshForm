@@ -3,20 +3,20 @@
     "Autofac": "4.6.2",
     "Microcharts": "0.8.3-pre",
     "Microcharts.Forms": "0.8.3-pre",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
     "NETStandard.Library": "2.0.1",
-    "Newtonsoft.Json": "10.0.3",
+    "Newtonsoft.Json": "11.0.1",
     "NLog": "5.0.0-beta11",
     "PCLStorage": "1.0.2",
     "Plugin.HttpTransferTasks": "1.0.0",
-    "Rg.Plugins.Popup": "1.1.0-pre3",
+    "Rg.Plugins.Popup": "1.1.0-pre5",
     "SharpCifs.Std": "0.2.11",
     "sqlite-net-pcl": "1.5.166-beta",
     "SSH.NET": "2016.1.0",
-    "Toasts.Forms.Plugin": "3.2.1",
+    "Toasts.Forms.Plugin": "3.3.2",
     "Xam.Plugin.Connectivity": "4.0.0.171-beta",
     "Xam.Plugins.Settings": "3.2.0.130-beta",
-    "Xamarin.Forms": "2.5.0.91635"
+    "Xamarin.Forms": "2.5.0.280555"
   },
   "frameworks": {
     "uap10.0.15063": {}

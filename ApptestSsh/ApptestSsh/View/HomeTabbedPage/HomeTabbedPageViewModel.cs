@@ -70,14 +70,21 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             set => SetProperty(ref _systemBean, value);
         }
 
-        private bool _vcgencmdBeanNotOnRpi;
+        private bool _haveErrorMessage;
 
-        public bool VcgencmdBeanNotOnRpi
+        public bool HaveErrorMessage
         {
-            get => _vcgencmdBeanNotOnRpi;
-            set => SetProperty(ref _vcgencmdBeanNotOnRpi, value);
+            get => _haveErrorMessage;
+            set => SetProperty(ref _haveErrorMessage, value);
         }
 
+        private string _errorMessage = string.Empty;
+
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set => SetProperty(ref _errorMessage, value);
+        }
 
         public DateTime NextForceRefresh { get; set; }
 
@@ -88,6 +95,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         public HomeTabbedPageViewModel(ILogger logger) : base(logger)
         {
+            ReloadOnAppearing = true;
             Title = "Home";
             NetworkInterfaceInformation = new ObservableRangeCollection<NetworkInterfaceInformationBean>();
             DiskUsage = new ObservableRangeCollection<DiskUsageViewModel>();
@@ -122,31 +130,31 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                     yield return new ToolbarItem
                     {
                         Text = "Refresh",
-                        Icon = "Assets/ic_storage_black.png",
+                        Icon = "Assets/ic_refresh_black_24dp_1x.png",
                         Command = RefreshCommand
                     };
                     break;
             }
-
+            var res = Device.RuntimePlatform == Device.Android ? "ic_storage_black_24dp.png" : "Assets/ic_storage_black_24dp_1x.png";
             yield return new ToolbarItem
             {
                 Text = "Manage Host",
-                Icon = "Assets/ic_storage_black_24dp_1x.png",
+                Icon = res,
                 Command = ManageHostCmd
             };
-
+            res = Device.RuntimePlatform == Device.Android ? "ic_account_box_black_24dp.png" : "Assets/ic_account_box_black_24dp_1x.png";
             yield return new ToolbarItem
             {
                 Text = "login",
-                Icon = "Assets/ic_account_box_black_24dp_1x.png",
+                Icon = res,
                 Command = GotoLoginCommand
             };
-
+            res = Device.RuntimePlatform == Device.Android ? "ic_dns_black_24dp.png" : "Assets/ic_dns_black_24dp_1x.png";
             if (ssh?.Host != null && ssh.Host.IsOmvServer)
                 yield return _omvToolbarItem = new ToolbarItem
                 {
                     Text = "OMV",
-                    Icon = "Assets/ic_dns_black_24dp_1x.png",
+                    Icon = res,
                     Command = GotoOmvPage
                 };
         }
@@ -213,6 +221,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
 
         protected override async Task Load()
         {
+            HaveErrorMessage = false;
+            ErrorMessage = string.Empty;
             var ssh = AppContainer.Container.Resolve<ISshService>();
             if (!ssh.IsInitialised)
                 await CheckSshParams(ssh);
@@ -224,8 +234,20 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 return;
             }
 
-            var res = ssh.Connect();
-            //var resultatttt = await new LastloginsQuery(ssh).RunAsync(Token);
+
+            if (!ssh.IsConnected())
+            {
+                var res = await ssh.ConnectAsync();
+                if (!res)
+                {
+                    ErrorMessage = $"Unable to connect to {ssh.Host.HostName}";
+                    HaveErrorMessage = true;
+
+                    return;
+                }
+                //var resultatttt = await new LastloginsQuery(ssh).RunAsync(Token);
+            }
+
 
             IsRpi = ssh.Host.IsRpi;
             if (IsRpi)
@@ -283,7 +305,11 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
                 VcgencmdBean = res.Result;
                 if (VcgencmdBean.ArmFrequency == 0 && VcgencmdBean.CoreFrequency == 0 && VcgencmdBean.CoreVolts == 0d &&
                     VcgencmdBean.CpuTemperature == 0d && VcgencmdBean.Version == "n/a")
-                    VcgencmdBeanNotOnRpi = true;
+                {
+                    ErrorMessage = "Are you sure that you use a RPI ? I can't get arm and core info.";
+                    HaveErrorMessage = true;
+
+                }
 
                 OnUpdateVcgencmdBean = false;
             }, TaskContinuationOptions.NotOnCanceled);

@@ -52,7 +52,7 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             set => SetProperty(ref _mountedOn, value);
         }
 
-
+        public string UsedSizePercent => $"{_usedPercent} ({_used})";
         public IEnumerable<Entry> Entries { get; set; }
 
         public RadialGaugeChart RadialGaugeChart { get; set; }

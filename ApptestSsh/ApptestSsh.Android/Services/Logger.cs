@@ -1,5 +1,6 @@
-﻿using System;
-using NLog;
+﻿using NLog;
+using NLog.Config;
+using System;
 
 namespace ApptestSsh.Droid.Services
 {
@@ -9,6 +10,7 @@ namespace ApptestSsh.Droid.Services
         bool enableHockeyApp = false;
         public Logger()
         {
+            //LogManager.Configuration = new XmlLoggingConfiguration("assets/nlog.config");
             _log = LogManager.GetCurrentClassLogger();
         }
 
@@ -66,7 +68,7 @@ namespace ApptestSsh.Droid.Services
 
             if (!enableHockeyApp)
                 return;
-            
+
             //HockeyApp.Android.Metrics.MetricsManager.TrackEvent(trackIdentifier);
         }
 

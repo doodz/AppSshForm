@@ -1,4 +1,5 @@
 using ApptestSsh.Core.DataBase;
+using PCLStorage;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -40,6 +41,7 @@ namespace ApptestSsh.Core.Services
         Page GetRootPage();
         Task GoToAddCommandPage();
         Task GoToEditCommandPage(CommandSsh cmd);
+        Task GoToContentLogPage(IFile file);
         Task GoToOmvServicesPage();
         Task GotoRddPage();
         Task GotoOmvUpdatePage();

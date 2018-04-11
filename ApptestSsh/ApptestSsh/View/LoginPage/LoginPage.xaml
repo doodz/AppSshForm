@@ -1,38 +1,40 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<mvvm:ViewPage  xmlns="http://xamarin.com/schemas/2014/forms"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
-                xmlns:loginPage="clr-namespace:ApptestSsh.Core.View.LoginPage;assembly=ApptestSsh.Core"
-                xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
-                x:Class="ApptestSsh.Core.View.Login.LoginPage"
-                x:TypeArguments="loginPage:LoginViewModel"
-                Title="{Binding Title}">
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-    <StackLayout>
-        <views:DoodsEntry Text="{Binding Host}"
-                             
-                             Placeholder="127.0.0.1"
-                             Font="Large"
-                             HasBorder="false" />
-        <views:DoodsEntry Text="{Binding Port}"
-                            
-                             Placeholder="22"
-                             Font="Large"
-                             HasBorder="false" />
-        <views:DoodsEntry Text="{Binding Username}"
-                            
-                             Placeholder="Username"
-                             Font="Large"
-                             HasBorder="false" />
-        <views:DoodsEntry Text="{Binding Password}"
-                            
-                             Placeholder="Password"
-                             Font="Large"
-                             IsPassword="True"
-                             HasBorder="false" />
+<mvvm:ViewPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+               xmlns:loginPage="clr-namespace:ApptestSsh.Core.View.LoginPage;assembly=ApptestSsh.Core"
+               xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+               x:Class="ApptestSsh.Core.View.Login.LoginPage"
+               x:TypeArguments="loginPage:LoginViewModel"
+               Title="{Binding Title}">
+    <views:AlwaysScrollView>
+
+        <StackLayout Spacing="0">
+            <views:DoodsEntry Text="{Binding Host}"
+
+                              Placeholder="127.0.0.1"
+                              Font="Large"
+                              HasBorder="false" />
+            <views:DoodsEntry Text="{Binding Port}"
+
+                              Placeholder="22"
+                              Font="Large"
+                              HasBorder="false" />
+            <views:DoodsEntry Text="{Binding Username}"
+
+                              Placeholder="Username"
+                              Font="Large"
+                              HasBorder="false" />
+            <views:DoodsEntry Text="{Binding Password}"
+
+                              Placeholder="Password"
+                              Font="Large"
+                              IsPassword="True"
+                              HasBorder="false" />
 
 
-        <!--<views:DoodsEntryBox Text="{Binding Host}"
+            <!--<views:DoodsEntryBox Text="{Binding Host}"
                              Label="Host"
                              Placeholder="127.0.0.1"
                              Font="Large"
@@ -53,8 +55,8 @@
                              Font="Large"
                              IsPassword="True"
                              HasBorder="false" />-->
-        
-        <!--<views:DoodsEntry Text="{Binding Host}"
+
+            <!--<views:DoodsEntry Text="{Binding Host}"
                           Font="Large"
                           TextColor="White"
                           Placeholder="127.0.0.1"
@@ -71,17 +73,18 @@
         <Entry Text="{Binding Password}"
                IsPassword="True"
                Placeholder="Password" />-->
-      <StackLayout Orientation="Horizontal">
-        <Label HorizontalOptions="StartAndExpand" Text="Is openmediavault server"/>
-        <Switch HorizontalOptions="End" IsToggled="{Binding IsOmvServer}"/>
-      </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Label HorizontalOptions="StartAndExpand" Text="Is a raspberry pi"/>
-            <Switch HorizontalOptions="End" IsToggled="{Binding IsRpi}"/>
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="Is openmediavault server" />
+                <Switch HorizontalOptions="End" IsToggled="{Binding IsOmvServer}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="StartAndExpand" Text="Is a raspberry pi" />
+                <Switch HorizontalOptions="End" IsToggled="{Binding IsRpi}" />
+            </StackLayout>
+            <views:DoodsButton Text="Test"
+                               Command="{Binding TestCmd, Mode=OneWay}" />
+            <views:DoodsButton Text="Save"
+                               Command="{Binding SaveCmd, Mode=OneWay}" />
         </StackLayout>
-        <views:DoodsButton Text="Test"
-                Command="{Binding TestCmd, Mode=OneWay}" />
-        <views:DoodsButton Text="Save"
-                Command="{Binding SaveCmd, Mode=OneWay}" />
-    </StackLayout>
+    </views:AlwaysScrollView>
 </mvvm:ViewPage>

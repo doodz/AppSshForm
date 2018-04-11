@@ -27,43 +27,44 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame>
-                            <Grid Margin="5,1">
+                        <Frame Margin="0" Padding="0">
+                            <Grid Margin="1">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition />
-                                    <RowDefinition />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
+                                    <ColumnDefinition  Width="Auto" />
+                                    <ColumnDefinition  Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <forms:ChartView HeightRequest="50"
-                                                 Grid.Column="0"
+                                <!--<forms:ChartView Grid.Column="0"
                                                  Grid.RowSpan="2"
                                                  Grid.Row="0"
-                                                 Chart="{Binding RadialGaugeChart,Mode=OneWay}" />
-                                <Label Grid.Column="1"
+                                                 Chart="{Binding RadialGaugeChart,Mode=OneWay}" />-->
+                                <!--<Label Grid.Column="1"
                                        Grid.Row="0"
-                                       Text="{Binding LabelDescription,Mode=OneWay}" />
-                                <Label Grid.Column="1"
+                                       Text="{Binding LabelDescription,Mode=OneWay}" />-->
+                                <Label Grid.Column="0"
                                        Grid.Row="1"
-                                       Text="{Binding Description,Mode=OneWay}" />
-                                <Label Grid.Column="2"
-                                       Grid.Row="0"
                                        Text="{Binding Type,Mode=OneWay}" />
-                                <Label Grid.Column="2"
+
+                                <Label Grid.Column="0"
+                                       Grid.Row="0"
+                                       Grid.ColumnSpan="4"
+                                       Text="{Binding Description,Mode=OneWay}" />
+                               
+                                <Label Grid.Column="1"
                                        Grid.Row="1"
                                        Text="{Binding Used,Mode=OneWay}" />
 
                                 <views:DoodsButton Margin="2"
-                                                   VerticalOptions="CenterAndExpand"
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   Grid.Column="3"
-                                                   Grid.RowSpan="2"
-                                                   Grid.Row="0"
+                                                  Grid.Column="0"
+                                                   
+                                                   Grid.Row="2"
                                                    Text="Umount"
                                                    Command="{Binding BindingContext.MountUmountCmd,Mode=OneWay,Source={x:Reference ListView}}"
                                                    CommandParameter="{Binding .}">

@@ -52,6 +52,11 @@
     <Compile Include="Services\SshService.cs" />
     <Compile Include="Services\XamarinDeviceService.cs" />
     <Compile Include="CoreSetup.cs" />
+    <Compile Include="View\AboutPage\AboutMenuItem.cs" />
+    <Compile Include="View\AboutPage\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AboutPage\AboutPageViewModel.cs" />
     <Compile Include="View\Base\LocalListViewModel.cs" />
     <Compile Include="View\Base\LocalOmvListViewModel.cs" />
     <Compile Include="View\Base\LocalOmvViewModel.cs" />
@@ -73,6 +78,10 @@
       <DependentUpon>HostManagerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HostManagerPage\HostManagerPageViewModel.cs" />
+    <Compile Include="View\LogsPage\ContentLogPage\ContentLogPageViewModel.cs" />
+    <Compile Include="View\LogsPage\ContentLogPage\ContentLogPage.xaml.cs">
+      <DependentUpon>ContentLogPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LogsPage\LogsPage.xaml.cs">
       <DependentUpon>LogsPage.xaml</DependentUpon>
     </Compile>
@@ -136,7 +145,6 @@
       <DependentUpon>MenuPageUWP.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RootPage\Windows\RootPageWindows.cs" />
-    <Compile Include="View\SettingsPage\SettingsMenuItem.cs" />
     <Compile Include="View\SettingsPage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -368,6 +376,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\LogsPage\LogsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\AboutPage\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\LogsPage\ContentLogPage\ContentLogPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

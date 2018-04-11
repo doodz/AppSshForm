@@ -60,6 +60,9 @@
     <Compile Include="Datas\SystemInfo.cs" />
     <Compile Include="Datas\SystemInfoData.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Modules\FormItemsParser.cs" />
+    <Compile Include="Modules\ModuleObject.cs" />
+    <Compile Include="Modules\RpcServiceParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CertificateService.cs" />
     <Compile Include="Services\ConfigService.cs" />
@@ -90,7 +93,11 @@
       <Name>Doods.StdLibSsh</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>..\..\..\Users\doods\.nuget\packages\system.componentmodel.annotations\4.1.0\ref\netcore50\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

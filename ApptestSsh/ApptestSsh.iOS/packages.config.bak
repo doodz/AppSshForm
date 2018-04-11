@@ -4,20 +4,20 @@
   <package id="ExifLib.PCL" version="1.0.2-pre01" targetFramework="xamarinios10" />
   <package id="Microcharts" version="0.8.3-pre" targetFramework="xamarinios10" />
   <package id="Microcharts.Forms" version="0.8.3-pre" targetFramework="xamarinios10" />
-  <package id="Microsoft.CSharp" version="4.4.0" targetFramework="xamarinios10" />
+  <package id="Microsoft.CSharp" version="4.4.1" targetFramework="xamarinios10" />
   <package id="Microsoft.NETCore.Platforms" version="2.0.1" targetFramework="xamarinios10" />
   <package id="Microsoft.Packaging.Tools" version="1.0.0-preview2-25401-01" targetFramework="xamarinios10" />
   <package id="Microsoft.Win32.Primitives" version="4.3.0" targetFramework="xamarinios10" />
   <package id="NETStandard.Library" version="2.0.1" targetFramework="xamarinios10" />
-  <package id="Newtonsoft.Json" version="10.0.3" targetFramework="xamarinios10" />
+  <package id="Newtonsoft.Json" version="11.0.1" targetFramework="xamarinios10" />
   <package id="NLog" version="5.0.0-beta11" targetFramework="xamarinios10" />
   <package id="PCLStorage" version="1.0.2" targetFramework="xamarinios10" />
   <package id="Plugin.HttpTransferTasks" version="1.0.0" targetFramework="xamarinios10" />
-  <package id="Rg.Plugins.Popup" version="1.1.0-pre3" targetFramework="xamarinios10" />
+  <package id="Rg.Plugins.Popup" version="1.1.0-pre5" targetFramework="xamarinios10" />
   <package id="SharpCifs.Std" version="0.2.11" targetFramework="xamarinios10" />
-  <package id="SkiaSharp" version="1.59.2" targetFramework="xamarinios10" />
-  <package id="SkiaSharp.Views" version="1.59.2" targetFramework="xamarinios10" />
-  <package id="SkiaSharp.Views.Forms" version="1.59.2" targetFramework="xamarinios10" />
+  <package id="SkiaSharp" version="1.59.3" targetFramework="xamarinios10" />
+  <package id="SkiaSharp.Views" version="1.59.3" targetFramework="xamarinios10" />
+  <package id="SkiaSharp.Views.Forms" version="1.59.3" targetFramework="xamarinios10" />
   <package id="sqlite-net-pcl" version="1.5.166-beta" targetFramework="xamarinios10" />
   <package id="SQLitePCLRaw.bundle_green" version="1.1.9" targetFramework="xamarinios10" />
   <package id="SQLitePCLRaw.core" version="1.1.9" targetFramework="xamarinios10" />
@@ -74,14 +74,14 @@
   <package id="System.Threading.ThreadPool" version="4.3.0" targetFramework="xamarinios10" />
   <package id="System.Threading.Timer" version="4.3.0" targetFramework="xamarinios10" />
   <package id="System.ValueTuple" version="4.4.0" targetFramework="xamarinios10" />
-  <package id="System.Xml.ReaderWriter" version="4.3.0" targetFramework="xamarinios10" />
+  <package id="System.Xml.ReaderWriter" version="4.3.1" targetFramework="xamarinios10" />
   <package id="System.Xml.XDocument" version="4.3.0" targetFramework="xamarinios10" />
   <package id="System.Xml.XmlDocument" version="4.3.0" targetFramework="xamarinios10" />
   <package id="System.Xml.XPath.XmlDocument" version="4.3.0" targetFramework="xamarinios10" />
-  <package id="Toasts.Forms.Plugin" version="3.2.1" targetFramework="xamarinios10" />
+  <package id="Toasts.Forms.Plugin" version="3.3.2" targetFramework="xamarinios10" />
   <package id="Xam.Plugin.Connectivity" version="4.0.0.171-beta" targetFramework="xamarinios10" />
   <package id="Xam.Plugins.Settings" version="3.2.0.130-beta" targetFramework="xamarinios10" />
-  <package id="Xamarin.Forms" version="2.5.0.91635" targetFramework="xamarinios10" />
+  <package id="Xamarin.Forms" version="2.5.0.280555" targetFramework="xamarinios10" />
   <package id="Xamarin.SimplePing" version="1.4.0" targetFramework="xamarinios10" />
   <package id="XLabs.Core" version="2.3.0-pre05" targetFramework="xamarinios10" />
   <package id="XLabs.IoC" version="2.3.0-pre05" targetFramework="xamarinios10" />

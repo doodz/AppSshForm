@@ -23,24 +23,26 @@ namespace ApptestSsh.Core.View.Omv.OmvServicesPage
                     });
                     break;
             }
+            var res = Device.RuntimePlatform == Device.Android ? "ic_dns_black_24dp.png" : "Assets/ic_dns_black_24dp_1x.png";
 
             ToolbarItems.Add(new ToolbarItem
             {
                 Text = "Rrd",
-                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Icon = res,
                 Command = ViewModel.GotoRrdPage
             });
+            res = Device.RuntimePlatform == Device.Android ? "ic_dns_black_24dp.png" : "Assets/ic_dns_black_24dp_1x.png";
             ToolbarItems.Add(new ToolbarItem
             {
                 Text = "File systems",
-                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Icon = res,
                 Command = ViewModel.GotoOmvFileSystemsPage
             });
-
+            res = Device.RuntimePlatform == Device.Android ? "ic_storage_black_24dp.png" : "Assets/ic_storage_black_24dp_1x.png";
             ToolbarItems.Add(new ToolbarItem
             {
                 Text = "Shereds folders",
-                Icon = "Assets/ic_dns_black_24dp_1x.png",
+                Icon = res,
                 Command = ViewModel.GotoSheredsFolders
             });
         }

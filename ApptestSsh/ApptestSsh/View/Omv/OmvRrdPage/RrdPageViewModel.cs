@@ -8,6 +8,7 @@ using Doods.StdLibSsh;
 using Doods.StdLibSsh.Queries;
 using Omv.Rpc.StdClient.Ssh.Queries;
 using PCLStorage;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -61,12 +62,32 @@ namespace ApptestSsh.Core.View.Omv.OmvRrdPage
 
             foreach (var l in lst)
             {
-                var file = await folder.CreateFileAsync(l.Name,
-                    CreationCollisionOption.ReplaceExisting);
-                await sftpclient.GetFile(l.FullName, file);
-                var gr = new RddGraphItem() { Name = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
-                Items.Add(gr);
+                try
+                {
+                    var file = await folder.CreateFileAsync(l.Name,
+                        CreationCollisionOption.ReplaceExisting);
+                    var fileStream = await sftpclient.GetFile(l.FullName, file);
+                    fileStream.Dispose();
+                    //var gr = new RddGraphItem() { Name = l.Name, Description = l.LastWriteTime.ToString(), ImageUrl = file.Path, ImageSource = ImageSource.FromFile(file.Path) };
+                    var gr = new RddGraphItem()
+                    {
+                        Name = l.Name,
+                        Description = l.LastWriteTime.ToString(),
+                        ImageUrl = file.Path,
+                        ImageSource = null
+                    };
+
+                    Items.Add(gr);
+                }
+                catch (Exception ex)
+                {
+                    //TODO THE change that or display error.
+                    var msg = ex.Message;
+                }
             }
+
+
+
         }
 
         protected override async Task Load()
@@ -74,7 +95,7 @@ namespace ApptestSsh.Core.View.Omv.OmvRrdPage
             var rootFolder = FileSystem.Current.LocalStorage;
             var folder = await rootFolder.CreateFolderAsync(RrdFolder,
                 CreationCollisionOption.OpenIfExists);
-
+            await MkGraph();
 
         }
     }

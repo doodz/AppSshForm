@@ -1,10 +1,12 @@
 ﻿using ApptestSsh.Core.Services;
+using ApptestSsh.Core.View.AboutPage;
 using ApptestSsh.Core.View.Base;
 using ApptestSsh.Core.View.CommandPage;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.LoginPage;
 using ApptestSsh.Core.View.LogsPage;
+using ApptestSsh.Core.View.LogsPage.ContentLogPage;
 using ApptestSsh.Core.View.MainPage;
 using ApptestSsh.Core.View.Omv.OmvFileSystemsPage;
 using ApptestSsh.Core.View.Omv.OmvRrdPage;
@@ -48,6 +50,9 @@ namespace ApptestSsh.Core
             appSetup.ContainerBuilder.RegisterType<OmvSharedsServersViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<LocalViewModel>().AsSelf();
             appSetup.ContainerBuilder.RegisterType<LogsListViewPageViewModel>().AsSelf();
+            appSetup.ContainerBuilder.RegisterType<AboutPageViewModel>().AsSelf();
+            appSetup.ContainerBuilder.RegisterType<ContentLogPageViewModel>().AsSelf();
+
 
             appSetup.ContainerBuilder.RegisterType<Database>().As<IDatabase>().SingleInstance();
             appSetup.ContainerBuilder.RegisterType<RepositoryBase>().As<IRepository>();

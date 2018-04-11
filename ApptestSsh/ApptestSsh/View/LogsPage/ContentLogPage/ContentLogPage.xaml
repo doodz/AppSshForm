@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:ViewPage x:TypeArguments="contentLogPage:ContentLogPageViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Doods.StdFramework.Mvvm;assembly=Doods.StdFramework"
+             xmlns:logsPage="clr-namespace:ApptestSsh.Core.View.LogsPage;assembly=ApptestSsh.Core"
+             xmlns:views="clr-namespace:Doods.StdFramework.Views;assembly=Doods.StdFramework"
+             xmlns:contentLogPage="clr-namespace:ApptestSsh.Core.View.LogsPage.ContentLogPage;assembly=ApptestSsh.Core"
+             x:Class="ApptestSsh.Core.View.LogsPage.ContentLogPage.ContentLogPage">
+    <ContentPage.Content>
+      <ScrollView
+          Margin="0"
+          Padding="2"
+          HorizontalOptions="StartAndExpand"
+          VerticalOptions="StartAndExpand">
+          <Label Margin="0"
+                 Text="{Binding FileContent,Mode=OneWay}"
+                 HorizontalOptions="StartAndExpand"
+                 VerticalOptions="StartAndExpand"
+                 />
+      </ScrollView>
+    </ContentPage.Content>
+</mvvm:ViewPage>

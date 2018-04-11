@@ -67,6 +67,12 @@ namespace Doods.StdLibSsh
                     _client.Value.EndDownloadFile(a);
                     return saveFile;
                 };
+
+
+
+
+
+
                 return await Task.Factory.FromAsync(_client.Value.BeginDownloadFile(filePath, saveFile), endMethod);
             }
         }

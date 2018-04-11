@@ -17,7 +17,8 @@ namespace ApptestSsh.Core.View.RootPage.MasterDetailPage
                 new RootMasterDetailPageMenuItem {Id = i++, Title = "Home",TargetType = typeof(HomeTabbedPage.HomeTabbedPage)},
                 new RootMasterDetailPageMenuItem {Id = i++, Title = "Commands",TargetType = typeof(CommandPage.CommandListViewPage)},
                 new RootMasterDetailPageMenuItem {Id = i++, Title = "Logs",TargetType = typeof(LogsPage.LogsPage)},
-                new RootMasterDetailPageMenuItem {Id = i++, Title = "Settings",TargetType = typeof(SettingsPage.SettingsPage)}
+                new RootMasterDetailPageMenuItem {Id = i++, Title = "Settings",TargetType = typeof(SettingsPage.SettingsPage)},
+                new RootMasterDetailPageMenuItem {Id = i, Title = "About",TargetType = typeof(AboutPage.AboutPage)}
             });
 
             Item = MenuItems.First();

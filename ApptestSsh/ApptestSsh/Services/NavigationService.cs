@@ -3,6 +3,7 @@ using ApptestSsh.Core.View.CommandPage;
 using ApptestSsh.Core.View.HomeTabbedPage;
 using ApptestSsh.Core.View.HostManagerPage;
 using ApptestSsh.Core.View.Login;
+using ApptestSsh.Core.View.LogsPage.ContentLogPage;
 using ApptestSsh.Core.View.Omv.OmvFileSystemsPage;
 using ApptestSsh.Core.View.Omv.OmvRrdPage;
 using ApptestSsh.Core.View.Omv.OmvSharedsFoldersPage;
@@ -13,6 +14,7 @@ using ApptestSsh.Core.View.ShellPage;
 using ApptestSsh.Core.View.UpgradablePage;
 using ApptestSsh.Core.View.WelcomeStartPage;
 using Doods.StdFramework.Navigation;
+using PCLStorage;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using OmvServicesPage = ApptestSsh.Core.View.Omv.OmvServicesPage.OmvServicesPage2;
@@ -127,6 +129,11 @@ namespace ApptestSsh.Core.Services
         public Task GoToEditCommandPage(CommandSsh cmd)
         {
             return PushAsync(Navigation, new AddCommandPage(cmd));
+        }
+
+        public Task GoToContentLogPage(IFile file)
+        {
+            return PushAsync(Navigation, new ContentLogPage(file));
         }
 
         public Task GoToOmvServicesPage()

@@ -8,80 +8,12 @@
                xmlns:omvServicesPage="clr-namespace:ApptestSsh.Core.View.Omv.OmvServicesPage;assembly=ApptestSsh.Core"
                xmlns:converters="clr-namespace:ApptestSsh.Core.Converters;assembly=ApptestSsh.Core"
                x:Class="ApptestSsh.Core.View.Omv.OmvServicesPage.OmvServicesPage2">
-  <views:AlwaysScrollView>
-    <views:CardView VerticalOptions="FillAndExpand">
-      <Grid>
-        <Grid.RowDefinitions>
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="*" />
-          <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <views:AlwaysScrollView Margin="0">
 
-        <Frame Grid.Row="0">
-          <Grid BindingContext="{Binding SystemInfo,Mode=OneWay}">
-              <Grid.Resources>
-                  <!--<Style TargetType="{x:Type Label}">
-                      <Setter Property="Margin" Value="1"/>                     
-                  </Style>-->
-              </Grid.Resources>
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto"/>
-              <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-              <RowDefinition />
-            </Grid.RowDefinitions>
+        <StackLayout Spacing="0">
 
-            <Label Margin="1" Grid.Row="0" Grid.Column="0" Text="HostName" />
-            <Label Margin="1" Grid.Row="1" Grid.Column="0" Text="Version" />
-            <Label Margin="1" Grid.Row="2" Grid.Column="0" Text="Processor" />
-            <Label  Margin="1" Grid.Row="3" Grid.Column="0" Text="Kernel" />
-            <Label  Margin="1" Grid.Row="4" Grid.Column="0" Text="System time" />
-            <Label  Margin="1" Grid.Row="5" Grid.Column="0" Text="Uptime" />
-            <Label  Margin="1" Grid.Row="6" Grid.Column="0" Text="LoadAverage" />
-            <Label  Margin="1" Grid.Row="7" Grid.Column="0" Text="CPU usage" />
-            <Label  Margin="1" Grid.Row="8" Grid.Column="0" Text="Memory usage" />
 
-            <Label Grid.Row="0" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Path=HostName.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="1" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Version.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="2" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Processor.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="3" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Kernel.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="4" Grid.Column="1" 
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding SystemTime.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="5" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Uptime.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="6" Grid.Column="1" 
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding LoadAverage.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="7" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Path=CpuUsage.Value.Value,Mode=OneWay}" />
-            <Label Grid.Row="8" Grid.Column="1"
-                   HorizontalOptions="EndAndExpand"
-                   Text="{Binding Path=MemoryUsage.Value.Value,Mode=OneWay}" />
-          </Grid>
-        </Frame>
-
-        <StackLayout Grid.Row="1">
+            <!--<StackLayout Grid.Row="1">
           <views:LabelSection Text="Services" />
           <views:HeaderDivider />
           <StackLayout Orientation="Horizontal">
@@ -89,47 +21,132 @@
             <Label WidthRequest="70" Text="Enabled" />
             <Label WidthRequest="70" Text="Running" />
           </StackLayout>
+        </StackLayout>-->
+          <Frame Padding="0">
+            <Grid BindingContext="{Binding SystemInfo,Mode=OneWay}">
+              <Grid.Resources>
+                <!--<Style TargetType="{x:Type Label}">
+                      <Setter Property="Margin" Value="1"/>                     
+                  </Style>-->
+              </Grid.Resources>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+
+              <Label Margin="1" Grid.Row="0" Grid.Column="0" Text="HostName" />
+              <Label Margin="1" Grid.Row="1" Grid.Column="0" Text="Version" />
+              <Label Margin="1" Grid.Row="2" Grid.Column="0" Text="Processor" />
+              <Label Margin="1" Grid.Row="3" Grid.Column="0" Text="Kernel" />
+              <Label Margin="1" Grid.Row="4" Grid.Column="0" Text="System time" />
+              <Label Margin="1" Grid.Row="5" Grid.Column="0" Text="Uptime" />
+              <Label Margin="1" Grid.Row="6" Grid.Column="0" Text="LoadAverage" />
+              <Label Margin="1" Grid.Row="7" Grid.Column="0" Text="CPU usage" />
+              <Label Margin="1" Grid.Row="8" Grid.Column="0" Text="Memory usage" />
+
+              <Label Grid.Row="0" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Path=HostName.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="1" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Version.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="2" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Processor.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="3" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Kernel.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="4" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding SystemTime.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="5" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Uptime.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="6" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding LoadAverage.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="7" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Path=CpuUsage.Value.Value,Mode=OneWay}" />
+              <Label Grid.Row="8" Grid.Column="1"
+                     Margin="0"
+                     HorizontalOptions="EndAndExpand"
+                     Text="{Binding Path=MemoryUsage.Value.Value,Mode=OneWay}" />
+            </Grid>
+          </Frame>
+            <views:CardView HeightRequest="400">
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="{StaticResource grayPrimary}"
+                                 Orientation="Vertical"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="5">
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label HorizontalOptions="FillAndExpand" Text="Service Name" />
+                            <Label WidthRequest="70" Text="Enabled" />
+                            <Label WidthRequest="70" Text="Running" />
+                        </StackLayout>
+                    </StackLayout>
+                    <views:NonScrollableListView
+                        ItemsSource="{Binding Services,Mode=OneWay}"
+                        RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
+                        IsRefreshing="{Binding IsRefreshing}"
+                        RowHeight="44">
+                        <views:NonScrollableListView.SeparatorColor>
+                            <OnPlatform x:TypeArguments="Color"
+                                        iOS="{StaticResource ListSeparator}" />
+                        </views:NonScrollableListView.SeparatorColor>
+                        <views:NonScrollableListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <Label Margin="5,0,0,0" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                                               Text="{Binding Name}" />
+                                        <ContentView HorizontalOptions="End" WidthRequest="65">
+                                            <!--<Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="true" />-->
+                                            <Button HorizontalOptions="FillAndExpand" Opacity="0.2"
+                                                    MinimumWidthRequest="20"
+                                                    BackgroundColor="{Binding Enabled,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}" />
+                                        </ContentView>
+
+                                        <ContentView HorizontalOptions="End" WidthRequest="65">
+
+                                            <Button HorizontalOptions="FillAndExpand" Opacity="0.2"
+                                                    MinimumWidthRequest="20"
+                                                    BackgroundColor="{Binding Running,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}" />
+                                            <!--<Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="true" />-->
+                                        </ContentView>
+
+                                    </StackLayout>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </views:NonScrollableListView.ItemTemplate>
+                    </views:NonScrollableListView>
+                    <views:FooterDivider Grid.Row="3" />
+                </StackLayout>
+            </views:CardView>
+          
         </StackLayout>
 
-        <views:NonScrollableListView
-            Grid.Row="2"
-            ItemsSource="{Binding Services,Mode=OneWay}"
-            RefreshCommand="{Binding RefreshCommand,Mode=OneWay}"
-            IsRefreshing="{Binding IsRefreshing}"
-            RowHeight="44">
-          <views:NonScrollableListView.SeparatorColor>
-            <OnPlatform x:TypeArguments="Color"
-                        iOS="{StaticResource ListSeparator}" />
-          </views:NonScrollableListView.SeparatorColor>
-          <views:NonScrollableListView.ItemTemplate>
-            <DataTemplate>
-              <ViewCell >
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
-                             MinimumHeightRequest="20">
-                  <Label  VerticalOptions="Center" HorizontalOptions="FillAndExpand"
-                         Text="{Binding Name}" />
-                  <ContentView HorizontalOptions="End">
-                    <!--<Switch HorizontalOptions="End" IsToggled="{Binding Enabled}" IsEnabled="true" />-->
-                    <Button HorizontalOptions="FillAndExpand" Opacity="0.2"
-                            BackgroundColor="{Binding Enabled,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}"
-                            />
-                  </ContentView>
-
-                  <ContentView HorizontalOptions="End">
-                    
-                      <Button HorizontalOptions="FillAndExpand" Opacity="0.2"  BackgroundColor="{Binding Running,Converter={x:Static converters:BoolToColorConverter.Default},Mode=OneWay}"
-                      />
-                      <!--<Switch HorizontalOptions="End" IsToggled="{Binding Running}" IsEnabled="true" />-->
-                  </ContentView>
-                  
-                </StackLayout>
-               
-              </ViewCell>
-            </DataTemplate>
-          </views:NonScrollableListView.ItemTemplate>
-        </views:NonScrollableListView>
-        <views:FooterDivider Grid.Row="3" />
-      </Grid>
-    </views:CardView>
-  </views:AlwaysScrollView>
+    </views:AlwaysScrollView>
 </mvvm:ViewPage>

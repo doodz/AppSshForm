@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Doods.StdFramework.Mvvm;
+using Newtonsoft.Json;
 
 namespace Omv.Rpc.StdClient.Datas
 {
-    public class SharedFolder
+    public class SharedFolder : IName
     {
         [JsonProperty("uuid")]
         public string Uuid { get; set; }

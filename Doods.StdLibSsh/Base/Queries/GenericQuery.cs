@@ -47,6 +47,13 @@ namespace Doods.StdLibSsh.Base.Queries
             {
                 Logger.Instance.Info($"Running command : {CmdString}.");
                 _resultStr = Sshcmd.Execute();
+
+
+                if (!string.IsNullOrEmpty(Sshcmd.Error))
+                {
+                    Logger.Instance.Info($"Running command ({CmdString}) Error : {Sshcmd.Error}.");
+                }
+
                 Logger.Instance.Info($"Return Value from command : {_resultStr}.");
                 _state = QueryState.CommandSent;
             }
@@ -111,7 +118,6 @@ namespace Doods.StdLibSsh.Base.Queries
                 Logger.Instance.Info($"Creta command async : {CmdString}.");
                 //TODO Doods : SshConnectionException
                 Sshcmd = Client.Client.CreateCommand(CmdString);
-
 
                 Logger.Instance.Info($"Running command async : {CmdString}.");
                 var restask = Client.RunCommandAsync(Sshcmd, token);

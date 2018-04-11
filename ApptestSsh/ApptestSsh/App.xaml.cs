@@ -8,8 +8,12 @@ namespace ApptestSsh.Core
 {
     public partial class App : Application
     {
+
+        public static App MyApp;
+
         public App()
         {
+            App.MyApp = this;
             InitializeComponent();
 
             //FirstLogin();
@@ -82,7 +86,10 @@ namespace ApptestSsh.Core
             // Handle when your app starts
         }
 
-
+        public void StartHomePage()
+        {
+            HomePage();
+        }
 
 
         private void HomePage()

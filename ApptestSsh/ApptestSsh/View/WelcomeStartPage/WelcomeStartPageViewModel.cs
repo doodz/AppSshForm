@@ -38,7 +38,8 @@ namespace ApptestSsh.Core.View.WelcomeStartPage
             if (await HaveHost())
             {
                 //NavigationService.ClearHistory();
-                await NavigationService.GoToRootPage();
+                // await NavigationService.GoToRootPage();
+                App.MyApp.StartHomePage();
             }
         }
 

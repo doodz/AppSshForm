@@ -2,9 +2,9 @@
 using Doods.StdFramework;
 using System.Windows.Input;
 
-namespace ApptestSsh.Core.View.Settings
+namespace ApptestSsh.Core.View.AboutPage
 {
-    public class SettingsMenuItem : ObservableObject
+    public class AboutMenuItem : ObservableObject
     {
         private string _name;
 

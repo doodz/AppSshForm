@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="apptestssh.apptestssh" android:versionName="beta 2" android:versionCode="5">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26" />
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-	<uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<application android:label="Monitor my server" android:icon="@drawable/ic_launcher"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="apptestssh.apptestssh" android:versionCode="5" android:versionName="beta 2">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="27" />
+	<application android:label="Monitor my server"></application>
 </manifest>

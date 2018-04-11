@@ -12,7 +12,6 @@ using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Plugin.HttpTransferTasks;
 using Xamarin.Forms;
 
 namespace ApptestSsh.Core.View.LogsPage
@@ -98,7 +97,8 @@ namespace ApptestSsh.Core.View.LogsPage
                 {
                     case "Show":
                         var localFile = await GetLogFile(ssh, SelectedItem);
-                        await ShowLogFile(localFile);
+                        await NavigationService.GoToContentLogPage(localFile);
+                        //await ShowLogFile(localFile);
 
                         break;
                     case "Download":
@@ -167,7 +167,9 @@ namespace ApptestSsh.Core.View.LogsPage
         private ShowFileContentView _showFileContentView;
         private InputAlertDialogBase<ProgressContentViewState> _inputAlertDialogBase;
 
-        private async Task ShowLogFile(IFile localFile)
+       
+
+        private async Task ShowLogFileBk(IFile localFile)
         {
             // create the TextInputView
             _showFileContentView = new ShowFileContentView(localFile);

@@ -83,8 +83,18 @@ namespace Doods.StdLibSsh
                 {
                     GetSshClient();
                 }
-                _client.Connect();
+
+                try
+                {
+                    _client.Connect();
+                }
+                catch
+                {
+                    // ignored
+                }
+
                 return _client.IsConnected;
+
             }
         }
 

@@ -29,8 +29,1517 @@ namespace ApptestSsh.Droid
 			global::Microcharts.Droid.Resource.String.library_name = global::ApptestSsh.Droid.Resource.String.library_name;
 			global::PCLStorage.Resource.String.ApplicationName = global::ApptestSsh.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::ApptestSsh.Droid.Resource.String.Hello;
+			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::ApptestSsh.Droid.Resource.Animation.abc_fade_in;
+			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::ApptestSsh.Droid.Resource.Animation.abc_fade_out;
+			global::Plugin.Toasts.Resource.Animation.abc_grow_fade_in_from_bottom = global::ApptestSsh.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_popup_enter = global::ApptestSsh.Droid.Resource.Animation.abc_popup_enter;
+			global::Plugin.Toasts.Resource.Animation.abc_popup_exit = global::ApptestSsh.Droid.Resource.Animation.abc_popup_exit;
+			global::Plugin.Toasts.Resource.Animation.abc_shrink_fade_out_from_bottom = global::ApptestSsh.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_in_bottom = global::ApptestSsh.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_in_top = global::ApptestSsh.Droid.Resource.Animation.abc_slide_in_top;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_out_bottom = global::ApptestSsh.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_out_top = global::ApptestSsh.Droid.Resource.Animation.abc_slide_out_top;
+			global::Plugin.Toasts.Resource.Animation.design_bottom_sheet_slide_in = global::ApptestSsh.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Plugin.Toasts.Resource.Animation.design_bottom_sheet_slide_out = global::ApptestSsh.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Plugin.Toasts.Resource.Animation.design_snackbar_in = global::ApptestSsh.Droid.Resource.Animation.design_snackbar_in;
+			global::Plugin.Toasts.Resource.Animation.design_snackbar_out = global::ApptestSsh.Droid.Resource.Animation.design_snackbar_out;
+			global::Plugin.Toasts.Resource.Attribute.actionBarDivider = global::ApptestSsh.Droid.Resource.Attribute.actionBarDivider;
+			global::Plugin.Toasts.Resource.Attribute.actionBarItemBackground = global::ApptestSsh.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionBarPopupTheme = global::ApptestSsh.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionBarSize = global::ApptestSsh.Droid.Resource.Attribute.actionBarSize;
+			global::Plugin.Toasts.Resource.Attribute.actionBarSplitStyle = global::ApptestSsh.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarStyle = global::ApptestSsh.Droid.Resource.Attribute.actionBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabBarStyle = global::ApptestSsh.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabStyle = global::ApptestSsh.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabTextStyle = global::ApptestSsh.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTheme = global::ApptestSsh.Droid.Resource.Attribute.actionBarTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionBarWidgetTheme = global::ApptestSsh.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.actionButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionDropDownStyle = global::ApptestSsh.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionLayout = global::ApptestSsh.Droid.Resource.Attribute.actionLayout;
+			global::Plugin.Toasts.Resource.Attribute.actionMenuTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.actionMenuTextColor = global::ApptestSsh.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Plugin.Toasts.Resource.Attribute.actionModeBackground = global::ApptestSsh.Droid.Resource.Attribute.actionModeBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCloseButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCloseDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCopyDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCutDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeFindDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModePasteDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModePopupWindowStyle = global::ApptestSsh.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeSelectAllDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeShareDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeSplitBackground = global::ApptestSsh.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionModeStyle = global::ApptestSsh.Droid.Resource.Attribute.actionModeStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeWebSearchDrawable = global::ApptestSsh.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionOverflowButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionOverflowMenuStyle = global::ApptestSsh.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionProviderClass = global::ApptestSsh.Droid.Resource.Attribute.actionProviderClass;
+			global::Plugin.Toasts.Resource.Attribute.actionViewClass = global::ApptestSsh.Droid.Resource.Attribute.actionViewClass;
+			global::Plugin.Toasts.Resource.Attribute.activityChooserViewStyle = global::ApptestSsh.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogButtonGroupStyle = global::ApptestSsh.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogCenterButtons = global::ApptestSsh.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogStyle = global::ApptestSsh.Droid.Resource.Attribute.alertDialogStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogTheme = global::ApptestSsh.Droid.Resource.Attribute.alertDialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.allowStacking = global::ApptestSsh.Droid.Resource.Attribute.allowStacking;
+			global::Plugin.Toasts.Resource.Attribute.arrowHeadLength = global::ApptestSsh.Droid.Resource.Attribute.arrowHeadLength;
+			global::Plugin.Toasts.Resource.Attribute.arrowShaftLength = global::ApptestSsh.Droid.Resource.Attribute.arrowShaftLength;
+			global::Plugin.Toasts.Resource.Attribute.autoCompleteTextViewStyle = global::ApptestSsh.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.background = global::ApptestSsh.Droid.Resource.Attribute.background;
+			global::Plugin.Toasts.Resource.Attribute.backgroundSplit = global::ApptestSsh.Droid.Resource.Attribute.backgroundSplit;
+			global::Plugin.Toasts.Resource.Attribute.backgroundStacked = global::ApptestSsh.Droid.Resource.Attribute.backgroundStacked;
+			global::Plugin.Toasts.Resource.Attribute.backgroundTint = global::ApptestSsh.Droid.Resource.Attribute.backgroundTint;
+			global::Plugin.Toasts.Resource.Attribute.backgroundTintMode = global::ApptestSsh.Droid.Resource.Attribute.backgroundTintMode;
+			global::Plugin.Toasts.Resource.Attribute.barLength = global::ApptestSsh.Droid.Resource.Attribute.barLength;
+			global::Plugin.Toasts.Resource.Attribute.behavior_hideable = global::ApptestSsh.Droid.Resource.Attribute.behavior_hideable;
+			global::Plugin.Toasts.Resource.Attribute.behavior_overlapTop = global::ApptestSsh.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Plugin.Toasts.Resource.Attribute.behavior_peekHeight = global::ApptestSsh.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Plugin.Toasts.Resource.Attribute.borderWidth = global::ApptestSsh.Droid.Resource.Attribute.borderWidth;
+			global::Plugin.Toasts.Resource.Attribute.borderlessButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.bottomSheetDialogTheme = global::ApptestSsh.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.bottomSheetStyle = global::ApptestSsh.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarNegativeButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarNeutralButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarPositiveButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonPanelSideLayout = global::ApptestSsh.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Plugin.Toasts.Resource.Attribute.buttonStyle = global::ApptestSsh.Droid.Resource.Attribute.buttonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonStyleSmall = global::ApptestSsh.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Plugin.Toasts.Resource.Attribute.buttonTint = global::ApptestSsh.Droid.Resource.Attribute.buttonTint;
+			global::Plugin.Toasts.Resource.Attribute.buttonTintMode = global::ApptestSsh.Droid.Resource.Attribute.buttonTintMode;
+			global::Plugin.Toasts.Resource.Attribute.checkboxStyle = global::ApptestSsh.Droid.Resource.Attribute.checkboxStyle;
+			global::Plugin.Toasts.Resource.Attribute.checkedTextViewStyle = global::ApptestSsh.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.closeIcon = global::ApptestSsh.Droid.Resource.Attribute.closeIcon;
+			global::Plugin.Toasts.Resource.Attribute.closeItemLayout = global::ApptestSsh.Droid.Resource.Attribute.closeItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.collapseContentDescription = global::ApptestSsh.Droid.Resource.Attribute.collapseContentDescription;
+			global::Plugin.Toasts.Resource.Attribute.collapseIcon = global::ApptestSsh.Droid.Resource.Attribute.collapseIcon;
+			global::Plugin.Toasts.Resource.Attribute.collapsedTitleGravity = global::ApptestSsh.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Plugin.Toasts.Resource.Attribute.collapsedTitleTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.color = global::ApptestSsh.Droid.Resource.Attribute.color;
+			global::Plugin.Toasts.Resource.Attribute.colorAccent = global::ApptestSsh.Droid.Resource.Attribute.colorAccent;
+			global::Plugin.Toasts.Resource.Attribute.colorButtonNormal = global::ApptestSsh.Droid.Resource.Attribute.colorButtonNormal;
+			global::Plugin.Toasts.Resource.Attribute.colorControlActivated = global::ApptestSsh.Droid.Resource.Attribute.colorControlActivated;
+			global::Plugin.Toasts.Resource.Attribute.colorControlHighlight = global::ApptestSsh.Droid.Resource.Attribute.colorControlHighlight;
+			global::Plugin.Toasts.Resource.Attribute.colorControlNormal = global::ApptestSsh.Droid.Resource.Attribute.colorControlNormal;
+			global::Plugin.Toasts.Resource.Attribute.colorPrimary = global::ApptestSsh.Droid.Resource.Attribute.colorPrimary;
+			global::Plugin.Toasts.Resource.Attribute.colorPrimaryDark = global::ApptestSsh.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Plugin.Toasts.Resource.Attribute.colorSwitchThumbNormal = global::ApptestSsh.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Plugin.Toasts.Resource.Attribute.commitIcon = global::ApptestSsh.Droid.Resource.Attribute.commitIcon;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetEnd = global::ApptestSsh.Droid.Resource.Attribute.contentInsetEnd;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetLeft = global::ApptestSsh.Droid.Resource.Attribute.contentInsetLeft;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetRight = global::ApptestSsh.Droid.Resource.Attribute.contentInsetRight;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetStart = global::ApptestSsh.Droid.Resource.Attribute.contentInsetStart;
+			global::Plugin.Toasts.Resource.Attribute.contentScrim = global::ApptestSsh.Droid.Resource.Attribute.contentScrim;
+			global::Plugin.Toasts.Resource.Attribute.controlBackground = global::ApptestSsh.Droid.Resource.Attribute.controlBackground;
+			global::Plugin.Toasts.Resource.Attribute.counterEnabled = global::ApptestSsh.Droid.Resource.Attribute.counterEnabled;
+			global::Plugin.Toasts.Resource.Attribute.counterMaxLength = global::ApptestSsh.Droid.Resource.Attribute.counterMaxLength;
+			global::Plugin.Toasts.Resource.Attribute.counterOverflowTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.counterTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.counterTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.customNavigationLayout = global::ApptestSsh.Droid.Resource.Attribute.customNavigationLayout;
+			global::Plugin.Toasts.Resource.Attribute.defaultQueryHint = global::ApptestSsh.Droid.Resource.Attribute.defaultQueryHint;
+			global::Plugin.Toasts.Resource.Attribute.dialogPreferredPadding = global::ApptestSsh.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Plugin.Toasts.Resource.Attribute.dialogTheme = global::ApptestSsh.Droid.Resource.Attribute.dialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.displayOptions = global::ApptestSsh.Droid.Resource.Attribute.displayOptions;
+			global::Plugin.Toasts.Resource.Attribute.divider = global::ApptestSsh.Droid.Resource.Attribute.divider;
+			global::Plugin.Toasts.Resource.Attribute.dividerHorizontal = global::ApptestSsh.Droid.Resource.Attribute.dividerHorizontal;
+			global::Plugin.Toasts.Resource.Attribute.dividerPadding = global::ApptestSsh.Droid.Resource.Attribute.dividerPadding;
+			global::Plugin.Toasts.Resource.Attribute.dividerVertical = global::ApptestSsh.Droid.Resource.Attribute.dividerVertical;
+			global::Plugin.Toasts.Resource.Attribute.drawableSize = global::ApptestSsh.Droid.Resource.Attribute.drawableSize;
+			global::Plugin.Toasts.Resource.Attribute.drawerArrowStyle = global::ApptestSsh.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Plugin.Toasts.Resource.Attribute.dropDownListViewStyle = global::ApptestSsh.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.dropdownListPreferredItemHeight = global::ApptestSsh.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Attribute.editTextBackground = global::ApptestSsh.Droid.Resource.Attribute.editTextBackground;
+			global::Plugin.Toasts.Resource.Attribute.editTextColor = global::ApptestSsh.Droid.Resource.Attribute.editTextColor;
+			global::Plugin.Toasts.Resource.Attribute.editTextStyle = global::ApptestSsh.Droid.Resource.Attribute.editTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.elevation = global::ApptestSsh.Droid.Resource.Attribute.elevation;
+			global::Plugin.Toasts.Resource.Attribute.errorEnabled = global::ApptestSsh.Droid.Resource.Attribute.errorEnabled;
+			global::Plugin.Toasts.Resource.Attribute.errorTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.errorTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.expandActivityOverflowButtonDrawable = global::ApptestSsh.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Plugin.Toasts.Resource.Attribute.expanded = global::ApptestSsh.Droid.Resource.Attribute.expanded;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleGravity = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMargin = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginBottom = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginEnd = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginStart = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginTop = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.fabSize = global::ApptestSsh.Droid.Resource.Attribute.fabSize;
+			global::Plugin.Toasts.Resource.Attribute.foregroundInsidePadding = global::ApptestSsh.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Plugin.Toasts.Resource.Attribute.gapBetweenBars = global::ApptestSsh.Droid.Resource.Attribute.gapBetweenBars;
+			global::Plugin.Toasts.Resource.Attribute.goIcon = global::ApptestSsh.Droid.Resource.Attribute.goIcon;
+			global::Plugin.Toasts.Resource.Attribute.headerLayout = global::ApptestSsh.Droid.Resource.Attribute.headerLayout;
+			global::Plugin.Toasts.Resource.Attribute.height = global::ApptestSsh.Droid.Resource.Attribute.height;
+			global::Plugin.Toasts.Resource.Attribute.hideOnContentScroll = global::ApptestSsh.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Plugin.Toasts.Resource.Attribute.hintAnimationEnabled = global::ApptestSsh.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Plugin.Toasts.Resource.Attribute.hintEnabled = global::ApptestSsh.Droid.Resource.Attribute.hintEnabled;
+			global::Plugin.Toasts.Resource.Attribute.hintTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.hintTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.homeAsUpIndicator = global::ApptestSsh.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Attribute.homeLayout = global::ApptestSsh.Droid.Resource.Attribute.homeLayout;
+			global::Plugin.Toasts.Resource.Attribute.icon = global::ApptestSsh.Droid.Resource.Attribute.icon;
+			global::Plugin.Toasts.Resource.Attribute.iconifiedByDefault = global::ApptestSsh.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Plugin.Toasts.Resource.Attribute.imageButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.imageButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.indeterminateProgressStyle = global::ApptestSsh.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Plugin.Toasts.Resource.Attribute.initialActivityCount = global::ApptestSsh.Droid.Resource.Attribute.initialActivityCount;
+			global::Plugin.Toasts.Resource.Attribute.insetForeground = global::ApptestSsh.Droid.Resource.Attribute.insetForeground;
+			global::Plugin.Toasts.Resource.Attribute.isLightTheme = global::ApptestSsh.Droid.Resource.Attribute.isLightTheme;
+			global::Plugin.Toasts.Resource.Attribute.itemBackground = global::ApptestSsh.Droid.Resource.Attribute.itemBackground;
+			global::Plugin.Toasts.Resource.Attribute.itemIconTint = global::ApptestSsh.Droid.Resource.Attribute.itemIconTint;
+			global::Plugin.Toasts.Resource.Attribute.itemPadding = global::ApptestSsh.Droid.Resource.Attribute.itemPadding;
+			global::Plugin.Toasts.Resource.Attribute.itemTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.itemTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.itemTextColor = global::ApptestSsh.Droid.Resource.Attribute.itemTextColor;
+			global::Plugin.Toasts.Resource.Attribute.keylines = global::ApptestSsh.Droid.Resource.Attribute.keylines;
+			global::Plugin.Toasts.Resource.Attribute.layout = global::ApptestSsh.Droid.Resource.Attribute.layout;
+			global::Plugin.Toasts.Resource.Attribute.layoutManager = global::ApptestSsh.Droid.Resource.Attribute.layoutManager;
+			global::Plugin.Toasts.Resource.Attribute.layout_anchor = global::ApptestSsh.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Toasts.Resource.Attribute.layout_anchorGravity = global::ApptestSsh.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Toasts.Resource.Attribute.layout_behavior = global::ApptestSsh.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Toasts.Resource.Attribute.layout_collapseMode = global::ApptestSsh.Droid.Resource.Attribute.layout_collapseMode;
+			global::Plugin.Toasts.Resource.Attribute.layout_collapseParallaxMultiplier = global::ApptestSsh.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Plugin.Toasts.Resource.Attribute.layout_keyline = global::ApptestSsh.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Toasts.Resource.Attribute.layout_scrollFlags = global::ApptestSsh.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Plugin.Toasts.Resource.Attribute.layout_scrollInterpolator = global::ApptestSsh.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Plugin.Toasts.Resource.Attribute.listChoiceBackgroundIndicator = global::ApptestSsh.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Plugin.Toasts.Resource.Attribute.listDividerAlertDialog = global::ApptestSsh.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Plugin.Toasts.Resource.Attribute.listItemLayout = global::ApptestSsh.Droid.Resource.Attribute.listItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.listLayout = global::ApptestSsh.Droid.Resource.Attribute.listLayout;
+			global::Plugin.Toasts.Resource.Attribute.listPopupWindowStyle = global::ApptestSsh.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeight = global::ApptestSsh.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeightLarge = global::ApptestSsh.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeightSmall = global::ApptestSsh.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemPaddingLeft = global::ApptestSsh.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemPaddingRight = global::ApptestSsh.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Plugin.Toasts.Resource.Attribute.logo = global::ApptestSsh.Droid.Resource.Attribute.logo;
+			global::Plugin.Toasts.Resource.Attribute.logoDescription = global::ApptestSsh.Droid.Resource.Attribute.logoDescription;
+			global::Plugin.Toasts.Resource.Attribute.maxActionInlineWidth = global::ApptestSsh.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Plugin.Toasts.Resource.Attribute.maxButtonHeight = global::ApptestSsh.Droid.Resource.Attribute.maxButtonHeight;
+			global::Plugin.Toasts.Resource.Attribute.measureWithLargestChild = global::ApptestSsh.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Plugin.Toasts.Resource.Attribute.menu = global::ApptestSsh.Droid.Resource.Attribute.menu;
+			global::Plugin.Toasts.Resource.Attribute.multiChoiceItemLayout = global::ApptestSsh.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.navigationContentDescription = global::ApptestSsh.Droid.Resource.Attribute.navigationContentDescription;
+			global::Plugin.Toasts.Resource.Attribute.navigationIcon = global::ApptestSsh.Droid.Resource.Attribute.navigationIcon;
+			global::Plugin.Toasts.Resource.Attribute.navigationMode = global::ApptestSsh.Droid.Resource.Attribute.navigationMode;
+			global::Plugin.Toasts.Resource.Attribute.overlapAnchor = global::ApptestSsh.Droid.Resource.Attribute.overlapAnchor;
+			global::Plugin.Toasts.Resource.Attribute.paddingEnd = global::ApptestSsh.Droid.Resource.Attribute.paddingEnd;
+			global::Plugin.Toasts.Resource.Attribute.paddingStart = global::ApptestSsh.Droid.Resource.Attribute.paddingStart;
+			global::Plugin.Toasts.Resource.Attribute.panelBackground = global::ApptestSsh.Droid.Resource.Attribute.panelBackground;
+			global::Plugin.Toasts.Resource.Attribute.panelMenuListTheme = global::ApptestSsh.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Plugin.Toasts.Resource.Attribute.panelMenuListWidth = global::ApptestSsh.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Plugin.Toasts.Resource.Attribute.popupMenuStyle = global::ApptestSsh.Droid.Resource.Attribute.popupMenuStyle;
+			global::Plugin.Toasts.Resource.Attribute.popupTheme = global::ApptestSsh.Droid.Resource.Attribute.popupTheme;
+			global::Plugin.Toasts.Resource.Attribute.popupWindowStyle = global::ApptestSsh.Droid.Resource.Attribute.popupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.preserveIconSpacing = global::ApptestSsh.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Plugin.Toasts.Resource.Attribute.pressedTranslationZ = global::ApptestSsh.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Plugin.Toasts.Resource.Attribute.progressBarPadding = global::ApptestSsh.Droid.Resource.Attribute.progressBarPadding;
+			global::Plugin.Toasts.Resource.Attribute.progressBarStyle = global::ApptestSsh.Droid.Resource.Attribute.progressBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.queryBackground = global::ApptestSsh.Droid.Resource.Attribute.queryBackground;
+			global::Plugin.Toasts.Resource.Attribute.queryHint = global::ApptestSsh.Droid.Resource.Attribute.queryHint;
+			global::Plugin.Toasts.Resource.Attribute.radioButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.radioButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyle = global::ApptestSsh.Droid.Resource.Attribute.ratingBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyleIndicator = global::ApptestSsh.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyleSmall = global::ApptestSsh.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Plugin.Toasts.Resource.Attribute.reverseLayout = global::ApptestSsh.Droid.Resource.Attribute.reverseLayout;
+			global::Plugin.Toasts.Resource.Attribute.rippleColor = global::ApptestSsh.Droid.Resource.Attribute.rippleColor;
+			global::Plugin.Toasts.Resource.Attribute.searchHintIcon = global::ApptestSsh.Droid.Resource.Attribute.searchHintIcon;
+			global::Plugin.Toasts.Resource.Attribute.searchIcon = global::ApptestSsh.Droid.Resource.Attribute.searchIcon;
+			global::Plugin.Toasts.Resource.Attribute.searchViewStyle = global::ApptestSsh.Droid.Resource.Attribute.searchViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.seekBarStyle = global::ApptestSsh.Droid.Resource.Attribute.seekBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.selectableItemBackground = global::ApptestSsh.Droid.Resource.Attribute.selectableItemBackground;
+			global::Plugin.Toasts.Resource.Attribute.selectableItemBackgroundBorderless = global::ApptestSsh.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Plugin.Toasts.Resource.Attribute.showAsAction = global::ApptestSsh.Droid.Resource.Attribute.showAsAction;
+			global::Plugin.Toasts.Resource.Attribute.showDividers = global::ApptestSsh.Droid.Resource.Attribute.showDividers;
+			global::Plugin.Toasts.Resource.Attribute.showText = global::ApptestSsh.Droid.Resource.Attribute.showText;
+			global::Plugin.Toasts.Resource.Attribute.singleChoiceItemLayout = global::ApptestSsh.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.spanCount = global::ApptestSsh.Droid.Resource.Attribute.spanCount;
+			global::Plugin.Toasts.Resource.Attribute.spinBars = global::ApptestSsh.Droid.Resource.Attribute.spinBars;
+			global::Plugin.Toasts.Resource.Attribute.spinnerDropDownItemStyle = global::ApptestSsh.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Plugin.Toasts.Resource.Attribute.spinnerStyle = global::ApptestSsh.Droid.Resource.Attribute.spinnerStyle;
+			global::Plugin.Toasts.Resource.Attribute.splitTrack = global::ApptestSsh.Droid.Resource.Attribute.splitTrack;
+			global::Plugin.Toasts.Resource.Attribute.srcCompat = global::ApptestSsh.Droid.Resource.Attribute.srcCompat;
+			global::Plugin.Toasts.Resource.Attribute.stackFromEnd = global::ApptestSsh.Droid.Resource.Attribute.stackFromEnd;
+			global::Plugin.Toasts.Resource.Attribute.state_above_anchor = global::ApptestSsh.Droid.Resource.Attribute.state_above_anchor;
+			global::Plugin.Toasts.Resource.Attribute.statusBarBackground = global::ApptestSsh.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Toasts.Resource.Attribute.statusBarScrim = global::ApptestSsh.Droid.Resource.Attribute.statusBarScrim;
+			global::Plugin.Toasts.Resource.Attribute.submitBackground = global::ApptestSsh.Droid.Resource.Attribute.submitBackground;
+			global::Plugin.Toasts.Resource.Attribute.subtitle = global::ApptestSsh.Droid.Resource.Attribute.subtitle;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextColor = global::ApptestSsh.Droid.Resource.Attribute.subtitleTextColor;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextStyle = global::ApptestSsh.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.suggestionRowLayout = global::ApptestSsh.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Plugin.Toasts.Resource.Attribute.switchMinWidth = global::ApptestSsh.Droid.Resource.Attribute.switchMinWidth;
+			global::Plugin.Toasts.Resource.Attribute.switchPadding = global::ApptestSsh.Droid.Resource.Attribute.switchPadding;
+			global::Plugin.Toasts.Resource.Attribute.switchStyle = global::ApptestSsh.Droid.Resource.Attribute.switchStyle;
+			global::Plugin.Toasts.Resource.Attribute.switchTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.switchTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.tabBackground = global::ApptestSsh.Droid.Resource.Attribute.tabBackground;
+			global::Plugin.Toasts.Resource.Attribute.tabContentStart = global::ApptestSsh.Droid.Resource.Attribute.tabContentStart;
+			global::Plugin.Toasts.Resource.Attribute.tabGravity = global::ApptestSsh.Droid.Resource.Attribute.tabGravity;
+			global::Plugin.Toasts.Resource.Attribute.tabIndicatorColor = global::ApptestSsh.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Plugin.Toasts.Resource.Attribute.tabIndicatorHeight = global::ApptestSsh.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Plugin.Toasts.Resource.Attribute.tabMaxWidth = global::ApptestSsh.Droid.Resource.Attribute.tabMaxWidth;
+			global::Plugin.Toasts.Resource.Attribute.tabMinWidth = global::ApptestSsh.Droid.Resource.Attribute.tabMinWidth;
+			global::Plugin.Toasts.Resource.Attribute.tabMode = global::ApptestSsh.Droid.Resource.Attribute.tabMode;
+			global::Plugin.Toasts.Resource.Attribute.tabPadding = global::ApptestSsh.Droid.Resource.Attribute.tabPadding;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingBottom = global::ApptestSsh.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingEnd = global::ApptestSsh.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingStart = global::ApptestSsh.Droid.Resource.Attribute.tabPaddingStart;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingTop = global::ApptestSsh.Droid.Resource.Attribute.tabPaddingTop;
+			global::Plugin.Toasts.Resource.Attribute.tabSelectedTextColor = global::ApptestSsh.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Plugin.Toasts.Resource.Attribute.tabTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.tabTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.tabTextColor = global::ApptestSsh.Droid.Resource.Attribute.tabTextColor;
+			global::Plugin.Toasts.Resource.Attribute.textAllCaps = global::ApptestSsh.Droid.Resource.Attribute.textAllCaps;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceLargePopupMenu = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceListItem = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceListItemSmall = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSearchResultSubtitle = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSearchResultTitle = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSmallPopupMenu = global::ApptestSsh.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Plugin.Toasts.Resource.Attribute.textColorAlertDialogListItem = global::ApptestSsh.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Plugin.Toasts.Resource.Attribute.textColorError = global::ApptestSsh.Droid.Resource.Attribute.textColorError;
+			global::Plugin.Toasts.Resource.Attribute.textColorSearchUrl = global::ApptestSsh.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Plugin.Toasts.Resource.Attribute.theme = global::ApptestSsh.Droid.Resource.Attribute.theme;
+			global::Plugin.Toasts.Resource.Attribute.thickness = global::ApptestSsh.Droid.Resource.Attribute.thickness;
+			global::Plugin.Toasts.Resource.Attribute.thumbTextPadding = global::ApptestSsh.Droid.Resource.Attribute.thumbTextPadding;
+			global::Plugin.Toasts.Resource.Attribute.title = global::ApptestSsh.Droid.Resource.Attribute.title;
+			global::Plugin.Toasts.Resource.Attribute.titleEnabled = global::ApptestSsh.Droid.Resource.Attribute.titleEnabled;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginBottom = global::ApptestSsh.Droid.Resource.Attribute.titleMarginBottom;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginEnd = global::ApptestSsh.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginStart = global::ApptestSsh.Droid.Resource.Attribute.titleMarginStart;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginTop = global::ApptestSsh.Droid.Resource.Attribute.titleMarginTop;
+			global::Plugin.Toasts.Resource.Attribute.titleMargins = global::ApptestSsh.Droid.Resource.Attribute.titleMargins;
+			global::Plugin.Toasts.Resource.Attribute.titleTextAppearance = global::ApptestSsh.Droid.Resource.Attribute.titleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.titleTextColor = global::ApptestSsh.Droid.Resource.Attribute.titleTextColor;
+			global::Plugin.Toasts.Resource.Attribute.titleTextStyle = global::ApptestSsh.Droid.Resource.Attribute.titleTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.toolbarId = global::ApptestSsh.Droid.Resource.Attribute.toolbarId;
+			global::Plugin.Toasts.Resource.Attribute.toolbarNavigationButtonStyle = global::ApptestSsh.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.toolbarStyle = global::ApptestSsh.Droid.Resource.Attribute.toolbarStyle;
+			global::Plugin.Toasts.Resource.Attribute.track = global::ApptestSsh.Droid.Resource.Attribute.track;
+			global::Plugin.Toasts.Resource.Attribute.useCompatPadding = global::ApptestSsh.Droid.Resource.Attribute.useCompatPadding;
+			global::Plugin.Toasts.Resource.Attribute.voiceIcon = global::ApptestSsh.Droid.Resource.Attribute.voiceIcon;
+			global::Plugin.Toasts.Resource.Attribute.windowActionBar = global::ApptestSsh.Droid.Resource.Attribute.windowActionBar;
+			global::Plugin.Toasts.Resource.Attribute.windowActionBarOverlay = global::ApptestSsh.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Plugin.Toasts.Resource.Attribute.windowActionModeOverlay = global::ApptestSsh.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedHeightMajor = global::ApptestSsh.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedHeightMinor = global::ApptestSsh.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedWidthMajor = global::ApptestSsh.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedWidthMinor = global::ApptestSsh.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowMinWidthMajor = global::ApptestSsh.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowMinWidthMinor = global::ApptestSsh.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowNoTitle = global::ApptestSsh.Droid.Resource.Attribute.windowNoTitle;
+			global::Plugin.Toasts.Resource.Boolean.abc_action_bar_embed_tabs = global::ApptestSsh.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Plugin.Toasts.Resource.Boolean.abc_allow_stacked_button_bar = global::ApptestSsh.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ApptestSsh.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::ApptestSsh.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::ApptestSsh.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Plugin.Toasts.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ApptestSsh.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_background_cache_hint_selector_material_light = global::ApptestSsh.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_color_highlight_material = global::ApptestSsh.Droid.Resource.Color.abc_color_highlight_material;
+			global::Plugin.Toasts.Resource.Color.abc_input_method_navigation_guard = global::ApptestSsh.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_disable_only_material_dark = global::ApptestSsh.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_disable_only_material_light = global::ApptestSsh.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_material_dark = global::ApptestSsh.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_material_light = global::ApptestSsh.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text = global::ApptestSsh.Droid.Resource.Color.abc_search_url_text;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_normal = global::ApptestSsh.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_pressed = global::ApptestSsh.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_selected = global::ApptestSsh.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Plugin.Toasts.Resource.Color.abc_secondary_text_material_dark = global::ApptestSsh.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_secondary_text_material_light = global::ApptestSsh.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Plugin.Toasts.Resource.Color.accent_material_dark = global::ApptestSsh.Droid.Resource.Color.accent_material_dark;
+			global::Plugin.Toasts.Resource.Color.accent_material_light = global::ApptestSsh.Droid.Resource.Color.accent_material_light;
+			global::Plugin.Toasts.Resource.Color.background_floating_material_dark = global::ApptestSsh.Droid.Resource.Color.background_floating_material_dark;
+			global::Plugin.Toasts.Resource.Color.background_floating_material_light = global::ApptestSsh.Droid.Resource.Color.background_floating_material_light;
+			global::Plugin.Toasts.Resource.Color.background_material_dark = global::ApptestSsh.Droid.Resource.Color.background_material_dark;
+			global::Plugin.Toasts.Resource.Color.background_material_light = global::ApptestSsh.Droid.Resource.Color.background_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_disabled_material_dark = global::ApptestSsh.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_disabled_material_light = global::ApptestSsh.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_inverse_material_dark = global::ApptestSsh.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_inverse_material_light = global::ApptestSsh.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_material_dark = global::ApptestSsh.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_material_light = global::ApptestSsh.Droid.Resource.Color.bright_foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.button_material_dark = global::ApptestSsh.Droid.Resource.Color.button_material_dark;
+			global::Plugin.Toasts.Resource.Color.button_material_light = global::ApptestSsh.Droid.Resource.Color.button_material_light;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_end_color = global::ApptestSsh.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_mid_color = global::ApptestSsh.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_start_color = global::ApptestSsh.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_end_inner_color = global::ApptestSsh.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_end_outer_color = global::ApptestSsh.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_top_inner_color = global::ApptestSsh.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_top_outer_color = global::ApptestSsh.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Plugin.Toasts.Resource.Color.design_snackbar_background_color = global::ApptestSsh.Droid.Resource.Color.design_snackbar_background_color;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_disabled_material_dark = global::ApptestSsh.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_disabled_material_light = global::ApptestSsh.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_material_dark = global::ApptestSsh.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_material_light = global::ApptestSsh.Droid.Resource.Color.dim_foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.foreground_material_dark = global::ApptestSsh.Droid.Resource.Color.foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.foreground_material_light = global::ApptestSsh.Droid.Resource.Color.foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.highlighted_text_material_dark = global::ApptestSsh.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.highlighted_text_material_light = global::ApptestSsh.Droid.Resource.Color.highlighted_text_material_light;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_800 = global::ApptestSsh.Droid.Resource.Color.material_blue_grey_800;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_900 = global::ApptestSsh.Droid.Resource.Color.material_blue_grey_900;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_950 = global::ApptestSsh.Droid.Resource.Color.material_blue_grey_950;
+			global::Plugin.Toasts.Resource.Color.material_deep_teal_200 = global::ApptestSsh.Droid.Resource.Color.material_deep_teal_200;
+			global::Plugin.Toasts.Resource.Color.material_deep_teal_500 = global::ApptestSsh.Droid.Resource.Color.material_deep_teal_500;
+			global::Plugin.Toasts.Resource.Color.material_grey_100 = global::ApptestSsh.Droid.Resource.Color.material_grey_100;
+			global::Plugin.Toasts.Resource.Color.material_grey_300 = global::ApptestSsh.Droid.Resource.Color.material_grey_300;
+			global::Plugin.Toasts.Resource.Color.material_grey_50 = global::ApptestSsh.Droid.Resource.Color.material_grey_50;
+			global::Plugin.Toasts.Resource.Color.material_grey_600 = global::ApptestSsh.Droid.Resource.Color.material_grey_600;
+			global::Plugin.Toasts.Resource.Color.material_grey_800 = global::ApptestSsh.Droid.Resource.Color.material_grey_800;
+			global::Plugin.Toasts.Resource.Color.material_grey_850 = global::ApptestSsh.Droid.Resource.Color.material_grey_850;
+			global::Plugin.Toasts.Resource.Color.material_grey_900 = global::ApptestSsh.Droid.Resource.Color.material_grey_900;
+			global::Plugin.Toasts.Resource.Color.primary_dark_material_dark = global::ApptestSsh.Droid.Resource.Color.primary_dark_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_dark_material_light = global::ApptestSsh.Droid.Resource.Color.primary_dark_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_material_dark = global::ApptestSsh.Droid.Resource.Color.primary_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_material_light = global::ApptestSsh.Droid.Resource.Color.primary_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_text_default_material_dark = global::ApptestSsh.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_text_default_material_light = global::ApptestSsh.Droid.Resource.Color.primary_text_default_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_text_disabled_material_dark = global::ApptestSsh.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_text_disabled_material_light = global::ApptestSsh.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.ripple_material_dark = global::ApptestSsh.Droid.Resource.Color.ripple_material_dark;
+			global::Plugin.Toasts.Resource.Color.ripple_material_light = global::ApptestSsh.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Toasts.Resource.Color.secondary_text_default_material_dark = global::ApptestSsh.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.Toasts.Resource.Color.secondary_text_default_material_light = global::ApptestSsh.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Toasts.Resource.Color.secondary_text_disabled_material_dark = global::ApptestSsh.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.secondary_text_disabled_material_light = global::ApptestSsh.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_disabled_material_dark = global::ApptestSsh.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_disabled_material_light = global::ApptestSsh.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_material_dark = global::ApptestSsh.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_material_light = global::ApptestSsh.Droid.Resource.Color.switch_thumb_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_normal_material_dark = global::ApptestSsh.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_normal_material_light = global::ApptestSsh.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_content_inset_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_height_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_padding_end_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_padding_start_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_progress_bar_size = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_stacked_max_height = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_height_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_width_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_width_overflow_material = global::ApptestSsh.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_alert_dialog_button_bar_height = global::ApptestSsh.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_inset_horizontal_material = global::ApptestSsh.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_inset_vertical_material = global::ApptestSsh.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_padding_horizontal_material = global::ApptestSsh.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_padding_vertical_material = global::ApptestSsh.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_config_prefDialogWidth = global::ApptestSsh.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_corner_material = global::ApptestSsh.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_inset_material = global::ApptestSsh.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_padding_material = global::ApptestSsh.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_height_major = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_height_minor = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_width_major = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_width_minor = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_min_width_major = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_min_width_minor = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_padding_material = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_padding_top_material = global::ApptestSsh.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_disabled_alpha_material_dark = global::ApptestSsh.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.abc_disabled_alpha_material_light = global::ApptestSsh.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_icon_width = global::ApptestSsh.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_text_padding_left = global::ApptestSsh.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_text_padding_right = global::ApptestSsh.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_bottom_material = global::ApptestSsh.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::ApptestSsh.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_top_material = global::ApptestSsh.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_floating_window_z = global::ApptestSsh.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Plugin.Toasts.Resource.Dimension.abc_list_item_padding_horizontal_material = global::ApptestSsh.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_panel_menu_list_width = global::ApptestSsh.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_search_view_preferred_width = global::ApptestSsh.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_seekbar_track_background_height_material = global::ApptestSsh.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_seekbar_track_progress_height_material = global::ApptestSsh.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_select_dialog_padding_start_material = global::ApptestSsh.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_switch_padding = global::ApptestSsh.Droid.Resource.Dimension.abc_switch_padding;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_body_1_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_body_2_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_button_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_caption_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_1_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_2_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_3_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_4_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_headline_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_large_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_medium_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_menu_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_small_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_subhead_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_title_material = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_title_material_toolbar = global::ApptestSsh.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Plugin.Toasts.Resource.Dimension.design_appbar_elevation = global::ApptestSsh.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_bottom_sheet_modal_elevation = global::ApptestSsh.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_border_width = global::ApptestSsh.Droid.Resource.Dimension.design_fab_border_width;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_elevation = global::ApptestSsh.Droid.Resource.Dimension.design_fab_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_image_size = global::ApptestSsh.Droid.Resource.Dimension.design_fab_image_size;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_size_mini = global::ApptestSsh.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_size_normal = global::ApptestSsh.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_translation_z_pressed = global::ApptestSsh.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_elevation = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_icon_padding = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_icon_size = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_max_width = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_padding_bottom = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_separator_vertical_padding = global::ApptestSsh.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_action_inline_max_width = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_background_corner_radius = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_elevation = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_max_width = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_min_width = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_horizontal = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_vertical = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_text_size = global::ApptestSsh.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_max_width = global::ApptestSsh.Droid.Resource.Dimension.design_tab_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_scrollable_min_width = global::ApptestSsh.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_text_size = global::ApptestSsh.Droid.Resource.Dimension.design_tab_text_size;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_text_size_2line = global::ApptestSsh.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Plugin.Toasts.Resource.Dimension.disabled_alpha_material_dark = global::ApptestSsh.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.disabled_alpha_material_light = global::ApptestSsh.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_colored = global::ApptestSsh.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_dark = global::ApptestSsh.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_light = global::ApptestSsh.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::ApptestSsh.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::ApptestSsh.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::ApptestSsh.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Plugin.Toasts.Resource.Dimension.notification_large_icon_height = global::ApptestSsh.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Toasts.Resource.Dimension.notification_large_icon_width = global::ApptestSsh.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Toasts.Resource.Dimension.notification_subtext_size = global::ApptestSsh.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Toasts.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_action_bar_item_background_material = global::ApptestSsh.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_borderless_material = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_material = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_colored_material = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_default_mtrl_shape = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_material = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::ApptestSsh.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_internal_bg = global::ApptestSsh.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_top_material = global::ApptestSsh.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_control_background_material = global::ApptestSsh.Droid.Resource.Drawable.abc_control_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_edit_text_material = global::ApptestSsh.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_black_16dp = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_black_36dp = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_half_black_16dp = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_half_black_36dp = global::ApptestSsh.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_item_background_holo_dark = global::ApptestSsh.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_item_background_holo_light = global::ApptestSsh.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_divider_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_focused_holo = global::ApptestSsh.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_longpressed_holo = global::ApptestSsh.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_pressed_holo_dark = global::ApptestSsh.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_pressed_holo_light = global::ApptestSsh.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_disabled_holo_light = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_holo_dark = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_holo_light = global::ApptestSsh.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::ApptestSsh.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Plugin.Toasts.Resource.Drawable.abc_popup_background_mtrl_mult = global::ApptestSsh.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Plugin.Toasts.Resource.Drawable.abc_ratingbar_indicator_material = global::ApptestSsh.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_ratingbar_small_material = global::ApptestSsh.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::ApptestSsh.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::ApptestSsh.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_seekbar_thumb_material = global::ApptestSsh.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_seekbar_track_material = global::ApptestSsh.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_spinner_textfield_background_material = global::ApptestSsh.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_switch_thumb_material = global::ApptestSsh.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_switch_track_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_tab_indicator_material = global::ApptestSsh.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_text_cursor_material = global::ApptestSsh.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::ApptestSsh.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_material = global::ApptestSsh.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Plugin.Toasts.Resource.Drawable.design_fab_background = global::ApptestSsh.Droid.Resource.Drawable.design_fab_background;
+			global::Plugin.Toasts.Resource.Drawable.design_snackbar_background = global::ApptestSsh.Droid.Resource.Drawable.design_snackbar_background;
+			global::Plugin.Toasts.Resource.Drawable.notification_template_icon_bg = global::ApptestSsh.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Toasts.Resource.Id.action0 = global::ApptestSsh.Droid.Resource.Id.action0;
+			global::Plugin.Toasts.Resource.Id.action_bar = global::ApptestSsh.Droid.Resource.Id.action_bar;
+			global::Plugin.Toasts.Resource.Id.action_bar_activity_content = global::ApptestSsh.Droid.Resource.Id.action_bar_activity_content;
+			global::Plugin.Toasts.Resource.Id.action_bar_container = global::ApptestSsh.Droid.Resource.Id.action_bar_container;
+			global::Plugin.Toasts.Resource.Id.action_bar_root = global::ApptestSsh.Droid.Resource.Id.action_bar_root;
+			global::Plugin.Toasts.Resource.Id.action_bar_spinner = global::ApptestSsh.Droid.Resource.Id.action_bar_spinner;
+			global::Plugin.Toasts.Resource.Id.action_bar_subtitle = global::ApptestSsh.Droid.Resource.Id.action_bar_subtitle;
+			global::Plugin.Toasts.Resource.Id.action_bar_title = global::ApptestSsh.Droid.Resource.Id.action_bar_title;
+			global::Plugin.Toasts.Resource.Id.action_context_bar = global::ApptestSsh.Droid.Resource.Id.action_context_bar;
+			global::Plugin.Toasts.Resource.Id.action_divider = global::ApptestSsh.Droid.Resource.Id.action_divider;
+			global::Plugin.Toasts.Resource.Id.action_menu_divider = global::ApptestSsh.Droid.Resource.Id.action_menu_divider;
+			global::Plugin.Toasts.Resource.Id.action_menu_presenter = global::ApptestSsh.Droid.Resource.Id.action_menu_presenter;
+			global::Plugin.Toasts.Resource.Id.action_mode_bar = global::ApptestSsh.Droid.Resource.Id.action_mode_bar;
+			global::Plugin.Toasts.Resource.Id.action_mode_bar_stub = global::ApptestSsh.Droid.Resource.Id.action_mode_bar_stub;
+			global::Plugin.Toasts.Resource.Id.action_mode_close_button = global::ApptestSsh.Droid.Resource.Id.action_mode_close_button;
+			global::Plugin.Toasts.Resource.Id.activity_chooser_view_content = global::ApptestSsh.Droid.Resource.Id.activity_chooser_view_content;
+			global::Plugin.Toasts.Resource.Id.alertTitle = global::ApptestSsh.Droid.Resource.Id.alertTitle;
+			global::Plugin.Toasts.Resource.Id.always = global::ApptestSsh.Droid.Resource.Id.always;
+			global::Plugin.Toasts.Resource.Id.beginning = global::ApptestSsh.Droid.Resource.Id.beginning;
+			global::Plugin.Toasts.Resource.Id.bottom = global::ApptestSsh.Droid.Resource.Id.bottom;
+			global::Plugin.Toasts.Resource.Id.buttonPanel = global::ApptestSsh.Droid.Resource.Id.buttonPanel;
+			global::Plugin.Toasts.Resource.Id.cancel_action = global::ApptestSsh.Droid.Resource.Id.cancel_action;
+			global::Plugin.Toasts.Resource.Id.center = global::ApptestSsh.Droid.Resource.Id.center;
+			global::Plugin.Toasts.Resource.Id.center_horizontal = global::ApptestSsh.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Toasts.Resource.Id.center_vertical = global::ApptestSsh.Droid.Resource.Id.center_vertical;
+			global::Plugin.Toasts.Resource.Id.checkbox = global::ApptestSsh.Droid.Resource.Id.checkbox;
+			global::Plugin.Toasts.Resource.Id.chronometer = global::ApptestSsh.Droid.Resource.Id.chronometer;
+			global::Plugin.Toasts.Resource.Id.clip_horizontal = global::ApptestSsh.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Toasts.Resource.Id.clip_vertical = global::ApptestSsh.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Toasts.Resource.Id.collapseActionView = global::ApptestSsh.Droid.Resource.Id.collapseActionView;
+			global::Plugin.Toasts.Resource.Id.contentPanel = global::ApptestSsh.Droid.Resource.Id.contentPanel;
+			global::Plugin.Toasts.Resource.Id.custom = global::ApptestSsh.Droid.Resource.Id.custom;
+			global::Plugin.Toasts.Resource.Id.customPanel = global::ApptestSsh.Droid.Resource.Id.customPanel;
+			global::Plugin.Toasts.Resource.Id.decor_content_parent = global::ApptestSsh.Droid.Resource.Id.decor_content_parent;
+			global::Plugin.Toasts.Resource.Id.default_activity_button = global::ApptestSsh.Droid.Resource.Id.default_activity_button;
+			global::Plugin.Toasts.Resource.Id.design_bottom_sheet = global::ApptestSsh.Droid.Resource.Id.design_bottom_sheet;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_action_area = global::ApptestSsh.Droid.Resource.Id.design_menu_item_action_area;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_action_area_stub = global::ApptestSsh.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_text = global::ApptestSsh.Droid.Resource.Id.design_menu_item_text;
+			global::Plugin.Toasts.Resource.Id.design_navigation_view = global::ApptestSsh.Droid.Resource.Id.design_navigation_view;
+			global::Plugin.Toasts.Resource.Id.disableHome = global::ApptestSsh.Droid.Resource.Id.disableHome;
+			global::Plugin.Toasts.Resource.Id.edit_query = global::ApptestSsh.Droid.Resource.Id.edit_query;
+			global::Plugin.Toasts.Resource.Id.end = global::ApptestSsh.Droid.Resource.Id.end;
+			global::Plugin.Toasts.Resource.Id.end_padder = global::ApptestSsh.Droid.Resource.Id.end_padder;
+			global::Plugin.Toasts.Resource.Id.enterAlways = global::ApptestSsh.Droid.Resource.Id.enterAlways;
+			global::Plugin.Toasts.Resource.Id.enterAlwaysCollapsed = global::ApptestSsh.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Plugin.Toasts.Resource.Id.exitUntilCollapsed = global::ApptestSsh.Droid.Resource.Id.exitUntilCollapsed;
+			global::Plugin.Toasts.Resource.Id.expand_activities_button = global::ApptestSsh.Droid.Resource.Id.expand_activities_button;
+			global::Plugin.Toasts.Resource.Id.expanded_menu = global::ApptestSsh.Droid.Resource.Id.expanded_menu;
+			global::Plugin.Toasts.Resource.Id.fill = global::ApptestSsh.Droid.Resource.Id.fill;
+			global::Plugin.Toasts.Resource.Id.fill_horizontal = global::ApptestSsh.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Toasts.Resource.Id.fill_vertical = global::ApptestSsh.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Toasts.Resource.Id.@fixed = global::ApptestSsh.Droid.Resource.Id.@fixed;
+			global::Plugin.Toasts.Resource.Id.home = global::ApptestSsh.Droid.Resource.Id.home;
+			global::Plugin.Toasts.Resource.Id.homeAsUp = global::ApptestSsh.Droid.Resource.Id.homeAsUp;
+			global::Plugin.Toasts.Resource.Id.icon = global::ApptestSsh.Droid.Resource.Id.icon;
+			global::Plugin.Toasts.Resource.Id.ifRoom = global::ApptestSsh.Droid.Resource.Id.ifRoom;
+			global::Plugin.Toasts.Resource.Id.image = global::ApptestSsh.Droid.Resource.Id.image;
+			global::Plugin.Toasts.Resource.Id.info = global::ApptestSsh.Droid.Resource.Id.info;
+			global::Plugin.Toasts.Resource.Id.item_touch_helper_previous_elevation = global::ApptestSsh.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Plugin.Toasts.Resource.Id.left = global::ApptestSsh.Droid.Resource.Id.left;
+			global::Plugin.Toasts.Resource.Id.line1 = global::ApptestSsh.Droid.Resource.Id.line1;
+			global::Plugin.Toasts.Resource.Id.line3 = global::ApptestSsh.Droid.Resource.Id.line3;
+			global::Plugin.Toasts.Resource.Id.listMode = global::ApptestSsh.Droid.Resource.Id.listMode;
+			global::Plugin.Toasts.Resource.Id.list_item = global::ApptestSsh.Droid.Resource.Id.list_item;
+			global::Plugin.Toasts.Resource.Id.media_actions = global::ApptestSsh.Droid.Resource.Id.media_actions;
+			global::Plugin.Toasts.Resource.Id.middle = global::ApptestSsh.Droid.Resource.Id.middle;
+			global::Plugin.Toasts.Resource.Id.mini = global::ApptestSsh.Droid.Resource.Id.mini;
+			global::Plugin.Toasts.Resource.Id.multiply = global::ApptestSsh.Droid.Resource.Id.multiply;
+			global::Plugin.Toasts.Resource.Id.navigation_header_container = global::ApptestSsh.Droid.Resource.Id.navigation_header_container;
+			global::Plugin.Toasts.Resource.Id.never = global::ApptestSsh.Droid.Resource.Id.never;
+			global::Plugin.Toasts.Resource.Id.none = global::ApptestSsh.Droid.Resource.Id.none;
+			global::Plugin.Toasts.Resource.Id.normal = global::ApptestSsh.Droid.Resource.Id.normal;
+			global::Plugin.Toasts.Resource.Id.parallax = global::ApptestSsh.Droid.Resource.Id.parallax;
+			global::Plugin.Toasts.Resource.Id.parentPanel = global::ApptestSsh.Droid.Resource.Id.parentPanel;
+			global::Plugin.Toasts.Resource.Id.pin = global::ApptestSsh.Droid.Resource.Id.pin;
+			global::Plugin.Toasts.Resource.Id.progress_circular = global::ApptestSsh.Droid.Resource.Id.progress_circular;
+			global::Plugin.Toasts.Resource.Id.progress_horizontal = global::ApptestSsh.Droid.Resource.Id.progress_horizontal;
+			global::Plugin.Toasts.Resource.Id.radio = global::ApptestSsh.Droid.Resource.Id.radio;
+			global::Plugin.Toasts.Resource.Id.right = global::ApptestSsh.Droid.Resource.Id.right;
+			global::Plugin.Toasts.Resource.Id.screen = global::ApptestSsh.Droid.Resource.Id.screen;
+			global::Plugin.Toasts.Resource.Id.scroll = global::ApptestSsh.Droid.Resource.Id.scroll;
+			global::Plugin.Toasts.Resource.Id.scrollIndicatorDown = global::ApptestSsh.Droid.Resource.Id.scrollIndicatorDown;
+			global::Plugin.Toasts.Resource.Id.scrollIndicatorUp = global::ApptestSsh.Droid.Resource.Id.scrollIndicatorUp;
+			global::Plugin.Toasts.Resource.Id.scrollView = global::ApptestSsh.Droid.Resource.Id.scrollView;
+			global::Plugin.Toasts.Resource.Id.scrollable = global::ApptestSsh.Droid.Resource.Id.scrollable;
+			global::Plugin.Toasts.Resource.Id.search_badge = global::ApptestSsh.Droid.Resource.Id.search_badge;
+			global::Plugin.Toasts.Resource.Id.search_bar = global::ApptestSsh.Droid.Resource.Id.search_bar;
+			global::Plugin.Toasts.Resource.Id.search_button = global::ApptestSsh.Droid.Resource.Id.search_button;
+			global::Plugin.Toasts.Resource.Id.search_close_btn = global::ApptestSsh.Droid.Resource.Id.search_close_btn;
+			global::Plugin.Toasts.Resource.Id.search_edit_frame = global::ApptestSsh.Droid.Resource.Id.search_edit_frame;
+			global::Plugin.Toasts.Resource.Id.search_go_btn = global::ApptestSsh.Droid.Resource.Id.search_go_btn;
+			global::Plugin.Toasts.Resource.Id.search_mag_icon = global::ApptestSsh.Droid.Resource.Id.search_mag_icon;
+			global::Plugin.Toasts.Resource.Id.search_plate = global::ApptestSsh.Droid.Resource.Id.search_plate;
+			global::Plugin.Toasts.Resource.Id.search_src_text = global::ApptestSsh.Droid.Resource.Id.search_src_text;
+			global::Plugin.Toasts.Resource.Id.search_voice_btn = global::ApptestSsh.Droid.Resource.Id.search_voice_btn;
+			global::Plugin.Toasts.Resource.Id.select_dialog_listview = global::ApptestSsh.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.Toasts.Resource.Id.shortcut = global::ApptestSsh.Droid.Resource.Id.shortcut;
+			global::Plugin.Toasts.Resource.Id.showCustom = global::ApptestSsh.Droid.Resource.Id.showCustom;
+			global::Plugin.Toasts.Resource.Id.showHome = global::ApptestSsh.Droid.Resource.Id.showHome;
+			global::Plugin.Toasts.Resource.Id.showTitle = global::ApptestSsh.Droid.Resource.Id.showTitle;
+			global::Plugin.Toasts.Resource.Id.snackbar_action = global::ApptestSsh.Droid.Resource.Id.snackbar_action;
+			global::Plugin.Toasts.Resource.Id.snackbar_text = global::ApptestSsh.Droid.Resource.Id.snackbar_text;
+			global::Plugin.Toasts.Resource.Id.snap = global::ApptestSsh.Droid.Resource.Id.snap;
+			global::Plugin.Toasts.Resource.Id.spacer = global::ApptestSsh.Droid.Resource.Id.spacer;
+			global::Plugin.Toasts.Resource.Id.split_action_bar = global::ApptestSsh.Droid.Resource.Id.split_action_bar;
+			global::Plugin.Toasts.Resource.Id.src_atop = global::ApptestSsh.Droid.Resource.Id.src_atop;
+			global::Plugin.Toasts.Resource.Id.src_in = global::ApptestSsh.Droid.Resource.Id.src_in;
+			global::Plugin.Toasts.Resource.Id.src_over = global::ApptestSsh.Droid.Resource.Id.src_over;
+			global::Plugin.Toasts.Resource.Id.start = global::ApptestSsh.Droid.Resource.Id.start;
+			global::Plugin.Toasts.Resource.Id.status_bar_latest_event_content = global::ApptestSsh.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.Toasts.Resource.Id.submit_area = global::ApptestSsh.Droid.Resource.Id.submit_area;
+			global::Plugin.Toasts.Resource.Id.tabMode = global::ApptestSsh.Droid.Resource.Id.tabMode;
+			global::Plugin.Toasts.Resource.Id.text = global::ApptestSsh.Droid.Resource.Id.text;
+			global::Plugin.Toasts.Resource.Id.text2 = global::ApptestSsh.Droid.Resource.Id.text2;
+			global::Plugin.Toasts.Resource.Id.textSpacerNoButtons = global::ApptestSsh.Droid.Resource.Id.textSpacerNoButtons;
+			global::Plugin.Toasts.Resource.Id.time = global::ApptestSsh.Droid.Resource.Id.time;
+			global::Plugin.Toasts.Resource.Id.title = global::ApptestSsh.Droid.Resource.Id.title;
+			global::Plugin.Toasts.Resource.Id.title_template = global::ApptestSsh.Droid.Resource.Id.title_template;
+			global::Plugin.Toasts.Resource.Id.top = global::ApptestSsh.Droid.Resource.Id.top;
+			global::Plugin.Toasts.Resource.Id.topPanel = global::ApptestSsh.Droid.Resource.Id.topPanel;
+			global::Plugin.Toasts.Resource.Id.touch_outside = global::ApptestSsh.Droid.Resource.Id.touch_outside;
+			global::Plugin.Toasts.Resource.Id.up = global::ApptestSsh.Droid.Resource.Id.up;
+			global::Plugin.Toasts.Resource.Id.useLogo = global::ApptestSsh.Droid.Resource.Id.useLogo;
+			global::Plugin.Toasts.Resource.Id.view_offset_helper = global::ApptestSsh.Droid.Resource.Id.view_offset_helper;
+			global::Plugin.Toasts.Resource.Id.withText = global::ApptestSsh.Droid.Resource.Id.withText;
+			global::Plugin.Toasts.Resource.Id.wrap_content = global::ApptestSsh.Droid.Resource.Id.wrap_content;
+			global::Plugin.Toasts.Resource.Integer.abc_config_activityDefaultDur = global::ApptestSsh.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Plugin.Toasts.Resource.Integer.abc_config_activityShortDur = global::ApptestSsh.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Plugin.Toasts.Resource.Integer.bottom_sheet_slide_duration = global::ApptestSsh.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Plugin.Toasts.Resource.Integer.cancel_button_image_alpha = global::ApptestSsh.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.Toasts.Resource.Integer.design_snackbar_text_max_lines = global::ApptestSsh.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Plugin.Toasts.Resource.Integer.status_bar_notification_info_maxnum = global::ApptestSsh.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Toasts.Resource.Layout.abc_action_bar_title_item = global::ApptestSsh.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Plugin.Toasts.Resource.Layout.abc_action_bar_up_container = global::ApptestSsh.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Plugin.Toasts.Resource.Layout.abc_action_bar_view_list_nav_layout = global::ApptestSsh.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_action_menu_item_layout = global::ApptestSsh.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_action_menu_layout = global::ApptestSsh.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_action_mode_bar = global::ApptestSsh.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Plugin.Toasts.Resource.Layout.abc_action_mode_close_item_material = global::ApptestSsh.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Plugin.Toasts.Resource.Layout.abc_activity_chooser_view = global::ApptestSsh.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Plugin.Toasts.Resource.Layout.abc_activity_chooser_view_list_item = global::ApptestSsh.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Plugin.Toasts.Resource.Layout.abc_alert_dialog_button_bar_material = global::ApptestSsh.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Plugin.Toasts.Resource.Layout.abc_alert_dialog_material = global::ApptestSsh.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Plugin.Toasts.Resource.Layout.abc_dialog_title_material = global::ApptestSsh.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Plugin.Toasts.Resource.Layout.abc_expanded_menu_layout = global::ApptestSsh.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_checkbox = global::ApptestSsh.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_icon = global::ApptestSsh.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_layout = global::ApptestSsh.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_radio = global::ApptestSsh.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Plugin.Toasts.Resource.Layout.abc_popup_menu_item_layout = global::ApptestSsh.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_content_include = global::ApptestSsh.Droid.Resource.Layout.abc_screen_content_include;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_simple = global::ApptestSsh.Droid.Resource.Layout.abc_screen_simple;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_simple_overlay_action_mode = global::ApptestSsh.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_toolbar = global::ApptestSsh.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Plugin.Toasts.Resource.Layout.abc_search_dropdown_item_icons_2line = global::ApptestSsh.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Plugin.Toasts.Resource.Layout.abc_search_view = global::ApptestSsh.Droid.Resource.Layout.abc_search_view;
+			global::Plugin.Toasts.Resource.Layout.abc_select_dialog_material = global::ApptestSsh.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Plugin.Toasts.Resource.Layout.design_bottom_sheet_dialog = global::ApptestSsh.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Plugin.Toasts.Resource.Layout.design_layout_snackbar = global::ApptestSsh.Droid.Resource.Layout.design_layout_snackbar;
+			global::Plugin.Toasts.Resource.Layout.design_layout_snackbar_include = global::ApptestSsh.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Plugin.Toasts.Resource.Layout.design_layout_tab_icon = global::ApptestSsh.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Plugin.Toasts.Resource.Layout.design_layout_tab_text = global::ApptestSsh.Droid.Resource.Layout.design_layout_tab_text;
+			global::Plugin.Toasts.Resource.Layout.design_menu_item_action_area = global::ApptestSsh.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item = global::ApptestSsh.Droid.Resource.Layout.design_navigation_item;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_header = global::ApptestSsh.Droid.Resource.Layout.design_navigation_item_header;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_separator = global::ApptestSsh.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_subheader = global::ApptestSsh.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_menu = global::ApptestSsh.Droid.Resource.Layout.design_navigation_menu;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_menu_item = global::ApptestSsh.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Plugin.Toasts.Resource.Layout.notification_media_action = global::ApptestSsh.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.Toasts.Resource.Layout.notification_media_cancel_action = global::ApptestSsh.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.Toasts.Resource.Layout.notification_template_big_media = global::ApptestSsh.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.Toasts.Resource.Layout.notification_template_big_media_narrow = global::ApptestSsh.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.Toasts.Resource.Layout.notification_template_media = global::ApptestSsh.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.Toasts.Resource.Layout.notification_template_part_chronometer = global::ApptestSsh.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Toasts.Resource.Layout.notification_template_part_time = global::ApptestSsh.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_item_material = global::ApptestSsh.Droid.Resource.Layout.select_dialog_item_material;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_multichoice_material = global::ApptestSsh.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_singlechoice_material = global::ApptestSsh.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Plugin.Toasts.Resource.Layout.support_simple_spinner_dropdown_item = global::ApptestSsh.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Plugin.Toasts.Resource.String.ApplicationName = global::ApptestSsh.Droid.Resource.String.ApplicationName;
 			global::Plugin.Toasts.Resource.String.Hello = global::ApptestSsh.Droid.Resource.String.Hello;
+			global::Plugin.Toasts.Resource.String.abc_action_bar_home_description = global::ApptestSsh.Droid.Resource.String.abc_action_bar_home_description;
+			global::Plugin.Toasts.Resource.String.abc_action_bar_up_description = global::ApptestSsh.Droid.Resource.String.abc_action_bar_up_description;
+			global::Plugin.Toasts.Resource.String.abc_action_menu_overflow_description = global::ApptestSsh.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Plugin.Toasts.Resource.String.abc_action_mode_done = global::ApptestSsh.Droid.Resource.String.abc_action_mode_done;
+			global::Plugin.Toasts.Resource.String.abc_activity_chooser_view_see_all = global::ApptestSsh.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Plugin.Toasts.Resource.String.abc_activitychooserview_choose_application = global::ApptestSsh.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.Toasts.Resource.String.abc_capital_off = global::ApptestSsh.Droid.Resource.String.abc_capital_off;
+			global::Plugin.Toasts.Resource.String.abc_capital_on = global::ApptestSsh.Droid.Resource.String.abc_capital_on;
+			global::Plugin.Toasts.Resource.String.abc_search_hint = global::ApptestSsh.Droid.Resource.String.abc_search_hint;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_clear = global::ApptestSsh.Droid.Resource.String.abc_searchview_description_clear;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_query = global::ApptestSsh.Droid.Resource.String.abc_searchview_description_query;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_search = global::ApptestSsh.Droid.Resource.String.abc_searchview_description_search;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_submit = global::ApptestSsh.Droid.Resource.String.abc_searchview_description_submit;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_voice = global::ApptestSsh.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.Toasts.Resource.String.abc_shareactionprovider_share_with = global::ApptestSsh.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Plugin.Toasts.Resource.String.abc_shareactionprovider_share_with_application = global::ApptestSsh.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Plugin.Toasts.Resource.String.abc_toolbar_collapse_description = global::ApptestSsh.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Plugin.Toasts.Resource.String.appbar_scrolling_view_behavior = global::ApptestSsh.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Plugin.Toasts.Resource.String.bottom_sheet_behavior = global::ApptestSsh.Droid.Resource.String.bottom_sheet_behavior;
+			global::Plugin.Toasts.Resource.String.character_counter_pattern = global::ApptestSsh.Droid.Resource.String.character_counter_pattern;
+			global::Plugin.Toasts.Resource.String.status_bar_notification_info_overflow = global::ApptestSsh.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Toasts.Resource.Style.AlertDialog_AppCompat = global::ApptestSsh.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Plugin.Toasts.Resource.Style.AlertDialog_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Animation_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Animation_AppCompat_DropDownUp = global::ApptestSsh.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Plugin.Toasts.Resource.Style.Animation_Design_BottomSheetDialog = global::ApptestSsh.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Base_AlertDialog_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_AlertDialog_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_Animation_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::ApptestSsh.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Plugin.Toasts.Resource.Style.Base_DialogWindowTitle_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Button = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Large = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Small = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Title = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::ApptestSsh.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::ApptestSsh.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::ApptestSsh.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::ApptestSsh.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::ApptestSsh.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::ApptestSsh.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::ApptestSsh.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V22_Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V22_Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V23_Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V23_Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::ApptestSsh.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::ApptestSsh.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::ApptestSsh.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionMode = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Small = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_EditText = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ImageButton = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SearchView = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SeekBar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Spinner = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Toolbar = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::ApptestSsh.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_Design_TabLayout = global::ApptestSsh.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Plugin.Toasts.Resource.Style.Platform_AppCompat = global::ApptestSsh.Droid.Resource.Style.Platform_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat = global::ApptestSsh.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::ApptestSsh.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_V11_AppCompat = global::ApptestSsh.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_V11_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_V14_AppCompat = global::ApptestSsh.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_V14_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_Widget_AppCompat_Spinner = global::ApptestSsh.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::ApptestSsh.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Plugin.Toasts.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::ApptestSsh.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::ApptestSsh.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Body1 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Body2 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Button = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Caption = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display1 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display2 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display3 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display4 = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Headline = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Large = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Medium = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Menu = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Small = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Subhead = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ApptestSsh.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Counter = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Counter_Overflow = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Error = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Hint = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Snackbar_Message = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Tab = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::ApptestSsh.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_CompactMenu = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog_Alert = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_NoActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_Design = global::ApptestSsh.Droid.Resource.Style.Theme_Design;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_BottomSheetDialog = global::ApptestSsh.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light = global::ApptestSsh.Droid.Resource.Style.Theme_Design_Light;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::ApptestSsh.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light_NoActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_NoActionBar = global::ApptestSsh.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat = global::ApptestSsh.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::ApptestSsh.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Dark = global::ApptestSsh.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::ApptestSsh.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Light = global::ApptestSsh.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionMode = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActivityChooserView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Borderless = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Colored = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Small = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ButtonBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_EditText = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ImageButton = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_SearchView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListPopupWindow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView_DropDown = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView_Menu = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupMenu = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupWindow = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ProgressBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar_Small = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SearchView = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SeekBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Toolbar = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::ApptestSsh.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_AppBarLayout = global::ApptestSsh.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_BottomSheet_Modal = global::ApptestSsh.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_CollapsingToolbar = global::ApptestSsh.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_CoordinatorLayout = global::ApptestSsh.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_FloatingActionButton = global::ApptestSsh.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_NavigationView = global::ApptestSsh.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::ApptestSsh.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_Snackbar = global::ApptestSsh.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_TabLayout = global::ApptestSsh.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_TextInputLayout = global::ApptestSsh.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar = global::ApptestSsh.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_background = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_background;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_backgroundSplit = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_backgroundStacked = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetEnd = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetLeft = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetRight = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetStart = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_customNavigationLayout = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_displayOptions = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_divider = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_divider;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_elevation = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_height = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_height;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_hideOnContentScroll = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_homeAsUpIndicator = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_homeLayout = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_icon = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_icon;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_itemPadding = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_logo = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_logo;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_navigationMode = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_popupTheme = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_progressBarPadding = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_progressBarStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_subtitle = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_subtitleTextStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_title = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_title;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_titleTextStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBarLayout = global::ApptestSsh.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::ApptestSsh.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuItemView = global::ApptestSsh.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuItemView_android_minWidth = global::ApptestSsh.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuView = global::ApptestSsh.Droid.Resource.Styleable.ActionMenuView;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode = global::ApptestSsh.Droid.Resource.Styleable.ActionMode;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_background = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_background;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_backgroundSplit = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_closeItemLayout = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_height = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_height;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_subtitleTextStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_titleTextStyle = global::ApptestSsh.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView = global::ApptestSsh.Droid.Resource.Styleable.ActivityChooserView;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::ApptestSsh.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView_initialActivityCount = global::ApptestSsh.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_android_layout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_listItemLayout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_listLayout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::ApptestSsh.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout = global::ApptestSsh.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_android_background = global::ApptestSsh.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_elevation = global::ApptestSsh.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_expanded = global::ApptestSsh.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView = global::ApptestSsh.Droid.Resource.Styleable.AppCompatImageView;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView_android_src = global::ApptestSsh.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView_srcCompat = global::ApptestSsh.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTextView;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView_android_textAppearance = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView_textAllCaps = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarDivider = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarSize = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_checkboxStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorAccent = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlActivated = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlNormal = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorPrimary = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_controlBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dialogTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dividerVertical = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextColor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_searchViewStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_seekBarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_spinnerStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_switchStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_toolbarStyle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionBar = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowNoTitle = global::ApptestSsh.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Plugin.Toasts.Resource.Styleable.ButtonBarLayout = global::ApptestSsh.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.ButtonBarLayout_allowStacking = global::ApptestSsh.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_title = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::ApptestSsh.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton = global::ApptestSsh.Droid.Resource.Styleable.CompoundButton;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_android_button = global::ApptestSsh.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_buttonTint = global::ApptestSsh.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_buttonTintMode = global::ApptestSsh.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout = global::ApptestSsh.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout_keylines = global::ApptestSsh.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::ApptestSsh.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme = global::ApptestSsh.Droid.Resource.Styleable.DesignTheme;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::ApptestSsh.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_bottomSheetStyle = global::ApptestSsh.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_textColorError = global::ApptestSsh.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_barLength = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_color = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_drawableSize = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_spinBars = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_thickness = global::ApptestSsh.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_backgroundTint = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_borderWidth = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_elevation = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_fabSize = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_rippleColor = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_useCompatPadding = global::ApptestSsh.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout = global::ApptestSsh.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::ApptestSsh.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::ApptestSsh.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::ApptestSsh.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_gravity = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_orientation = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_divider = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_showDividers = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::ApptestSsh.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow = global::ApptestSsh.Droid.Resource.Styleable.ListPopupWindow;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::ApptestSsh.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::ApptestSsh.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_checkableBehavior = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_enabled = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_id = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_menuCategory = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_orderInCategory = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_visible = global::ApptestSsh.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem = global::ApptestSsh.Droid.Resource.Styleable.MenuItem;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionLayout = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionProviderClass = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionViewClass = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_checkable = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_checked = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_enabled = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_icon = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_id = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_menuCategory = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_numericShortcut = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_onClick = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_orderInCategory = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_title = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_titleCondensed = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_visible = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_showAsAction = global::ApptestSsh.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Plugin.Toasts.Resource.Styleable.MenuView = global::ApptestSsh.Droid.Resource.Styleable.MenuView;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_headerBackground = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_horizontalDivider = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemBackground = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_verticalDivider = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_windowAnimationStyle = global::ApptestSsh.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_preserveIconSpacing = global::ApptestSsh.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView = global::ApptestSsh.Droid.Resource.Styleable.NavigationView;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_background = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_maxWidth = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_elevation = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_headerLayout = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemBackground = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemIconTint = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemTextColor = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_menu = global::ApptestSsh.Droid.Resource.Styleable.NavigationView_menu;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow = global::ApptestSsh.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow_android_popupBackground = global::ApptestSsh.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow_overlapAnchor = global::ApptestSsh.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindowBackgroundState = global::ApptestSsh.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::ApptestSsh.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_android_orientation = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_layoutManager = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_reverseLayout = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_spanCount = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_stackFromEnd = global::ApptestSsh.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Plugin.Toasts.Resource.Styleable.ScrimInsetsFrameLayout = global::ApptestSsh.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Plugin.Toasts.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::ApptestSsh.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView = global::ApptestSsh.Droid.Resource.Styleable.SearchView;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_focusable = global::ApptestSsh.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_imeOptions = global::ApptestSsh.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_inputType = global::ApptestSsh.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_maxWidth = global::ApptestSsh.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_closeIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_commitIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_defaultQueryHint = global::ApptestSsh.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_goIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_iconifiedByDefault = global::ApptestSsh.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_layout = global::ApptestSsh.Droid.Resource.Styleable.SearchView_layout;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_queryBackground = global::ApptestSsh.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_queryHint = global::ApptestSsh.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_searchHintIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_searchIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_submitBackground = global::ApptestSsh.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_suggestionRowLayout = global::ApptestSsh.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_voiceIcon = global::ApptestSsh.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout = global::ApptestSsh.Droid.Resource.Styleable.SnackbarLayout;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_android_maxWidth = global::ApptestSsh.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_elevation = global::ApptestSsh.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::ApptestSsh.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Plugin.Toasts.Resource.Styleable.Spinner = global::ApptestSsh.Droid.Resource.Styleable.Spinner;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_dropDownWidth = global::ApptestSsh.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_entries = global::ApptestSsh.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_popupBackground = global::ApptestSsh.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_prompt = global::ApptestSsh.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_popupTheme = global::ApptestSsh.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_textOff = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_textOn = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_thumb = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_showText = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_splitTrack = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchMinWidth = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchPadding = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_thumbTextPadding = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_track = global::ApptestSsh.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Plugin.Toasts.Resource.Styleable.TabItem = global::ApptestSsh.Droid.Resource.Styleable.TabItem;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_icon = global::ApptestSsh.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_layout = global::ApptestSsh.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_text = global::ApptestSsh.Droid.Resource.Styleable.TabItem_android_text;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout = global::ApptestSsh.Droid.Resource.Styleable.TabLayout;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabBackground = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabContentStart = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabGravity = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabIndicatorColor = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabIndicatorHeight = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMaxWidth = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMinWidth = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMode = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPadding = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingBottom = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingEnd = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingStart = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingTop = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabSelectedTextColor = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabTextColor = global::ApptestSsh.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowColor = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowDx = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowDy = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowRadius = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textColor = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textSize = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textStyle = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_typeface = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_textAllCaps = global::ApptestSsh.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_android_hint = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_android_textColorHint = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterEnabled = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterMaxLength = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_errorEnabled = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_errorTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintEnabled = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar = global::ApptestSsh.Droid.Resource.Styleable.Toolbar;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_android_gravity = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_android_minHeight = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_collapseContentDescription = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_collapseIcon = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetEnd = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetLeft = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetRight = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetStart = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_logo = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_logo;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_logoDescription = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_maxButtonHeight = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_navigationContentDescription = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_navigationIcon = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_popupTheme = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitle = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitleTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitleTextColor = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_title = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_title;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginBottom = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginEnd = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginStart = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginTop = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMargins = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleTextAppearance = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleTextColor = global::ApptestSsh.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Plugin.Toasts.Resource.Styleable.View = global::ApptestSsh.Droid.Resource.Styleable.View;
+			global::Plugin.Toasts.Resource.Styleable.View_android_focusable = global::ApptestSsh.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.Toasts.Resource.Styleable.View_android_theme = global::ApptestSsh.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.Toasts.Resource.Styleable.View_paddingEnd = global::ApptestSsh.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.Toasts.Resource.Styleable.View_paddingStart = global::ApptestSsh.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.Toasts.Resource.Styleable.View_theme = global::ApptestSsh.Droid.Resource.Styleable.View_theme;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper = global::ApptestSsh.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_android_background = global::ApptestSsh.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::ApptestSsh.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::ApptestSsh.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat = global::ApptestSsh.Droid.Resource.Styleable.ViewStubCompat;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_id = global::ApptestSsh.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ApptestSsh.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_layout = global::ApptestSsh.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ApptestSsh.Droid.Resource.Attribute.actionBarSize;
 			global::XLabs.Platform.Resource.String.ApplicationName = global::ApptestSsh.Droid.Resource.String.ApplicationName;
 			global::XLabs.Platform.Resource.String.Hello = global::ApptestSsh.Droid.Resource.String.Hello;
@@ -3091,59 +4600,59 @@ namespace ApptestSsh.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0031
-			public const int ALT = 2131361841;
-			
 			// aapt resource value: 0x7f0a0032
-			public const int CTRL = 2131361842;
+			public const int ALT = 2131361842;
 			
 			// aapt resource value: 0x7f0a0033
-			public const int FUNCTION = 2131361843;
+			public const int CTRL = 2131361843;
 			
 			// aapt resource value: 0x7f0a0034
-			public const int META = 2131361844;
+			public const int FUNCTION = 2131361844;
 			
 			// aapt resource value: 0x7f0a0035
-			public const int SHIFT = 2131361845;
+			public const int META = 2131361845;
 			
 			// aapt resource value: 0x7f0a0036
-			public const int SYM = 2131361846;
+			public const int SHIFT = 2131361846;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int action0 = 2131361975;
+			// aapt resource value: 0x7f0a0037
+			public const int SYM = 2131361847;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int action_bar = 2131361915;
+			// aapt resource value: 0x7f0a00b8
+			public const int action0 = 2131361976;
+			
+			// aapt resource value: 0x7f0a007c
+			public const int action_bar = 2131361916;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int action_bar_container = 2131361914;
+			// aapt resource value: 0x7f0a007b
+			public const int action_bar_container = 2131361915;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int action_bar_root = 2131361910;
+			// aapt resource value: 0x7f0a0077
+			public const int action_bar_root = 2131361911;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_bar_spinner = 2131361794;
 			
+			// aapt resource value: 0x7f0a005b
+			public const int action_bar_subtitle = 2131361883;
+			
 			// aapt resource value: 0x7f0a005a
-			public const int action_bar_subtitle = 2131361882;
-			
-			// aapt resource value: 0x7f0a0059
-			public const int action_bar_title = 2131361881;
-			
-			// aapt resource value: 0x7f0a00b4
-			public const int action_container = 2131361972;
-			
-			// aapt resource value: 0x7f0a007c
-			public const int action_context_bar = 2131361916;
-			
-			// aapt resource value: 0x7f0a00bb
-			public const int action_divider = 2131361979;
+			public const int action_bar_title = 2131361882;
 			
 			// aapt resource value: 0x7f0a00b5
-			public const int action_image = 2131361973;
+			public const int action_container = 2131361973;
+			
+			// aapt resource value: 0x7f0a007d
+			public const int action_context_bar = 2131361917;
+			
+			// aapt resource value: 0x7f0a00bc
+			public const int action_divider = 2131361980;
+			
+			// aapt resource value: 0x7f0a00b6
+			public const int action_image = 2131361974;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -3151,158 +4660,158 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_presenter = 2131361796;
 			
+			// aapt resource value: 0x7f0a0079
+			public const int action_mode_bar = 2131361913;
+			
 			// aapt resource value: 0x7f0a0078
-			public const int action_mode_bar = 2131361912;
-			
-			// aapt resource value: 0x7f0a0077
-			public const int action_mode_bar_stub = 2131361911;
-			
-			// aapt resource value: 0x7f0a005b
-			public const int action_mode_close_button = 2131361883;
-			
-			// aapt resource value: 0x7f0a00b6
-			public const int action_text = 2131361974;
-			
-			// aapt resource value: 0x7f0a00c4
-			public const int actions = 2131361988;
+			public const int action_mode_bar_stub = 2131361912;
 			
 			// aapt resource value: 0x7f0a005c
-			public const int activity_chooser_view_content = 2131361884;
+			public const int action_mode_close_button = 2131361884;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int add = 2131361835;
+			// aapt resource value: 0x7f0a00b7
+			public const int action_text = 2131361975;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int alertTitle = 2131361903;
-			
-			// aapt resource value: 0x7f0a0051
-			public const int all = 2131361873;
-			
-			// aapt resource value: 0x7f0a0037
-			public const int always = 2131361847;
-			
-			// aapt resource value: 0x7f0a0055
-			public const int async = 2131361877;
-			
-			// aapt resource value: 0x7f0a0043
-			public const int auto = 2131361859;
-			
-			// aapt resource value: 0x7f0a002e
-			public const int beginning = 2131361838;
-			
-			// aapt resource value: 0x7f0a0056
-			public const int blocking = 2131361878;
-			
-			// aapt resource value: 0x7f0a003c
-			public const int bottom = 2131361852;
-			
-			// aapt resource value: 0x7f0a0062
-			public const int buttonPanel = 2131361890;
-			
-			// aapt resource value: 0x7f0a00b8
-			public const int cancel_action = 2131361976;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int center = 2131361860;
-			
-			// aapt resource value: 0x7f0a0045
-			public const int center_horizontal = 2131361861;
-			
-			// aapt resource value: 0x7f0a0046
-			public const int center_vertical = 2131361862;
-			
-			// aapt resource value: 0x7f0a0072
-			public const int checkbox = 2131361906;
-			
-			// aapt resource value: 0x7f0a00c0
-			public const int chronometer = 2131361984;
-			
-			// aapt resource value: 0x7f0a004d
-			public const int clip_horizontal = 2131361869;
-			
-			// aapt resource value: 0x7f0a004e
-			public const int clip_vertical = 2131361870;
-			
-			// aapt resource value: 0x7f0a0038
-			public const int collapseActionView = 2131361848;
-			
-			// aapt resource value: 0x7f0a008c
-			public const int container = 2131361932;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int contentPanel = 2131361893;
-			
-			// aapt resource value: 0x7f0a008d
-			public const int coordinator = 2131361933;
-			
-			// aapt resource value: 0x7f0a006c
-			public const int custom = 2131361900;
-			
-			// aapt resource value: 0x7f0a006b
-			public const int customPanel = 2131361899;
-			
-			// aapt resource value: 0x7f0a0079
-			public const int decor_content_parent = 2131361913;
-			
-			// aapt resource value: 0x7f0a005f
-			public const int default_activity_button = 2131361887;
-			
-			// aapt resource value: 0x7f0a008f
-			public const int design_bottom_sheet = 2131361935;
-			
-			// aapt resource value: 0x7f0a0096
-			public const int design_menu_item_action_area = 2131361942;
-			
-			// aapt resource value: 0x7f0a0095
-			public const int design_menu_item_action_area_stub = 2131361941;
-			
-			// aapt resource value: 0x7f0a0094
-			public const int design_menu_item_text = 2131361940;
-			
-			// aapt resource value: 0x7f0a0093
-			public const int design_navigation_view = 2131361939;
-			
-			// aapt resource value: 0x7f0a001f
-			public const int disableHome = 2131361823;
-			
-			// aapt resource value: 0x7f0a007d
-			public const int edit_query = 2131361917;
-			
-			// aapt resource value: 0x7f0a002f
-			public const int end = 2131361839;
-			
-			// aapt resource value: 0x7f0a00c6
-			public const int end_padder = 2131361990;
-			
-			// aapt resource value: 0x7f0a003e
-			public const int enterAlways = 2131361854;
-			
-			// aapt resource value: 0x7f0a003f
-			public const int enterAlwaysCollapsed = 2131361855;
-			
-			// aapt resource value: 0x7f0a0040
-			public const int exitUntilCollapsed = 2131361856;
+			// aapt resource value: 0x7f0a00c5
+			public const int actions = 2131361989;
 			
 			// aapt resource value: 0x7f0a005d
-			public const int expand_activities_button = 2131361885;
+			public const int activity_chooser_view_content = 2131361885;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int expanded_menu = 2131361905;
+			// aapt resource value: 0x7f0a0027
+			public const int add = 2131361831;
 			
-			// aapt resource value: 0x7f0a004f
-			public const int fill = 2131361871;
+			// aapt resource value: 0x7f0a0070
+			public const int alertTitle = 2131361904;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int fill_horizontal = 2131361872;
+			// aapt resource value: 0x7f0a0052
+			public const int all = 2131361874;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int fill_vertical = 2131361863;
+			// aapt resource value: 0x7f0a0038
+			public const int always = 2131361848;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int @fixed = 2131361875;
+			// aapt resource value: 0x7f0a0056
+			public const int async = 2131361878;
+			
+			// aapt resource value: 0x7f0a0044
+			public const int auto = 2131361860;
+			
+			// aapt resource value: 0x7f0a002f
+			public const int beginning = 2131361839;
 			
 			// aapt resource value: 0x7f0a0057
-			public const int forever = 2131361879;
+			public const int blocking = 2131361879;
+			
+			// aapt resource value: 0x7f0a003d
+			public const int bottom = 2131361853;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int buttonPanel = 2131361891;
+			
+			// aapt resource value: 0x7f0a00b9
+			public const int cancel_action = 2131361977;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int center = 2131361861;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int center_horizontal = 2131361862;
+			
+			// aapt resource value: 0x7f0a0047
+			public const int center_vertical = 2131361863;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int checkbox = 2131361907;
+			
+			// aapt resource value: 0x7f0a00c1
+			public const int chronometer = 2131361985;
+			
+			// aapt resource value: 0x7f0a004e
+			public const int clip_horizontal = 2131361870;
+			
+			// aapt resource value: 0x7f0a004f
+			public const int clip_vertical = 2131361871;
+			
+			// aapt resource value: 0x7f0a0039
+			public const int collapseActionView = 2131361849;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int container = 2131361933;
+			
+			// aapt resource value: 0x7f0a0066
+			public const int contentPanel = 2131361894;
+			
+			// aapt resource value: 0x7f0a008e
+			public const int coordinator = 2131361934;
+			
+			// aapt resource value: 0x7f0a006d
+			public const int custom = 2131361901;
+			
+			// aapt resource value: 0x7f0a006c
+			public const int customPanel = 2131361900;
+			
+			// aapt resource value: 0x7f0a007a
+			public const int decor_content_parent = 2131361914;
+			
+			// aapt resource value: 0x7f0a0060
+			public const int default_activity_button = 2131361888;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int design_bottom_sheet = 2131361936;
+			
+			// aapt resource value: 0x7f0a0097
+			public const int design_menu_item_action_area = 2131361943;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int design_menu_item_action_area_stub = 2131361942;
+			
+			// aapt resource value: 0x7f0a0095
+			public const int design_menu_item_text = 2131361941;
+			
+			// aapt resource value: 0x7f0a0094
+			public const int design_navigation_view = 2131361940;
+			
+			// aapt resource value: 0x7f0a0020
+			public const int disableHome = 2131361824;
+			
+			// aapt resource value: 0x7f0a007e
+			public const int edit_query = 2131361918;
+			
+			// aapt resource value: 0x7f0a0030
+			public const int end = 2131361840;
+			
+			// aapt resource value: 0x7f0a00c7
+			public const int end_padder = 2131361991;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int enterAlways = 2131361855;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int enterAlwaysCollapsed = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int exitUntilCollapsed = 2131361857;
+			
+			// aapt resource value: 0x7f0a005e
+			public const int expand_activities_button = 2131361886;
+			
+			// aapt resource value: 0x7f0a0072
+			public const int expanded_menu = 2131361906;
+			
+			// aapt resource value: 0x7f0a0050
+			public const int fill = 2131361872;
+			
+			// aapt resource value: 0x7f0a0051
+			public const int fill_horizontal = 2131361873;
+			
+			// aapt resource value: 0x7f0a0048
+			public const int fill_vertical = 2131361864;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int @fixed = 2131361876;
+			
+			// aapt resource value: 0x7f0a0058
+			public const int forever = 2131361880;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int ghost_view = 2131361802;
@@ -3310,35 +4819,35 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int homeAsUp = 2131361824;
+			// aapt resource value: 0x7f0a0021
+			public const int homeAsUp = 2131361825;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int icon = 2131361889;
+			// aapt resource value: 0x7f0a0062
+			public const int icon = 2131361890;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int icon_group = 2131361989;
+			// aapt resource value: 0x7f0a00c6
+			public const int icon_group = 2131361990;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int ifRoom = 2131361849;
+			// aapt resource value: 0x7f0a003a
+			public const int ifRoom = 2131361850;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int image = 2131361886;
+			// aapt resource value: 0x7f0a005f
+			public const int image = 2131361887;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int info = 2131361985;
+			// aapt resource value: 0x7f0a00c2
+			public const int info = 2131361986;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int italic = 2131361880;
+			// aapt resource value: 0x7f0a0059
+			public const int italic = 2131361881;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int largeLabel = 2131361931;
+			// aapt resource value: 0x7f0a008c
+			public const int largeLabel = 2131361932;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int left = 2131361864;
+			// aapt resource value: 0x7f0a0049
+			public const int left = 2131361865;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int line1 = 2131361815;
@@ -3346,158 +4855,158 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0018
 			public const int line3 = 2131361816;
 			
-			// aapt resource value: 0x7f0a001c
-			public const int listMode = 2131361820;
+			// aapt resource value: 0x7f0a001d
+			public const int listMode = 2131361821;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int list_item = 2131361888;
-			
-			// aapt resource value: 0x7f0a00cc
-			public const int masked = 2131361996;
-			
-			// aapt resource value: 0x7f0a00ba
-			public const int media_actions = 2131361978;
-			
-			// aapt resource value: 0x7f0a00c9
-			public const int message = 2131361993;
-			
-			// aapt resource value: 0x7f0a0030
-			public const int middle = 2131361840;
-			
-			// aapt resource value: 0x7f0a0052
-			public const int mini = 2131361874;
-			
-			// aapt resource value: 0x7f0a00a5
-			public const int mr_art = 2131361957;
-			
-			// aapt resource value: 0x7f0a009a
-			public const int mr_chooser_list = 2131361946;
-			
-			// aapt resource value: 0x7f0a009d
-			public const int mr_chooser_route_desc = 2131361949;
-			
-			// aapt resource value: 0x7f0a009b
-			public const int mr_chooser_route_icon = 2131361947;
-			
-			// aapt resource value: 0x7f0a009c
-			public const int mr_chooser_route_name = 2131361948;
-			
-			// aapt resource value: 0x7f0a0099
-			public const int mr_chooser_title = 2131361945;
-			
-			// aapt resource value: 0x7f0a00a2
-			public const int mr_close = 2131361954;
-			
-			// aapt resource value: 0x7f0a00a8
-			public const int mr_control_divider = 2131361960;
-			
-			// aapt resource value: 0x7f0a00ae
-			public const int mr_control_playback_ctrl = 2131361966;
-			
-			// aapt resource value: 0x7f0a00b1
-			public const int mr_control_subtitle = 2131361969;
-			
-			// aapt resource value: 0x7f0a00b0
-			public const int mr_control_title = 2131361968;
-			
-			// aapt resource value: 0x7f0a00af
-			public const int mr_control_title_container = 2131361967;
-			
-			// aapt resource value: 0x7f0a00a3
-			public const int mr_custom_control = 2131361955;
-			
-			// aapt resource value: 0x7f0a00a4
-			public const int mr_default_control = 2131361956;
-			
-			// aapt resource value: 0x7f0a009f
-			public const int mr_dialog_area = 2131361951;
-			
-			// aapt resource value: 0x7f0a009e
-			public const int mr_expandable_area = 2131361950;
-			
-			// aapt resource value: 0x7f0a00b2
-			public const int mr_group_expand_collapse = 2131361970;
-			
-			// aapt resource value: 0x7f0a00a6
-			public const int mr_media_main_control = 2131361958;
-			
-			// aapt resource value: 0x7f0a00a1
-			public const int mr_name = 2131361953;
-			
-			// aapt resource value: 0x7f0a00a7
-			public const int mr_playback_control = 2131361959;
-			
-			// aapt resource value: 0x7f0a00a0
-			public const int mr_title_bar = 2131361952;
-			
-			// aapt resource value: 0x7f0a00a9
-			public const int mr_volume_control = 2131361961;
-			
-			// aapt resource value: 0x7f0a00aa
-			public const int mr_volume_group_list = 2131361962;
-			
-			// aapt resource value: 0x7f0a00ac
-			public const int mr_volume_item_icon = 2131361964;
-			
-			// aapt resource value: 0x7f0a00ad
-			public const int mr_volume_slider = 2131361965;
-			
-			// aapt resource value: 0x7f0a0026
-			public const int multiply = 2131361830;
-			
-			// aapt resource value: 0x7f0a00d0
-			public const int nav_Shell = 2131362000;
-			
-			// aapt resource value: 0x7f0a00ce
-			public const int nav_home = 2131361998;
-			
-			// aapt resource value: 0x7f0a00cf
-			public const int nav_hostManager = 2131361999;
+			// aapt resource value: 0x7f0a0061
+			public const int list_item = 2131361889;
 			
 			// aapt resource value: 0x7f0a00cd
-			public const int nav_section_main = 2131361997;
+			public const int masked = 2131361997;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int nav_settings = 2131362001;
+			// aapt resource value: 0x7f0a00bb
+			public const int media_actions = 2131361979;
+			
+			// aapt resource value: 0x7f0a00ca
+			public const int message = 2131361994;
+			
+			// aapt resource value: 0x7f0a0031
+			public const int middle = 2131361841;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int mini = 2131361875;
+			
+			// aapt resource value: 0x7f0a00a6
+			public const int mr_art = 2131361958;
+			
+			// aapt resource value: 0x7f0a009b
+			public const int mr_chooser_list = 2131361947;
+			
+			// aapt resource value: 0x7f0a009e
+			public const int mr_chooser_route_desc = 2131361950;
+			
+			// aapt resource value: 0x7f0a009c
+			public const int mr_chooser_route_icon = 2131361948;
+			
+			// aapt resource value: 0x7f0a009d
+			public const int mr_chooser_route_name = 2131361949;
+			
+			// aapt resource value: 0x7f0a009a
+			public const int mr_chooser_title = 2131361946;
+			
+			// aapt resource value: 0x7f0a00a3
+			public const int mr_close = 2131361955;
+			
+			// aapt resource value: 0x7f0a00a9
+			public const int mr_control_divider = 2131361961;
+			
+			// aapt resource value: 0x7f0a00af
+			public const int mr_control_playback_ctrl = 2131361967;
+			
+			// aapt resource value: 0x7f0a00b2
+			public const int mr_control_subtitle = 2131361970;
+			
+			// aapt resource value: 0x7f0a00b1
+			public const int mr_control_title = 2131361969;
+			
+			// aapt resource value: 0x7f0a00b0
+			public const int mr_control_title_container = 2131361968;
+			
+			// aapt resource value: 0x7f0a00a4
+			public const int mr_custom_control = 2131361956;
+			
+			// aapt resource value: 0x7f0a00a5
+			public const int mr_default_control = 2131361957;
+			
+			// aapt resource value: 0x7f0a00a0
+			public const int mr_dialog_area = 2131361952;
+			
+			// aapt resource value: 0x7f0a009f
+			public const int mr_expandable_area = 2131361951;
 			
 			// aapt resource value: 0x7f0a00b3
-			public const int nav_view = 2131361971;
+			public const int mr_group_expand_collapse = 2131361971;
 			
-			// aapt resource value: 0x7f0a0092
-			public const int navigation_header_container = 2131361938;
+			// aapt resource value: 0x7f0a00a7
+			public const int mr_media_main_control = 2131361959;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int never = 2131361850;
+			// aapt resource value: 0x7f0a00a2
+			public const int mr_name = 2131361954;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int none = 2131361825;
+			// aapt resource value: 0x7f0a00a8
+			public const int mr_playback_control = 2131361960;
 			
-			// aapt resource value: 0x7f0a001d
-			public const int normal = 2131361821;
+			// aapt resource value: 0x7f0a00a1
+			public const int mr_title_bar = 2131361953;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int notification_background = 2131361987;
+			// aapt resource value: 0x7f0a00aa
+			public const int mr_volume_control = 2131361962;
+			
+			// aapt resource value: 0x7f0a00ab
+			public const int mr_volume_group_list = 2131361963;
+			
+			// aapt resource value: 0x7f0a00ad
+			public const int mr_volume_item_icon = 2131361965;
+			
+			// aapt resource value: 0x7f0a00ae
+			public const int mr_volume_slider = 2131361966;
+			
+			// aapt resource value: 0x7f0a0028
+			public const int multiply = 2131361832;
+			
+			// aapt resource value: 0x7f0a00d1
+			public const int nav_Shell = 2131362001;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int nav_home = 2131361999;
+			
+			// aapt resource value: 0x7f0a00d0
+			public const int nav_hostManager = 2131362000;
+			
+			// aapt resource value: 0x7f0a00ce
+			public const int nav_section_main = 2131361998;
+			
+			// aapt resource value: 0x7f0a00d2
+			public const int nav_settings = 2131362002;
+			
+			// aapt resource value: 0x7f0a00b4
+			public const int nav_view = 2131361972;
+			
+			// aapt resource value: 0x7f0a0093
+			public const int navigation_header_container = 2131361939;
+			
+			// aapt resource value: 0x7f0a003b
+			public const int never = 2131361851;
+			
+			// aapt resource value: 0x7f0a0022
+			public const int none = 2131361826;
+			
+			// aapt resource value: 0x7f0a001e
+			public const int normal = 2131361822;
+			
+			// aapt resource value: 0x7f0a00c4
+			public const int notification_background = 2131361988;
+			
+			// aapt resource value: 0x7f0a00be
+			public const int notification_main_column = 2131361982;
 			
 			// aapt resource value: 0x7f0a00bd
-			public const int notification_main_column = 2131361981;
+			public const int notification_main_column_container = 2131361981;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int notification_main_column_container = 2131361980;
+			// aapt resource value: 0x7f0a004c
+			public const int parallax = 2131361868;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int parallax = 2131361867;
-			
-			// aapt resource value: 0x7f0a0064
-			public const int parentPanel = 2131361892;
+			// aapt resource value: 0x7f0a0065
+			public const int parentPanel = 2131361893;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int parent_matrix = 2131361803;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int pin = 2131361868;
+			// aapt resource value: 0x7f0a004d
+			public const int pin = 2131361869;
 			
-			// aapt resource value: 0x7f0a0098
-			public const int profile_name = 2131361944;
+			// aapt resource value: 0x7f0a0099
+			public const int profile_name = 2131361945;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int progress_circular = 2131361798;
@@ -3505,17 +5014,17 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int radio = 2131361908;
+			// aapt resource value: 0x7f0a0075
+			public const int radio = 2131361909;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int right = 2131361865;
+			// aapt resource value: 0x7f0a004a
+			public const int right = 2131361866;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int right_icon = 2131361986;
+			// aapt resource value: 0x7f0a00c3
+			public const int right_icon = 2131361987;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int right_side = 2131361982;
+			// aapt resource value: 0x7f0a00bf
+			public const int right_side = 2131361983;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -3526,128 +5035,131 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a000e
 			public const int save_scale_type = 2131361806;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int screen = 2131361831;
-			
-			// aapt resource value: 0x7f0a0041
-			public const int scroll = 2131361857;
-			
-			// aapt resource value: 0x7f0a006a
-			public const int scrollIndicatorDown = 2131361898;
-			
-			// aapt resource value: 0x7f0a0066
-			public const int scrollIndicatorUp = 2131361894;
-			
-			// aapt resource value: 0x7f0a0067
-			public const int scrollView = 2131361895;
-			
-			// aapt resource value: 0x7f0a0054
-			public const int scrollable = 2131361876;
-			
-			// aapt resource value: 0x7f0a007f
-			public const int search_badge = 2131361919;
-			
-			// aapt resource value: 0x7f0a007e
-			public const int search_bar = 2131361918;
-			
-			// aapt resource value: 0x7f0a0080
-			public const int search_button = 2131361920;
-			
-			// aapt resource value: 0x7f0a0085
-			public const int search_close_btn = 2131361925;
-			
-			// aapt resource value: 0x7f0a0081
-			public const int search_edit_frame = 2131361921;
-			
-			// aapt resource value: 0x7f0a0087
-			public const int search_go_btn = 2131361927;
-			
-			// aapt resource value: 0x7f0a0082
-			public const int search_mag_icon = 2131361922;
-			
-			// aapt resource value: 0x7f0a0083
-			public const int search_plate = 2131361923;
-			
-			// aapt resource value: 0x7f0a0084
-			public const int search_src_text = 2131361924;
-			
-			// aapt resource value: 0x7f0a0088
-			public const int search_voice_btn = 2131361928;
-			
-			// aapt resource value: 0x7f0a0089
-			public const int select_dialog_listview = 2131361929;
-			
-			// aapt resource value: 0x7f0a0073
-			public const int shortcut = 2131361907;
-			
-			// aapt resource value: 0x7f0a0022
-			public const int showCustom = 2131361826;
-			
-			// aapt resource value: 0x7f0a0023
-			public const int showHome = 2131361827;
-			
-			// aapt resource value: 0x7f0a0024
-			public const int showTitle = 2131361828;
-			
-			// aapt resource value: 0x7f0a00c7
-			public const int sliding_tabs = 2131361991;
-			
-			// aapt resource value: 0x7f0a008a
-			public const int smallLabel = 2131361930;
-			
-			// aapt resource value: 0x7f0a0091
-			public const int snackbar_action = 2131361937;
-			
-			// aapt resource value: 0x7f0a0090
-			public const int snackbar_text = 2131361936;
+			// aapt resource value: 0x7f0a0029
+			public const int screen = 2131361833;
 			
 			// aapt resource value: 0x7f0a0042
-			public const int snap = 2131361858;
+			public const int scroll = 2131361858;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int spacer = 2131361891;
+			// aapt resource value: 0x7f0a006b
+			public const int scrollIndicatorDown = 2131361899;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int scrollIndicatorUp = 2131361895;
+			
+			// aapt resource value: 0x7f0a0068
+			public const int scrollView = 2131361896;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int scrollable = 2131361877;
+			
+			// aapt resource value: 0x7f0a0080
+			public const int search_badge = 2131361920;
+			
+			// aapt resource value: 0x7f0a007f
+			public const int search_bar = 2131361919;
+			
+			// aapt resource value: 0x7f0a0081
+			public const int search_button = 2131361921;
+			
+			// aapt resource value: 0x7f0a0086
+			public const int search_close_btn = 2131361926;
+			
+			// aapt resource value: 0x7f0a0082
+			public const int search_edit_frame = 2131361922;
+			
+			// aapt resource value: 0x7f0a0088
+			public const int search_go_btn = 2131361928;
+			
+			// aapt resource value: 0x7f0a0083
+			public const int search_mag_icon = 2131361923;
+			
+			// aapt resource value: 0x7f0a0084
+			public const int search_plate = 2131361924;
+			
+			// aapt resource value: 0x7f0a0085
+			public const int search_src_text = 2131361925;
+			
+			// aapt resource value: 0x7f0a0089
+			public const int search_voice_btn = 2131361929;
+			
+			// aapt resource value: 0x7f0a008a
+			public const int select_dialog_listview = 2131361930;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int shortcut = 2131361908;
+			
+			// aapt resource value: 0x7f0a0023
+			public const int showCustom = 2131361827;
+			
+			// aapt resource value: 0x7f0a0024
+			public const int showHome = 2131361828;
+			
+			// aapt resource value: 0x7f0a0025
+			public const int showTitle = 2131361829;
+			
+			// aapt resource value: 0x7f0a00c8
+			public const int sliding_tabs = 2131361992;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int smallLabel = 2131361931;
+			
+			// aapt resource value: 0x7f0a0092
+			public const int snackbar_action = 2131361938;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int snackbar_text = 2131361937;
+			
+			// aapt resource value: 0x7f0a0043
+			public const int snap = 2131361859;
+			
+			// aapt resource value: 0x7f0a0064
+			public const int spacer = 2131361892;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int src_atop = 2131361832;
-			
-			// aapt resource value: 0x7f0a0029
-			public const int src_in = 2131361833;
-			
 			// aapt resource value: 0x7f0a002a
-			public const int src_over = 2131361834;
+			public const int src_atop = 2131361834;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int start = 2131361866;
+			// aapt resource value: 0x7f0a002b
+			public const int src_in = 2131361835;
 			
-			// aapt resource value: 0x7f0a00b9
-			public const int status_bar_latest_event_content = 2131361977;
+			// aapt resource value: 0x7f0a002c
+			public const int src_over = 2131361836;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int submenuarrow = 2131361909;
+			// aapt resource value: 0x7f0a004b
+			public const int start = 2131361867;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int submit_area = 2131361926;
+			// aapt resource value: 0x7f0a00ba
+			public const int status_bar_latest_event_content = 2131361978;
 			
-			// aapt resource value: 0x7f0a001e
-			public const int tabMode = 2131361822;
+			// aapt resource value: 0x7f0a0076
+			public const int submenuarrow = 2131361910;
+			
+			// aapt resource value: 0x7f0a0087
+			public const int submit_area = 2131361927;
+			
+			// aapt resource value: 0x7f0a001f
+			public const int tabMode = 2131361823;
 			
 			// aapt resource value: 0x7f0a0019
-			public const int text = 2131361817;
+			public const int tag_transition_group = 2131361817;
 			
 			// aapt resource value: 0x7f0a001a
-			public const int text2 = 2131361818;
+			public const int text = 2131361818;
+			
+			// aapt resource value: 0x7f0a001b
+			public const int text2 = 2131361819;
+			
+			// aapt resource value: 0x7f0a006a
+			public const int textSpacerNoButtons = 2131361898;
 			
 			// aapt resource value: 0x7f0a0069
-			public const int textSpacerNoButtons = 2131361897;
+			public const int textSpacerNoTitle = 2131361897;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int textSpacerNoTitle = 2131361896;
-			
-			// aapt resource value: 0x7f0a0097
-			public const int text_input_password_toggle = 2131361943;
+			// aapt resource value: 0x7f0a0098
+			public const int text_input_password_toggle = 2131361944;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int textinput_counter = 2131361812;
@@ -3655,29 +5167,29 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int textinput_error = 2131361813;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int time = 2131361983;
+			// aapt resource value: 0x7f0a00c0
+			public const int time = 2131361984;
 			
-			// aapt resource value: 0x7f0a001b
-			public const int title = 2131361819;
+			// aapt resource value: 0x7f0a001c
+			public const int title = 2131361820;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int titleDividerNoCustom = 2131361904;
+			// aapt resource value: 0x7f0a0071
+			public const int titleDividerNoCustom = 2131361905;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int title_template = 2131361903;
+			
+			// aapt resource value: 0x7f0a00c9
+			public const int toolbar = 2131361993;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int top = 2131361854;
 			
 			// aapt resource value: 0x7f0a006e
-			public const int title_template = 2131361902;
+			public const int topPanel = 2131361902;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int toolbar = 2131361992;
-			
-			// aapt resource value: 0x7f0a003d
-			public const int top = 2131361853;
-			
-			// aapt resource value: 0x7f0a006d
-			public const int topPanel = 2131361901;
-			
-			// aapt resource value: 0x7f0a008e
-			public const int touch_outside = 2131361934;
+			// aapt resource value: 0x7f0a008f
+			public const int touch_outside = 2131361935;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int transition_current_scene = 2131361807;
@@ -3694,32 +5206,32 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0a0013
 			public const int transition_transform = 2131361811;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int uniform = 2131361836;
+			// aapt resource value: 0x7f0a002d
+			public const int uniform = 2131361837;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int useLogo = 2131361829;
+			// aapt resource value: 0x7f0a0026
+			public const int useLogo = 2131361830;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
+			// aapt resource value: 0x7f0a00cc
+			public const int visible = 2131361996;
+			
+			// aapt resource value: 0x7f0a00ac
+			public const int volume_item_container = 2131361964;
+			
 			// aapt resource value: 0x7f0a00cb
-			public const int visible = 2131361995;
+			public const int widgetBackground = 2131361995;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int volume_item_container = 2131361963;
+			// aapt resource value: 0x7f0a003c
+			public const int withText = 2131361852;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int widgetBackground = 2131361994;
-			
-			// aapt resource value: 0x7f0a003b
-			public const int withText = 2131361851;
-			
-			// aapt resource value: 0x7f0a002d
-			public const int wrap_content = 2131361837;
+			// aapt resource value: 0x7f0a002e
+			public const int wrap_content = 2131361838;
 			
 			static Id()
 			{
@@ -4060,109 +5572,103 @@ namespace ApptestSsh.Droid
 			public const int abc_action_bar_home_description = 2131230743;
 			
 			// aapt resource value: 0x7f080018
-			public const int abc_action_bar_home_description_format = 2131230744;
+			public const int abc_action_bar_up_description = 2131230744;
 			
 			// aapt resource value: 0x7f080019
-			public const int abc_action_bar_home_subtitle_description_format = 2131230745;
+			public const int abc_action_menu_overflow_description = 2131230745;
 			
 			// aapt resource value: 0x7f08001a
-			public const int abc_action_bar_up_description = 2131230746;
+			public const int abc_action_mode_done = 2131230746;
 			
 			// aapt resource value: 0x7f08001b
-			public const int abc_action_menu_overflow_description = 2131230747;
+			public const int abc_activity_chooser_view_see_all = 2131230747;
 			
 			// aapt resource value: 0x7f08001c
-			public const int abc_action_mode_done = 2131230748;
+			public const int abc_activitychooserview_choose_application = 2131230748;
 			
 			// aapt resource value: 0x7f08001d
-			public const int abc_activity_chooser_view_see_all = 2131230749;
+			public const int abc_capital_off = 2131230749;
 			
 			// aapt resource value: 0x7f08001e
-			public const int abc_activitychooserview_choose_application = 2131230750;
-			
-			// aapt resource value: 0x7f08001f
-			public const int abc_capital_off = 2131230751;
-			
-			// aapt resource value: 0x7f080020
-			public const int abc_capital_on = 2131230752;
-			
-			// aapt resource value: 0x7f08002c
-			public const int abc_font_family_body_1_material = 2131230764;
-			
-			// aapt resource value: 0x7f08002d
-			public const int abc_font_family_body_2_material = 2131230765;
-			
-			// aapt resource value: 0x7f08002e
-			public const int abc_font_family_button_material = 2131230766;
-			
-			// aapt resource value: 0x7f08002f
-			public const int abc_font_family_caption_material = 2131230767;
-			
-			// aapt resource value: 0x7f080030
-			public const int abc_font_family_display_1_material = 2131230768;
-			
-			// aapt resource value: 0x7f080031
-			public const int abc_font_family_display_2_material = 2131230769;
-			
-			// aapt resource value: 0x7f080032
-			public const int abc_font_family_display_3_material = 2131230770;
-			
-			// aapt resource value: 0x7f080033
-			public const int abc_font_family_display_4_material = 2131230771;
-			
-			// aapt resource value: 0x7f080034
-			public const int abc_font_family_headline_material = 2131230772;
-			
-			// aapt resource value: 0x7f080035
-			public const int abc_font_family_menu_material = 2131230773;
-			
-			// aapt resource value: 0x7f080036
-			public const int abc_font_family_subhead_material = 2131230774;
-			
-			// aapt resource value: 0x7f080037
-			public const int abc_font_family_title_material = 2131230775;
-			
-			// aapt resource value: 0x7f080021
-			public const int abc_search_hint = 2131230753;
-			
-			// aapt resource value: 0x7f080022
-			public const int abc_searchview_description_clear = 2131230754;
-			
-			// aapt resource value: 0x7f080023
-			public const int abc_searchview_description_query = 2131230755;
-			
-			// aapt resource value: 0x7f080024
-			public const int abc_searchview_description_search = 2131230756;
-			
-			// aapt resource value: 0x7f080025
-			public const int abc_searchview_description_submit = 2131230757;
-			
-			// aapt resource value: 0x7f080026
-			public const int abc_searchview_description_voice = 2131230758;
-			
-			// aapt resource value: 0x7f080027
-			public const int abc_shareactionprovider_share_with = 2131230759;
-			
-			// aapt resource value: 0x7f080028
-			public const int abc_shareactionprovider_share_with_application = 2131230760;
+			public const int abc_capital_on = 2131230750;
 			
 			// aapt resource value: 0x7f080029
-			public const int abc_toolbar_collapse_description = 2131230761;
+			public const int abc_font_family_body_1_material = 2131230761;
 			
-			// aapt resource value: 0x7f080041
-			public const int app_name = 2131230785;
+			// aapt resource value: 0x7f08002a
+			public const int abc_font_family_body_2_material = 2131230762;
 			
-			// aapt resource value: 0x7f080038
-			public const int appbar_scrolling_view_behavior = 2131230776;
+			// aapt resource value: 0x7f08002b
+			public const int abc_font_family_button_material = 2131230763;
 			
-			// aapt resource value: 0x7f080039
-			public const int bottom_sheet_behavior = 2131230777;
+			// aapt resource value: 0x7f08002c
+			public const int abc_font_family_caption_material = 2131230764;
 			
-			// aapt resource value: 0x7f08003a
-			public const int character_counter_pattern = 2131230778;
+			// aapt resource value: 0x7f08002d
+			public const int abc_font_family_display_1_material = 2131230765;
 			
-			// aapt resource value: 0x7f080040
-			public const int library_name = 2131230784;
+			// aapt resource value: 0x7f08002e
+			public const int abc_font_family_display_2_material = 2131230766;
+			
+			// aapt resource value: 0x7f08002f
+			public const int abc_font_family_display_3_material = 2131230767;
+			
+			// aapt resource value: 0x7f080030
+			public const int abc_font_family_display_4_material = 2131230768;
+			
+			// aapt resource value: 0x7f080031
+			public const int abc_font_family_headline_material = 2131230769;
+			
+			// aapt resource value: 0x7f080032
+			public const int abc_font_family_menu_material = 2131230770;
+			
+			// aapt resource value: 0x7f080033
+			public const int abc_font_family_subhead_material = 2131230771;
+			
+			// aapt resource value: 0x7f080034
+			public const int abc_font_family_title_material = 2131230772;
+			
+			// aapt resource value: 0x7f08001f
+			public const int abc_search_hint = 2131230751;
+			
+			// aapt resource value: 0x7f080020
+			public const int abc_searchview_description_clear = 2131230752;
+			
+			// aapt resource value: 0x7f080021
+			public const int abc_searchview_description_query = 2131230753;
+			
+			// aapt resource value: 0x7f080022
+			public const int abc_searchview_description_search = 2131230754;
+			
+			// aapt resource value: 0x7f080023
+			public const int abc_searchview_description_submit = 2131230755;
+			
+			// aapt resource value: 0x7f080024
+			public const int abc_searchview_description_voice = 2131230756;
+			
+			// aapt resource value: 0x7f080025
+			public const int abc_shareactionprovider_share_with = 2131230757;
+			
+			// aapt resource value: 0x7f080026
+			public const int abc_shareactionprovider_share_with_application = 2131230758;
+			
+			// aapt resource value: 0x7f080027
+			public const int abc_toolbar_collapse_description = 2131230759;
+			
+			// aapt resource value: 0x7f08003f
+			public const int app_name = 2131230783;
+			
+			// aapt resource value: 0x7f080035
+			public const int appbar_scrolling_view_behavior = 2131230773;
+			
+			// aapt resource value: 0x7f080036
+			public const int bottom_sheet_behavior = 2131230774;
+			
+			// aapt resource value: 0x7f080037
+			public const int character_counter_pattern = 2131230775;
+			
+			// aapt resource value: 0x7f08003e
+			public const int library_name = 2131230782;
 			
 			// aapt resource value: 0x7f080002
 			public const int mr_button_content_description = 2131230722;
@@ -4227,32 +5733,32 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f080016
 			public const int mr_user_route_category_name = 2131230742;
 			
+			// aapt resource value: 0x7f080038
+			public const int password_toggle_content_description = 2131230776;
+			
+			// aapt resource value: 0x7f080039
+			public const int path_password_eye = 2131230777;
+			
+			// aapt resource value: 0x7f08003a
+			public const int path_password_eye_mask_strike_through = 2131230778;
+			
 			// aapt resource value: 0x7f08003b
-			public const int password_toggle_content_description = 2131230779;
+			public const int path_password_eye_mask_visible = 2131230779;
 			
 			// aapt resource value: 0x7f08003c
-			public const int path_password_eye = 2131230780;
+			public const int path_password_strike_through = 2131230780;
+			
+			// aapt resource value: 0x7f080028
+			public const int search_menu_title = 2131230760;
 			
 			// aapt resource value: 0x7f08003d
-			public const int path_password_eye_mask_strike_through = 2131230781;
+			public const int status_bar_notification_info_overflow = 2131230781;
 			
-			// aapt resource value: 0x7f08003e
-			public const int path_password_eye_mask_visible = 2131230782;
+			// aapt resource value: 0x7f080040
+			public const int widget_disk_usage = 2131230784;
 			
-			// aapt resource value: 0x7f08003f
-			public const int path_password_strike_through = 2131230783;
-			
-			// aapt resource value: 0x7f08002a
-			public const int search_menu_title = 2131230762;
-			
-			// aapt resource value: 0x7f08002b
-			public const int status_bar_notification_info_overflow = 2131230763;
-			
-			// aapt resource value: 0x7f080042
-			public const int widget_disk_usage = 2131230786;
-			
-			// aapt resource value: 0x7f080043
-			public const int widget_loading = 2131230787;
+			// aapt resource value: 0x7f080041
+			public const int widget_loading = 2131230785;
 			
 			static String()
 			{
@@ -4267,50 +5773,50 @@ namespace ApptestSsh.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f0c00a4
+			public const int AlertDialog_AppCompat = 2131493028;
+			
+			// aapt resource value: 0x7f0c00a5
+			public const int AlertDialog_AppCompat_Light = 2131493029;
+			
+			// aapt resource value: 0x7f0c00a6
+			public const int Animation_AppCompat_Dialog = 2131493030;
+			
+			// aapt resource value: 0x7f0c00a7
+			public const int Animation_AppCompat_DropDownUp = 2131493031;
+			
+			// aapt resource value: 0x7f0c00a8
+			public const int Animation_AppCompat_Tooltip = 2131493032;
+			
+			// aapt resource value: 0x7f0c016e
+			public const int Animation_Design_BottomSheetDialog = 2131493230;
+			
+			// aapt resource value: 0x7f0c0191
+			public const int AppCompatDialogStyle = 2131493265;
+			
+			// aapt resource value: 0x7f0c00a9
+			public const int Base_AlertDialog_AppCompat = 2131493033;
+			
+			// aapt resource value: 0x7f0c00aa
+			public const int Base_AlertDialog_AppCompat_Light = 2131493034;
+			
+			// aapt resource value: 0x7f0c00ab
+			public const int Base_Animation_AppCompat_Dialog = 2131493035;
+			
 			// aapt resource value: 0x7f0c00ac
-			public const int AlertDialog_AppCompat = 2131493036;
+			public const int Base_Animation_AppCompat_DropDownUp = 2131493036;
 			
 			// aapt resource value: 0x7f0c00ad
-			public const int AlertDialog_AppCompat_Light = 2131493037;
-			
-			// aapt resource value: 0x7f0c00ae
-			public const int Animation_AppCompat_Dialog = 2131493038;
-			
-			// aapt resource value: 0x7f0c00af
-			public const int Animation_AppCompat_DropDownUp = 2131493039;
-			
-			// aapt resource value: 0x7f0c00b0
-			public const int Animation_AppCompat_Tooltip = 2131493040;
-			
-			// aapt resource value: 0x7f0c0178
-			public const int Animation_Design_BottomSheetDialog = 2131493240;
-			
-			// aapt resource value: 0x7f0c019b
-			public const int AppCompatDialogStyle = 2131493275;
-			
-			// aapt resource value: 0x7f0c00b1
-			public const int Base_AlertDialog_AppCompat = 2131493041;
-			
-			// aapt resource value: 0x7f0c00b2
-			public const int Base_AlertDialog_AppCompat_Light = 2131493042;
-			
-			// aapt resource value: 0x7f0c00b3
-			public const int Base_Animation_AppCompat_Dialog = 2131493043;
-			
-			// aapt resource value: 0x7f0c00b4
-			public const int Base_Animation_AppCompat_DropDownUp = 2131493044;
-			
-			// aapt resource value: 0x7f0c00b5
-			public const int Base_Animation_AppCompat_Tooltip = 2131493045;
+			public const int Base_Animation_AppCompat_Tooltip = 2131493037;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int Base_CardView = 2131492876;
 			
-			// aapt resource value: 0x7f0c00b6
-			public const int Base_DialogWindowTitle_AppCompat = 2131493046;
+			// aapt resource value: 0x7f0c00ae
+			public const int Base_DialogWindowTitle_AppCompat = 2131493038;
 			
-			// aapt resource value: 0x7f0c00b7
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131493047;
+			// aapt resource value: 0x7f0c00af
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131493039;
 			
 			// aapt resource value: 0x7f0c0048
 			public const int Base_TextAppearance_AppCompat = 2131492936;
@@ -4366,8 +5872,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0055
 			public const int Base_TextAppearance_AppCompat_Menu = 2131492949;
 			
-			// aapt resource value: 0x7f0c00b8
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131493048;
+			// aapt resource value: 0x7f0c00b0
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131493040;
 			
 			// aapt resource value: 0x7f0c0056
 			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131492950;
@@ -4393,11 +5899,11 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c001f
 			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131492895;
 			
-			// aapt resource value: 0x7f0c00b9
-			public const int Base_TextAppearance_AppCompat_Tooltip = 2131493049;
+			// aapt resource value: 0x7f0c00b1
+			public const int Base_TextAppearance_AppCompat_Tooltip = 2131493041;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493021;
+			// aapt resource value: 0x7f0c0095
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493013;
 			
 			// aapt resource value: 0x7f0c005b
 			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131492955;
@@ -4420,17 +5926,17 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0061
 			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131492961;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131493028;
+			// aapt resource value: 0x7f0c009c
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131493020;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131493029;
+			// aapt resource value: 0x7f0c009d
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131493021;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131493022;
+			// aapt resource value: 0x7f0c0096
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131493014;
 			
-			// aapt resource value: 0x7f0c00ba
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131493050;
+			// aapt resource value: 0x7f0c00b2
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131493042;
 			
 			// aapt resource value: 0x7f0c0062
 			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131492962;
@@ -4447,8 +5953,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0066
 			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131492966;
 			
-			// aapt resource value: 0x7f0c00bb
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493051;
+			// aapt resource value: 0x7f0c00b3
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493043;
 			
 			// aapt resource value: 0x7f0c0067
 			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131492967;
@@ -4459,8 +5965,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0069
 			public const int Base_Theme_AppCompat = 2131492969;
 			
-			// aapt resource value: 0x7f0c00bc
-			public const int Base_Theme_AppCompat_CompactMenu = 2131493052;
+			// aapt resource value: 0x7f0c00b4
+			public const int Base_Theme_AppCompat_CompactMenu = 2131493044;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int Base_Theme_AppCompat_Dialog = 2131492896;
@@ -4468,8 +5974,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0021
 			public const int Base_Theme_AppCompat_Dialog_Alert = 2131492897;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131493053;
+			// aapt resource value: 0x7f0c00b5
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131493045;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131492898;
@@ -4480,8 +5986,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c006a
 			public const int Base_Theme_AppCompat_Light = 2131492970;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131493054;
+			// aapt resource value: 0x7f0c00b6
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131493046;
 			
 			// aapt resource value: 0x7f0c0023
 			public const int Base_Theme_AppCompat_Light_Dialog = 2131492899;
@@ -4489,8 +5995,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0024
 			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131492900;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131493055;
+			// aapt resource value: 0x7f0c00b7
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131493047;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131492901;
@@ -4498,17 +6004,17 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0011
 			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131492881;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int Base_ThemeOverlay_AppCompat = 2131493056;
+			// aapt resource value: 0x7f0c00b8
+			public const int Base_ThemeOverlay_AppCompat = 2131493048;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131493057;
+			// aapt resource value: 0x7f0c00b9
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131493049;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131493058;
+			// aapt resource value: 0x7f0c00ba
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131493050;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131493059;
+			// aapt resource value: 0x7f0c00bb
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131493051;
 			
 			// aapt resource value: 0x7f0c0026
 			public const int Base_ThemeOverlay_AppCompat_Dialog = 2131492902;
@@ -4516,8 +6022,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0027
 			public const int Base_ThemeOverlay_AppCompat_Dialog_Alert = 2131492903;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131493060;
+			// aapt resource value: 0x7f0c00bc
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131493052;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int Base_V11_Theme_AppCompat_Dialog = 2131492904;
@@ -4534,8 +6040,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0033
 			public const int Base_V12_Widget_AppCompat_EditText = 2131492915;
 			
-			// aapt resource value: 0x7f0c0179
-			public const int Base_V14_Widget_Design_AppBarLayout = 2131493241;
+			// aapt resource value: 0x7f0c016f
+			public const int Base_V14_Widget_Design_AppBarLayout = 2131493231;
 			
 			// aapt resource value: 0x7f0c006b
 			public const int Base_V21_Theme_AppCompat = 2131492971;
@@ -4552,65 +6058,65 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c006f
 			public const int Base_V21_ThemeOverlay_AppCompat_Dialog = 2131492975;
 			
-			// aapt resource value: 0x7f0c0175
-			public const int Base_V21_Widget_Design_AppBarLayout = 2131493237;
+			// aapt resource value: 0x7f0c016b
+			public const int Base_V21_Widget_Design_AppBarLayout = 2131493227;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int Base_V22_Theme_AppCompat = 2131493019;
+			// aapt resource value: 0x7f0c0093
+			public const int Base_V22_Theme_AppCompat = 2131493011;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int Base_V22_Theme_AppCompat_Light = 2131493020;
+			// aapt resource value: 0x7f0c0094
+			public const int Base_V22_Theme_AppCompat_Light = 2131493012;
 			
-			// aapt resource value: 0x7f0c009f
-			public const int Base_V23_Theme_AppCompat = 2131493023;
+			// aapt resource value: 0x7f0c0097
+			public const int Base_V23_Theme_AppCompat = 2131493015;
+			
+			// aapt resource value: 0x7f0c0098
+			public const int Base_V23_Theme_AppCompat_Light = 2131493016;
 			
 			// aapt resource value: 0x7f0c00a0
-			public const int Base_V23_Theme_AppCompat_Light = 2131493024;
+			public const int Base_V26_Theme_AppCompat = 2131493024;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int Base_V26_Theme_AppCompat = 2131493032;
+			// aapt resource value: 0x7f0c00a1
+			public const int Base_V26_Theme_AppCompat_Light = 2131493025;
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int Base_V26_Theme_AppCompat_Light = 2131493033;
+			// aapt resource value: 0x7f0c00a2
+			public const int Base_V26_Widget_AppCompat_Toolbar = 2131493026;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int Base_V26_Widget_AppCompat_Toolbar = 2131493034;
+			// aapt resource value: 0x7f0c016d
+			public const int Base_V26_Widget_Design_AppBarLayout = 2131493229;
 			
-			// aapt resource value: 0x7f0c0177
-			public const int Base_V26_Widget_Design_AppBarLayout = 2131493239;
+			// aapt resource value: 0x7f0c00bd
+			public const int Base_V7_Theme_AppCompat = 2131493053;
+			
+			// aapt resource value: 0x7f0c00be
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131493054;
+			
+			// aapt resource value: 0x7f0c00bf
+			public const int Base_V7_Theme_AppCompat_Light = 2131493055;
+			
+			// aapt resource value: 0x7f0c00c0
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131493056;
+			
+			// aapt resource value: 0x7f0c00c1
+			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131493057;
+			
+			// aapt resource value: 0x7f0c00c2
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131493058;
+			
+			// aapt resource value: 0x7f0c00c3
+			public const int Base_V7_Widget_AppCompat_EditText = 2131493059;
+			
+			// aapt resource value: 0x7f0c00c4
+			public const int Base_V7_Widget_AppCompat_Toolbar = 2131493060;
 			
 			// aapt resource value: 0x7f0c00c5
-			public const int Base_V7_Theme_AppCompat = 2131493061;
+			public const int Base_Widget_AppCompat_ActionBar = 2131493061;
 			
 			// aapt resource value: 0x7f0c00c6
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131493062;
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131493062;
 			
 			// aapt resource value: 0x7f0c00c7
-			public const int Base_V7_Theme_AppCompat_Light = 2131493063;
-			
-			// aapt resource value: 0x7f0c00c8
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131493064;
-			
-			// aapt resource value: 0x7f0c00c9
-			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131493065;
-			
-			// aapt resource value: 0x7f0c00ca
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131493066;
-			
-			// aapt resource value: 0x7f0c00cb
-			public const int Base_V7_Widget_AppCompat_EditText = 2131493067;
-			
-			// aapt resource value: 0x7f0c00cc
-			public const int Base_V7_Widget_AppCompat_Toolbar = 2131493068;
-			
-			// aapt resource value: 0x7f0c00cd
-			public const int Base_Widget_AppCompat_ActionBar = 2131493069;
-			
-			// aapt resource value: 0x7f0c00ce
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131493070;
-			
-			// aapt resource value: 0x7f0c00cf
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131493071;
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131493063;
 			
 			// aapt resource value: 0x7f0c0070
 			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131492976;
@@ -4627,11 +6133,11 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0074
 			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131492980;
 			
-			// aapt resource value: 0x7f0c00d0
-			public const int Base_Widget_AppCompat_ActionMode = 2131493072;
+			// aapt resource value: 0x7f0c00c8
+			public const int Base_Widget_AppCompat_ActionMode = 2131493064;
 			
-			// aapt resource value: 0x7f0c00d1
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131493073;
+			// aapt resource value: 0x7f0c00c9
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131493065;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131492916;
@@ -4645,11 +6151,11 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0077
 			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131492983;
 			
-			// aapt resource value: 0x7f0c00d2
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493074;
+			// aapt resource value: 0x7f0c00ca
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493066;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int Base_Widget_AppCompat_Button_Colored = 2131493025;
+			// aapt resource value: 0x7f0c0099
+			public const int Base_Widget_AppCompat_Button_Colored = 2131493017;
 			
 			// aapt resource value: 0x7f0c0078
 			public const int Base_Widget_AppCompat_Button_Small = 2131492984;
@@ -4657,8 +6163,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0079
 			public const int Base_Widget_AppCompat_ButtonBar = 2131492985;
 			
-			// aapt resource value: 0x7f0c00d3
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131493075;
+			// aapt resource value: 0x7f0c00cb
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131493067;
 			
 			// aapt resource value: 0x7f0c007a
 			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131492986;
@@ -4666,14 +6172,14 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c007b
 			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131492987;
 			
-			// aapt resource value: 0x7f0c00d4
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131493076;
+			// aapt resource value: 0x7f0c00cc
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131493068;
 			
 			// aapt resource value: 0x7f0c000f
 			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131492879;
 			
-			// aapt resource value: 0x7f0c00d5
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131493077;
+			// aapt resource value: 0x7f0c00cd
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131493069;
 			
 			// aapt resource value: 0x7f0c007c
 			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131492988;
@@ -4684,14 +6190,14 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c007d
 			public const int Base_Widget_AppCompat_ImageButton = 2131492989;
 			
-			// aapt resource value: 0x7f0c00d6
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131493078;
+			// aapt resource value: 0x7f0c00ce
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131493070;
 			
-			// aapt resource value: 0x7f0c00d7
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131493079;
+			// aapt resource value: 0x7f0c00cf
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131493071;
 			
-			// aapt resource value: 0x7f0c00d8
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131493080;
+			// aapt resource value: 0x7f0c00d0
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131493072;
 			
 			// aapt resource value: 0x7f0c007e
 			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131492990;
@@ -4708,8 +6214,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0082
 			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131492994;
 			
-			// aapt resource value: 0x7f0c00d9
-			public const int Base_Widget_AppCompat_ListMenuView = 2131493081;
+			// aapt resource value: 0x7f0c00d1
+			public const int Base_Widget_AppCompat_ListMenuView = 2131493073;
 			
 			// aapt resource value: 0x7f0c0083
 			public const int Base_Widget_AppCompat_ListPopupWindow = 2131492995;
@@ -4729,8 +6235,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0088
 			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131493000;
 			
-			// aapt resource value: 0x7f0c00da
-			public const int Base_Widget_AppCompat_PopupWindow = 2131493082;
+			// aapt resource value: 0x7f0c00d2
+			public const int Base_Widget_AppCompat_PopupWindow = 2131493074;
 			
 			// aapt resource value: 0x7f0c002b
 			public const int Base_Widget_AppCompat_ProgressBar = 2131492907;
@@ -4741,23 +6247,23 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0089
 			public const int Base_Widget_AppCompat_RatingBar = 2131493001;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131493026;
+			// aapt resource value: 0x7f0c009a
+			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131493018;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int Base_Widget_AppCompat_RatingBar_Small = 2131493027;
+			// aapt resource value: 0x7f0c009b
+			public const int Base_Widget_AppCompat_RatingBar_Small = 2131493019;
 			
-			// aapt resource value: 0x7f0c00db
-			public const int Base_Widget_AppCompat_SearchView = 2131493083;
+			// aapt resource value: 0x7f0c00d3
+			public const int Base_Widget_AppCompat_SearchView = 2131493075;
 			
-			// aapt resource value: 0x7f0c00dc
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131493084;
+			// aapt resource value: 0x7f0c00d4
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131493076;
 			
 			// aapt resource value: 0x7f0c008a
 			public const int Base_Widget_AppCompat_SeekBar = 2131493002;
 			
-			// aapt resource value: 0x7f0c00dd
-			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131493085;
+			// aapt resource value: 0x7f0c00d5
+			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131493077;
 			
 			// aapt resource value: 0x7f0c008b
 			public const int Base_Widget_AppCompat_Spinner = 2131493003;
@@ -4768,17 +6274,17 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c008c
 			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131493004;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int Base_Widget_AppCompat_Toolbar = 2131493035;
+			// aapt resource value: 0x7f0c00a3
+			public const int Base_Widget_AppCompat_Toolbar = 2131493027;
 			
 			// aapt resource value: 0x7f0c008d
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131493005;
 			
-			// aapt resource value: 0x7f0c0176
-			public const int Base_Widget_Design_AppBarLayout = 2131493238;
+			// aapt resource value: 0x7f0c016c
+			public const int Base_Widget_Design_AppBarLayout = 2131493228;
 			
-			// aapt resource value: 0x7f0c017a
-			public const int Base_Widget_Design_TabLayout = 2131493242;
+			// aapt resource value: 0x7f0c0170
+			public const int Base_Widget_Design_TabLayout = 2131493232;
 			
 			// aapt resource value: 0x7f0c000b
 			public const int CardView = 2131492875;
@@ -4789,11 +6295,11 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c000e
 			public const int CardView_Light = 2131492878;
 			
-			// aapt resource value: 0x7f0c0199
-			public const int MainTheme = 2131493273;
+			// aapt resource value: 0x7f0c018f
+			public const int MainTheme = 2131493263;
 			
-			// aapt resource value: 0x7f0c019a
-			public const int MainTheme_Base = 2131493274;
+			// aapt resource value: 0x7f0c0190
+			public const int MainTheme_Base = 2131493264;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int Platform_AppCompat = 2131492909;
@@ -4828,11 +6334,11 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0092
 			public const int Platform_V21_AppCompat_Light = 2131493010;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int Platform_V25_AppCompat = 2131493030;
+			// aapt resource value: 0x7f0c009e
+			public const int Platform_V25_AppCompat = 2131493022;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int Platform_V25_AppCompat_Light = 2131493031;
+			// aapt resource value: 0x7f0c009f
+			public const int Platform_V25_AppCompat_Light = 2131493023;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int Platform_Widget_AppCompat_Spinner = 2131492913;
@@ -4879,236 +6385,206 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0047
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131492935;
 			
-			// aapt resource value: 0x7f0c019d
-			public const int Text = 2131493277;
+			// aapt resource value: 0x7f0c0193
+			public const int Text = 2131493267;
 			
-			// aapt resource value: 0x7f0c019e
-			public const int Text_Loading = 2131493278;
+			// aapt resource value: 0x7f0c0194
+			public const int Text_Loading = 2131493268;
+			
+			// aapt resource value: 0x7f0c00d6
+			public const int TextAppearance_AppCompat = 2131493078;
+			
+			// aapt resource value: 0x7f0c00d7
+			public const int TextAppearance_AppCompat_Body1 = 2131493079;
+			
+			// aapt resource value: 0x7f0c00d8
+			public const int TextAppearance_AppCompat_Body2 = 2131493080;
+			
+			// aapt resource value: 0x7f0c00d9
+			public const int TextAppearance_AppCompat_Button = 2131493081;
+			
+			// aapt resource value: 0x7f0c00da
+			public const int TextAppearance_AppCompat_Caption = 2131493082;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int TextAppearance_AppCompat_Display1 = 2131493083;
+			
+			// aapt resource value: 0x7f0c00dc
+			public const int TextAppearance_AppCompat_Display2 = 2131493084;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int TextAppearance_AppCompat_Display3 = 2131493085;
 			
 			// aapt resource value: 0x7f0c00de
-			public const int TextAppearance_AppCompat = 2131493086;
+			public const int TextAppearance_AppCompat_Display4 = 2131493086;
 			
 			// aapt resource value: 0x7f0c00df
-			public const int TextAppearance_AppCompat_Body1 = 2131493087;
+			public const int TextAppearance_AppCompat_Headline = 2131493087;
 			
 			// aapt resource value: 0x7f0c00e0
-			public const int TextAppearance_AppCompat_Body2 = 2131493088;
+			public const int TextAppearance_AppCompat_Inverse = 2131493088;
 			
 			// aapt resource value: 0x7f0c00e1
-			public const int TextAppearance_AppCompat_Button = 2131493089;
+			public const int TextAppearance_AppCompat_Large = 2131493089;
 			
 			// aapt resource value: 0x7f0c00e2
-			public const int TextAppearance_AppCompat_Caption = 2131493090;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131493090;
 			
 			// aapt resource value: 0x7f0c00e3
-			public const int TextAppearance_AppCompat_Display1 = 2131493091;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131493091;
 			
 			// aapt resource value: 0x7f0c00e4
-			public const int TextAppearance_AppCompat_Display2 = 2131493092;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131493092;
 			
 			// aapt resource value: 0x7f0c00e5
-			public const int TextAppearance_AppCompat_Display3 = 2131493093;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131493093;
 			
 			// aapt resource value: 0x7f0c00e6
-			public const int TextAppearance_AppCompat_Display4 = 2131493094;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131493094;
 			
 			// aapt resource value: 0x7f0c00e7
-			public const int TextAppearance_AppCompat_Headline = 2131493095;
+			public const int TextAppearance_AppCompat_Medium = 2131493095;
 			
 			// aapt resource value: 0x7f0c00e8
-			public const int TextAppearance_AppCompat_Inverse = 2131493096;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131493096;
 			
 			// aapt resource value: 0x7f0c00e9
-			public const int TextAppearance_AppCompat_Large = 2131493097;
+			public const int TextAppearance_AppCompat_Menu = 2131493097;
 			
 			// aapt resource value: 0x7f0c00ea
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131493098;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131493098;
 			
 			// aapt resource value: 0x7f0c00eb
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131493099;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131493099;
 			
 			// aapt resource value: 0x7f0c00ec
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131493100;
+			public const int TextAppearance_AppCompat_Small = 2131493100;
 			
 			// aapt resource value: 0x7f0c00ed
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131493101;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131493101;
 			
 			// aapt resource value: 0x7f0c00ee
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131493102;
+			public const int TextAppearance_AppCompat_Subhead = 2131493102;
 			
 			// aapt resource value: 0x7f0c00ef
-			public const int TextAppearance_AppCompat_Medium = 2131493103;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131493103;
 			
 			// aapt resource value: 0x7f0c00f0
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131493104;
+			public const int TextAppearance_AppCompat_Title = 2131493104;
 			
 			// aapt resource value: 0x7f0c00f1
-			public const int TextAppearance_AppCompat_Menu = 2131493105;
-			
-			// aapt resource value: 0x7f0c0093
-			public const int TextAppearance_AppCompat_Notification = 2131493011;
-			
-			// aapt resource value: 0x7f0c0094
-			public const int TextAppearance_AppCompat_Notification_Info = 2131493012;
-			
-			// aapt resource value: 0x7f0c0095
-			public const int TextAppearance_AppCompat_Notification_Info_Media = 2131493013;
-			
-			// aapt resource value: 0x7f0c00f2
-			public const int TextAppearance_AppCompat_Notification_Line2 = 2131493106;
-			
-			// aapt resource value: 0x7f0c00f3
-			public const int TextAppearance_AppCompat_Notification_Line2_Media = 2131493107;
-			
-			// aapt resource value: 0x7f0c0096
-			public const int TextAppearance_AppCompat_Notification_Media = 2131493014;
-			
-			// aapt resource value: 0x7f0c0097
-			public const int TextAppearance_AppCompat_Notification_Time = 2131493015;
-			
-			// aapt resource value: 0x7f0c0098
-			public const int TextAppearance_AppCompat_Notification_Time_Media = 2131493016;
-			
-			// aapt resource value: 0x7f0c0099
-			public const int TextAppearance_AppCompat_Notification_Title = 2131493017;
-			
-			// aapt resource value: 0x7f0c009a
-			public const int TextAppearance_AppCompat_Notification_Title_Media = 2131493018;
-			
-			// aapt resource value: 0x7f0c00f4
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131493108;
-			
-			// aapt resource value: 0x7f0c00f5
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131493109;
-			
-			// aapt resource value: 0x7f0c00f6
-			public const int TextAppearance_AppCompat_Small = 2131493110;
-			
-			// aapt resource value: 0x7f0c00f7
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131493111;
-			
-			// aapt resource value: 0x7f0c00f8
-			public const int TextAppearance_AppCompat_Subhead = 2131493112;
-			
-			// aapt resource value: 0x7f0c00f9
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131493113;
-			
-			// aapt resource value: 0x7f0c00fa
-			public const int TextAppearance_AppCompat_Title = 2131493114;
-			
-			// aapt resource value: 0x7f0c00fb
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131493115;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131493105;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int TextAppearance_AppCompat_Tooltip = 2131492921;
 			
+			// aapt resource value: 0x7f0c00f2
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493106;
+			
+			// aapt resource value: 0x7f0c00f3
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131493107;
+			
+			// aapt resource value: 0x7f0c00f4
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131493108;
+			
+			// aapt resource value: 0x7f0c00f5
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131493109;
+			
+			// aapt resource value: 0x7f0c00f6
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131493110;
+			
+			// aapt resource value: 0x7f0c00f7
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131493111;
+			
+			// aapt resource value: 0x7f0c00f8
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131493112;
+			
+			// aapt resource value: 0x7f0c00f9
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131493113;
+			
+			// aapt resource value: 0x7f0c00fa
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131493114;
+			
+			// aapt resource value: 0x7f0c00fb
+			public const int TextAppearance_AppCompat_Widget_Button = 2131493115;
+			
 			// aapt resource value: 0x7f0c00fc
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493116;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131493116;
 			
 			// aapt resource value: 0x7f0c00fd
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131493117;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131493117;
 			
 			// aapt resource value: 0x7f0c00fe
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131493118;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131493118;
 			
 			// aapt resource value: 0x7f0c00ff
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131493119;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131493119;
 			
 			// aapt resource value: 0x7f0c0100
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131493120;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131493120;
 			
 			// aapt resource value: 0x7f0c0101
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131493121;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131493121;
 			
 			// aapt resource value: 0x7f0c0102
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131493122;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131493122;
 			
 			// aapt resource value: 0x7f0c0103
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131493123;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131493123;
 			
 			// aapt resource value: 0x7f0c0104
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131493124;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131493124;
 			
-			// aapt resource value: 0x7f0c0105
-			public const int TextAppearance_AppCompat_Widget_Button = 2131493125;
+			// aapt resource value: 0x7f0c0188
+			public const int TextAppearance_Compat_Notification = 2131493256;
 			
-			// aapt resource value: 0x7f0c0106
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131493126;
+			// aapt resource value: 0x7f0c0189
+			public const int TextAppearance_Compat_Notification_Info = 2131493257;
 			
-			// aapt resource value: 0x7f0c0107
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131493127;
+			// aapt resource value: 0x7f0c0165
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131493221;
 			
-			// aapt resource value: 0x7f0c0108
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131493128;
+			// aapt resource value: 0x7f0c018e
+			public const int TextAppearance_Compat_Notification_Line2 = 2131493262;
 			
-			// aapt resource value: 0x7f0c0109
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131493129;
+			// aapt resource value: 0x7f0c0169
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131493225;
 			
-			// aapt resource value: 0x7f0c010a
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131493130;
+			// aapt resource value: 0x7f0c0166
+			public const int TextAppearance_Compat_Notification_Media = 2131493222;
 			
-			// aapt resource value: 0x7f0c010b
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131493131;
+			// aapt resource value: 0x7f0c018a
+			public const int TextAppearance_Compat_Notification_Time = 2131493258;
 			
-			// aapt resource value: 0x7f0c010c
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131493132;
+			// aapt resource value: 0x7f0c0167
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131493223;
 			
-			// aapt resource value: 0x7f0c010d
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131493133;
+			// aapt resource value: 0x7f0c018b
+			public const int TextAppearance_Compat_Notification_Title = 2131493259;
 			
-			// aapt resource value: 0x7f0c010e
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131493134;
-			
-			// aapt resource value: 0x7f0c0192
-			public const int TextAppearance_Compat_Notification = 2131493266;
-			
-			// aapt resource value: 0x7f0c0193
-			public const int TextAppearance_Compat_Notification_Info = 2131493267;
-			
-			// aapt resource value: 0x7f0c016f
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131493231;
-			
-			// aapt resource value: 0x7f0c0198
-			public const int TextAppearance_Compat_Notification_Line2 = 2131493272;
-			
-			// aapt resource value: 0x7f0c0173
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131493235;
-			
-			// aapt resource value: 0x7f0c0170
-			public const int TextAppearance_Compat_Notification_Media = 2131493232;
-			
-			// aapt resource value: 0x7f0c0194
-			public const int TextAppearance_Compat_Notification_Time = 2131493268;
+			// aapt resource value: 0x7f0c0168
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131493224;
 			
 			// aapt resource value: 0x7f0c0171
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131493233;
-			
-			// aapt resource value: 0x7f0c0195
-			public const int TextAppearance_Compat_Notification_Title = 2131493269;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131493233;
 			
 			// aapt resource value: 0x7f0c0172
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131493234;
+			public const int TextAppearance_Design_Counter = 2131493234;
 			
-			// aapt resource value: 0x7f0c017b
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131493243;
+			// aapt resource value: 0x7f0c0173
+			public const int TextAppearance_Design_Counter_Overflow = 2131493235;
 			
-			// aapt resource value: 0x7f0c017c
-			public const int TextAppearance_Design_Counter = 2131493244;
+			// aapt resource value: 0x7f0c0174
+			public const int TextAppearance_Design_Error = 2131493236;
 			
-			// aapt resource value: 0x7f0c017d
-			public const int TextAppearance_Design_Counter_Overflow = 2131493245;
+			// aapt resource value: 0x7f0c0175
+			public const int TextAppearance_Design_Hint = 2131493237;
 			
-			// aapt resource value: 0x7f0c017e
-			public const int TextAppearance_Design_Error = 2131493246;
+			// aapt resource value: 0x7f0c0176
+			public const int TextAppearance_Design_Snackbar_Message = 2131493238;
 			
-			// aapt resource value: 0x7f0c017f
-			public const int TextAppearance_Design_Hint = 2131493247;
-			
-			// aapt resource value: 0x7f0c0180
-			public const int TextAppearance_Design_Snackbar_Message = 2131493248;
-			
-			// aapt resource value: 0x7f0c0181
-			public const int TextAppearance_Design_Tab = 2131493249;
+			// aapt resource value: 0x7f0c0177
+			public const int TextAppearance_Design_Tab = 2131493239;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int TextAppearance_MediaRouter_PrimaryText = 2131492864;
@@ -5119,20 +6595,20 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0002
 			public const int TextAppearance_MediaRouter_Title = 2131492866;
 			
-			// aapt resource value: 0x7f0c010f
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493135;
+			// aapt resource value: 0x7f0c0105
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493125;
 			
-			// aapt resource value: 0x7f0c0110
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131493136;
+			// aapt resource value: 0x7f0c0106
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131493126;
 			
-			// aapt resource value: 0x7f0c0111
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131493137;
+			// aapt resource value: 0x7f0c0107
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131493127;
 			
-			// aapt resource value: 0x7f0c0112
-			public const int Theme_AppCompat = 2131493138;
+			// aapt resource value: 0x7f0c0108
+			public const int Theme_AppCompat = 2131493128;
 			
-			// aapt resource value: 0x7f0c0113
-			public const int Theme_AppCompat_CompactMenu = 2131493139;
+			// aapt resource value: 0x7f0c0109
+			public const int Theme_AppCompat_CompactMenu = 2131493129;
 			
 			// aapt resource value: 0x7f0c0013
 			public const int Theme_AppCompat_DayNight = 2131492883;
@@ -5155,59 +6631,59 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0019
 			public const int Theme_AppCompat_DayNight_NoActionBar = 2131492889;
 			
+			// aapt resource value: 0x7f0c010a
+			public const int Theme_AppCompat_Dialog = 2131493130;
+			
+			// aapt resource value: 0x7f0c010b
+			public const int Theme_AppCompat_Dialog_Alert = 2131493131;
+			
+			// aapt resource value: 0x7f0c010c
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131493132;
+			
+			// aapt resource value: 0x7f0c010d
+			public const int Theme_AppCompat_DialogWhenLarge = 2131493133;
+			
+			// aapt resource value: 0x7f0c010e
+			public const int Theme_AppCompat_Light = 2131493134;
+			
+			// aapt resource value: 0x7f0c010f
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131493135;
+			
+			// aapt resource value: 0x7f0c0110
+			public const int Theme_AppCompat_Light_Dialog = 2131493136;
+			
+			// aapt resource value: 0x7f0c0111
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131493137;
+			
+			// aapt resource value: 0x7f0c0112
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131493138;
+			
+			// aapt resource value: 0x7f0c0113
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131493139;
+			
 			// aapt resource value: 0x7f0c0114
-			public const int Theme_AppCompat_Dialog = 2131493140;
+			public const int Theme_AppCompat_Light_NoActionBar = 2131493140;
 			
 			// aapt resource value: 0x7f0c0115
-			public const int Theme_AppCompat_Dialog_Alert = 2131493141;
+			public const int Theme_AppCompat_NoActionBar = 2131493141;
 			
-			// aapt resource value: 0x7f0c0116
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131493142;
+			// aapt resource value: 0x7f0c0178
+			public const int Theme_Design = 2131493240;
 			
-			// aapt resource value: 0x7f0c0117
-			public const int Theme_AppCompat_DialogWhenLarge = 2131493143;
+			// aapt resource value: 0x7f0c0179
+			public const int Theme_Design_BottomSheetDialog = 2131493241;
 			
-			// aapt resource value: 0x7f0c0118
-			public const int Theme_AppCompat_Light = 2131493144;
+			// aapt resource value: 0x7f0c017a
+			public const int Theme_Design_Light = 2131493242;
 			
-			// aapt resource value: 0x7f0c0119
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131493145;
+			// aapt resource value: 0x7f0c017b
+			public const int Theme_Design_Light_BottomSheetDialog = 2131493243;
 			
-			// aapt resource value: 0x7f0c011a
-			public const int Theme_AppCompat_Light_Dialog = 2131493146;
+			// aapt resource value: 0x7f0c017c
+			public const int Theme_Design_Light_NoActionBar = 2131493244;
 			
-			// aapt resource value: 0x7f0c011b
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131493147;
-			
-			// aapt resource value: 0x7f0c011c
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131493148;
-			
-			// aapt resource value: 0x7f0c011d
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131493149;
-			
-			// aapt resource value: 0x7f0c011e
-			public const int Theme_AppCompat_Light_NoActionBar = 2131493150;
-			
-			// aapt resource value: 0x7f0c011f
-			public const int Theme_AppCompat_NoActionBar = 2131493151;
-			
-			// aapt resource value: 0x7f0c0182
-			public const int Theme_Design = 2131493250;
-			
-			// aapt resource value: 0x7f0c0183
-			public const int Theme_Design_BottomSheetDialog = 2131493251;
-			
-			// aapt resource value: 0x7f0c0184
-			public const int Theme_Design_Light = 2131493252;
-			
-			// aapt resource value: 0x7f0c0185
-			public const int Theme_Design_Light_BottomSheetDialog = 2131493253;
-			
-			// aapt resource value: 0x7f0c0186
-			public const int Theme_Design_Light_NoActionBar = 2131493254;
-			
-			// aapt resource value: 0x7f0c0187
-			public const int Theme_Design_NoActionBar = 2131493255;
+			// aapt resource value: 0x7f0c017d
+			public const int Theme_Design_NoActionBar = 2131493245;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int Theme_MediaRouter = 2131492867;
@@ -5221,26 +6697,26 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0006
 			public const int Theme_MediaRouter_LightControlPanel = 2131492870;
 			
-			// aapt resource value: 0x7f0c0120
-			public const int ThemeOverlay_AppCompat = 2131493152;
+			// aapt resource value: 0x7f0c0116
+			public const int ThemeOverlay_AppCompat = 2131493142;
 			
-			// aapt resource value: 0x7f0c0121
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131493153;
+			// aapt resource value: 0x7f0c0117
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131493143;
 			
-			// aapt resource value: 0x7f0c0122
-			public const int ThemeOverlay_AppCompat_Dark = 2131493154;
+			// aapt resource value: 0x7f0c0118
+			public const int ThemeOverlay_AppCompat_Dark = 2131493144;
 			
-			// aapt resource value: 0x7f0c0123
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131493155;
+			// aapt resource value: 0x7f0c0119
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131493145;
 			
-			// aapt resource value: 0x7f0c0124
-			public const int ThemeOverlay_AppCompat_Dialog = 2131493156;
+			// aapt resource value: 0x7f0c011a
+			public const int ThemeOverlay_AppCompat_Dialog = 2131493146;
 			
-			// aapt resource value: 0x7f0c0125
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131493157;
+			// aapt resource value: 0x7f0c011b
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131493147;
 			
-			// aapt resource value: 0x7f0c0126
-			public const int ThemeOverlay_AppCompat_Light = 2131493158;
+			// aapt resource value: 0x7f0c011c
+			public const int ThemeOverlay_AppCompat_Light = 2131493148;
 			
 			// aapt resource value: 0x7f0c0007
 			public const int ThemeOverlay_MediaRouter_Dark = 2131492871;
@@ -5248,260 +6724,260 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c0008
 			public const int ThemeOverlay_MediaRouter_Light = 2131492872;
 			
+			// aapt resource value: 0x7f0c011d
+			public const int Widget_AppCompat_ActionBar = 2131493149;
+			
+			// aapt resource value: 0x7f0c011e
+			public const int Widget_AppCompat_ActionBar_Solid = 2131493150;
+			
+			// aapt resource value: 0x7f0c011f
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131493151;
+			
+			// aapt resource value: 0x7f0c0120
+			public const int Widget_AppCompat_ActionBar_TabText = 2131493152;
+			
+			// aapt resource value: 0x7f0c0121
+			public const int Widget_AppCompat_ActionBar_TabView = 2131493153;
+			
+			// aapt resource value: 0x7f0c0122
+			public const int Widget_AppCompat_ActionButton = 2131493154;
+			
+			// aapt resource value: 0x7f0c0123
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131493155;
+			
+			// aapt resource value: 0x7f0c0124
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131493156;
+			
+			// aapt resource value: 0x7f0c0125
+			public const int Widget_AppCompat_ActionMode = 2131493157;
+			
+			// aapt resource value: 0x7f0c0126
+			public const int Widget_AppCompat_ActivityChooserView = 2131493158;
+			
 			// aapt resource value: 0x7f0c0127
-			public const int Widget_AppCompat_ActionBar = 2131493159;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131493159;
 			
 			// aapt resource value: 0x7f0c0128
-			public const int Widget_AppCompat_ActionBar_Solid = 2131493160;
+			public const int Widget_AppCompat_Button = 2131493160;
 			
 			// aapt resource value: 0x7f0c0129
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131493161;
+			public const int Widget_AppCompat_Button_Borderless = 2131493161;
 			
 			// aapt resource value: 0x7f0c012a
-			public const int Widget_AppCompat_ActionBar_TabText = 2131493162;
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131493162;
 			
 			// aapt resource value: 0x7f0c012b
-			public const int Widget_AppCompat_ActionBar_TabView = 2131493163;
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493163;
 			
 			// aapt resource value: 0x7f0c012c
-			public const int Widget_AppCompat_ActionButton = 2131493164;
+			public const int Widget_AppCompat_Button_Colored = 2131493164;
 			
 			// aapt resource value: 0x7f0c012d
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131493165;
+			public const int Widget_AppCompat_Button_Small = 2131493165;
 			
 			// aapt resource value: 0x7f0c012e
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131493166;
+			public const int Widget_AppCompat_ButtonBar = 2131493166;
 			
 			// aapt resource value: 0x7f0c012f
-			public const int Widget_AppCompat_ActionMode = 2131493167;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131493167;
 			
 			// aapt resource value: 0x7f0c0130
-			public const int Widget_AppCompat_ActivityChooserView = 2131493168;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131493168;
 			
 			// aapt resource value: 0x7f0c0131
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131493169;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131493169;
 			
 			// aapt resource value: 0x7f0c0132
-			public const int Widget_AppCompat_Button = 2131493170;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131493170;
 			
 			// aapt resource value: 0x7f0c0133
-			public const int Widget_AppCompat_Button_Borderless = 2131493171;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131493171;
 			
 			// aapt resource value: 0x7f0c0134
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131493172;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131493172;
 			
 			// aapt resource value: 0x7f0c0135
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493173;
+			public const int Widget_AppCompat_EditText = 2131493173;
 			
 			// aapt resource value: 0x7f0c0136
-			public const int Widget_AppCompat_Button_Colored = 2131493174;
+			public const int Widget_AppCompat_ImageButton = 2131493174;
 			
 			// aapt resource value: 0x7f0c0137
-			public const int Widget_AppCompat_Button_Small = 2131493175;
+			public const int Widget_AppCompat_Light_ActionBar = 2131493175;
 			
 			// aapt resource value: 0x7f0c0138
-			public const int Widget_AppCompat_ButtonBar = 2131493176;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131493176;
 			
 			// aapt resource value: 0x7f0c0139
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131493177;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131493177;
 			
 			// aapt resource value: 0x7f0c013a
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131493178;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131493178;
 			
 			// aapt resource value: 0x7f0c013b
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131493179;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131493179;
 			
 			// aapt resource value: 0x7f0c013c
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131493180;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131493180;
 			
 			// aapt resource value: 0x7f0c013d
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131493181;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131493181;
 			
 			// aapt resource value: 0x7f0c013e
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131493182;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131493182;
 			
 			// aapt resource value: 0x7f0c013f
-			public const int Widget_AppCompat_EditText = 2131493183;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131493183;
 			
 			// aapt resource value: 0x7f0c0140
-			public const int Widget_AppCompat_ImageButton = 2131493184;
+			public const int Widget_AppCompat_Light_ActionButton = 2131493184;
 			
 			// aapt resource value: 0x7f0c0141
-			public const int Widget_AppCompat_Light_ActionBar = 2131493185;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131493185;
 			
 			// aapt resource value: 0x7f0c0142
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131493186;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131493186;
 			
 			// aapt resource value: 0x7f0c0143
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131493187;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131493187;
 			
 			// aapt resource value: 0x7f0c0144
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131493188;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131493188;
 			
 			// aapt resource value: 0x7f0c0145
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131493189;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131493189;
 			
 			// aapt resource value: 0x7f0c0146
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131493190;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131493190;
 			
 			// aapt resource value: 0x7f0c0147
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131493191;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131493191;
 			
 			// aapt resource value: 0x7f0c0148
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131493192;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131493192;
 			
 			// aapt resource value: 0x7f0c0149
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131493193;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131493193;
 			
 			// aapt resource value: 0x7f0c014a
-			public const int Widget_AppCompat_Light_ActionButton = 2131493194;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131493194;
 			
 			// aapt resource value: 0x7f0c014b
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131493195;
+			public const int Widget_AppCompat_Light_SearchView = 2131493195;
 			
 			// aapt resource value: 0x7f0c014c
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131493196;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131493196;
 			
 			// aapt resource value: 0x7f0c014d
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131493197;
+			public const int Widget_AppCompat_ListMenuView = 2131493197;
 			
 			// aapt resource value: 0x7f0c014e
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131493198;
+			public const int Widget_AppCompat_ListPopupWindow = 2131493198;
 			
 			// aapt resource value: 0x7f0c014f
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131493199;
+			public const int Widget_AppCompat_ListView = 2131493199;
 			
 			// aapt resource value: 0x7f0c0150
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131493200;
+			public const int Widget_AppCompat_ListView_DropDown = 2131493200;
 			
 			// aapt resource value: 0x7f0c0151
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131493201;
+			public const int Widget_AppCompat_ListView_Menu = 2131493201;
 			
 			// aapt resource value: 0x7f0c0152
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131493202;
+			public const int Widget_AppCompat_PopupMenu = 2131493202;
 			
 			// aapt resource value: 0x7f0c0153
-			public const int Widget_AppCompat_Light_PopupMenu = 2131493203;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131493203;
 			
 			// aapt resource value: 0x7f0c0154
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131493204;
+			public const int Widget_AppCompat_PopupWindow = 2131493204;
 			
 			// aapt resource value: 0x7f0c0155
-			public const int Widget_AppCompat_Light_SearchView = 2131493205;
+			public const int Widget_AppCompat_ProgressBar = 2131493205;
 			
 			// aapt resource value: 0x7f0c0156
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131493206;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131493206;
 			
 			// aapt resource value: 0x7f0c0157
-			public const int Widget_AppCompat_ListMenuView = 2131493207;
+			public const int Widget_AppCompat_RatingBar = 2131493207;
 			
 			// aapt resource value: 0x7f0c0158
-			public const int Widget_AppCompat_ListPopupWindow = 2131493208;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131493208;
 			
 			// aapt resource value: 0x7f0c0159
-			public const int Widget_AppCompat_ListView = 2131493209;
+			public const int Widget_AppCompat_RatingBar_Small = 2131493209;
 			
 			// aapt resource value: 0x7f0c015a
-			public const int Widget_AppCompat_ListView_DropDown = 2131493210;
+			public const int Widget_AppCompat_SearchView = 2131493210;
 			
 			// aapt resource value: 0x7f0c015b
-			public const int Widget_AppCompat_ListView_Menu = 2131493211;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131493211;
 			
 			// aapt resource value: 0x7f0c015c
-			public const int Widget_AppCompat_PopupMenu = 2131493212;
+			public const int Widget_AppCompat_SeekBar = 2131493212;
 			
 			// aapt resource value: 0x7f0c015d
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131493213;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131493213;
 			
 			// aapt resource value: 0x7f0c015e
-			public const int Widget_AppCompat_PopupWindow = 2131493214;
+			public const int Widget_AppCompat_Spinner = 2131493214;
 			
 			// aapt resource value: 0x7f0c015f
-			public const int Widget_AppCompat_ProgressBar = 2131493215;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131493215;
 			
 			// aapt resource value: 0x7f0c0160
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131493216;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131493216;
 			
 			// aapt resource value: 0x7f0c0161
-			public const int Widget_AppCompat_RatingBar = 2131493217;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131493217;
 			
 			// aapt resource value: 0x7f0c0162
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131493218;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131493218;
 			
 			// aapt resource value: 0x7f0c0163
-			public const int Widget_AppCompat_RatingBar_Small = 2131493219;
+			public const int Widget_AppCompat_Toolbar = 2131493219;
 			
 			// aapt resource value: 0x7f0c0164
-			public const int Widget_AppCompat_SearchView = 2131493220;
-			
-			// aapt resource value: 0x7f0c0165
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131493221;
-			
-			// aapt resource value: 0x7f0c0166
-			public const int Widget_AppCompat_SeekBar = 2131493222;
-			
-			// aapt resource value: 0x7f0c0167
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131493223;
-			
-			// aapt resource value: 0x7f0c0168
-			public const int Widget_AppCompat_Spinner = 2131493224;
-			
-			// aapt resource value: 0x7f0c0169
-			public const int Widget_AppCompat_Spinner_DropDown = 2131493225;
-			
-			// aapt resource value: 0x7f0c016a
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131493226;
-			
-			// aapt resource value: 0x7f0c016b
-			public const int Widget_AppCompat_Spinner_Underlined = 2131493227;
-			
-			// aapt resource value: 0x7f0c016c
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131493228;
-			
-			// aapt resource value: 0x7f0c016d
-			public const int Widget_AppCompat_Toolbar = 2131493229;
-			
-			// aapt resource value: 0x7f0c016e
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131493230;
-			
-			// aapt resource value: 0x7f0c0196
-			public const int Widget_Compat_NotificationActionContainer = 2131493270;
-			
-			// aapt resource value: 0x7f0c0197
-			public const int Widget_Compat_NotificationActionText = 2131493271;
-			
-			// aapt resource value: 0x7f0c0188
-			public const int Widget_Design_AppBarLayout = 2131493256;
-			
-			// aapt resource value: 0x7f0c0189
-			public const int Widget_Design_BottomNavigationView = 2131493257;
-			
-			// aapt resource value: 0x7f0c018a
-			public const int Widget_Design_BottomSheet_Modal = 2131493258;
-			
-			// aapt resource value: 0x7f0c018b
-			public const int Widget_Design_CollapsingToolbar = 2131493259;
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131493220;
 			
 			// aapt resource value: 0x7f0c018c
-			public const int Widget_Design_CoordinatorLayout = 2131493260;
+			public const int Widget_Compat_NotificationActionContainer = 2131493260;
 			
 			// aapt resource value: 0x7f0c018d
-			public const int Widget_Design_FloatingActionButton = 2131493261;
+			public const int Widget_Compat_NotificationActionText = 2131493261;
 			
-			// aapt resource value: 0x7f0c018e
-			public const int Widget_Design_NavigationView = 2131493262;
+			// aapt resource value: 0x7f0c017e
+			public const int Widget_Design_AppBarLayout = 2131493246;
 			
-			// aapt resource value: 0x7f0c018f
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131493263;
+			// aapt resource value: 0x7f0c017f
+			public const int Widget_Design_BottomNavigationView = 2131493247;
 			
-			// aapt resource value: 0x7f0c0190
-			public const int Widget_Design_Snackbar = 2131493264;
+			// aapt resource value: 0x7f0c0180
+			public const int Widget_Design_BottomSheet_Modal = 2131493248;
 			
-			// aapt resource value: 0x7f0c0174
-			public const int Widget_Design_TabLayout = 2131493236;
+			// aapt resource value: 0x7f0c0181
+			public const int Widget_Design_CollapsingToolbar = 2131493249;
 			
-			// aapt resource value: 0x7f0c0191
-			public const int Widget_Design_TextInputLayout = 2131493265;
+			// aapt resource value: 0x7f0c0182
+			public const int Widget_Design_CoordinatorLayout = 2131493250;
+			
+			// aapt resource value: 0x7f0c0183
+			public const int Widget_Design_FloatingActionButton = 2131493251;
+			
+			// aapt resource value: 0x7f0c0184
+			public const int Widget_Design_NavigationView = 2131493252;
+			
+			// aapt resource value: 0x7f0c0185
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131493253;
+			
+			// aapt resource value: 0x7f0c0186
+			public const int Widget_Design_Snackbar = 2131493254;
+			
+			// aapt resource value: 0x7f0c016a
+			public const int Widget_Design_TabLayout = 2131493226;
+			
+			// aapt resource value: 0x7f0c0187
+			public const int Widget_Design_TextInputLayout = 2131493255;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131492873;
@@ -5509,8 +6985,8 @@ namespace ApptestSsh.Droid
 			// aapt resource value: 0x7f0c000a
 			public const int Widget_MediaRouter_MediaRouteButton = 2131492874;
 			
-			// aapt resource value: 0x7f0c019c
-			public const int WidgetBackground = 2131493276;
+			// aapt resource value: 0x7f0c0192
+			public const int WidgetBackground = 2131493266;
 			
 			static Style()
 			{
@@ -6714,18 +8190,30 @@ namespace ApptestSsh.Droid
 			public const int FontFamily_fontProviderQuery = 2;
 			
 			public static int[] FontFamilyFont = new int[] {
+					16844082,
+					16844083,
+					16844095,
 					2130772336,
 					2130772337,
 					2130772338};
 			
-			// aapt resource value: 1
-			public const int FontFamilyFont_font = 1;
-			
 			// aapt resource value: 0
-			public const int FontFamilyFont_fontStyle = 0;
+			public const int FontFamilyFont_android_font = 0;
 			
 			// aapt resource value: 2
-			public const int FontFamilyFont_fontWeight = 2;
+			public const int FontFamilyFont_android_fontStyle = 2;
+			
+			// aapt resource value: 1
+			public const int FontFamilyFont_android_fontWeight = 1;
+			
+			// aapt resource value: 4
+			public const int FontFamilyFont_font = 4;
+			
+			// aapt resource value: 3
+			public const int FontFamilyFont_fontStyle = 3;
+			
+			// aapt resource value: 5
+			public const int FontFamilyFont_fontWeight = 5;
 			
 			public static int[] ForegroundLinearLayout = new int[] {
 					16843017,
