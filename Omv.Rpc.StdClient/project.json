@@ -1,16 +1,16 @@
 ﻿{
   "supports": {},
   "dependencies": {
-    "Autofac": "4.6.2",
+    "Autofac": "4.8.1",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-    "NETStandard.Library": "2.0.1",
-    "Newtonsoft.Json": "11.0.1",
+    "NETStandard.Library": "2.0.3",
+    "Newtonsoft.Json": "11.0.2",
     "NLog": "5.0.0-beta11",
     "PCLStorage": "1.0.2",
     "sqlite-net-pcl": "1.5.166-beta",
     "Xam.Plugin.Connectivity": "4.0.0.171-beta",
     "Xam.Plugins.Settings": "3.2.0.130-beta",
-    "Xamarin.Forms": "2.5.0.280555"
+    "Xamarin.Forms": "3.1.0.637273"
   },
   "frameworks": {
     "netstandard1.4": {

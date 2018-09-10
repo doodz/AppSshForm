@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
-    "Autofac": "4.6.2",
+    "Autofac": "4.8.1",
     "Microcharts": "0.8.3-pre",
     "Microcharts.Forms": "0.8.3-pre",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
-    "NETStandard.Library": "2.0.1",
-    "Newtonsoft.Json": "11.0.1",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.1.5",
+    "NETStandard.Library": "2.0.3",
+    "Newtonsoft.Json": "11.0.2",
     "NLog": "5.0.0-beta11",
     "PCLStorage": "1.0.2",
     "Plugin.HttpTransferTasks": "1.0.0",
@@ -16,7 +16,7 @@
     "Toasts.Forms.Plugin": "3.3.2",
     "Xam.Plugin.Connectivity": "4.0.0.171-beta",
     "Xam.Plugins.Settings": "3.2.0.130-beta",
-    "Xamarin.Forms": "2.5.0.280555"
+    "Xamarin.Forms": "3.1.0.637273"
   },
   "frameworks": {
     "uap10.0.15063": {}

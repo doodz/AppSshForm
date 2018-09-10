@@ -124,9 +124,8 @@ namespace ApptestSsh.Core.View.HomeTabbedPage
             //if (ssh.Host != null)
             switch (Device.RuntimePlatform)
             {
-                case Device.WinPhone:
+                case Device.WPF:
                 case Device.UWP:
-                case Device.WinRT:
                     yield return new ToolbarItem
                     {
                         Text = "Refresh",

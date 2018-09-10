@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Doods.StdFramework.Mvvm;
+﻿using Doods.StdFramework.Mvvm;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +14,8 @@ namespace ApptestSsh.Core.View.LogsPage
             InitializeComponent();
             switch (Device.RuntimePlatform)
             {
-                case Device.WinPhone:
+                case Device.WPF:
                 case Device.UWP:
-                case Device.WinRT:
                     ToolbarItems.Add(new ToolbarItem
                     {
                         Text = "Refresh",

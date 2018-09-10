@@ -27,7 +27,7 @@ namespace Doods.StdFramework.Mvvm
                 case Device.Android:
                     Padding = new Thickness(10, 20, 0, 0);
                     break;
-                case Device.WinPhone:
+                case Device.WPF:
                 case Device.UWP:
                     Padding = new Thickness(30, 20, 0, 0);
                     break;

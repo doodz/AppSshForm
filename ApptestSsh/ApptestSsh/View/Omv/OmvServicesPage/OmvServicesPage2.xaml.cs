@@ -12,9 +12,8 @@ namespace ApptestSsh.Core.View.Omv.OmvServicesPage
             InitializeComponent();
             switch (Device.RuntimePlatform)
             {
-                case Device.WinPhone:
+                case Device.WPF:
                 case Device.UWP:
-                case Device.WinRT:
                     ToolbarItems.Add(new ToolbarItem
                     {
                         Text = "Refresh",
